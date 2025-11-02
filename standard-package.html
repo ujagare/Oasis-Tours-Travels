@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Standard Package - Oasis Travel & Tourism</title>
+    <link rel="icon" type="image/png" href="Images/Oasis Logo_New.png" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Local Tailwind CSS -->
+    <link rel="stylesheet" href="dist/style.css">
+    
+    <!-- Required Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body class="bg-gray-50">
+
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+              <img
+                class="w-16 h-12"
+                src="Images/Oasis Logo_New.png"
+                alt="Oasis Travel & Tourism"
+              />
+            </a>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >About</a
+            >
+            <a href="packages.html" class="text-[#000042] font-semibold"
+              >Packages</a
+            >
+            <a
+              href="destinations.html"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >Destinations</a
+            >
+            <a
+              href="index.html#services"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >Services</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >Contact</a
+            >
+            <a
+              href="booking.html"
+              class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              >Book Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-[#000042] to-blue-700 text-white py-20"
+    >
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <div
+          class="inline-block bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-4"
+        >
+          Most Preferred
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Standard Travel Package
+        </h1>
+        <p class="text-xl max-w-3xl mx-auto leading-relaxed mb-8">
+          The perfect balance of comfort and value. Enjoy premium experiences
+          with quality accommodations and comprehensive services.
+        </p>
+        <div class="text-4xl font-bold">Starting from ₹1,15,000/-</div>
+      </div>
+    </section>
+
+    <!-- Package Details -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Package Info -->
+          <div>
+            <h2 class="text-3xl font-bold mb-6">What's Included</h2>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-[#000042] text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h3 class="font-semibold">Premium Accommodation</h3>
+                  <p class="text-gray-600">
+                    4-star hotels with breakfast & dinner included
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-[#000042] text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h3 class="font-semibold">Private Transportation</h3>
+                  <p class="text-gray-600">
+                    Private transfers and comfortable vehicles
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-[#000042] text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h3 class="font-semibold">Guided Tours</h3>
+                  <p class="text-gray-600">
+                    Professional guides for all major attractions
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-[#000042] text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h3 class="font-semibold">All Meals</h3>
+                  <p class="text-gray-600">
+                    Breakfast, lunch & dinner at quality restaurants
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-[#000042] text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h3 class="font-semibold">Activities & Experiences</h3>
+                  <p class="text-gray-600">
+                    Cultural shows, adventure activities included
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i
+                  class="fas fa-check-circle text-[#000042] text-xl mr-4 mt-1"
+                ></i>
+                <div>
+                  <h3 class="font-semibold">Comprehensive Insurance</h3>
+                  <p class="text-gray-600">
+                    Full travel insurance with medical coverage
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">Popular Destinations</h3>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div
+                class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm"
+              >
+                <h4 class="font-semibold">Dubai Premium</h4>
+                <p class="text-sm text-gray-600">6 Days / 5 Nights</p>
+                <p class="text-[#000042] font-bold">₹1,15,000</p>
+                <div class="flex items-center mt-2">
+                  <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                  <span class="text-xs text-gray-500 ml-2">(4.8)</span>
+                </div>
+              </div>
+              <div
+                class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm"
+              >
+                <h4 class="font-semibold">Japan Cultural</h4>
+                <p class="text-sm text-gray-600">8 Days / 7 Nights</p>
+                <p class="text-[#000042] font-bold">₹1,45,000</p>
+                <div class="flex items-center mt-2">
+                  <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                  <span class="text-xs text-gray-500 ml-2">(4.9)</span>
+                </div>
+              </div>
+              <div class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm">
+                <h4 class="font-semibold">Maldives Paradise</h4>
+                <p class="text-sm text-gray-600">5 Days / 4 Nights</p>
+                <p class="text-[#000042] font-bold">₹1,25,000</p>
+                <div class="flex items-center mt-2">
+                  <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                  <span class="text-xs text-gray-500 ml-2">(5.0)</span>
+                </div>
+              </div>
+              <div class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm">
+                <h4 class="font-semibold">Singapore Delight</h4>
+                <p class="text-sm text-gray-600">4 Days / 3 Nights</p>
+                <p class="text-[#000042] font-bold">₹95,000</p>
+                <div class="flex items-center mt-2">
+                  <div class="flex text-yellow-400 text-sm">★★★★☆</div>
+                  <span class="text-xs text-gray-500 ml-2">(4.7)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Booking Form -->
+          <div class="bg-white rounded-2xl shadow-xl p-8">
+            <h2 class="text-2xl font-bold mb-6">Book Standard Package</h2>
+            <form class="space-y-4" id="standardPackageForm">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+                <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent" />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Select Package *</label>
+                <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent">
+                  <option value="">Choose package</option>
+                  <option value="dubai">Dubai Premium - ₹1,15,000</option>
+                  <option value="japan">Japan Cultural - ₹1,45,000</option>
+                  <option value="maldives">Maldives Paradise - ₹1,25,000</option>
+                  <option value="singapore">Singapore Delight - ₹95,000</option>
+                </select>
+              </div>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Travel Date *</label>
+                  <input type="date" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent" />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2">Travelers *</label>
+                  <select required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent">
+                    <option value="">Select</option>
+                    <option value="1">1 Person</option>
+                    <option value="2">2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5+">5+ People</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2">Special Requests</label>
+                <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent" placeholder="Any special requirements or preferences..."></textarea>
+              </div>
+              <button type="submit" class="w-full bg-gradient-to-r from-[#000042] to-blue-700 text-white py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-[#000042] transition-all duration-300 transform hover:scale-105">
+                Book Standard Package
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Itinerary -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Sample Itinerary - Dubai Premium</h2>
+        <div class="space-y-6">
+          <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl">
+            <div class="w-12 h-12 bg-[#000042] text-white rounded-full flex items-center justify-center font-bold">1</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Day 1: Arrival & City Tour</h3>
+              <p class="text-gray-600 mb-2">Arrive at Dubai International Airport, private transfer to 4-star hotel</p>
+              <ul class="text-sm text-gray-500 space-y-1">
+                <li>• Check-in at premium hotel</li>
+                <li>• Evening Dubai Marina & JBR walk</li>
+                <li>• Welcome dinner at local restaurant</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl">
+            <div class="w-12 h-12 bg-[#000042] text-white rounded-full flex items-center justify-center font-bold">2</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Day 2: Modern Dubai</h3>
+              <p class="text-gray-600 mb-2">Explore iconic landmarks and modern attractions</p>
+              <ul class="text-sm text-gray-500 space-y-1">
+                <li>• Burj Khalifa visit (124th floor)</li>
+                <li>• Dubai Mall shopping & aquarium</li>
+                <li>• Dubai Fountain show</li>
+                <li>• Lunch at Burj Al Arab</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl">
+            <div class="w-12 h-12 bg-[#000042] text-white rounded-full flex items-center justify-center font-bold">3</div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">Day 3: Desert Safari</h3>
+              <p class="text-gray-600 mb-2">Adventure in the Arabian desert</p>
+              <ul class="text-sm text-gray-500 space-y-1">
+                <li>• Morning at leisure</li>
+                <li>• Afternoon desert safari with dune bashing</li>
+                <li>• Camel riding & sandboarding</li>
+                <li>• BBQ dinner with cultural show</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Comparison -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Package Pricing</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-4">Solo Traveler</h3>
+            <div class="text-4xl font-bold text-[#000042] mb-4">₹1,45,000</div>
+            <ul class="text-left space-y-2 mb-6">
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Single occupancy</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>All meals included</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Private guide</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Premium room</li>
+            </ul>
+            <button class="w-full bg-[#000042] text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">Book Now</button>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg p-8 text-center border-2 border-[#000042] relative">
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-[#000042] text-white px-4 py-2 rounded-full text-sm font-bold">Most Popular</div>
+            <h3 class="text-2xl font-bold mb-4">Couple</h3>
+            <div class="text-4xl font-bold text-[#000042] mb-4">₹1,15,000</div>
+            <p class="text-sm text-gray-500 mb-4">per person</p>
+            <ul class="text-left space-y-2 mb-6">
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Double occupancy</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>All meals included</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Shared guide</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Deluxe room</li>
+            </ul>
+            <button class="w-full bg-[#000042] text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">Book Now</button>
+          </div>
+          <div class="bg-white rounded-2xl shadow-lg p-8 text-center">
+            <h3 class="text-2xl font-bold mb-4">Group (4+)</h3>
+            <div class="text-4xl font-bold text-[#000042] mb-4">₹95,000</div>
+            <p class="text-sm text-gray-500 mb-4">per person</p>
+            <ul class="text-left space-y-2 mb-6">
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Shared occupancy</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>All meals included</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Group guide</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i>Standard room</li>
+            </ul>
+            <button class="w-full bg-[#000042] text-white py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Package Gallery</h2>
+        <div class="grid md:grid-cols-4 gap-4">
+          <div class="h-64 bg-gradient-to-br from-blue-400 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">Dubai Skyline</div>
+          <div class="h-64 bg-gradient-to-br from-green-400 to-blue-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">Luxury Hotels</div>
+          <div class="h-64 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">Cultural Sites</div>
+          <div class="h-64 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">Adventure Activities</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Standard Package -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Why Choose Our Standard Package?</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-[#000042] rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-star text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Premium Quality</h3>
+            <p class="text-gray-600">4-star accommodations and quality services</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-[#000042] rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-balance-scale text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Perfect Balance</h3>
+            <p class="text-gray-600">Ideal mix of comfort and value for money</p>
+          </div>
+          <div class="text-center">
+            <div class="w-16 h-16 bg-[#000042] rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-users text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Most Popular</h3>
+            <p class="text-gray-600">Preferred choice of most travelers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">What Our Customers Say</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-lg border">
+            <div class="flex text-yellow-400 mb-4"><span>★★★★★</span></div>
+            <p class="text-gray-600 mb-4">"Perfect balance of luxury and affordability. The Dubai package exceeded our expectations!"</p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-blue-500 rounded-full mr-3"></div>
+              <div>
+                <p class="font-semibold">Priya Sharma</p>
+                <p class="text-sm text-gray-500">Dubai Premium Package</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg border">
+            <div class="flex text-yellow-400 mb-4"><span>★★★★★</span></div>
+            <p class="text-gray-600 mb-4">"Amazing experience! Everything was well organized and the hotels were excellent."</p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-green-500 rounded-full mr-3"></div>
+              <div>
+                <p class="font-semibold">Rajesh Kumar</p>
+                <p class="text-sm text-gray-500">Japan Cultural Package</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-6 rounded-xl shadow-lg border">
+            <div class="flex text-yellow-400 mb-4"><span>★★★★☆</span></div>
+            <p class="text-gray-600 mb-4">"Great value for money. The guided tours were informative and fun."</p>
+            <div class="flex items-center">
+              <div class="w-10 h-10 bg-purple-500 rounded-full mr-3"></div>
+              <div>
+                <p class="font-semibold">Anita Patel</p>
+                <p class="text-sm text-gray-500">Maldives Paradise Package</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <div class="bg-white rounded-lg shadow-sm">
+            <button class="w-full text-left p-6 font-semibold flex justify-between items-center" onclick="toggleFAQ(1)">
+              What's included in the Standard Package?
+              <i class="fas fa-chevron-down" id="faq-icon-1"></i>
+            </button>
+            <div class="hidden p-6 pt-0 text-gray-600" id="faq-content-1">
+              Our Standard Package includes 4-star accommodation, all meals, private transportation, guided tours, activities, and comprehensive travel insurance.
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-sm">
+            <button class="w-full text-left p-6 font-semibold flex justify-between items-center" onclick="toggleFAQ(2)">
+              Can I customize the itinerary?
+              <i class="fas fa-chevron-down" id="faq-icon-2"></i>
+            </button>
+            <div class="hidden p-6 pt-0 text-gray-600" id="faq-content-2">
+              Yes! While this is our standard package, we can make minor adjustments to suit your preferences. For major customizations, consider our Custom Package option.
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-sm">
+            <button class="w-full text-left p-6 font-semibold flex justify-between items-center" onclick="toggleFAQ(3)">
+              What's the cancellation policy?
+              <i class="fas fa-chevron-down" id="faq-icon-3"></i>
+            </button>
+            <div class="hidden p-6 pt-0 text-gray-600" id="faq-content-3">
+              Free cancellation up to 30 days before travel. 50% refund for cancellations 15-30 days before. No refund for cancellations within 15 days of travel.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#000042] py-16 relative overflow-hidden">
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <div class="mb-12 text-center">
+          <img src="Images/Oasis Logo_New.png" alt="Oasis Travel & Tourism" class="h-20 mx-auto mb-4">
+          <p class="text-gray-300 max-w-2xl mx-auto">Your trusted partner for unforgettable travel experiences.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div>
+            <h3 class="text-xl font-bold text-white mb-6">Contact</h3>
+            <div class="space-y-4">
+              <div class="flex items-center text-gray-300">
+                <i class="fas fa-phone mr-3"></i>
+                <span>+91 12345 67890</span>
+              </div>
+              <div class="flex items-center text-gray-300">
+                <i class="fas fa-envelope mr-3"></i>
+                <span>Oasistours@gmail.com</span>
+              </div>
+              <div class="flex items-start text-gray-300">
+                <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                <span>Ravet, Pune- 411007<br>Maharashtra, India</span>
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-bold text-white mb-6">Company</h3>
+            <ul class="space-y-3">
+              <li><a href="index.html" class="text-gray-300 hover:text-[#d4af37] transition-colors">Home</a></li>
+              <li><a href="about.html" class="text-gray-300 hover:text-[#d4af37] transition-colors">About Us</a></li>
+              <li><a href="index.html#packages" class="text-gray-300 hover:text-[#d4af37] transition-colors">Packages</a></li>
+              <li><a href="index.html#services" class="text-gray-300 hover:text-[#d4af37] transition-colors">Team</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-bold text-white mb-6">Support</h3>
+            <ul class="space-y-3">
+              <li><a href="contact.html" class="text-gray-300 hover:text-[#d4af37] transition-colors">Contact Us</a></li>
+              <li><a href="index.html#contact" class="text-gray-300 hover:text-[#d4af37] transition-colors">Enquiry</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-[#d4af37] transition-colors">FAQ's</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-[#d4af37] transition-colors">Help</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-bold text-white mb-6">Services</h3>
+            <ul class="space-y-3">
+              <li><a href="budget-package.html" class="text-gray-300 hover:text-[#d4af37] transition-colors">Budget Package</a></li>
+              <li><a href="luxury-package.html" class="text-gray-300 hover:text-[#d4af37] transition-colors">Luxury Package</a></li>
+              <li><a href="custom-package.html" class="text-gray-300 hover:text-[#d4af37] transition-colors">Custom Package</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="border-t border-gray-600 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="flex space-x-4 mb-4 md:mb-0">
+              <a href="#" class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all duration-300">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+              <a href="#" class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white transition-all duration-300">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-gradient-to-r hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F77737] hover:border-[#833AB4] hover:text-white transition-all duration-300">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="mailto:Oasistours@gmail.com" class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-[#d4af37] hover:border-[#d4af37] hover:text-white transition-colors">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+            
+            <div class="text-gray-300 text-center md:text-right">
+              <p>Copyright © 2025 Oasis Tours & Travel | Design By Code Sunny</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      function toggleFAQ(num) {
+        const content = document.getElementById(`faq-content-${num}`);
+        const icon = document.getElementById(`faq-icon-${num}`);
+        
+        if (content.classList.contains('hidden')) {
+          content.classList.remove('hidden');
+          icon.classList.remove('fa-chevron-down');
+          icon.classList.add('fa-chevron-up');
+        } else {
+          content.classList.add('hidden');
+          icon.classList.remove('fa-chevron-up');
+          icon.classList.add('fa-chevron-down');
+        }
+      }
+    </script>
+  </body>
+</html>er mt-2">
+                  <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                  <span class="text-xs text-gray-500 ml-2">(5.0)</span>
+                </div>
+              </div>
+              <div
+                class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm"
+              >
+                <h4 class="font-semibold">Europe Classic</h4>
+                <p class="text-sm text-gray-600">10 Days / 9 Nights</p>
+                <p class="text-[#000042] font-bold">₹1,85,000</p>
+                <div class="flex items-center mt-2">
+                  <div class="flex text-yellow-400 text-sm">★★★★★</div>
+                  <span class="text-xs text-gray-500 ml-2">(4.7)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Booking Form -->
+          <div class="bg-white rounded-2xl shadow-xl p-8">
+            <h2 class="text-2xl font-bold mb-6">Book Your Standard Package</h2>
+            <form class="space-y-4" id="standardPackageForm">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Full Name *</label
+                >
+                <input
+                  type="text"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Email *</label
+                >
+                <input
+                  type="email"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Phone Number *</label
+                >
+                <input
+                  type="tel"
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Select Destination *</label
+                >
+                <select
+                  required
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
+                >
+                  <option value="">Choose destination</option>
+                  <option value="dubai">Dubai Premium - ₹1,15,000</option>
+                  <option value="japan">Japan Cultural - ₹1,45,000</option>
+                  <option value="maldives">
+                    Maldives Paradise - ₹1,25,000
+                  </option>
+                  <option value="europe">Europe Classic - ₹1,85,000</option>
+                </select>
+              </div>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Travel Date *</label
+                  >
+                  <input
+                    type="date"
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Travelers *</label
+                  >
+                  <select
+                    required
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
+                  >
+                    <option value="">Select</option>
+                    <option value="1">1 Person</option>
+                    <option value="2">2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5+">5+ People</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Room Preference</label
+                >
+                <select
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
+                >
+                  <option value="">Select room type</option>
+                  <option value="standard">Standard Room</option>
+                  <option value="deluxe">Deluxe Room</option>
+                  <option value="suite">Suite</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Special Requests</label
+                >
+                <textarea
+                  rows="3"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
+                  placeholder="Dietary requirements, accessibility needs, special occasions..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-gradient-to-r from-[#000042] to-blue-700 text-white py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-[#000042] transition-all duration-300 transform hover:scale-105"
+              >
+                Book Standard Package
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Standard Package -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Why Choose Our Standard Package?
+        </h2>
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#000042] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-star text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Premium Quality</h3>
+            <p class="text-gray-600">4-star accommodations and services</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#000042] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-utensils text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">All Meals Included</h3>
+            <p class="text-gray-600">Breakfast, lunch & dinner covered</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#000042] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-user-tie text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Expert Guides</h3>
+            <p class="text-gray-600">Professional local guides</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-[#000042] rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-shield-alt text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Full Insurance</h3>
+            <p class="text-gray-600">Comprehensive travel coverage</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#000042] text-white py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <img
+              class="w-32 mb-4"
+              src="Images/Oasis Logo_New.png"
+              alt="Oasis Travel & Tourism"
+            />
+            <p class="text-gray-300">
+              Premium travel experiences with exceptional value.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="text-gray-300 hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-300 hover:text-white"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="packages.html" class="text-gray-300 hover:text-white"
+                  >Packages</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-300 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Other Packages</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="budget-package.html"
+                  class="text-gray-300 hover:text-white"
+                  >Budget Package</a
+                >
+              </li>
+              <li>
+                <a
+                  href="luxury-package.html"
+                  class="text-gray-300 hover:text-white"
+                  >Luxury Package</a
+                >
+              </li>
+              <li>
+                <a
+                  href="custom-package.html"
+                  class="text-gray-300 hover:text-white"
+                  >Custom Package</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+            <div class="space-y-2 text-gray-300">
+              <p><i class="fas fa-phone mr-2"></i> +91 98765 43210</p>
+              <p><i class="fas fa-envelope mr-2"></i> info@oasistravel.com</p>
+              <p><i class="fas fa-map-marker-alt mr-2"></i> Mumbai, India</p>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p>&copy; 2024 Oasis Travel & Tourism. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

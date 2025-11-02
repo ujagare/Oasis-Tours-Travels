@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Dashboard - Oasis Travel & Tourism</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .dashboard-card {
+        transition: all 0.3s ease;
+      }
+      .dashboard-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div class="min-h-screen">
+      <!-- Header -->
+      <header class="bg-[#000042] text-white p-6">
+        <div class="max-w-7xl mx-auto">
+          <h1 class="text-3xl font-bold">🔥 Firebase Dashboard</h1>
+          <p class="text-blue-200 mt-2">Oasis Travel & Tourism - Admin Panel</p>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="max-w-7xl mx-auto p-6">
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="dashboard-card bg-white rounded-lg shadow-lg p-6">
+            <div class="flex items-center">
+              <div class="p-3 bg-blue-100 rounded-full">
+                <svg
+                  class="w-6 h-6 text-blue-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Contact Inquiries
+                </h3>
+                <p class="text-2xl font-bold text-blue-600" id="contact-count">
+                  Loading...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-card bg-white rounded-lg shadow-lg p-6">
+            <div class="flex items-center">
+              <div class="p-3 bg-green-100 rounded-full">
+                <svg
+                  class="w-6 h-6 text-green-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Newsletter Subscribers
+                </h3>
+                <p
+                  class="text-2xl font-bold text-green-600"
+                  id="newsletter-count"
+                >
+                  Loading...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-card bg-white rounded-lg shadow-lg p-6">
+            <div class="flex items-center">
+              <div class="p-3 bg-purple-100 rounded-full">
+                <svg
+                  class="w-6 h-6 text-purple-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                  ></path>
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-gray-900">
+                  Package Bookings
+                </h3>
+                <p
+                  class="text-2xl font-bold text-purple-600"
+                  id="booking-count"
+                >
+                  Loading...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="bg-white rounded-lg shadow-lg">
+          <div class="border-b border-gray-200">
+            <nav class="flex space-x-8 px-6">
+              <button
+                class="tab-btn py-4 px-1 border-b-2 border-blue-500 text-blue-600 font-medium"
+                data-tab="contacts"
+              >
+                Contact Inquiries
+              </button>
+              <button
+                class="tab-btn py-4 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700"
+                data-tab="newsletter"
+              >
+                Newsletter
+              </button>
+              <button
+                class="tab-btn py-4 px-1 border-b-2 border-transparent text-gray-500 hover:text-gray-700"
+                data-tab="bookings"
+              >
+                Bookings
+              </button>
+            </nav>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="p-6">
+            <!-- Contact Inquiries Tab -->
+            <div id="contacts-tab" class="tab-content">
+              <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold">Recent Contact Inquiries</h2>
+                <button
+                  onclick="refreshData()"
+                  class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                >
+                  Refresh
+                </button>
+              </div>
+              <div id="contacts-list" class="space-y-4">
+                <div class="text-center py-8 text-gray-500">
+                  Loading contact inquiries...
+                </div>
+              </div>
+            </div>
+
+            <!-- Newsletter Tab -->
+            <div id="newsletter-tab" class="tab-content hidden">
+              <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold">Newsletter Subscribers</h2>
+                <button
+                  onclick="exportEmails()"
+                  class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
+                >
+                  Export Emails
+                </button>
+              </div>
+              <div id="newsletter-list" class="space-y-4">
+                <div class="text-center py-8 text-gray-500">
+                  Loading subscribers...
+                </div>
+              </div>
+            </div>
+
+            <!-- Bookings Tab -->
+            <div id="bookings-tab" class="tab-content hidden">
+              <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-semibold">Package Bookings</h2>
+                <button
+                  onclick="refreshData()"
+                  class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700"
+                >
+                  Refresh
+                </button>
+              </div>
+              <div id="bookings-list" class="space-y-4">
+                <div class="text-center py-8 text-gray-500">
+                  Loading bookings...
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Firebase Dashboard Script -->
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+      import {
+        getFirestore,
+        collection,
+        getDocs,
+        query,
+        orderBy,
+        limit,
+      } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+      // Firebase Configuration (replace with your actual config)
+      const firebaseConfig = {
+        apiKey: "AIzaSyBvOkBwGyRLsruRQSCrI0Rj7FAoHfaFIpo",
+        authDomain: "oasis-travel-tourism.firebaseapp.com",
+        projectId: "oasis-travel-tourism",
+        storageBucket: "oasis-travel-tourism.appspot.com",
+        messagingSenderId: "123456789012",
+        appId: "1:123456789012:web:abcdef123456789012345",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      // Tab functionality
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const tabName = btn.dataset.tab;
+
+          // Update active tab
+          document.querySelectorAll(".tab-btn").forEach((b) => {
+            b.classList.remove("border-blue-500", "text-blue-600");
+            b.classList.add("border-transparent", "text-gray-500");
+          });
+          btn.classList.add("border-blue-500", "text-blue-600");
+          btn.classList.remove("border-transparent", "text-gray-500");
+
+          // Show/hide content
+          document.querySelectorAll(".tab-content").forEach((content) => {
+            content.classList.add("hidden");
+          });
+          document.getElementById(tabName + "-tab").classList.remove("hidden");
+        });
+      });
+
+      // Load data functions
+      async function loadContacts() {
+        try {
+          const q = query(
+            collection(db, "contact-inquiries"),
+            orderBy("timestamp", "desc"),
+            limit(20)
+          );
+          const querySnapshot = await getDocs(q);
+
+          const contactsList = document.getElementById("contacts-list");
+          const contactCount = document.getElementById("contact-count");
+
+          contactCount.textContent = querySnapshot.size;
+
+          if (querySnapshot.empty) {
+            contactsList.innerHTML =
+              '<div class="text-center py-8 text-gray-500">No contact inquiries yet</div>';
+            return;
+          }
+
+          contactsList.innerHTML = "";
+          querySnapshot.forEach((doc) => {
+            const data = doc.data();
+            const date =
+              data.timestamp?.toDate?.()?.toLocaleDateString() ||
+              "Unknown date";
+
+            contactsList.innerHTML += `
+                        <div class="bg-gray-50 rounded-lg p-4 border">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-semibold text-gray-900">${data.name || "No name"}</h3>
+                                    <p class="text-gray-600">${data.email || "No email"}</p>
+                                    <p class="text-sm text-gray-500">Destination: ${data.destination || "Not specified"}</p>
+                                    <p class="text-sm text-gray-500">Package: ${data.package || "Not specified"}</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-sm text-gray-500">${date}</span>
+                                    <div class="mt-1">
+                                        <span class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">
+                                            ${data.status || "new"}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            ${data.message ? `<p class="mt-2 text-gray-700 text-sm">"${data.message}"</p>` : ""}
+                        </div>
+                    `;
+          });
+        } catch (error) {
+          console.error("Error loading contacts:", error);
+          document.getElementById("contacts-list").innerHTML =
+            '<div class="text-center py-8 text-red-500">Error loading data</div>';
+        }
+      }
+
+      async function loadNewsletter() {
+        try {
+          const q = query(
+            collection(db, "newsletter-subscribers"),
+            orderBy("timestamp", "desc"),
+            limit(50)
+          );
+          const querySnapshot = await getDocs(q);
+
+          const newsletterList = document.getElementById("newsletter-list");
+          const newsletterCount = document.getElementById("newsletter-count");
+
+          newsletterCount.textContent = querySnapshot.size;
+
+          if (querySnapshot.empty) {
+            newsletterList.innerHTML =
+              '<div class="text-center py-8 text-gray-500">No subscribers yet</div>';
+            return;
+          }
+
+          newsletterList.innerHTML = "";
+          querySnapshot.forEach((doc) => {
+            const data = doc.data();
+            const date =
+              data.timestamp?.toDate?.()?.toLocaleDateString() ||
+              "Unknown date";
+
+            newsletterList.innerHTML += `
+                        <div class="bg-gray-50 rounded-lg p-4 border flex justify-between items-center">
+                            <div>
+                                <p class="font-medium text-gray-900">${data.email}</p>
+                                <p class="text-sm text-gray-500">Subscribed: ${date}</p>
+                            </div>
+                            <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">
+                                ${data.status || "active"}
+                            </span>
+                        </div>
+                    `;
+          });
+        } catch (error) {
+          console.error("Error loading newsletter:", error);
+          document.getElementById("newsletter-list").innerHTML =
+            '<div class="text-center py-8 text-red-500">Error loading data</div>';
+        }
+      }
+
+      async function loadBookings() {
+        try {
+          const q = query(
+            collection(db, "package-bookings"),
+            orderBy("timestamp", "desc"),
+            limit(20)
+          );
+          const querySnapshot = await getDocs(q);
+
+          const bookingsList = document.getElementById("bookings-list");
+          const bookingCount = document.getElementById("booking-count");
+
+          bookingCount.textContent = querySnapshot.size;
+
+          if (querySnapshot.empty) {
+            bookingsList.innerHTML =
+              '<div class="text-center py-8 text-gray-500">No bookings yet</div>';
+            return;
+          }
+
+          bookingsList.innerHTML = "";
+          querySnapshot.forEach((doc) => {
+            const data = doc.data();
+            const date =
+              data.timestamp?.toDate?.()?.toLocaleDateString() ||
+              "Unknown date";
+
+            bookingsList.innerHTML += `
+                        <div class="bg-gray-50 rounded-lg p-4 border">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-semibold text-gray-900">${data.name || "No name"}</h3>
+                                    <p class="text-gray-600">${data.email || "No email"}</p>
+                                    <p class="text-sm text-gray-500">Package: ${data.packageType || "Not specified"}</p>
+                                    <p class="text-sm text-gray-500">Destination: ${data.destination || "Not specified"}</p>
+                                    <p class="text-sm text-gray-500">Guests: ${data.adults || 0} adults, ${data.children || 0} children</p>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-sm text-gray-500">${date}</span>
+                                    <div class="mt-1">
+                                        <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-800">
+                                            ${data.status || "pending"}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+          });
+        } catch (error) {
+          console.error("Error loading bookings:", error);
+          document.getElementById("bookings-list").innerHTML =
+            '<div class="text-center py-8 text-red-500">Error loading data</div>';
+        }
+      }
+
+      // Global functions
+      window.refreshData = function () {
+        loadContacts();
+        loadNewsletter();
+        loadBookings();
+      };
+
+      window.exportEmails = async function () {
+        try {
+          const querySnapshot = await getDocs(
+            collection(db, "newsletter-subscribers")
+          );
+          const emails = [];
+          querySnapshot.forEach((doc) => {
+            emails.push(doc.data().email);
+          });
+
+          const csvContent = "data:text/csv;charset=utf-8," + emails.join("\n");
+          const encodedUri = encodeURI(csvContent);
+          const link = document.createElement("a");
+          link.setAttribute("href", encodedUri);
+          link.setAttribute("download", "newsletter-subscribers.csv");
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } catch (error) {
+          console.error("Error exporting emails:", error);
+          alert("Error exporting emails");
+        }
+      };
+
+      // Load initial data
+      loadContacts();
+      loadNewsletter();
+      loadBookings();
+
+      console.log("🔥 Firebase Dashboard loaded successfully!");
+    </script>
+  </body>
+</html>

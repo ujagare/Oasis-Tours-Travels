@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Package - Oasis Travel & Tourism</title>
+    <link rel="icon" type="image/png" href="Images/Oasis Logo_New.png" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Local Tailwind CSS -->
+    <link rel="stylesheet" href="dist/style.css" />
+
+    <!-- Required Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+              <img
+                class="w-16 h-12"
+                src="Images/Oasis Logo_New.png"
+                alt="Oasis Travel & Tourism"
+              />
+            </a>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >About</a
+            >
+            <a href="packages.html" class="text-[#000042] font-semibold"
+              >Packages</a
+            >
+            <a
+              href="destinations.html"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >Destinations</a
+            >
+            <a
+              href="index.html#services"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >Services</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >Contact</a
+            >
+            <a
+              href="booking.html"
+              class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              >Book Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-purple-800 via-purple-900 to-indigo-900 text-white py-20"
+    >
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <div
+          class="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-4 py-2 rounded-full text-sm font-bold mb-4"
+        >
+          ✨ Ultimate Luxury Experience
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+          Luxury Travel Package
+        </h1>
+        <p class="text-xl max-w-3xl mx-auto leading-relaxed mb-8">
+          Indulge in the finest travel experiences with 5-star accommodations,
+          private services, and exclusive access to the world's most prestigious
+          destinations.
+        </p>
+        <div class="text-4xl font-bold">Starting from ₹1,50,000/-</div>
+      </div>
+    </section>
+
+    <!-- Package Details -->
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Package Info -->
+          <div>
+            <h2 class="text-3xl font-bold mb-6">Luxury Inclusions</h2>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-crown text-yellow-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h3 class="font-semibold">5-Star Luxury Hotels</h3>
+                  <p class="text-gray-600">
+                    Presidential suites with premium amenities
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-crown text-yellow-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h3 class="font-semibold">Private Jet/First Class</h3>
+                  <p class="text-gray-600">
+                    Luxury air travel with VIP services
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-crown text-yellow-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h3 class="font-semibold">Personal Butler Service</h3>
+                  <p class="text-gray-600">
+                    24/7 dedicated personal assistance
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-crown text-yellow-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h3 class="font-semibold">Michelin Star Dining</h3>
+                  <p class="text-gray-600">
+                    Exclusive restaurants and private chefs
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-crown text-yellow-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h3 class="font-semibold">VIP Experiences</h3>
+                  <p class="text-gray-600">
+                    Private tours, exclusive access, premium activities
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-crown text-yellow-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h3 class="font-semibold">Luxury Transportation</h3>
+                  <p class="text-gray-600">
+                    Private limousines, yachts, and helicopters
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-crown text-yellow-500 text-xl mr-4 mt-1"></i>
+                <div>
+                  <h3 class="font-semibold">Premium Insurance</h3>
+                  <p class="text-gray-600">
+                    Comprehensive luxury travel protection
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mt-8 mb-4">Exclusive Destinations</h3>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div
+                class="p-6 border border-gray-200 rounded-lg bg-gradient-to-br from-purple-50 to-indigo-50 shadow-lg"
+              >
+                <h4 class="font-semibold text-lg">Dubai Royal Experience</h4>
+                <p class="text-sm text-gray-600">7 Days / 6 Nights</p>
+                <p class="text-purple-700 font-bold text-lg">₹1,50,000</p>
+                <div class="flex items-center mt-2">
+                  <div class="flex text-yellow-400">★★★★★</div>
+                  <span class="text-xs text-gray-500 ml-2">(5.0)</span>
+                </div>
+              </div>
+              <div
+                class="p-6 border border-gray-200 rounded-lg bg-gradient-to-br from-purple-50 to-indigo-50 shadow-lg"
+              >
+                <h4 class="font-semibold text-lg">Maldives Private Island</h4>
+                <p class="text-sm text-gray-600">6 Days / 5 Nights</p>
+                <p class="text-purple-700 font-bold text-lg">₹2,25,000</p>
+                <div class="flex items-center mt-2">
+                  <div class="flex text-yellow-400">★★★★★</div>
+                  <span class="text-xs text-gray-500 ml-2">(5.0)</span>
+                </div>
+              </div>
+              <div
+                class="p-6 border border-gray-200 rounded-lg bg-gradient-to-br from-purple-50 to-indigo-50 shadow-lg"
+              >
+                <h4 class="font-semibold text-lg">Swiss Alps Luxury</h4>
+                <p class="text-sm text-gray-600">8 Days / 7 Nights</p>
+                <p class="text-purple-700 font-bold text-lg">₹2,85,000</p>
+                <div class="flex items-center mt-2">
+                  <div class="flex text-yellow-400">★★★★★</div>
+                  <span class="text-xs text-gray-500 ml-2">(4.9)</span>
+                </div>
+              </div>
+              <div
+                class="p-6 border border-gray-200 rounded-lg bg-gradient-to-br from-purple-50 to-indigo-50 shadow-lg"
+              >
+                <h4 class="font-semibold text-lg">African Safari Luxury</h4>
+                <p class="text-sm text-gray-600">10 Days / 9 Nights</p>
+                <p class="text-purple-700 font-bold text-lg">₹3,50,000</p>
+                <div class="flex items-center mt-2">
+                  <div class="flex text-yellow-400">★★★★★</div>
+                  <span class="text-xs text-gray-500 ml-2">(5.0)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Booking Form -->
+          <div
+            class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl shadow-xl p-8 border border-purple-200"
+          >
+            <h2 class="text-2xl font-bold mb-6 text-purple-900">
+              Reserve Your Luxury Experience
+            </h2>
+            <form class="space-y-4" id="luxuryPackageForm">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Full Name *</label
+                >
+                <input
+                  type="text"
+                  required
+                  class="w-full px-4 py-3 border border-purple-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Email *</label
+                >
+                <input
+                  type="email"
+                  required
+                  class="w-full px-4 py-3 border border-purple-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Phone Number *</label
+                >
+                <input
+                  type="tel"
+                  required
+                  class="w-full px-4 py-3 border border-purple-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white"
+                />
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Select Luxury Destination *</label
+                >
+                <select
+                  required
+                  class="w-full px-4 py-3 border border-purple-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white"
+                >
+                  <option value="">Choose your luxury experience</option>
+                  <option value="dubai">
+                    Dubai Royal Experience - ₹1,50,000
+                  </option>
+                  <option value="maldives">
+                    Maldives Private Island - ₹2,25,000
+                  </option>
+                  <option value="swiss">Swiss Alps Luxury - ₹2,85,000</option>
+                  <option value="safari">
+                    African Safari Luxury - ₹3,50,000
+                  </option>
+                </select>
+              </div>
+              <div class="grid md:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Preferred Date *</label
+                  >
+                  <input
+                    type="date"
+                    required
+                    class="w-full px-4 py-3 border border-purple-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Guests *</label
+                  >
+                  <select
+                    required
+                    class="w-full px-4 py-3 border border-purple-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white"
+                  >
+                    <option value="">Select guests</option>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5+">5+ Guests</option>
+                  </select>
+                </div>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Suite Preference</label
+                >
+                <select
+                  class="w-full px-4 py-3 border border-purple-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white"
+                >
+                  <option value="">Select suite type</option>
+                  <option value="presidential">Presidential Suite</option>
+                  <option value="royal">Royal Suite</option>
+                  <option value="penthouse">Penthouse Suite</option>
+                  <option value="villa">Private Villa</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-2"
+                  >Special Preferences</label
+                >
+                <textarea
+                  rows="3"
+                  class="w-full px-4 py-3 border border-purple-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent bg-white"
+                  placeholder="Private chef preferences, spa treatments, exclusive experiences, celebration arrangements..."
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-gradient-to-r from-purple-800 to-indigo-900 text-white py-4 rounded-lg font-bold text-lg hover:from-purple-900 hover:to-indigo-800 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Reserve Luxury Package
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Luxury Features -->
+    <section
+      class="py-16 bg-gradient-to-br from-purple-900 to-indigo-900 text-white"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          The Ultimate Luxury Experience
+        </h2>
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-gem text-purple-900 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Exclusive Access</h3>
+            <p class="text-purple-200">Private venues and VIP experiences</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-concierge-bell text-purple-900 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Personal Service</h3>
+            <p class="text-purple-200">Dedicated butler and concierge</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-helicopter text-purple-900 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Premium Transport</h3>
+            <p class="text-purple-200">Private jets and luxury vehicles</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-spa text-purple-900 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Wellness & Spa</h3>
+            <p class="text-purple-200">World-class spa and wellness</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#000042] text-white py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <img
+              class="w-32 mb-4"
+              src="Images/Oasis Logo_New.png"
+              alt="Oasis Travel & Tourism"
+            />
+            <p class="text-gray-300">
+              Redefining luxury travel with unparalleled experiences.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="text-gray-300 hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-300 hover:text-white"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="packages.html" class="text-gray-300 hover:text-white"
+                  >Packages</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-300 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Other Packages</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="budget-package.html"
+                  class="text-gray-300 hover:text-white"
+                  >Budget Package</a
+                >
+              </li>
+              <li>
+                <a
+                  href="standard-package.html"
+                  class="text-gray-300 hover:text-white"
+                  >Standard Package</a
+                >
+              </li>
+              <li>
+                <a
+                  href="custom-package.html"
+                  class="text-gray-300 hover:text-white"
+                  >Custom Package</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">VIP Contact</h3>
+            <div class="space-y-2 text-gray-300">
+              <p><i class="fas fa-phone mr-2"></i> +91 98765 43210</p>
+              <p><i class="fas fa-envelope mr-2"></i> luxury@oasistravel.com</p>
+              <p><i class="fas fa-map-marker-alt mr-2"></i> Mumbai, India</p>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+          <p>&copy; 2024 Oasis Travel & Tourism. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tour Packages - Oasis Travel & Tourism</title>
+    <link rel="icon" type="image/png" href="Images/Oasis Logo_New.png" />
+    <link rel="stylesheet" href="dist/style.css" />
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .package-card {
+        transition: all 0.3s ease;
+      }
+      .package-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+      .filter-btn.active {
+        background: #000042;
+        color: white;
+      }
+      .price-badge {
+        background: linear-gradient(135deg, #000042, #1e40af);
+      }
+
+      /* Mobile Navigation Styles - Home Page Match */
+      .mobile-nav {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000042;
+        z-index: 40;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        overflow-y: auto;
+        padding: 0;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+
+      .mobile-nav.active {
+        top: 0;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .mobile-nav-links {
+        padding: 3rem 2rem 0.5rem 2rem;
+      }
+
+      .mobile-nav-links a {
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 0.8rem;
+        transition: color 0.3s ease;
+      }
+
+      .mobile-nav-links a:hover {
+        color: #60a5fa;
+      }
+
+      .mobile-nav-button {
+        padding: 0 2rem 1rem 2rem;
+      }
+
+      .mobile-nav-button button {
+        width: 100%;
+        max-width: 250px;
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-nav-button button:hover {
+        background: white;
+        color: #000042;
+      }
+
+      .mobile-nav-address {
+        padding: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .mobile-nav-address h3 {
+        color: white;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+      }
+
+      .address-item {
+        display: flex;
+        align-items: center;
+        color: white;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .address-item svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 1rem;
+        color: white;
+        flex-shrink: 0;
+      }
+
+      .mobile-nav-social {
+        display: flex;
+        gap: 1rem;
+        padding: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-btn:hover {
+        border-color: white;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .burger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 8px;
+        position: relative;
+        z-index: 10000;
+        width: 40px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .burger .line1,
+      .burger .line2 {
+        width: 30px;
+        height: 2px;
+        background: white !important;
+        margin: 2px 0;
+        transition: 0.3s;
+        border-radius: 2px;
+        display: block !important;
+        transform-origin: center;
+      }
+
+      .burger.active .line1 {
+        transform: rotate(45deg) translateY(6px);
+      }
+
+      .burger.active .line2 {
+        transform: rotate(-45deg) translateY(-6px);
+      }
+
+      @media (max-width: 768px) {
+        .burger {
+          display: flex !important;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .burger {
+          display: flex !important;
+          visibility: visible !important;
+        }
+      }
+
+      .burger {
+        pointer-events: auto !important;
+      }
+
+      .burger span {
+        pointer-events: none !important;
+      }
+
+      .mobile-nav:not(.active) {
+        top: -100% !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav
+      class="fixed top-0 left-0 right-0 bg-black bg-opacity-50 backdrop-blur-sm shadow-lg"
+      style="z-index: 9999 !important"
+    >
+      <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-28">
+          <!-- Logo -->
+          <div
+            class="flex items-center"
+            style="z-index: 10000; position: relative"
+          >
+            <a href="index.html" class="flex items-center space-x-2">
+              <img
+                class="w-20"
+                src="Images/Oasis Logo_New.png"
+                alt="Oasis Travel & Tourism"
+                class="h-14 w-auto"
+              />
+            </a>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8 p-20">
+            <a
+              href="index.html"
+              class="text-white hover:text-blue-300 font-bold transition-colors"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-white hover:text-blue-300 font-bold transition-colors"
+              >About</a
+            >
+            <a
+              href="destinations.html"
+              class="text-white hover:text-blue-300 font-bold transition-colors"
+              >Destinations</a
+            >
+            <a
+              href="packages.html"
+              class="text-white hover:text-blue-300 font-bold transition-colors"
+              >Packages</a
+            >
+            <a
+              href="index.html#services"
+              class="text-white hover:text-blue-300 font-bold transition-colors"
+              >Services</a
+            >
+            <a
+              href="contact.html"
+              class="text-white hover:text-blue-300 font-bold transition-colors"
+              >Contact</a
+            >
+            <a
+              href="contact.html"
+              class="border-2 text-white px-6 py-2 rounded-lg hover:bg-[#000042] transition-colors font-semibold"
+            >
+              Book Now
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <div class="burger">
+              <span class="line1"></span>
+              <span class="line2"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div class="mobile-nav">
+        <!-- Navigation Links -->
+        <div class="mobile-nav-links" style="padding-top: 8rem">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="packages.html">Packages</a>
+          <a href="index.html#services">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Book Now Button -->
+        <div class="mobile-nav-button">
+          <button onclick="window.location.href='contact.html'">
+            Book Now
+          </button>
+        </div>
+
+        <!-- Address Section -->
+        <div class="mobile-nav-address">
+          <h3>Contact Info</h3>
+          <div class="address-item">
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+              ></path>
+            </svg>
+            <span>+91 12345 67890</span>
+          </div>
+          <div class="address-item">
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+            <span>Oasistours@gmail.com</span>
+          </div>
+          <div class="address-item">
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              ></path>
+            </svg>
+            <span>Ravet, Pune- 411007 Maharashtra, India</span>
+          </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="mobile-nav-social">
+          <a
+            href="https://wa.me/911234567890?text=Hello%20Oasis%20Tours"
+            class="social-btn"
+            title="WhatsApp"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"
+              />
+            </svg>
+          </a>
+          <a href="#" class="social-btn" title="Facebook">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
+            </svg>
+          </a>
+          <a href="#" class="social-btn" title="Instagram">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.40z"
+              />
+            </svg>
+          </a>
+          <a
+            href="mailto:Oasistours@gmail.com"
+            class="social-btn"
+            title="Email"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-[#000042] to-blue-600 text-white pt-32 pb-20"
+    >
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">Tour Packages</h1>
+        <p class="text-xl max-w-3xl mx-auto leading-relaxed">
+          Discover our carefully curated tour packages designed to give you the
+          perfect travel experience
+        </p>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-12 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+          <button
+            class="filter-btn active px-6 py-3 rounded-full border-2 border-[#000042] font-semibold transition-all"
+            data-filter="all"
+          >
+            All Packages
+          </button>
+          <button
+            class="filter-btn px-6 py-3 rounded-full border-2 border-[#000042] text-[#000042] font-semibold transition-all hover:bg-[#000042] hover:text-white"
+            data-filter="honeymoon"
+          >
+            Honeymoon
+          </button>
+          <button
+            class="filter-btn px-6 py-3 rounded-full border-2 border-[#000042] text-[#000042] font-semibold transition-all hover:bg-[#000042] hover:text-white"
+            data-filter="family"
+          >
+            Family
+          </button>
+          <button
+            class="filter-btn px-6 py-3 rounded-full border-2 border-[#000042] text-[#000042] font-semibold transition-all hover:bg-[#000042] hover:text-white"
+            data-filter="adventure"
+          >
+            Adventure
+          </button>
+          <button
+            class="filter-btn px-6 py-3 rounded-full border-2 border-[#000042] text-[#000042] font-semibold transition-all hover:bg-[#000042] hover:text-white"
+            data-filter="luxury"
+          >
+            Luxury
+          </button>
+          <button
+            class="filter-btn px-6 py-3 rounded-full border-2 border-[#000042] text-[#000042] font-semibold transition-all hover:bg-[#000042] hover:text-white"
+            data-filter="budget"
+          >
+            Budget
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Packages Grid -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          id="packagesGrid"
+        >
+          <!-- Package 1: Dubai Luxury -->
+          <div
+            class="package-card bg-white rounded-2xl overflow-hidden shadow-lg"
+            data-category="luxury"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=250&fit=crop"
+                alt="Dubai Luxury"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 left-4 price-badge text-white px-4 py-2 rounded-full"
+              >
+                <span class="text-sm font-semibold">From $2,999</span>
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold"
+              >
+                Hot Deal
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Dubai Luxury Experience
+              </h3>
+              <p class="text-gray-600 mb-4">7 Days / 6 Nights</p>
+              <p class="text-gray-700 mb-4">
+                Experience the ultimate luxury in Dubai with 5-star hotels,
+                private tours, and exclusive experiences.
+              </p>
+
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-yellow-500">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="text-gray-600 ml-2">(4.9)</span>
+                </div>
+                <span class="text-green-600 font-semibold">Available</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-[#000042]">$2,999</div>
+                <button
+                  class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 2: Japan Cultural -->
+          <div
+            class="package-card bg-white rounded-2xl overflow-hidden shadow-lg"
+            data-category="family"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&h=250&fit=crop"
+                alt="Japan Cultural"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 left-4 price-badge text-white px-4 py-2 rounded-full"
+              >
+                <span class="text-sm font-semibold">From $2,499</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Japan Cultural Journey
+              </h3>
+              <p class="text-gray-600 mb-4">10 Days / 9 Nights</p>
+              <p class="text-gray-700 mb-4">
+                Immerse yourself in Japanese culture with temple visits,
+                traditional experiences, and modern city tours.
+              </p>
+
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-yellow-500">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="text-gray-600 ml-2">(4.8)</span>
+                </div>
+                <span class="text-green-600 font-semibold">Available</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-[#000042]">$2,499</div>
+                <button
+                  class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 3: Maldives Honeymoon -->
+          <div
+            class="package-card bg-white rounded-2xl overflow-hidden shadow-lg"
+            data-category="honeymoon"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop"
+                alt="Maldives Honeymoon"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 left-4 price-badge text-white px-4 py-2 rounded-full"
+              >
+                <span class="text-sm font-semibold">From $3,999</span>
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold"
+              >
+                Romantic
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Maldives Honeymoon Paradise
+              </h3>
+              <p class="text-gray-600 mb-4">5 Days / 4 Nights</p>
+              <p class="text-gray-700 mb-4">
+                Perfect romantic getaway with overwater villas, private dining,
+                and couples spa treatments.
+              </p>
+
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-yellow-500">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="text-gray-600 ml-2">(5.0)</span>
+                </div>
+                <span class="text-green-600 font-semibold">Available</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-[#000042]">$3,999</div>
+                <button
+                  class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 4: Nepal Adventure -->
+          <div
+            class="package-card bg-white rounded-2xl overflow-hidden shadow-lg"
+            data-category="adventure"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=250&fit=crop"
+                alt="Nepal Adventure"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 left-4 price-badge text-white px-4 py-2 rounded-full"
+              >
+                <span class="text-sm font-semibold">From $1,899</span>
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold"
+              >
+                Adventure
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Nepal Himalayan Adventure
+              </h3>
+              <p class="text-gray-600 mb-4">12 Days / 11 Nights</p>
+              <p class="text-gray-700 mb-4">
+                Trek through the Himalayas, visit ancient temples, and
+                experience the thrill of mountain adventures.
+              </p>
+
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-yellow-500">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="text-gray-600 ml-2">(4.7)</span>
+                </div>
+                <span class="text-green-600 font-semibold">Available</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-[#000042]">$1,899</div>
+                <button
+                  class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 5: Thailand Budget -->
+          <div
+            class="package-card bg-white rounded-2xl overflow-hidden shadow-lg"
+            data-category="budget"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=400&h=250&fit=crop"
+                alt="Thailand Budget"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 left-4 price-badge text-white px-4 py-2 rounded-full"
+              >
+                <span class="text-sm font-semibold">From $899</span>
+              </div>
+              <div
+                class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold"
+              >
+                Budget
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Thailand Budget Explorer
+              </h3>
+              <p class="text-gray-600 mb-4">6 Days / 5 Nights</p>
+              <p class="text-gray-700 mb-4">
+                Affordable Thailand experience with temples, beaches, and local
+                culture without breaking the bank.
+              </p>
+
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-yellow-500">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                  <span class="text-gray-600 ml-2">(4.5)</span>
+                </div>
+                <span class="text-green-600 font-semibold">Available</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-[#000042]">$899</div>
+                <button
+                  class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Package 6: Europe Family -->
+          <div
+            class="package-card bg-white rounded-2xl overflow-hidden shadow-lg"
+            data-category="family"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=400&h=250&fit=crop"
+                alt="Europe Family"
+                class="w-full h-64 object-cover"
+              />
+              <div
+                class="absolute top-4 left-4 price-badge text-white px-4 py-2 rounded-full"
+              >
+                <span class="text-sm font-semibold">From $3,499</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Europe Family Adventure
+              </h3>
+              <p class="text-gray-600 mb-4">14 Days / 13 Nights</p>
+              <p class="text-gray-700 mb-4">
+                Perfect family vacation covering Paris, Rome, and Barcelona with
+                kid-friendly activities.
+              </p>
+
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-yellow-500">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="text-gray-600 ml-2">(4.8)</span>
+                </div>
+                <span class="text-green-600 font-semibold">Available</span>
+              </div>
+
+              <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-[#000042]">$3,499</div>
+                <button
+                  class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-[#000042] text-white">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-6">
+          Can't Find Your Perfect Package?
+        </h2>
+        <p class="text-xl mb-8">
+          Let us create a custom tour package just for you!
+        </p>
+        <button
+          class="bg-white text-[#000042] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+        >
+          Create Custom Package
+        </button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <img
+              src="Images/Oasis Logo_New.png"
+              alt="Oasis Travel"
+              class="h-16 mb-4"
+            />
+            <p class="text-gray-400">
+              Your trusted partner for unforgettable travel experiences.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="text-gray-400 hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-400 hover:text-white"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="packages.html" class="text-gray-400 hover:text-white"
+                  >Packages</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-gray-400 hover:text-white"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Services</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Hotel Booking</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Flight Booking</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Visa Assistance</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white"
+                  >Travel Insurance</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+            <div class="space-y-2 text-gray-400">
+              <p><i class="fas fa-phone mr-2"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-envelope mr-2"></i> info@oasistravel.com</p>
+              <p>
+                <i class="fas fa-map-marker-alt mr-2"></i> 123 Travel Street,
+                City
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2024 Oasis Travel & Tourism. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script src="script.js"></script>
+
+    <!-- Filter Functionality -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const packageCards = document.querySelectorAll(".package-card");
+
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            // Remove active class from all buttons
+            filterBtns.forEach((b) => b.classList.remove("active"));
+            // Add active class to clicked button
+            btn.classList.add("active");
+
+            const filter = btn.getAttribute("data-filter");
+
+            packageCards.forEach((card) => {
+              if (
+                filter === "all" ||
+                card.getAttribute("data-category") === filter
+              ) {
+                card.style.display = "block";
+                gsap.fromTo(
+                  card,
+                  { opacity: 0, y: 20 },
+                  { opacity: 1, y: 0, duration: 0.5 }
+                );
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+
+        // Text animations
+        if (typeof gsap !== "undefined") {
+          gsap.utils.toArray("section h1, section h2").forEach((heading) => {
+            gsap.fromTo(
+              heading,
+              { opacity: 0, y: 30 },
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                scrollTrigger: {
+                  trigger: heading,
+                  start: "top 85%",
+                  toggleActions: "play none none none",
+                },
+              }
+            );
+          });
+
+          gsap.utils.toArray(".package-card").forEach((card, index) => {
+            gsap.fromTo(
+              card,
+              { opacity: 0, y: 50 },
+              {
+                opacity: 1,
+                y: 0,
+                duration: 0.6,
+                delay: index * 0.1,
+                scrollTrigger: {
+                  trigger: card,
+                  start: "top 90%",
+                  toggleActions: "play none none none",
+                },
+              }
+            );
+          });
+        }
+      });
+
+      // Mobile Navigation JavaScript
+      const burger = document.querySelector(".burger");
+      const mobileNav = document.querySelector(".mobile-nav");
+      const mobileLinks = document.querySelectorAll(".mobile-nav-links a");
+      const body = document.body;
+
+      // Toggle mobile menu
+      function toggleMobileMenu() {
+        burger.classList.toggle("active");
+        mobileNav.classList.toggle("active");
+        body.classList.toggle("menu-open");
+      }
+
+      // Close mobile menu
+      function closeMobileMenu() {
+        burger.classList.remove("active");
+        mobileNav.classList.remove("active");
+        body.classList.remove("menu-open");
+      }
+
+      // Event listeners
+      if (burger) {
+        burger.addEventListener("click", toggleMobileMenu);
+      }
+
+      // Close menu when clicking on links
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
+      });
+
+      // Close menu when clicking outside
+      mobileNav.addEventListener("click", function (e) {
+        if (e.target === mobileNav) {
+          closeMobileMenu();
+        }
+      });
+    </script>
+  </body>
+</html>

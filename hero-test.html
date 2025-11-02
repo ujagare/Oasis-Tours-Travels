@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Slider Test</title>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .hero-test {
+        height: 100vh;
+        position: relative;
+      }
+
+      .heroSwiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .swiper-slide video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .slide-content {
+        text-align: center;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 2rem;
+        border-radius: 10px;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        color: white !important;
+      }
+
+      .swiper-pagination-bullet {
+        background: white !important;
+      }
+
+      .debug-info {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000;
+        font-size: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="debug-info" id="debugInfo">Loading...</div>
+
+    <section class="hero-test">
+      <div class="swiper heroSwiper">
+        <div class="swiper-wrapper">
+          <!-- Dubai Slide -->
+          <div class="swiper-slide">
+            <video muted loop preload="metadata">
+              <source src="video/Dubai.mp4" type="video/mp4" />
+            </video>
+            <div class="slide-content">
+              <h1>Dubai, UAE</h1>
+              <p>Slide 1 - Dubai</p>
+            </div>
+          </div>
+
+          <!-- Japan Slide -->
+          <div class="swiper-slide">
+            <video muted loop preload="metadata">
+              <source src="video/Japan.mp4" type="video/mp4" />
+            </video>
+            <div class="slide-content">
+              <h1>Japan</h1>
+              <p>Slide 2 - Japan</p>
+            </div>
+          </div>
+
+          <!-- Malaysia Slide -->
+          <div class="swiper-slide">
+            <video muted loop preload="metadata">
+              <source src="video/Malaysica.mp4" type="video/mp4" />
+            </video>
+            <div class="slide-content">
+              <h1>Malaysia</h1>
+              <p>Slide 3 - Malaysia</p>
+            </div>
+          </div>
+
+          <!-- USA Slide -->
+          <div class="swiper-slide">
+            <video muted loop preload="metadata">
+              <source src="video/Usa.mp4" type="video/mp4" />
+            </video>
+            <div class="slide-content">
+              <h1>United States</h1>
+              <p>Slide 4 - USA</p>
+            </div>
+          </div>
+
+          <!-- Kazakhstan Slide -->
+          <div class="swiper-slide">
+            <video muted loop preload="metadata">
+              <source src="video/kajajistan.mp4" type="video/mp4" />
+            </video>
+            <div class="slide-content">
+              <h1>Kazakhstan</h1>
+              <p>Slide 5 - Kazakhstan</p>
+            </div>
+          </div>
+
+          <!-- Adventure Slide -->
+          <div class="swiper-slide">
+            <video muted loop preload="metadata">
+              <source src="video/activity_video_bg.mp4" type="video/mp4" />
+            </video>
+            <div class="slide-content">
+              <h1>Adventure Awaits</h1>
+              <p>Slide 6 - Adventure</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("🚀 Hero Test Page Loading...");
+
+        const debugInfo = document.getElementById("debugInfo");
+
+        function updateDebugInfo(message) {
+          debugInfo.innerHTML = message;
+          console.log(message);
+        }
+
+        updateDebugInfo("Initializing Swiper...");
+
+        // Check slides
+        const slides = document.querySelectorAll(".swiper-slide");
+        updateDebugInfo(`Found ${slides.length} slides`);
+
+        // Initialize Swiper
+        const swiper = new Swiper(".heroSwiper", {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          on: {
+            init: function () {
+              updateDebugInfo(
+                `✅ Swiper initialized with ${this.slides.length} slides`
+              );
+              playCurrentVideo(this);
+            },
+            slideChange: function () {
+              updateDebugInfo(
+                `Slide changed to: ${this.activeIndex} (real: ${this.realIndex})`
+              );
+
+              // Stop all videos
+              document.querySelectorAll("video").forEach((video) => {
+                video.pause();
+                video.currentTime = 0;
+              });
+
+              // Play current video
+              playCurrentVideo(this);
+            },
+          },
+        });
+
+        function playCurrentVideo(swiperInstance) {
+          const activeSlide = swiperInstance.slides[swiperInstance.activeIndex];
+          const video = activeSlide?.querySelector("video");
+
+          if (video) {
+            video.currentTime = 0;
+            video.play().catch((e) => {
+              console.warn("Video autoplay prevented:", e);
+            });
+          }
+        }
+
+        // Test navigation
+        setTimeout(() => {
+          updateDebugInfo("Testing navigation...");
+          swiper.slideNext();
+        }, 5000);
+      });
+    </script>
+  </body>
+</html>

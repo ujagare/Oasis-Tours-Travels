@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Package - Oasis Travel & Tourism</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo_New.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/Oasis Logo_New.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/Oasis Logo_New.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="Images/Oasis Logo_New.png">
+    
+    <link rel="stylesheet" href="style.css" />
+    <!-- Local Tailwind CSS -->
+    <link rel="stylesheet" href="dist/style.css">
+    
+    <!-- Required Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body class="bg-gray-50">
+
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-40">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+              <img
+                class="w-16 h-12"
+                src="Images/Oasis Logo_New.png"
+                alt="Oasis Travel & Tourism"
+              />
+            </a>
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >About</a
+            >
+            <a href="packages.html" class="text-[#000042] font-semibold"
+              >Packages</a
+            >
+            <a
+              href="destinations.html"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >Destinations</a
+            >
+            <a
+              href="index.html#services"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >Services</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              >Contact</a
+            >
+            <a
+              href="contact.html"
+              class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+              >Book Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center mb-8">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Budget Tour Packages</h1>
+          <p class="text-xl mb-6">Explore the world without breaking the bank</p>
+          <div class="flex justify-center items-center space-x-8 text-sm">
+            <div class="flex items-center"><i class="fas fa-check-circle mr-2"></i>Best Price Guarantee</div>
+            <div class="flex items-center"><i class="fas fa-check-circle mr-2"></i>24/7 Support</div>
+            <div class="flex items-center"><i class="fas fa-check-circle mr-2"></i>Instant Booking</div>
+          </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="bg-white rounded-lg p-6 shadow-xl max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-4 gap-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Destination</label>
+              <select class="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-900">
+                <option>Select Destination</option>
+                <option>Dubai</option>
+                <option>Malaysia</option>
+                <option>Thailand</option>
+                <option>Singapore</option>
+                <option>Bali</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Duration</label>
+              <select class="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-900">
+                <option>Any Duration</option>
+                <option>3-5 Days</option>
+                <option>6-8 Days</option>
+                <option>9+ Days</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700 mb-2">Budget</label>
+              <select class="w-full px-3 py-2 border border-gray-300 rounded-md text-gray-900">
+                <option>Any Budget</option>
+                <option>Under ₹50,000</option>
+                <option>₹50,000 - ₹1,00,000</option>
+                <option>Above ₹1,00,000</option>
+              </select>
+            </div>
+            <div class="flex items-end">
+              <button class="w-full bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-600 font-semibold">
+                Search Packages
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter & Sort Section -->
+    <section class="py-8 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-wrap items-center justify-between mb-6">
+          <h2 class="text-2xl font-bold">Budget Tour Packages (24 packages found)</h2>
+          <div class="flex items-center space-x-4">
+            <select class="px-3 py-2 border border-gray-300 rounded-md">
+              <option>Sort by: Price (Low to High)</option>
+              <option>Sort by: Price (High to Low)</option>
+              <option>Sort by: Duration</option>
+              <option>Sort by: Popularity</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Filter Tags -->
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Under ₹1,00,000</span>
+          <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">3-7 Days</span>
+          <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">International</span>
+          <button class="text-red-600 text-sm hover:underline">Clear all filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Package Listings -->
+    <section class="py-8">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid lg:grid-cols-4 gap-6">
+          <!-- Sidebar Filters -->
+          <div class="lg:col-span-1">
+            <div class="bg-white rounded-lg shadow-sm p-6 sticky top-4">
+              <h3 class="font-bold text-lg mb-4">Filter Packages</h3>
+              
+              <!-- Price Filter -->
+              <div class="mb-6">
+                <h4 class="font-semibold mb-3">Price Range</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> Under ₹50,000 (8)
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> ₹50,000 - ₹1,00,000 (12)
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> Above ₹1,00,000 (4)
+                  </label>
+                </div>
+              </div>
+              
+              <!-- Duration Filter -->
+              <div class="mb-6">
+                <h4 class="font-semibold mb-3">Duration</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> 3-5 Days (10)
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> 6-8 Days (8)
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> 9+ Days (6)
+                  </label>
+                </div>
+              </div>
+              
+              <!-- Destination Filter -->
+              <div class="mb-6">
+                <h4 class="font-semibold mb-3">Destinations</h4>
+                <div class="space-y-2">
+                    <input type="checkbox" class="mr-2"> Dubai (6)
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> Thailand (5)
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> Malaysia (4)
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> Singapore (3)
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> Bali (3)
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> Nepal (3)
+                  </label>
+                </div>
+              </div>
+              
+              <!-- Package Type Filter -->
+              <div class="mb-6">
+                <h4 class="font-semibold mb-3">Package Type</h4>
+                <div class="space-y-2">
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> Adventure (8)
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> Cultural (6)
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> Beach (5)
+                  </label>
+                  <label class="flex items-center">
+                    <input type="checkbox" class="mr-2"> City Break (5)
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Package Cards -->
+          <div class="lg:col-span-3">
+            <div class="space-y-6">
+              
+              <!-- Package Card 1 -->
+              <div class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+                <div class="flex">
+                  <div class="w-1/3">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=300&h=200&fit=crop" alt="Dubai" class="w-full h-48 object-cover rounded-l-lg">
+                  </div>
+                  <div class="w-2/3 p-6">
+                    <div class="flex justify-between items-start mb-2">
+                      <div>
+                        <h3 class="text-xl font-bold mb-1">Dubai Budget Explorer</h3>
+                        <p class="text-gray-600 text-sm">5 Days / 4 Nights • Dubai, UAE</p>
+                      </div>
+                      <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Best Seller</span>
+                    </div>
+                    
+                    <div class="flex items-center mb-3">
+                      <div class="flex text-yellow-400 text-sm mr-2">★★★★☆</div>
+                      <span class="text-sm text-gray-600">4.2/5 (156 reviews)</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-hotel mr-2 text-blue-500"></i> 3-Star Hotel
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-utensils mr-2 text-green-500"></i> Breakfast Included
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-car mr-2 text-purple-500"></i> Airport Transfer
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-map-marked-alt mr-2 text-red-500"></i> City Tours
+                      </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <span class="text-2xl font-bold text-green-600">₹75,000</span>
+                        <span class="text-sm text-gray-500 line-through ml-2">₹95,000</span>
+                        <p class="text-xs text-gray-500">per person</p>
+                      </div>
+                      <div class="flex space-x-2">
+                        <button class="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-50">View Details</button>
+                        <button class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Package Card 2 -->
+              <div class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+                <div class="flex">
+                  <div class="w-1/3">
+                    <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=300&h=200&fit=crop" alt="Malaysia" class="w-full h-48 object-cover rounded-l-lg">
+                  </div>
+                  <div class="w-2/3 p-6">
+                    <div class="flex justify-between items-start mb-2">
+                      <div>
+                        <h3 class="text-xl font-bold mb-1">Malaysia Cultural Journey</h3>
+                        <p class="text-gray-600 text-sm">6 Days / 5 Nights • Kuala Lumpur, Malaysia</p>
+                      </div>
+                      <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">Popular</span>
+                    </div>
+                    
+                    <div class="flex items-center mb-3">
+                      <div class="flex text-yellow-400 text-sm mr-2">★★★★☆</div>
+                      <span class="text-sm text-gray-600">4.3/5 (89 reviews)</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-hotel mr-2 text-blue-500"></i> 3-Star Hotel
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-utensils mr-2 text-green-500"></i> Breakfast + 2 Meals
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-car mr-2 text-purple-500"></i> Private Transfer
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-camera mr-2 text-red-500"></i> Photo Spots
+                      </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <span class="text-2xl font-bold text-green-600">₹85,000</span>
+                        <span class="text-sm text-gray-500 line-through ml-2">₹1,05,000</span>
+                        <p class="text-xs text-gray-500">per person</p>
+                      </div>
+                      <div class="flex space-x-2">
+                        <button class="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-50">View Details</button>
+                        <button class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Package Card 3 -->
+              <div class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+                <div class="flex">
+                  <div class="w-1/3">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=300&h=200&fit=crop" alt="Thailand" class="w-full h-48 object-cover rounded-l-lg">
+                  </div>
+                  <div class="w-2/3 p-6">
+                    <div class="flex justify-between items-start mb-2">
+                      <div>
+                        <h3 class="text-xl font-bold mb-1">Thailand Island Adventure</h3>
+                        <p class="text-gray-600 text-sm">7 Days / 6 Nights • Bangkok, Phuket</p>
+                      </div>
+                      <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full">Adventure</span>
+                    </div>
+                    
+                    <div class="flex items-center mb-3">
+                      <div class="flex text-yellow-400 text-sm mr-2">★★★★★</div>
+                      <span class="text-sm text-gray-600">4.5/5 (203 reviews)</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-hotel mr-2 text-blue-500"></i> Beach Resort
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-utensils mr-2 text-green-500"></i> All Meals
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-ship mr-2 text-purple-500"></i> Island Hopping
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-swimmer mr-2 text-red-500"></i> Water Sports
+                      </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <span class="text-2xl font-bold text-green-600">₹95,000</span>
+                        <span class="text-sm text-gray-500 line-through ml-2">₹1,20,000</span>
+                        <p class="text-xs text-gray-500">per person</p>
+                      </div>
+                      <div class="flex space-x-2">
+                        <button class="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-50">View Details</button>
+                        <button class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Package Card 4 -->
+              <div class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+                <div class="flex">
+                  <div class="w-1/3">
+                    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=300&h=200&fit=crop" alt="Singapore" class="w-full h-48 object-cover rounded-l-lg">
+                  </div>
+                  <div class="w-2/3 p-6">
+                    <div class="flex justify-between items-start mb-2">
+                      <div>
+                        <h3 class="text-xl font-bold mb-1">Singapore City Break</h3>
+                        <p class="text-gray-600 text-sm">4 Days / 3 Nights • Singapore</p>
+                      </div>
+                      <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full">Quick Trip</span>
+                    </div>
+                    
+                    <div class="flex items-center mb-3">
+                      <div class="flex text-yellow-400 text-sm mr-2">★★★★☆</div>
+                      <span class="text-sm text-gray-600">4.1/5 (67 reviews)</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-hotel mr-2 text-blue-500"></i> City Hotel
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-utensils mr-2 text-green-500"></i> Breakfast
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-ticket-alt mr-2 text-purple-500"></i> City Pass
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-shopping-bag mr-2 text-red-500"></i> Shopping Tours
+                      </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <span class="text-2xl font-bold text-green-600">₹65,000</span>
+                        <span class="text-sm text-gray-500 line-through ml-2">₹80,000</span>
+                        <p class="text-xs text-gray-500">per person</p>
+                      </div>
+                      <div class="flex space-x-2">
+                        <button class="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-50">View Details</button>
+                        <button class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Package Card 5 -->
+              <div class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+                <div class="flex">
+                  <div class="w-1/3">
+                    <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=300&h=200&fit=crop" alt="Bali" class="w-full h-48 object-cover rounded-l-lg">
+                  </div>
+                  <div class="w-2/3 p-6">
+                    <div class="flex justify-between items-start mb-2">
+                      <div>
+                        <h3 class="text-xl font-bold mb-1">Bali Cultural Experience</h3>
+                        <p class="text-gray-600 text-sm">6 Days / 5 Nights • Ubud, Bali</p>
+                      </div>
+                      <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full">Tropical</span>
+                    </div>
+                    
+                    <div class="flex items-center mb-3">
+                      <div class="flex text-yellow-400 text-sm mr-2">★★★★☆</div>
+                      <span class="text-sm text-gray-600">4.4/5 (134 reviews)</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-hotel mr-2 text-blue-500"></i> Resort Stay
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-utensils mr-2 text-green-500"></i> Local Cuisine
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-temple mr-2 text-purple-500"></i> Temple Tours
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-spa mr-2 text-red-500"></i> Spa Sessions
+                      </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <span class="text-2xl font-bold text-green-600">₹78,000</span>
+                        <span class="text-sm text-gray-500 line-through ml-2">₹98,000</span>
+                        <p class="text-xs text-gray-500">per person</p>
+                      </div>
+                      <div class="flex space-x-2">
+                        <button class="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-50">View Details</button>
+                        <button class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Package Card 6 -->
+              <div class="bg-white rounded-lg shadow-sm border hover:shadow-md transition-shadow">
+                <div class="flex">
+                  <div class="w-1/3">
+                    <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=300&h=200&fit=crop" alt="Nepal" class="w-full h-48 object-cover rounded-l-lg">
+                  </div>
+                  <div class="w-2/3 p-6">
+                    <div class="flex justify-between items-start mb-2">
+                      <div>
+                        <h3 class="text-xl font-bold mb-1">Nepal Himalayan Trek</h3>
+                        <p class="text-gray-600 text-sm">5 Days / 4 Nights • Kathmandu, Nepal</p>
+                      </div>
+                      <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">Nature</span>
+                    </div>
+                    
+                    <div class="flex items-center mb-3">
+                      <div class="flex text-yellow-400 text-sm mr-2">★★★★☆</div>
+                      <span class="text-sm text-gray-600">4.0/5 (78 reviews)</span>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-4 text-sm">
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-hotel mr-2 text-blue-500"></i> Mountain Lodge
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-utensils mr-2 text-green-500"></i> All Meals
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-hiking mr-2 text-purple-500"></i> Guided Trek
+                      </div>
+                      <div class="flex items-center text-gray-600">
+                        <i class="fas fa-mountain mr-2 text-red-500"></i> Mountain Views
+                      </div>
+                    </div>
+                    
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <span class="text-2xl font-bold text-green-600">₹55,000</span>
+                        <span class="text-sm text-gray-500 line-through ml-2">₹70,000</span>
+                        <p class="text-xs text-gray-500">per person</p>
+                      </div>
+                      <div class="flex space-x-2">
+                        <button class="px-4 py-2 border border-blue-500 text-blue-500 rounded hover:bg-blue-50">View Details</button>
+                        <button class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600">Book Now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Load More Button -->
+              <div class="text-center py-8">
+                <button class="px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-semibold">Load More Packages (18 remaining)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section class="py-16 bg-gradient-to-r from-orange-500 to-red-600 text-white">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-6">Limited Time Offers!</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2">Early Bird Discount</h3>
+            <p class="text-3xl font-bold mb-2">20% OFF</p>
+            <p class="text-sm">Book 60 days in advance</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2">Group Booking</h3>
+            <p class="text-3xl font-bold mb-2">15% OFF</p>
+            <p class="text-sm">For groups of 6 or more</p>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <h3 class="text-xl font-bold mb-2">First Time Traveler</h3>
+            <p class="text-3xl font-bold mb-2">₹5,000 OFF</p>
+            <p class="text-sm">On your first booking</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Budget Packages -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Why Choose Our Budget Packages?</h2>
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-dollar-sign text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Best Value</h3>
+            <p class="text-gray-600">Get maximum experiences at the most affordable prices with no hidden costs</p>
+          </div>
+          <div class="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-shield-alt text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Quality Assured</h3>
+            <p class="text-gray-600">Comfortable accommodations and reliable services with verified reviews</p>
+          </div>
+          <div class="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-users text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Group Friendly</h3>
+            <p class="text-gray-600">Perfect for families, couples, and friend groups with flexible options</p>
+          </div>
+          <div class="text-center bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-headset text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+            <p class="text-gray-600">Round-the-clock assistance during your travels with dedicated support team</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-[#000042] text-white py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <img
+              class="w-32 mb-4"
+              src="Images/Oasis Logo_New.png"
+              alt="Oasis Travel & Tourism"
+            />
+            <p class="text-gray-300 mb-4">
+              Making travel dreams affordable for everyone. Explore the world without breaking the bank.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-facebook"></i></a>
+              <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-gray-300 hover:text-white text-xl"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li><a href="index.html" class="text-gray-300 hover:text-white transition-colors">Home</a></li>
+              <li><a href="about.html" class="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="packages.html" class="text-gray-300 hover:text-white transition-colors">All Packages</a></li>
+              <li><a href="destinations.html" class="text-gray-300 hover:text-white transition-colors">Destinations</a></li>
+              <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="contact.html" class="text-gray-300 hover:text-white transition-colors">Book Now</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Budget Packages</h3>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Dubai Budget - ₹75,000</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Malaysia Explorer - ₹85,000</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Thailand Adventure - ₹95,000</a></li>
+              <li><a href="#" class="text-gray-300 hover:text-white transition-colors">Singapore Getaway - ₹65,000</a></li>
+              <li><a href="standard-package.html" class="text-gray-300 hover:text-white transition-colors">Standard Package</a></li>
+              <li><a href="luxury-package.html" class="text-gray-300 hover:text-white transition-colors">Luxury Package</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+            <div class="space-y-3 text-gray-300">
+              <div class="flex items-center">
+                <i class="fas fa-phone mr-3 text-green-400"></i>
+                <div>
+                  <p class="font-semibold">+91 98765 43210</p>
+                  <p class="text-sm">24/7 Support</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-envelope mr-3 text-green-400"></i>
+                <div>
+                  <p class="font-semibold">budget@oasistravel.com</p>
+                  <p class="text-sm">Budget Packages</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-map-marker-alt mr-3 text-green-400"></i>
+                <div>
+                  <p class="font-semibold">Mumbai, India</p>
+                  <p class="text-sm">Head Office</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-12 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-300">&copy; 2024 Oasis Travel & Tourism. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+              <a href="#" class="text-gray-300 hover:text-white text-sm transition-colors">Privacy Policy</a>
+              <a href="#" class="text-gray-300 hover:text-white text-sm transition-colors">Terms & Conditions</a>
+              <a href="#" class="text-gray-300 hover:text-white text-sm transition-colors">Refund Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
