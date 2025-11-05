@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <!-- Enhanced Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo_New.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Images/Oasis Logo_New.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Images/Oasis Logo_New.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo_New.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="Images/Oasis Logo_New.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="Images/Oasis Logo_New.jpeg">
     <link rel="manifest" href="favicon_io/site.webmanifest">
-    <link rel="shortcut icon" href="Images/Oasis Logo_New.png">
+    <link rel="shortcut icon" href="Images/Oasis Logo_New.jpeg">
     
     <!-- PhotoSwipe CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.2/dist/photoswipe.css" />
@@ -298,15 +298,15 @@
         /* Hero section height adjustments */
         @media (max-height: 600px) {
             #home {
-                height: 100vh !important;
+                height: 90vh !important;
                 min-height: 500px !important;
             }
         }
         
         @media (max-width: 640px) {
             #home {
-                height: 100vh !important;
-                min-height: 100vh !important;
+                height: 90vh !important;
+                min-height: 90vh !important;
             }
         }
         
@@ -1140,7 +1140,7 @@
                 }
                 
                 .destinationsSwiper .swiper-slide .group h3 {
-                    font-size: 1rem !important;
+                    font-size: 1.5rem !important;
                 }
                 
                 .destinationsSwiper .swiper-slide .group p {
@@ -1491,11 +1491,75 @@
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .choice-text h2 {
-                font-size: 2.5rem !important;
+                font-size: 2rem !important;
             }
             
             .choice-text p {
                 font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .choice-text h2 {
+                font-size: 1.75rem !important;
+                line-height: 1.3 !important;
+            }
+            
+            .choice-text p {
+                font-size: 1rem;
+            }
+            
+            /* Services section heading mobile optimization */
+            #services h2 {
+                font-size: 2.25rem !important;
+                line-height: 1.3 !important;
+            }
+            
+            /* Stats section "Discover The World" heading mobile optimization */
+            .py-20 h2 {
+                font-size: 2rem !important;
+                line-height: 1.3 !important;
+            }
+            
+            /* Why Choose Oasis Travel heading mobile optimization */
+            #services .text-center h2 {
+                font-size: 2.5rem !important;
+                line-height: 1.2 !important;
+                text-align: center !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .choice-text h2 {
+                font-size: 1.5rem !important;
+                line-height: 1.4 !important;
+            }
+            
+            .choice-text p {
+                font-size: 0.9rem;
+            }
+            
+            /* Services section heading for small mobile */
+            #services h2 {
+                font-size: 2rem !important;
+                line-height: 1.4 !important;
+            }
+            
+            /* Stats section "Discover The World" heading mobile optimization */
+            .py-20 h2 {
+                font-size: 1.75rem !important;
+                line-height: 1.3 !important;
+            }
+            
+            /* Why Choose Oasis Travel heading for small mobile */
+            #services .text-center h2 {
+                font-size: 2.25rem !important;
+                line-height: 1.3 !important;
+                text-align: center !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
             }
             
             .country-choice-item {
@@ -1857,6 +1921,31 @@
                 margin: 0;
             }
             
+            /* Fix testimonials height on mobile */
+            .mySwiper {
+                height: auto !important;
+                min-height: 500px !important;
+                padding-bottom: 80px !important;
+            }
+            
+            .mySwiper .swiper-slide {
+                height: auto !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            
+            .mySwiper .swiper-slide > div {
+                width: 100% !important;
+                margin: 0 auto !important;
+                display: flex !important;
+                justify-content: center !important;
+            }
+            
+            .mySwiper .swiper-slide > div > div {
+                margin: 0 auto !important;
+            }
+            
             .testimonial-prev,
             .testimonial-next,
             .mySwiper2-prev,
@@ -1913,6 +2002,24 @@
             .mySwiper2 .swiper-slide > div {
                 margin: 0 0.5rem;
             }
+            
+            /* Small mobile testimonials fix */
+            .mySwiper {
+                height: auto !important;
+                min-height: 450px !important;
+                padding-bottom: 60px !important;
+                margin: 0 -1rem !important;
+            }
+            
+            .mySwiper .swiper-slide > div {
+                margin: 0 0.5rem !important;
+                display: flex !important;
+                justify-content: center !important;
+            }
+            
+            .mySwiper .swiper-slide > div > div {
+                margin: 0 auto !important;
+            }
         }
         
         /* Performance optimizations */
@@ -1951,6 +2058,12 @@
         
         .mySwiper3 .swiper-slide:active {
             cursor: grabbing !important;
+        }
+        
+        /* Country names in Popular Destinations cards */
+        .mySwiper3 .swiper-slide .group h3 {
+            font-size: 1.5rem !important;
+            font-weight: bold !important;
         }
         
         .mySwiper3 .swiper-button-next,
@@ -2168,6 +2281,21 @@
             .experiencesSwiper .swiper-slide > div {
                 max-width: 260px !important;
             }
+            
+            /* Stats section "Discover The World" heading for very small mobile */
+            .py-20 h2 {
+                font-size: 1.5rem !important;
+                line-height: 1.4 !important;
+            }
+            
+            /* Why Choose Oasis Travel heading for very small mobile */
+            #services .text-center h2 {
+                font-size: 2rem !important;
+                line-height: 1.3 !important;
+                text-align: center !important;
+                word-wrap: break-word !important;
+                overflow-wrap: break-word !important;
+            }
         }
         
 
@@ -2284,6 +2412,36 @@
             }
         }
         
+        /* View All Destinations Button Responsive */
+        @media (max-width: 768px) {
+            .text-center button {
+                padding: 0.75rem 1.5rem !important;
+                font-size: 0.875rem !important;
+            }
+            
+            .text-center button span {
+                font-size: 1rem !important;
+            }
+            
+            .text-center button svg {
+                width: 1rem !important;
+                height: 1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .text-center button {
+                padding: 0.625rem 1.25rem !important;
+                font-size: 0.8rem !important;
+                width: 100% !important;
+                max-width: 280px !important;
+            }
+            
+            .text-center button span {
+                font-size: 0.875rem !important;
+            }
+        }
+        
         @media (max-width: 480px) {
             .destinations-next,
             .destinations-prev {
@@ -2351,7 +2509,7 @@
                 <!-- Logo -->
                 <div class="flex items-center" style="z-index: 10000; position: relative;">
                     <a href="#" class="flex items-center space-x-2">
-                        <img class="w-20" src="Images/Oasis Logo_New.png" alt="Oasis Travel & Tourism" class="h-14 w-auto">
+                        <img class="w-20" src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="h-14 w-auto">
                     </a>
                 </div>
                 
@@ -2452,7 +2610,7 @@
             <div class="swiper heroSwiper h-full">
                 <div class="swiper-wrapper">
                     <!-- Dubai Slide -->
-                    <div class="swiper-slide relative overflow-hidden">
+                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='dubai.html'" style="cursor: pointer;">
                         <!-- Fallback background image -->
                         <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-purple-900 to-pink-900"></div>
                         <video autoplay muted loop preload="metadata" class="absolute inset-0 w-full h-full object-cover z-5">
@@ -2467,7 +2625,7 @@
                                 <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Dubai, UAE</h1>
                                 <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Experience luxury like never before in the city of gold</p>
                                 <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">From towering skyscrapers to pristine beaches, Dubai offers world-class shopping, dining, and entertainment. Discover the perfect blend of modern innovation and traditional Arabian culture.</p>
-                                <a href="destinations.html" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                <a href="dubai.html" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
                                     Explore Dubai
                                 </a>
                             </div>
@@ -2475,7 +2633,7 @@
                     </div>
                     
                     <!-- Japan Slide -->
-                    <div class="swiper-slide relative overflow-hidden">
+                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='japan.html'" style="cursor: pointer;">
                         <video muted loop preload="metadata" class="absolute inset-0 w-full h-full object-cover">
                             <source src="video/Japan.mp4" type="video/mp4">
                         </video>
@@ -2488,7 +2646,7 @@
                                 <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Japan</h1>
                                 <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Where ancient traditions meet cutting-edge technology</p>
                                 <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Immerse yourself in the land of the rising sun. From serene temples and cherry blossoms to bustling Tokyo streets and bullet trains, Japan offers an unforgettable cultural journey.</p>
-                                <a href="destinations.html" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                <a href="japan.html" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
                                     Discover Japan
                                 </a>
                             </div>
@@ -2557,8 +2715,8 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Adventure Activities Slide -->
-                    <div class="swiper-slide relative overflow-hidden">
+                    <!-- Maldives Slide -->
+                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='maldives.html'" style="cursor: pointer;">
                         <video muted loop preload="metadata" class="absolute inset-0 w-full h-full object-cover">
                             <source src="video/activity_video_bg.mp4" type="video/mp4">
                         </video>
@@ -2568,12 +2726,12 @@
                         <!-- Hero Content -->
                         <div class="relative z-20 flex items-center justify-start h-full text-left text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
                             <div class="slide-text w-full max-w-4xl">
-                                <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Adventure Awaits</h1>
-                                <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Thrilling experiences and outdoor adventures</p>
-                                <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">From mountain climbing to water sports, desert safaris to jungle treks - experience heart-pumping adventures across the globe. Create memories that will last a lifetime with our expertly guided adventure tours.</p>
-                                <button class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-white hover:text-[#000042] transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
-                                    Book Adventure
-                                </button>
+                                <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Maldives</h1>
+                                <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Paradise on Earth with crystal clear waters</p>
+                                <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Escape to tropical paradise with pristine beaches, luxury overwater villas, and world-class diving. Experience the ultimate romantic getaway in the Maldives' crystal-clear lagoons and coral reefs.</p>
+                                <a href="maldives.html" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-white hover:text-[#000042] transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                    Discover Maldives
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -3115,7 +3273,7 @@
                 <!-- Header -->
                 <div class="text-center mb-16">
                     <span class="text-cyan-400 text-lg font-semibold tracking-wide uppercase">Our Services</span>
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 mt-4">Ready for an unforgettable trip?</h2>
+                    <h2 class="text-sm md:text-5xl font-bold text-white mb-6 mt-4">Let's Get StartedY</h2>
                     <p class="text-gray-300 text-lg max-w-4xl mx-auto leading-relaxed">
                         We're the travel experts you can trust. From custom itineraries to all-inclusive tours, we handle every detail so you can simply relax and enjoy the world. Explore our hand-picked collection of adventures, book flights and hotels with ease, and get 24/7 support. Let us take the stress out of planning and turn your dream vacation into a reality. Start your journey with our expertise today and discover the perfect trip for you.
                     </p>
@@ -3369,7 +3527,7 @@
                                             Dubai is a futuristic metropolis where luxury meets innovation. Experience Burj Khalifa, pristine beaches, and world-class shopping in this modern marvel...
                                         </p>
                                     </div>
-                                    <button class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
+                                    <button onclick="window.location.href='dubai.html'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
                                         Discover Dubai
                                     </button>
                                 </div>
@@ -3401,7 +3559,7 @@
                                             The Maldives offers tropical paradise with crystal-clear waters, pristine beaches, and luxury overwater villas. Perfect for romantic getaways and relaxation...
                                         </p>
                                     </div>
-                                    <button class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
+                                    <button onclick="window.location.href='maldives.html'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
                                         Visit Maldives
                                     </button>
                                 </div>
@@ -3433,7 +3591,7 @@
                                             Japan blends ancient traditions with cutting-edge technology. Experience serene temples, bustling Tokyo streets, cherry blossoms, and authentic cuisine...
                                         </p>
                                     </div>
-                                    <button class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
+                                    <button onclick="window.location.href='japan.html'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
                                         Experience Japan
                                     </button>
                                 </div>
@@ -3505,7 +3663,18 @@
                         </div>
                     </div>
                     
+                   
+                </div>
                 
+                <!-- View All Destinations Button -->
+                <div class="text-center mt-12">
+                    <button onclick="window.location.href='destinations.html'" class="inline-flex items-center justify-center bg-gradient-to-r from-[#000042] to-blue-600 text-white font-semibold px-8 py-4 rounded-xl hover:from-blue-600 hover:to-[#000042] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl group">
+                        <span class="mr-3 text-lg">View All Destinations</span>
+                        <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </button>
+                </div>
               
         </section>
 
@@ -3903,8 +4072,8 @@
                     <div class="inline-block bg-gradient-to-r from-[#000042] to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
                         Our Services
                     </div>
-                    <h2 class="text-5xl md:text-6xl font-bold text-[#000042] mb-6 leading-tight">Why Choose<br><span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-[#000042]">Oasis Travel</span></h2>
-                    <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">We deliver the best service and experience to make your journey unforgettable</p>
+                        <h2 class="font-semibold text-blue-900">Why Chooose Us</h2>
+                    <p class="text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">We deliver the best service and experience to make your journey unforgettable</p>
                 </div>
 
                 <!-- Services Grid -->
@@ -3963,7 +4132,7 @@
                 <div class="grid lg:grid-cols-2 gap-12 items-center">
                     <!-- Left Content -->
                     <div class="text-white">
-                        <h3 class="text-3xl font-bold mb-6">Let's Plan Your Dream Journey</h3>
+                        <h3 class="text-2xl font-bold mb-6">Let's Plan Your Dream Journey</h3>
                         <p class="text-xl mb-8 text-gray-200 leading-relaxed">Ready to explore the world? Our travel experts are here to create unforgettable experiences tailored just for you.</p>
                         
                         <div class="space-y-6">
@@ -4169,7 +4338,7 @@
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <!-- Logo Section -->
             <div class="mb-12 text-center">
-                <img src="Images/Oasis Logo_New.png" alt="Oasis Travel & Tourism" class="h-20 mx-auto mb-4">
+                <img src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="h-20 mx-auto mb-4">
                 <p class="text-gray-300 max-w-2xl mx-auto">Your trusted partner for unforgettable travel experiences. Discover the world with Oasis Travel & Tourism.</p>
             </div>
             

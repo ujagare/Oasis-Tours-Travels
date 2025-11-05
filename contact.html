@@ -26,6 +26,8 @@
         .w-15 { width: 3.75rem; }
         .h-15 { height: 3.75rem; }
         
+
+        
         /* Mobile Navigation Styles - Exact Image Match */
         .mobile-nav {
             position: fixed;
@@ -238,30 +240,7 @@
             pointer-events: auto !important;
         }
         
-        /* Mobile optimization for Get In Touch text */
-        @media (max-width: 640px) {
-            .contact-title {
-                font-size: 2rem !important;
-                line-height: 1.3 !important;
-                margin-bottom: 1rem !important;
-                padding: 0 1rem !important;
-                word-wrap: break-word !important;
-                text-align: center !important;
-                width: 100% !important;
-                display: block !important;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .contact-title {
-                font-size: 1.75rem !important;
-                line-height: 1.4 !important;
-                margin-bottom: 0.75rem !important;
-                text-align: center !important;
-                width: 100% !important;
-                display: block !important;
-            }
-        }
+
         
         .burger span {
             pointer-events: none !important;
@@ -319,7 +298,7 @@
                 <!-- Logo -->
                 <div class="flex items-center" style="z-index: 10000; position: relative;">
                     <a href="#" class="flex items-center space-x-2">
-                        <img class="w-20" src="Images/Oasis Logo_New.png" alt="Oasis Travel & Tourism" class="h-14 w-auto">
+                        <img class="w-20" src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="h-14 w-auto">
                     </a>
                 </div>
                 
@@ -428,16 +407,10 @@
     
     <!-- Contact Section -->
     <section class="py-20 bg-gray-100">
-        <div class="w-full px-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Title -->
-            <div class="text-center mb-16">
-                <h3 class="contact-title text-3xl sm:text-4xl md:text-5xl font-normal text-black mb-5 leading-tight text-center px-4">
-                    Get In <span class="text-[#000042]">Touch</span>
-                </h3>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    We'd love to hear from you. Send us a message and we'll respond as soon as possible to help you plan your perfect trip.
-                </p>
-            </div>
+            <div class="text-center mb-16" style="text-align: center;">
+                
             
             <!-- Contact Info Bar - Horizontal Layout -->
             <div class=" py-10 mb-16 rounded-3xl">
@@ -842,7 +815,7 @@
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <!-- Logo Section -->
             <div class="mb-12 text-center">
-                <img src="Images/Oasis Logo_New.png" alt="Oasis Travel & Tourism" class="h-20 mx-auto mb-4">
+                <img src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="h-20 mx-auto mb-4">
                 <p class="text-gray-300 max-w-2xl mx-auto">Your trusted partner for unforgettable travel experiences. Discover the world with Oasis Travel & Tourism.</p>
             </div>
             
@@ -1082,28 +1055,31 @@
 
                 // Apply text animation to contact page headings (exclude only hero section)
                 gsap.utils.toArray('section h1, section h2, section h3, section h3.text-3xl, section h3.text-4xl, section h3.text-5xl').forEach((heading) => {
-                    // Skip only Contact Us hero heading, allow Get In Touch to animate
-                    if (!heading.textContent.includes('Contact Us')) {
+                    // Skip Contact Us hero heading and Get In Touch heading to prevent centering issues
+                    if (!heading.textContent.includes('Contact Us') && !heading.textContent.includes('Get In Touch')) {
                         createSimpleTextAnimation(heading);
                     }
                 });
 
-                // Subtitle Animation
+                // Subtitle Animation (exclude Get In Touch)
                 gsap.utils.toArray('section h3, .text-blue-300').forEach((subtitle) => {
-                    gsap.fromTo(subtitle,
-                        { opacity: 0, y: 50 },
-                        {
-                            opacity: 1,
-                            y: 0,
-                            duration: 0.8,
-                            ease: 'power2.out',
-                            scrollTrigger: {
-                                trigger: subtitle,
-                                start: 'top 85%',
-                                toggleActions: 'play none none none'
+                    // Skip Get In Touch heading to prevent centering issues
+                    if (!subtitle.textContent.includes('Get In Touch')) {
+                        gsap.fromTo(subtitle,
+                            { opacity: 0, y: 50 },
+                            {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.8,
+                                ease: 'power2.out',
+                                scrollTrigger: {
+                                    trigger: subtitle,
+                                    start: 'top 85%',
+                                    toggleActions: 'play none none none'
+                                }
                             }
-                        }
-                    );
+                        );
+                    }
                 });
 
                 // Text with Typewriter Effect (exclude only hero section)

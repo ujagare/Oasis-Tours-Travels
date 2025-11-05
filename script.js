@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "ℹ️ Hero Swiper initialization delegated to hero-slider-fix.js"
     );
 
-    // Destinations Swiper - Complete Mobile Fix (DISABLED - No destinationsSwiper found)
+    // Destinations Swiper - Disabled to avoid conflicts with individual page initializations
     const destinationsElement = document.querySelector(".destinationsSwiper");
     if (false && destinationsElement) {
       const destinationsSwiper = new Swiper(".destinationsSwiper", {
@@ -294,13 +294,12 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       console.log("Destinations Swiper initialized successfully");
-    } else {
-      console.error("Destinations Swiper element not found!");
     }
+    // Note: destinationsSwiper initialization is handled by individual page scripts to avoid conflicts
 
-    // Experiences Swiper (Popular Destinations) - Mobile Optimized
+    // Experiences Swiper - Disabled to avoid conflicts with index.html initialization
     const experiencesElement = document.querySelector(".experiencesSwiper");
-    if (experiencesElement) {
+    if (false && experiencesElement) {
       const experiencesSwiper = new Swiper(".experiencesSwiper", {
         slidesPerView: 1,
         spaceBetween: 0,
@@ -414,9 +413,8 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       console.log("Experiences Swiper initialized successfully");
-    } else {
-      console.error("Experiences Swiper element not found!");
     }
+    // Note: experiencesSwiper initialization is handled by index.html script to avoid conflicts
 
     // Testimonials Swiper (Original)
     const testimonialsElement = document.querySelector(".mySwiper");

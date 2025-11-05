@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maldives - Oasis Travel & Tourism</title>
+    <title>Japan - Oasis Travel & Tourism</title>
     
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo_New.png">
@@ -66,8 +66,8 @@
         }
         
         /* Enhanced Custom Styles */
-        .maldives-gallery .swiper-button-next,
-        .maldives-gallery .swiper-button-prev {
+        .japan-gallery .swiper-button-next,
+        .japan-gallery .swiper-button-prev {
             color: white;
             background: rgba(0, 0, 0, 0.3);
             width: 35px;
@@ -78,14 +78,14 @@
             transition: all 0.3s ease;
         }
         
-        .maldives-gallery .swiper-button-next:after,
-        .maldives-gallery .swiper-button-prev:after {
+        .japan-gallery .swiper-button-next:after,
+        .japan-gallery .swiper-button-prev:after {
             font-size: 12px;
             font-weight: bold;
         }
         
-        .maldives-gallery .swiper-button-next:hover,
-        .maldives-gallery .swiper-button-prev:hover {
+        .japan-gallery .swiper-button-next:hover,
+        .japan-gallery .swiper-button-prev:hover {
             background: rgba(6, 182, 212, 0.8);
             transform: scale(1.1);
         }
@@ -458,74 +458,6 @@
         .burger.active .line2 {
             transform: rotate(-45deg) translateY(-6px);
         }
-        
-        /* Hide burger menu on desktop */
-        @media (min-width: 769px) {
-            .burger {
-                display: none !important;
-            }
-        }
-        
-        /* Responsive card heights */
-        @media (max-width: 640px) {
-            .swiper-slide .h-48 {
-                height: 10rem !important; /* h-40 equivalent */
-            }
-            
-            .destinationsSwiper {
-                padding: 10px 0 !important;
-            }
-            
-            .swiper-slide .mx-2 {
-                margin-left: 0.5rem !important;
-                margin-right: 0.5rem !important;
-            }
-            
-            .swiper-slide .p-6 {
-                padding: 1rem !important;
-            }
-            
-            .swiper-slide h3 {
-                font-size: 1rem !important;
-                margin-bottom: 0.5rem !important;
-            }
-            
-            .swiper-slide p {
-                font-size: 0.875rem !important;
-                margin-bottom: 1rem !important;
-            }
-            
-            .swiper-slide button {
-                font-size: 0.75rem !important;
-                padding: 0.5rem 1rem !important;
-            }
-        }
-        
-        @media (min-width: 641px) and (max-width: 768px) {
-            .swiper-slide .h-48 {
-                height: 11rem !important; /* h-44 equivalent */
-            }
-            
-            .destinationsSwiper {
-                padding: 15px 0 !important;
-            }
-        }
-        
-        /* Ensure burger menu is visible on mobile only */
-        @media (max-width: 768px) {
-            .burger {
-                display: flex !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-            }
-            
-            .burger span {
-                background: white !important;
-                display: block !important;
-                visibility: visible !important;
-                opacity: 1 !important;
-            }
-        }
     </style>
 </head>
 <body>
@@ -549,7 +481,7 @@
                     <a href="destinations.html" class="text-white hover:text-blue-300 font-bold transition-colors">Destinations</a>
                     <a href="index.html#gallery" class="text-white hover:text-blue-300 font-bold transition-colors">Gallery</a>
                     <a href="contact.html" class="text-white hover:text-blue-300 font-bold transition-colors">Contact</a>
-                    <button class="border-2 text-white px-6 py-2 rounded-lg hover:bg-[#000042] transition-colors font-semibold">
+                    <button onclick="window.location.href='contact.html'" class="border-2 text-white px-6 py-2 rounded-lg hover:bg-[#000042] transition-colors font-semibold">
                         Book Now
                     </button>
                 </div>
@@ -636,7 +568,7 @@
     <section class="pt-28 relative overflow-hidden flex items-center" style="height: 70vh; min-height: 70vh;">
         <!-- Video Background -->
         <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
-            <source src="video/activity_video_bg.mp4" type="video/mp4">
+            <source src="video/Japan.mp4" type="video/mp4">
             <!-- Fallback gradient background if video fails to load -->
         </video>
         
@@ -652,12 +584,12 @@
         
         <!-- Content -->
         <div class="max-w-7xl mx-auto px-4 text-center relative z-30 w-full">
-            <h1 class="text-6xl md:text-8xl font-bold text-white mb-12 text-glow-white">Maldives</h1>
+            <h1 class="text-6xl md:text-8xl font-bold text-white mb-12 text-glow-white">Japan</h1>
             
             <!-- CTA Button -->
             <div class="flex justify-center">
-                <button onclick="window.location.href='booking.html?destination=Maldives'" class="glass-card text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base md:text-lg hover:scale-105 transition-all duration-300 border border-white/30">
-                    Book Your Paradise
+                <button onclick="window.location.href='contact.html?destination=Japan'" class="glass-card text-white px-8 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all duration-300 border border-white/30">
+                    Book Your Journey
                 </button>
             </div>
         </div>
@@ -671,8 +603,8 @@
                     <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 float-animation" style="background-color: #000042;">
                         <i data-lucide="map-pin" class="w-8 h-8 text-white"></i>
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-3 text-lg">Capital</h3>
-                    <p class="text-gray-600 text-lg font-semibold">Malé</p>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg">Country</h3>
+                    <p class="text-gray-600 text-lg font-semibold">Japan</p>
                     <div class="mt-4 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 </div>
                 <div class="group p-8 bg-white rounded-2xl shadow-lg hover-lift hover-glow card-tilt border border-gray-100">
@@ -680,7 +612,7 @@
                         <i data-lucide="users" class="w-8 h-8 text-white"></i>
                     </div>
                     <h3 class="font-bold text-gray-800 mb-3 text-lg">Population</h3>
-                    <p class="text-gray-600 text-lg font-semibold">540,000</p>
+                    <p class="text-gray-600 text-lg font-semibold">125 Million</p>
                     <div class="mt-4 h-1 bg-gradient-to-r from-pink-400 to-red-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 </div>
                 <div class="group p-8 bg-white rounded-2xl shadow-lg hover-lift hover-glow card-tilt border border-gray-100">
@@ -688,7 +620,7 @@
                         <i data-lucide="globe" class="w-8 h-8 text-white"></i>
                     </div>
                     <h3 class="font-bold text-gray-800 mb-3 text-lg">Language</h3>
-                    <p class="text-gray-600 text-lg font-semibold">Dhivehi, English</p>
+                    <p class="text-gray-600 text-lg font-semibold">Japanese</p>
                     <div class="mt-4 h-1 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 </div>
                 <div class="group p-8 bg-white rounded-2xl shadow-lg hover-lift hover-glow card-tilt border border-gray-100">
@@ -696,7 +628,7 @@
                         <i data-lucide="banknote" class="w-8 h-8 text-white"></i>
                     </div>
                     <h3 class="font-bold text-gray-800 mb-3 text-lg">Currency</h3>
-                    <p class="text-gray-600 text-lg font-semibold">Maldivian Rufiyaa</p>
+                    <p class="text-gray-600 text-lg font-semibold">Japanese Yen</p>
                     <div class="mt-4 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
                 </div>
             </div>
@@ -708,24 +640,24 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 sm:mb-6">Discover Maldives</h2>
-                    <p class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">The Maldives is a tropical paradise consisting of 1,192 coral islands grouped in 26 atolls. Known for its crystal-clear waters, pristine beaches, and luxury overwater bungalows, it's the perfect destination for romance and relaxation.</p>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Discover Japan</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">Japan is a captivating island nation where ancient traditions seamlessly blend with cutting-edge technology. From serene temples and cherry blossoms to bustling Tokyo streets and bullet trains, Japan offers an unforgettable cultural experience that balances modern innovation with timeless beauty.</p>
                     <div class="space-y-4">
                         <div class="flex items-center">
-                            <i data-lucide="check-circle" class="w-5 h-5 sm:w-6 sm:h-6 text-cyan-600 mr-2 sm:mr-3"></i>
-                            <span class="text-sm sm:text-base text-gray-700">Crystal clear turquoise waters</span>
+                            <i data-lucide="check-circle" class="w-6 h-6 text-cyan-600 mr-3"></i>
+                            <span class="text-gray-700">Ancient temples & shrines</span>
                         </div>
                         <div class="flex items-center">
-                            <i data-lucide="check-circle" class="w-5 h-5 sm:w-6 sm:h-6 text-cyan-600 mr-2 sm:mr-3"></i>
-                            <span class="text-sm sm:text-base text-gray-700">Luxury overwater villas</span>
+                            <i data-lucide="check-circle" class="w-6 h-6 text-cyan-600 mr-3"></i>
+                            <span class="text-gray-700">Cherry blossom seasons</span>
                         </div>
                         <div class="flex items-center">
-                            <i data-lucide="check-circle" class="w-5 h-5 sm:w-6 sm:h-6 text-cyan-600 mr-2 sm:mr-3"></i>
-                            <span class="text-sm sm:text-base text-gray-700">World-class diving & snorkeling</span>
+                            <i data-lucide="check-circle" class="w-6 h-6 text-cyan-600 mr-3"></i>
+                            <span class="text-gray-700">Traditional hot springs</span>
                         </div>
                         <div class="flex items-center">
-                            <i data-lucide="check-circle" class="w-5 h-5 sm:w-6 sm:h-6 text-cyan-600 mr-2 sm:mr-3"></i>
-                            <span class="text-sm sm:text-base text-gray-700">Private island resorts</span>
+                            <i data-lucide="check-circle" class="w-6 h-6 text-cyan-600 mr-3"></i>
+                            <span class="text-gray-700">Modern cities & culture</span>
                         </div>
                     </div>
                 </div>
@@ -763,6 +695,7 @@
                         <div class="swiper-button-prev"></div>
                     </div>
                 </div>
+            </div>
         </div>
     </section>
 
@@ -776,19 +709,19 @@
         
         <div class="max-w-7xl mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold text-gray-800 mb-6 text-glow">Top Destinations in Maldives</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore the most breathtaking atolls and islands in the Maldives archipelago</p>
+                <h2 class="text-5xl font-bold text-gray-800 mb-6 text-glow">Top Destinations in Japan</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore the most iconic attractions and landmarks in the Land of the Rising Sun</p>
             </div>
             
             <!-- Destinations Slider -->
             <div class="relative">
                 <div class="swiper destinationsSwiper overflow-hidden">
                     <div class="swiper-wrapper pb-8">
-                        <!-- Slide 1 - Malé -->
+                        <!-- Slide 1 - Tokyo -->
                         <div class="swiper-slide">
                             <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
                                 <div class="h-48 relative overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Malé Capital City" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Tokyo Skyline" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                                     <div class="absolute top-4 right-4">
                                         <div class="w-8 h-8 rounded-full flex items-center justify-center">
@@ -802,11 +735,11 @@
                                     </div>
                                 </div>
                                 <div class="p-6">
-                                    <h3 class="font-bold mb-2 text-lg group-hover:text-cyan-600 transition-colors">Malé</h3>
-                                    <p class="text-sm text-gray-600 mb-4">Capital city with rich local culture and vibrant markets</p>
+                                    <h3 class="font-bold mb-2 text-lg group-hover:text-yellow-600 transition-colors">Tokyo</h3>
+                                    <p class="text-sm text-gray-600 mb-4">Modern metropolis with skyscrapers and traditional culture</p>
                                     <div class="flex justify-between items-center">
-                                        <span class="text-cyan-600 font-bold text-lg">From $200/day</span>
-                                        <button onclick="window.location.href='booking.html?destination=Male&price=200'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
+                                        <span class="text-yellow-600 font-bold text-lg">From $200/day</span>
+                                        <button onclick="window.location.href='booking.html?destination=Tokyo&price=200'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
                                             Explore
                                         </button>
                                     </div>
@@ -814,11 +747,11 @@
                             </div>
                         </div>
                         
-                        <!-- Slide 2 - Baa Atoll -->
+                        <!-- Slide 2 - Mount Fuji -->
                         <div class="swiper-slide">
                             <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
                                 <div class="h-48 relative overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Baa Atoll UNESCO Site" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mount Fuji" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                                     <div class="absolute top-4 right-4">
                                         <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
@@ -832,11 +765,11 @@
                                     </div>
                                 </div>
                                 <div class="p-6">
-                                    <h3 class="font-bold mb-2 text-lg group-hover:text-teal-600 transition-colors">Baa Atoll</h3>
-                                    <p class="text-sm text-gray-600 mb-4">UNESCO Biosphere Reserve with pristine marine life</p>
+                                    <h3 class="font-bold mb-2 text-lg group-hover:text-blue-600 transition-colors">Mount Fuji</h3>
+                                    <p class="text-sm text-gray-600 mb-4">Japan's sacred mountain and iconic symbol</p>
                                     <div class="flex justify-between items-center">
-                                        <span class="text-teal-600 font-bold text-lg">From $400/day</span>
-                                        <button onclick="window.location.href='booking.html?destination=Baa Atoll&price=400'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
+                                        <span class="text-blue-600 font-bold text-lg">From $150/day</span>
+                                        <button onclick="window.location.href='booking.html?destination=Mount Fuji&price=150'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
                                             Explore
                                         </button>
                                     </div>
@@ -844,131 +777,11 @@
                             </div>
                         </div>
                         
-                        <!-- Slide 3 - Ari Atoll -->
+                        <!-- Slide 3 - Kyoto -->
                         <div class="swiper-slide">
                             <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
                                 <div class="h-48 relative overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Ari Atoll Marine Life" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                                    <div class="absolute top-4 right-4">
-                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                                            <i data-lucide="fish" class="w-4 h-4 text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div class="absolute bottom-4 left-4">
-                                        <div class="glass-card px-3 py-1 rounded-full">
-                                            <span class="text-white text-sm font-semibold">Marine Life</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="font-bold mb-2 text-lg group-hover:text-blue-600 transition-colors">Ari Atoll</h3>
-                                    <p class="text-sm text-gray-600 mb-4">Famous for whale shark encounters and diving</p>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-blue-600 font-bold text-lg">From $350/day</span>
-                                        <button onclick="window.location.href='booking.html?destination=Ari Atoll&price=350'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
-                                            Explore
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 4 - Addu Atoll -->
-                        <div class="swiper-slide">
-                            <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
-                                <div class="h-48 relative overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Addu Atoll Paradise" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                                    <div class="absolute top-4 right-4">
-                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                                            <i data-lucide="sunset" class="w-4 h-4 text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div class="absolute bottom-4 left-4">
-                                        <div class="glass-card px-3 py-1 rounded-full">
-                                            <span class="text-white text-sm font-semibold">Paradise</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="font-bold mb-2 text-lg group-hover:text-purple-600 transition-colors">Addu Atoll</h3>
-                                    <p class="text-sm text-gray-600 mb-4">Southernmost atoll with untouched beauty</p>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-purple-600 font-bold text-lg">From $300/day</span>
-                                        <button onclick="window.location.href='booking.html?destination=Addu Atoll&price=300'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
-                                            Explore
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 5 - Lhaviyani Atoll -->
-                        <div class="swiper-slide">
-                            <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
-                                <div class="h-48 relative overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2062&q=80" alt="Lhaviyani Atoll Diving" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                                    <div class="absolute top-4 right-4">
-                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                                            <i data-lucide="waves" class="w-4 h-4 text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div class="absolute bottom-4 left-4">
-                                        <div class="glass-card px-3 py-1 rounded-full">
-                                            <span class="text-white text-sm font-semibold">Diving Paradise</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="font-bold mb-2 text-lg group-hover:text-emerald-600 transition-colors">Lhaviyani Atoll</h3>
-                                    <p class="text-sm text-gray-600 mb-4">World-class diving spots and coral reefs</p>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-emerald-600 font-bold text-lg">From $380/day</span>
-                                        <button onclick="window.location.href='booking.html?destination=Lhaviyani Atoll&price=380'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
-                                            Explore
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 6 - Noonu Atoll -->
-                        <div class="swiper-slide">
-                            <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
-                                <div class="h-48 relative overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Noonu Atoll Romantic" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
-                                    <div class="absolute top-4 right-4">
-                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                                            <i data-lucide="heart" class="w-4 h-4 text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div class="absolute bottom-4 left-4">
-                                        <div class="glass-card px-3 py-1 rounded-full">
-                                            <span class="text-white text-sm font-semibold">Romantic</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="p-6">
-                                    <h3 class="font-bold mb-2 text-lg group-hover:text-rose-600 transition-colors">Noonu Atoll</h3>
-                                    <p class="text-sm text-gray-600 mb-4">Perfect for romantic getaways and honeymoons</p>
-                                    <div class="flex justify-between items-center">
-                                        <span class="text-rose-600 font-bold text-lg">From $450/day</span>
-                                        <button onclick="window.location.href='booking.html?destination=Noonu Atoll&price=450'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
-                                            Explore
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Slide 7 - Raa Atoll -->
-                        <div class="swiper-slide">
-                            <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
-                                <div class="h-48 relative overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2065&q=80" alt="Raa Atoll Luxury" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <img src="https://images.unsplash.com/photo-1545569341-9eb8b30979d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Kyoto Temples" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                                     <div class="absolute top-4 right-4">
                                         <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
@@ -977,16 +790,16 @@
                                     </div>
                                     <div class="absolute bottom-4 left-4">
                                         <div class="glass-card px-3 py-1 rounded-full">
-                                            <span class="text-white text-sm font-semibold">Luxury</span>
+                                            <span class="text-white text-sm font-semibold">Ancient Culture</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="p-6">
-                                    <h3 class="font-bold mb-2 text-lg group-hover:text-violet-600 transition-colors">Raa Atoll</h3>
-                                    <p class="text-sm text-gray-600 mb-4">Exclusive luxury resorts and private islands</p>
+                                    <h3 class="font-bold mb-2 text-lg group-hover:text-red-600 transition-colors">Kyoto</h3>
+                                    <p class="text-sm text-gray-600 mb-4">Ancient capital with temples and traditional culture</p>
                                     <div class="flex justify-between items-center">
-                                        <span class="text-violet-600 font-bold text-lg">From $500/day</span>
-                                        <button onclick="window.location.href='booking.html?destination=Raa Atoll&price=500'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
+                                        <span class="text-red-600 font-bold text-lg">From $180/day</span>
+                                        <button onclick="window.location.href='booking.html?destination=Kyoto&price=180'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
                                             Explore
                                         </button>
                                     </div>
@@ -994,29 +807,149 @@
                             </div>
                         </div>
                         
-                        <!-- Slide 8 - Kaafu Atoll -->
+                        <!-- Slide 4 - Osaka -->
                         <div class="swiper-slide">
                             <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
                                 <div class="h-48 relative overflow-hidden">
-                                    <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Kaafu Atoll Adventure" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Osaka Castle" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                                     <div class="absolute top-4 right-4">
                                         <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                                            <i data-lucide="sun" class="w-4 h-4 text-white"></i>
+                                            <i data-lucide="utensils" class="w-4 h-4 text-white"></i>
                                         </div>
                                     </div>
                                     <div class="absolute bottom-4 left-4">
                                         <div class="glass-card px-3 py-1 rounded-full">
-                                            <span class="text-white text-sm font-semibold">Adventure</span>
+                                            <span class="text-white text-sm font-semibold">Food Capital</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="p-6">
-                                    <h3 class="font-bold mb-2 text-lg group-hover:text-amber-600 transition-colors">Kaafu Atoll</h3>
-                                    <p class="text-sm text-gray-600 mb-4">Adventure activities and water sports hub</p>
+                                    <h3 class="font-bold mb-2 text-lg group-hover:text-purple-600 transition-colors">Osaka</h3>
+                                    <p class="text-sm text-gray-600 mb-4">Japan's kitchen with incredible street food and castle</p>
                                     <div class="flex justify-between items-center">
-                                        <span class="text-amber-600 font-bold text-lg">From $320/day</span>
-                                        <button onclick="window.location.href='booking.html?destination=Kaafu Atoll&price=320'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
+                                        <span class="text-purple-600 font-bold text-lg">From $160/day</span>
+                                        <button onclick="window.location.href='booking.html?destination=Osaka&price=160'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
+                                            Explore
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 5 - Hiroshima -->
+                        <div class="swiper-slide">
+                            <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
+                                <div class="h-48 relative overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Hiroshima Peace Memorial" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                    <div class="absolute top-4 right-4">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                                            <i data-lucide="heart" class="w-4 h-4 text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-4 left-4">
+                                        <div class="glass-card px-3 py-1 rounded-full">
+                                            <span class="text-white text-sm font-semibold">Peace Memorial</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-bold mb-2 text-lg group-hover:text-emerald-600 transition-colors">Hiroshima</h3>
+                                    <p class="text-sm text-gray-600 mb-4">Historic city with peace memorial and beautiful islands</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-emerald-600 font-bold text-lg">From $140/day</span>
+                                        <button onclick="window.location.href='booking.html?destination=Hiroshima&price=140'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
+                                            Explore
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 6 - Nara -->
+                        <div class="swiper-slide">
+                            <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
+                                <div class="h-48 relative overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nara Deer Park" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                    <div class="absolute top-4 right-4">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                                            <i data-lucide="trees" class="w-4 h-4 text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-4 left-4">
+                                        <div class="glass-card px-3 py-1 rounded-full">
+                                            <span class="text-white text-sm font-semibold">Nature & Wildlife</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-bold mb-2 text-lg group-hover:text-rose-600 transition-colors">Nara</h3>
+                                    <p class="text-sm text-gray-600 mb-4">Ancient capital with friendly deer and historic temples</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-rose-600 font-bold text-lg">From $120/day</span>
+                                        <button onclick="window.location.href='booking.html?destination=Nara&price=120'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
+                                            Explore
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 7 - Nikko -->
+                        <div class="swiper-slide">
+                            <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
+                                <div class="h-48 relative overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Nikko Shrines" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                    <div class="absolute top-4 right-4">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                                            <i data-lucide="star" class="w-4 h-4 text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-4 left-4">
+                                        <div class="glass-card px-3 py-1 rounded-full">
+                                            <span class="text-white text-sm font-semibold">Sacred Sites</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-bold mb-2 text-lg group-hover:text-violet-600 transition-colors">Nikko</h3>
+                                    <p class="text-sm text-gray-600 mb-4">Sacred shrines and beautiful mountain scenery</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-violet-600 font-bold text-lg">From $130/day</span>
+                                        <button onclick="window.location.href='booking.html?destination=Nikko&price=130'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
+                                            Explore
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 8 - Hakone -->
+                        <div class="swiper-slide">
+                            <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
+                                <div class="h-48 relative overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Hakone Hot Springs" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                    <div class="absolute top-4 right-4">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                                            <i data-lucide="waves" class="w-4 h-4 text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-4 left-4">
+                                        <div class="glass-card px-3 py-1 rounded-full">
+                                            <span class="text-white text-sm font-semibold">Hot Springs</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-bold mb-2 text-lg group-hover:text-amber-600 transition-colors">Hakone</h3>
+                                    <p class="text-sm text-gray-600 mb-4">Traditional hot springs with Mount Fuji views</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-amber-600 font-bold text-lg">From $170/day</span>
+                                        <button onclick="window.location.href='booking.html?destination=Hakone&price=170'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
                                             Explore
                                         </button>
                                     </div>
@@ -1066,8 +999,8 @@
         
         <div class="max-w-7xl mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold text-gray-800 mb-6 text-glow">Luxury Resorts in Maldives</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Experience world-class hospitality in paradise with our handpicked luxury resorts</p>
+                <h2 class="text-5xl font-bold text-gray-800 mb-6 text-glow">Luxury Hotels in Japan</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Experience traditional Japanese hospitality with our handpicked luxury hotels and ryokans</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-10">
@@ -1089,7 +1022,7 @@
                     
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-2xl font-bold text-gray-800 group-hover:text-cyan-600 transition-colors">Conrad Maldives</h3>
+                            <h3 class="text-2xl font-bold text-gray-800 group-hover:text-cyan-600 transition-colors">Park Hyatt Tokyo</h3>
                             <div class="flex space-x-1">
                                 <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
                                 <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
@@ -1099,21 +1032,21 @@
                             </div>
                         </div>
                         
-                        <p class="text-gray-600 mb-6 leading-relaxed">Luxury overwater & beach villas with world-class amenities and pristine beaches</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Sophisticated luxury hotel in Shinjuku with stunning city views and world-class service</p>
                         
                         <!-- Features -->
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">Overwater Villa</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Private Beach</span>
+                            <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">City Views</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Fine Dining</span>
                             <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-semibold">Spa</span>
                         </div>
                         
                         <div class="flex items-center justify-between">
                             <div>
-                                <span class="text-3xl font-bold text-cyan-600">$800</span>
+                                <span class="text-3xl font-bold text-cyan-600">$450</span>
                                 <span class="text-gray-500 text-lg">/night</span>
                             </div>
-                            <button onclick="window.location.href='booking.html?destination=Conrad Maldives&price=800'" class="text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-all duration-300" style="background-color: #000042;">
+                            <button onclick="window.location.href='contact.html'" class="text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-all duration-300" style="background-color: #000042;">
                                 Book Now
                             </button>
                         </div>
@@ -1136,7 +1069,7 @@
                     
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">Four Seasons Maldives</h3>
+                            <h3 class="text-2xl font-bold text-gray-800 group-hover:text-teal-600 transition-colors">Aman Tokyo</h3>
                             <div class="flex space-x-1">
                                 <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
                                 <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
@@ -1146,20 +1079,20 @@
                             </div>
                         </div>
                         
-                        <p class="text-gray-600 mb-6 leading-relaxed">Ultimate luxury island experience with personalized service and exclusive amenities</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Serene urban sanctuary blending traditional Japanese aesthetics with modern luxury</p>
                         
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-semibold">Private Island</span>
-                            <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">Butler Service</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Fine Dining</span>
+                            <span class="bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-semibold">Traditional Design</span>
+                            <span class="bg-cyan-100 text-cyan-800 px-3 py-1 rounded-full text-xs font-semibold">Zen Gardens</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Kaiseki Dining</span>
                         </div>
                         
                         <div class="flex items-center justify-between">
                             <div>
-                                <span class="text-3xl font-bold text-teal-600">$1200</span>
+                                <span class="text-3xl font-bold text-teal-600">$650</span>
                                 <span class="text-gray-500 text-lg">/night</span>
                             </div>
-                            <button onclick="window.location.href='booking.html?destination=Four Seasons Maldives&price=1200'" class="text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-all duration-300" style="background-color: #000042;">
+                            <button onclick="window.location.href='contact.html'" class="text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-all duration-300" style="background-color: #000042;">
                                 Book Now
                             </button>
                         </div>
@@ -1182,7 +1115,7 @@
                     
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-2xl font-bold text-gray-800 group-hover:text-purple-600 transition-colors">Soneva Jani</h3>
+                            <h3 class="text-2xl font-bold text-gray-800 group-hover:text-purple-600 transition-colors">Hoshinoya Kyoto</h3>
                             <div class="flex space-x-1">
                                 <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
                                 <i data-lucide="star" class="w-4 h-4 text-yellow-400 fill-current"></i>
@@ -1192,20 +1125,20 @@
                             </div>
                         </div>
                         
-                        <p class="text-gray-600 mb-6 leading-relaxed">Eco-luxury overwater villas with sustainable practices and unparalleled comfort</p>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Traditional ryokan experience in Arashiyama with river views and authentic hospitality</p>
                         
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Eco-Friendly</span>
-                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs font-semibold">Observatory</span>
-                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Water Slide</span>
+                            <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs font-semibold">Ryokan Style</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-xs font-semibold">River Views</span>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Hot Springs</span>
                         </div>
                         
                         <div class="flex items-center justify-between">
                             <div>
-                                <span class="text-3xl font-bold text-purple-600">$1500</span>
+                                <span class="text-3xl font-bold text-purple-600">$800</span>
                                 <span class="text-gray-500 text-lg">/night</span>
                             </div>
-                            <button onclick="window.location.href='booking.html?destination=Soneva Jani&price=1500'" class="text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-all duration-300" style="background-color: #000042;">
+                            <button onclick="window.location.href='contact.html'" class="text-white px-6 py-3 rounded-full font-bold hover:scale-105 transition-all duration-300" style="background-color: #000042;">
                                 Book Now
                             </button>
                         </div>
@@ -1256,8 +1189,8 @@
         
         <div class="max-w-7xl mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold text-gray-800 mb-6 text-glow">Maldives Activities & Experiences</h2>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto">Discover endless adventures and unforgettable experiences in the crystal-clear waters and pristine islands of the Maldives</p>
+                <h2 class="text-5xl font-bold text-gray-800 mb-6 text-glow">Japan Activities & Experiences</h2>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto">Discover authentic cultural experiences and unforgettable adventures in the Land of the Rising Sun</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="group text-center p-8 bg-white rounded-3xl shadow-xl hover-lift hover-glow card-tilt border border-gray-100 relative overflow-hidden">
@@ -1267,9 +1200,9 @@
                     <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 float-animation relative z-10" style="background-color: #000042;">
                         <i data-lucide="plane" class="w-10 h-10 text-white"></i>
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-cyan-600 transition-colors">Seaplane Transfer</h3>
-                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Scenic flights to your resort with breathtaking aerial views of atolls and crystal waters</p>
-                    <div class="text-2xl font-bold text-cyan-600 mb-4">From $200</div>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-cyan-600 transition-colors">Temple Visits</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Explore ancient temples and shrines with guided cultural experiences and meditation sessions</p>
+                    <div class="text-2xl font-bold text-cyan-600 mb-4">From $80</div>
                     <button class="text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
                         Book Experience
                     </button>
@@ -1280,9 +1213,9 @@
                     <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 float-animation relative z-10" style="animation-delay: 0.5s; background-color: #000042;">
                         <i data-lucide="waves" class="w-10 h-10 text-white wave-animation"></i>
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-blue-600 transition-colors">Water Sports</h3>
-                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Diving, snorkeling, jet skiing & windsurfing in pristine waters</p>
-                    <div class="text-2xl font-bold text-blue-600 mb-4">From $150</div>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-blue-600 transition-colors">Cherry Blossom Tours</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Seasonal sakura viewing tours with traditional hanami picnics and photography</p>
+                    <div class="text-2xl font-bold text-blue-600 mb-4">From $120</div>
                     <button class="text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
                         Book Experience
                     </button>
@@ -1294,9 +1227,9 @@
                     <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 float-animation relative z-10" style="animation-delay: 1s; background-color: #000042;">
                         <i data-lucide="ship" class="w-10 h-10 text-white"></i>
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-teal-600 transition-colors">Island Hopping</h3>
-                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Explore multiple pristine islands and discover local culture</p>
-                    <div class="text-2xl font-bold text-teal-600 mb-4">From $120</div>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-teal-600 transition-colors">Hot Springs</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Relax in traditional onsen hot springs with mountain and nature views</p>
+                    <div class="text-2xl font-bold text-teal-600 mb-4">From $100</div>
                     <button class="text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
                         Book Experience
                     </button>
@@ -1308,9 +1241,9 @@
                     <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 float-animation relative z-10" style="animation-delay: 1.5s; background-color: #000042;">
                         <i data-lucide="heart" class="w-10 h-10 text-white"></i>
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-pink-600 transition-colors">Spa & Wellness</h3>
-                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Rejuvenating treatments in luxurious overwater spas</p>
-                    <div class="text-2xl font-bold text-pink-600 mb-4">From $180</div>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-pink-600 transition-colors">Cultural Workshops</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Learn traditional arts like tea ceremony, calligraphy, and kimono wearing</p>
+                    <div class="text-2xl font-bold text-pink-600 mb-4">From $90</div>
                     <button class="text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
                         Book Experience
                     </button>
@@ -1325,9 +1258,9 @@
                     <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 float-animation relative z-10" style="background-color: #000042;">
                         <i data-lucide="fish" class="w-10 h-10 text-white"></i>
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-orange-600 transition-colors">Fishing Trips</h3>
-                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Deep sea & sunset fishing experiences with local guides</p>
-                    <div class="text-2xl font-bold text-orange-600 mb-4">From $100</div>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-orange-600 transition-colors">Mount Fuji Tours</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Guided tours to Japan's sacred mountain with hiking and scenic views</p>
+                    <div class="text-2xl font-bold text-orange-600 mb-4">From $150</div>
                     <button class="text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
                         Book Experience
                     </button>
@@ -1339,9 +1272,9 @@
                     <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 float-animation relative z-10" style="animation-delay: 0.5s; background-color: #000042;">
                         <i data-lucide="sunset" class="w-10 h-10 text-white"></i>
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-purple-600 transition-colors">Sunset Cruise</h3>
-                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Romantic sunset sailing with dolphin watching</p>
-                    <div class="text-2xl font-bold text-purple-600 mb-4">From $80</div>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-purple-600 transition-colors">Bullet Train Experience</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">High-speed rail journeys between major cities with scenic countryside views</p>
+                    <div class="text-2xl font-bold text-purple-600 mb-4">From $200</div>
                     <button class="text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
                         Book Experience
                     </button>
@@ -1353,9 +1286,9 @@
                     <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 float-animation relative z-10" style="animation-delay: 1s; background-color: #000042;">
                         <i data-lucide="camera" class="w-10 h-10 text-white"></i>
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-green-600 transition-colors">Photography</h3>
-                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Professional underwater & aerial photography sessions</p>
-                    <div class="text-2xl font-bold text-green-600 mb-4">From $250</div>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-green-600 transition-colors">Samurai Experience</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Traditional samurai sword training and historical cultural immersion</p>
+                    <div class="text-2xl font-bold text-green-600 mb-4">From $180</div>
                     <button class="text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
                         Book Experience
                     </button>
@@ -1367,9 +1300,9 @@
                     <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 float-animation relative z-10" style="animation-delay: 1.5s; background-color: #000042;">
                         <i data-lucide="utensils" class="w-10 h-10 text-white"></i>
                     </div>
-                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-red-600 transition-colors">Dining Experiences</h3>
-                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Underwater restaurants & exclusive beach dining</p>
-                    <div class="text-2xl font-bold text-red-600 mb-4">From $300</div>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-red-600 transition-colors">Kaiseki Dining</h3>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">Multi-course traditional Japanese cuisine with seasonal ingredients</p>
+                    <div class="text-2xl font-bold text-red-600 mb-4">From $250</div>
                     <button class="text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
                         Book Experience
                     </button>
@@ -1384,8 +1317,8 @@
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Meet Your Maldives Experts</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our experienced local guides will ensure you have the most authentic and memorable Maldives experience</p>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Meet Your Japan Experts</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Our experienced local guides will ensure you have the most authentic and memorable Japan experience</p>
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
@@ -1398,7 +1331,7 @@
                         
                         <!-- Expert Badge -->
                         <div class="absolute top-4 left-4">
-                            <span class="bg-cyan-600 text-white px-3 py-1 rounded-full text-xs font-bold">MARINE EXPERT</span>
+                            <span class="bg-cyan-600 text-white px-3 py-1 rounded-full text-xs font-bold">CULTURAL EXPERT</span>
                         </div>
                         
                         <!-- Rating -->
@@ -1411,14 +1344,14 @@
                         
                         <!-- Name & Title -->
                         <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold mb-1">Ahmed Hassan</h3>
-                            <p class="text-cyan-200 text-sm font-medium">Marine Life Expert</p>
+                            <h3 class="text-xl font-bold mb-1">Hiroshi Tanaka</h3>
+                            <p class="text-cyan-200 text-sm font-medium">Cultural Heritage Expert</p>
                         </div>
                     </div>
                     
                     <!-- Guide Info -->
                     <div class="p-6">
-                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">15+ years experience in diving and marine conservation. Certified PADI instructor specializing in Maldivian marine ecosystems.</p>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">20+ years experience in Japanese culture and history. Licensed guide specializing in temples, traditions, and cultural experiences.</p>
                         
                         <!-- Stats -->
                         <div class="flex justify-between mb-4 text-center">
@@ -1438,14 +1371,14 @@
                         
                         <!-- Skills -->
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-xs">Diving</span>
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Snorkeling</span>
-                            <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded text-xs">Marine Biology</span>
+                            <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-xs">Temples</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">History</span>
+                            <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded text-xs">Tea Ceremony</span>
                         </div>
                         
                         <!-- Book Button -->
-                        <button onclick="window.location.href='contact.html?guide=Ahmed Hassan'" class="w-full text-white py-2 rounded-lg font-semibold transition-colors" style="background-color: #000042;">
-                            Book with Ahmed
+                        <button onclick="window.location.href='contact.html?guide=Hiroshi Tanaka'" class="w-full text-white py-2 rounded-lg font-semibold transition-colors" style="background-color: #000042;">
+                            Book with Hiroshi
                         </button>
                     </div>
                 </div>
@@ -1459,7 +1392,7 @@
                         
                         <!-- Expert Badge -->
                         <div class="absolute top-4 left-4">
-                            <span class="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-bold">CULTURAL EXPERT</span>
+                            <span class="bg-teal-600 text-white px-3 py-1 rounded-full text-xs font-bold">NATURE EXPERT</span>
                         </div>
                         
                         <!-- Rating -->
@@ -1472,14 +1405,14 @@
                         
                         <!-- Name & Title -->
                         <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold mb-1">Mariyam Ali</h3>
-                            <p class="text-teal-200 text-sm font-medium">Cultural Heritage Guide</p>
+                            <h3 class="text-xl font-bold mb-1">Yuki Yamamoto</h3>
+                            <p class="text-teal-200 text-sm font-medium">Nature & Mountain Guide</p>
                         </div>
                     </div>
                     
                     <!-- Guide Info -->
                     <div class="p-6">
-                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Local Maldivian with deep knowledge of traditions, history, and island culture. Fluent in English, Dhivehi, and Arabic.</p>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Expert mountain guide with extensive knowledge of Mount Fuji, hiking trails, and Japan's natural landscapes. Fluent in English and Japanese.</p>
                         
                         <!-- Stats -->
                         <div class="flex justify-between mb-4 text-center">
@@ -1499,14 +1432,14 @@
                         
                         <!-- Skills -->
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded text-xs">Culture</span>
-                            <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-xs">History</span>
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Local Life</span>
+                            <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded text-xs">Hiking</span>
+                            <span class="bg-cyan-100 text-cyan-800 px-2 py-1 rounded text-xs">Mount Fuji</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Nature</span>
                         </div>
                         
                         <!-- Book Button -->
-                        <button onclick="window.location.href='contact.html?guide=Mariyam Ali'" class="w-full text-white py-2 rounded-lg font-semibold transition-colors" style="background-color: #000042;">
-                            Book with Mariyam
+                        <button onclick="window.location.href='contact.html?guide=Yuki Yamamoto'" class="w-full text-white py-2 rounded-lg font-semibold transition-colors" style="background-color: #000042;">
+                            Book with Yuki
                         </button>
                     </div>
                 </div>
@@ -1520,7 +1453,7 @@
                         
                         <!-- Expert Badge -->
                         <div class="absolute top-4 left-4">
-                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">ADVENTURE EXPERT</span>
+                            <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-bold">CULINARY EXPERT</span>
                         </div>
                         
                         <!-- Rating -->
@@ -1533,14 +1466,14 @@
                         
                         <!-- Name & Title -->
                         <div class="absolute bottom-4 left-4 text-white">
-                            <h3 class="text-xl font-bold mb-1">Captain Ibrahim</h3>
-                            <p class="text-blue-200 text-sm font-medium">Water Sports & Adventure</p>
+                            <h3 class="text-xl font-bold mb-1">Kenji Sato</h3>
+                            <p class="text-blue-200 text-sm font-medium">Culinary & Food Guide</p>
                         </div>
                     </div>
                     
                     <!-- Guide Info -->
                     <div class="p-6">
-                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Professional boat captain and water sports instructor. Expert in fishing, sailing, and adventure activities across the atolls.</p>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Professional chef and food guide specializing in traditional Japanese cuisine, street food tours, and culinary experiences.</p>
                         
                         <!-- Stats -->
                         <div class="flex justify-between mb-4 text-center">
@@ -1560,14 +1493,14 @@
                         
                         <!-- Skills -->
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Fishing</span>
-                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs">Sailing</span>
-                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Adventure</span>
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Sushi</span>
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs">Ramen</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Street Food</span>
                         </div>
                         
                         <!-- Book Button -->
-                        <button onclick="window.location.href='contact.html?guide=Captain Ibrahim'" class="w-full text-white py-2 rounded-lg font-semibold transition-colors" style="background-color: #000042;">
-                            Book with Ibrahim
+                        <button onclick="window.location.href='contact.html?guide=Kenji Sato'" class="w-full text-white py-2 rounded-lg font-semibold transition-colors" style="background-color: #000042;">
+                            Book with Kenji
                         </button>
                     </div>
                 </div>
@@ -1578,7 +1511,7 @@
     </section>
 
 
-    <!-- Enhanced Maldives Packages -->
+    <!-- Enhanced Dubai Packages -->
     <section class="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
         <!-- Background Elements -->
         <div class="absolute inset-0">
@@ -1589,8 +1522,8 @@
         
         <div class="max-w-7xl mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold text-gray-800 mb-6 text-glow">Exclusive Maldives Packages</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Carefully curated packages for the ultimate Maldivian experience</p>
+                <h2 class="text-5xl font-bold text-gray-800 mb-6 text-glow">Exclusive Japan Packages</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Carefully curated packages for the ultimate Japan experience</p>
             </div>
             
             <div class="grid lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
@@ -1626,24 +1559,24 @@
                         <!-- Package Features -->
                         <div class="space-y-2 mb-6">
                             <div class="flex items-center p-2 bg-green-50 rounded-lg">
-                                <i data-lucide="plane" ></i>
+                                <i data-lucide="plane" class="w-4 h-4 text-green-600 mr-2"></i>
                                 <span class="text-xs font-medium">Round-trip flights</span>
                             </div>
                             <div class="flex items-center p-2 bg-blue-50 rounded-lg">
                                 <i data-lucide="home" class="w-4 h-4 text-blue-600 mr-2"></i>
-                                <span class="text-xs font-medium">Beach villa accommodation</span>
+                                <span class="text-xs font-medium">Business hotel accommodation</span>
                             </div>
                             <div class="flex items-center p-2 bg-cyan-50 rounded-lg">
                                 <i data-lucide="utensils" class="w-4 h-4 text-cyan-600 mr-2"></i>
                                 <span class="text-xs font-medium">Daily breakfast</span>
                             </div>
                             <div class="flex items-center p-2 bg-teal-50 rounded-lg">
-                                <i data-lucide="ship" class="w-4 h-4 text-teal-600 mr-2"></i>
-                                <span class="text-xs font-medium">Airport transfers</span>
+                                <i data-lucide="train" class="w-4 h-4 text-teal-600 mr-2"></i>
+                                <span class="text-xs font-medium">JR Pass included</span>
                             </div>
                         </div>
                         
-                        <button onclick="window.location.href='booking.html?destination=Maldives Budget&price=699'" class="w-full bg-[#000042] text-white py-3 rounded-xl font-bold hover:scale-105 transition-all duration-300 mb-3">
+                        <button onclick="window.location.href='booking.html?destination=Japan Budget&price=899'" class="w-full bg-[#000042] text-white py-3 rounded-xl font-bold hover:scale-105 transition-all duration-300 mb-3">
                             Book Budget Package
                         </button>
                         
@@ -1956,7 +1889,7 @@
                                 <div class="flex text-yellow-400 mb-6 text-xl">
                                     <span>★★★★★</span>
                                 </div>
-                                <p class="text-gray-600 mb-6 text-lg leading-relaxed">"Absolutely magical Maldives honeymoon! The overwater villa was a dream come true. Every moment was perfect."</p>
+                                <p class="text-gray-600 mb-6 text-lg leading-relaxed">"Japan exceeded all expectations! The cherry blossoms were breathtaking and the cultural experiences were incredible. Every moment was perfect."</p>
                                 <div class="flex items-center">
                                     <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" alt="Emma" class="w-12 h-12 rounded-full mr-4 object-cover">
                                     <div>
@@ -1973,7 +1906,7 @@
                                 <div class="flex text-yellow-400 mb-6 text-xl">
                                     <span>★★★★★</span>
                                 </div>
-                                <p class="text-gray-600 mb-6 text-lg leading-relaxed">"Perfect organization! Every detail was taken care of. Maldives was paradise on earth!"</p>
+                                <p class="text-gray-600 mb-6 text-lg leading-relaxed">"Perfect organization! Every detail was taken care of. Japan was a cultural paradise!"</p>
                                 <div class="flex items-center">
                                     <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="David" class="w-12 h-12 rounded-full mr-4 object-cover">
                                     <div>
@@ -1990,7 +1923,7 @@
                                 <div class="flex text-yellow-400 mb-6 text-xl">
                                     <span>★★★★★</span>
                                 </div>
-                                <p class="text-gray-600 mb-6 text-lg leading-relaxed">"Best vacation ever! The diving was incredible and the resort was luxury at its finest."</p>
+                                <p class="text-gray-600 mb-6 text-lg leading-relaxed">"Best vacation ever! The temple visits were incredible and the ryokans were luxury at its finest."</p>
                                 <div class="flex items-center">
                                     <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Priya" class="w-12 h-12 rounded-full mr-4 object-cover">
                                     <div>
@@ -2007,7 +1940,7 @@
                                 <div class="flex text-yellow-400 mb-6 text-xl">
                                     <span>★★★★★</span>
                                 </div>
-                                <p class="text-gray-600 mb-6 text-lg leading-relaxed">"The crystal clear waters and white sand beaches exceeded all expectations. Truly unforgettable!"</p>
+                                <p class="text-gray-600 mb-6 text-lg leading-relaxed">"The ancient temples and modern Tokyo exceeded all expectations. Truly unforgettable!"</p>
                                 <div class="flex items-center">
                                     <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Michael" class="w-12 h-12 rounded-full mr-4 object-cover">
                                     <div>
@@ -2024,7 +1957,7 @@
                                 <div class="flex text-yellow-400 mb-6 text-xl">
                                     <span>★★★★★</span>
                                 </div>
-                                <p class="text-gray-600 mb-6 text-lg leading-relaxed">"Amazing service from start to finish. The sunset cruise and spa treatments were absolutely divine!"</p>
+                                <p class="text-gray-600 mb-6 text-lg leading-relaxed">"Amazing service from start to finish. The cultural tours and kaiseki dining were absolutely divine!"</p>
                                 <div class="flex items-center">
                                     <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face" alt="Sarah" class="w-12 h-12 rounded-full mr-4 object-cover">
                                     <div>
@@ -2041,7 +1974,7 @@
                                 <div class="flex text-yellow-400 mb-6 text-xl">
                                     <span>★★★★★</span>
                                 </div>
-                                <p class="text-gray-600 mb-6 text-lg leading-relaxed">"The underwater restaurant experience was mind-blowing! Every detail was perfectly planned."</p>
+                                <p class="text-gray-600 mb-6 text-lg leading-relaxed">"The Mount Fuji experience was mind-blowing! Every detail was perfectly planned."</p>
                                 <div class="flex items-center">
                                     <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="Alex" class="w-12 h-12 rounded-full mr-4 object-cover">
                                     <div>
@@ -2222,8 +2155,7 @@
         </div>
     </footer>
 
-    <!-- Load script.js -->
-    <script src="script.js"></script>
+    <!-- Dubai page has its own swiper initialization below -->
     
     <script>
         // Initialize Destinations Slider
@@ -2319,13 +2251,13 @@
                 }
             });
             
-            // Initialize Maldives Gallery Swiper
-            const maldivesGallerySwiper = new Swiper('.maldives-gallery', {
+            // Initialize Dubai Gallery Swiper
+            const dubaiGallerySwiper = new Swiper('.dubai-gallery', {
                 slidesPerView: 1,
                 spaceBetween: 0,
                 navigation: {
-                    nextEl: '.maldives-gallery .swiper-button-next',
-                    prevEl: '.maldives-gallery .swiper-button-prev',
+                    nextEl: '.dubai-gallery .swiper-button-next',
+                    prevEl: '.dubai-gallery .swiper-button-prev',
                 },
 
                 autoplay: {
@@ -2341,15 +2273,18 @@
                 loop: true,
                 on: {
                     init: function() {
-                        console.log('Maldives Gallery Swiper initialized successfully');
+                        console.log('Dubai Gallery Swiper initialized successfully');
                     }
                 }
             });
             
-            console.log('Maldives Destinations Slider initialized successfully!');
+            console.log('Dubai Destinations Slider initialized successfully!');
         });
-    </script>
-      
+        
+        // Initialize Lucide Icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
     </script>
     
     <!-- Mobile Navigation JavaScript -->

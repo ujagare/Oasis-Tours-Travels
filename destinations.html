@@ -15,7 +15,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="Images/Oasis Logo_New.png"
+      href="Images/Oasis Logo_New.pngna"
     />
     <link
       rel="icon"
@@ -362,7 +362,7 @@
             <a href="#" class="flex items-center space-x-2">
               <img
                 class="w-20"
-                src="Images/Oasis Logo_New.png"
+                src="Images/Oasis Logo.png"
                 alt="Oasis Travel & Tourism"
                 class="h-14 w-auto"
               />
@@ -549,7 +549,13 @@
 
     <!-- Enhanced Hero Section -->
     <section
-      class="pt-28 pb-20 bg-gradient-to-br from-[#000042] via-blue-900 to-purple-900 relative overflow-hidden h-[70vh]"
+      class="pt-28 pb-20 relative overflow-hidden h-[70vh]"
+      style="
+        background-image: url(&quot;Images/all destination.jpg&quot;);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
     >
       <!-- Background Elements -->
       <div class="absolute inset-0 opacity-10">
@@ -825,8 +831,19 @@
             :key="destination.name"
           >
             <div
-              class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+              class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 cursor-pointer"
               x-transition
+              @click="
+                if (destination.name === 'Japan') {
+                  window.location.href = 'japan.html';
+                } else if (destination.name === 'Dubai') {
+                  window.location.href = 'dubai.html';
+                } else if (destination.name === 'Maldives') {
+                  window.location.href = 'maldives.html';
+                } else {
+                  window.location.href = 'contact.html';
+                }
+              "
             >
               <div
                 class="relative h-48 bg-gradient-to-br from-blue-400 to-purple-600 flex items-center justify-center"
@@ -867,10 +884,22 @@
                   ></span>
                 </div>
                 <button
-                  @click="window.location.href = 'contact.html'"
+                  @click="
+                    if (destination.name === 'Japan') {
+                      window.location.href = 'japan.html';
+                    } else if (destination.name === 'Dubai') {
+                      window.location.href = 'dubai.html';
+                    } else if (destination.name === 'Maldives') {
+                      window.location.href = 'maldives.html';
+                    } else {
+                      window.location.href = 'contact.html';
+                    }
+                  "
                   class="w-full bg-[#000042] text-white py-3 px-6 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105"
                 >
-                  Book Now
+                  <span
+                    x-text="destination.name === 'Japan' || destination.name === 'Dubai' || destination.name === 'Maldives' ? 'Explore' : 'Book Now'"
+                  ></span>
                 </button>
               </div>
             </div>
@@ -986,7 +1015,7 @@
         <!-- Logo Section -->
         <div class="mb-12 text-center">
           <img
-            src="Images/Oasis Logo_New.png"
+            src="Images/Oasis Logo.png"
             alt="Oasis Travel & Tourism"
             class="h-20 mx-auto mb-4"
           />
