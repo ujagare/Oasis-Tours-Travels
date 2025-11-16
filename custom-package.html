@@ -9,6 +9,206 @@
     <!-- Local Tailwind CSS -->
     <link rel="stylesheet" href="dist/style.css" />
 
+    <!-- Mobile Navigation Styles -->
+    <style>
+      /* Mobile Navigation Styles - Exact Image Match */
+      .mobile-nav {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000042;
+        z-index: 40;
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        overflow-y: auto;
+        padding: 0;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+
+      .mobile-nav.active {
+        top: 0;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Navigation Links */
+      .mobile-nav-links {
+        padding: 3rem 2rem 0.5rem 2rem;
+      }
+
+      .mobile-nav-links a {
+        display: flex;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-bottom: 0.8rem;
+        transition: color 0.3s ease;
+      }
+
+      .mobile-nav-links a:hover {
+        color: #60a5fa;
+      }
+
+      /* Book Now Button */
+      .mobile-nav-button {
+        padding: 0 2rem 1rem 2rem;
+      }
+
+      .mobile-nav-button button {
+        width: 100%;
+        max-width: 250px;
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .mobile-nav-button button:hover {
+        background: white;
+        color: #1a1a3a;
+      }
+
+      /* Address Section */
+      .mobile-nav-address {
+        padding: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .mobile-nav-address h3 {
+        color: white;
+        font-size: 2rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+      }
+
+      .address-item {
+        display: flex;
+        align-items: center;
+        color: white;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      .address-item svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 1rem;
+        color: white;
+        flex-shrink: 0;
+      }
+
+      /* Social Media Icons */
+      .mobile-nav-social {
+        display: flex;
+        gap: 1rem;
+        padding: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-btn:hover {
+        border-color: white;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      /* Burger Menu */
+      .burger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        padding: 8px;
+        position: relative;
+        z-index: 10000;
+        width: 40px;
+        height: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .burger span {
+        width: 30px;
+        height: 2px;
+        background: white !important;
+        margin: 2px 0;
+        transition: 0.3s;
+        border-radius: 2px;
+        display: block !important;
+        transform-origin: center;
+      }
+
+      .burger .line1,
+      .burger .line2 {
+        width: 30px;
+        height: 2px;
+        background: white !important;
+        margin: 2px 0;
+        transition: 0.3s;
+        border-radius: 2px;
+        display: block !important;
+        transform-origin: center;
+      }
+
+      .burger.active .line1 {
+        transform: rotate(45deg) translateY(6px);
+      }
+
+      .burger.active .line2 {
+        transform: rotate(-45deg) translateY(-6px);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .burger {
+          display: flex !important;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .burger {
+          display: flex !important;
+          visibility: visible !important;
+        }
+      }
+
+      .burger {
+        pointer-events: auto !important;
+      }
+
+      .burger span {
+        pointer-events: none !important;
+      }
+
+      .mobile-nav:not(.active) {
+        top: -100% !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+      }
+    </style>
+
     <!-- Required Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
@@ -30,265 +230,666 @@
     ></script>
   </head>
   <body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-40">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between items-center h-20">
-          <div class="flex items-center">
-            <a href="index.html" class="flex items-center space-x-2">
+    <!-- Navigation Bar -->
+    <nav
+      class="fixed top-0 left-0 right-0 bg-black bg-opacity-50 backdrop-blur-sm shadow-lg"
+      style="z-index: 9999 !important"
+    >
+      <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-28">
+          <!-- Logo -->
+          <div
+            class="flex items-center"
+            style="z-index: 10000; position: relative"
+          >
+            <a href="#" class="flex items-center space-x-2">
               <img
-                class="w-16 h-12"
-                src="Images/Oasis Logo_New.png"
+                src="Images/Oasis Logo.png"
                 alt="Oasis Travel & Tourism"
+                class="w-20 h-20 object-contain"
               />
             </a>
           </div>
 
-          <div class="hidden md:flex items-center space-x-8">
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8 p-20">
             <a
               href="index.html"
-              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              class="text-white hover:text-blue-300 font-bold transition-colors"
               >Home</a
             >
             <a
               href="about.html"
-              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              class="text-white hover:text-blue-300 font-bold transition-colors"
               >About</a
             >
             <a
-              href="packages.html"
-              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
-              >Packages</a
-            >
-            <a
               href="destinations.html"
-              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              class="text-white hover:text-blue-300 font-bold transition-colors"
               >Destinations</a
             >
             <a
+              href="packages.html"
+              class="text-white hover:text-blue-300 font-bold transition-colors"
+              >Packages</a
+            >
+            <a
               href="index.html#services"
-              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              class="text-white hover:text-blue-300 font-bold transition-colors"
               >Services</a
             >
             <a
               href="contact.html"
-              class="text-gray-700 hover:text-[#000042] font-semibold transition-colors"
+              class="text-white hover:text-blue-300 font-bold transition-colors"
               >Contact</a
             >
             <a
               href="contact.html"
-              class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-              >Book Now</a
+              class="border-2 text-white px-6 py-2 rounded-lg hover:bg-[#000042] transition-colors font-semibold"
             >
+              Book Now
+            </a>
           </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <div class="burger">
+              <span class="line1"></span>
+              <span class="line2"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div class="mobile-nav">
+        <!-- Navigation Links -->
+        <div class="mobile-nav-links" style="padding-top: 8rem">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="packages.html">Packages</a>
+          <a href="index.html#services">Services</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Book Now Button -->
+        <div class="mobile-nav-button">
+          <button onclick="window.location.href='contact.html'">
+            Book Now
+          </button>
+        </div>
+
+        <!-- Address Section -->
+        <div class="mobile-nav-address">
+          <h3>Contact Info</h3>
+          <div class="address-item">
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+              ></path>
+            </svg>
+            <span>+91 9796986969</span>
+          </div>
+          <div class="address-item">
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+            <span>info@oasistoursandtravels.com</span>
+          </div>
+          <div class="address-item">
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+            <span>Ops@oasistoursandtravels.com</span>
+          </div>
+          <div class="address-item">
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+              ></path>
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              ></path>
+            </svg>
+            <span>Ravet, Pune- 411007 Maharashtra, India</span>
+          </div>
+        </div>
+
+        <!-- Social Media Icons -->
+        <div class="mobile-nav-social">
+          <a
+            href="https://wa.me/919796986969?text=Hello%20Oasis%20Tours"
+            class="social-btn"
+            title="WhatsApp"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/oasistoursandtravels"
+            class="social-btn"
+            title="Facebook"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/oasistoursandtravels"
+            class="social-btn"
+            title="Instagram"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
+          <a
+            href="mailto:info@oasistoursandtravels.com"
+            class="social-btn"
+            title="Email"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              ></path>
+            </svg>
+          </a>
         </div>
       </div>
     </nav>
 
     <!-- Hero Section -->
     <section
-      class="bg-gradient-to-r from-[#000042] to-blue-700 text-white py-20"
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      <div class="max-w-7xl mx-auto px-4 text-center">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6">
-          Custom Travel Package
-        </h1>
-        <p class="text-xl max-w-3xl mx-auto leading-relaxed">
-          Create your perfect travel experience tailored to your preferences,
-          budget, and dreams. Let us design a unique journey just for you.
-        </p>
+      <!-- Background -->
+      <div
+        class="absolute inset-0 bg-gradient-to-br from-rose-600 via-pink-700 to-purple-800"
+      >
+        <div class="absolute inset-0 bg-black/25"></div>
+        <!-- Custom Pattern Overlay -->
+        <div class="absolute inset-0 opacity-10">
+          <div
+            class="absolute top-32 left-16 w-20 h-20 border-2 border-rose-400 rotate-45"
+          ></div>
+          <div
+            class="absolute top-20 right-20 w-28 h-28 border-2 border-pink-400 rotate-12"
+          ></div>
+          <div
+            class="absolute bottom-40 left-1/3 w-16 h-16 border-2 border-purple-400 rotate-45"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 text-center text-white">
+        <div class="mb-8">
+          <div
+            class="inline-flex items-center bg-rose-500/20 backdrop-blur-sm border border-rose-400/30 rounded-full px-6 py-3 mb-6"
+          >
+            <i class="fas fa-palette text-rose-300 mr-3"></i>
+            <span class="text-rose-100 font-semibold"
+              >PERSONALIZED EXPERIENCE</span
+            >
+          </div>
+
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <span
+              class="bg-gradient-to-r from-rose-300 to-pink-300 bg-clip-text text-transparent"
+              >Custom</span
+            ><br />
+            <span class="text-white">Travel Package</span>
+          </h1>
+
+          <p
+            class="text-xl md:text-2xl text-gray-200 mb-8 max-w-4xl mx-auto leading-relaxed"
+          >
+            Create your perfect journey tailored to your preferences, budget,
+            and dreams. Every detail crafted just for you.
+          </p>
+
+          <div
+            class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 inline-block"
+          >
+            <div class="text-sm text-gray-300 mb-2">Starting from</div>
+            <div class="text-4xl md:text-5xl font-bold text-white">
+              ₹50,000<span class="text-2xl text-gray-300">/-</span>
+            </div>
+            <div class="text-sm text-gray-300 mt-2">customizable pricing</div>
+          </div>
+
+          <div
+            class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          >
+            <button
+              class="bg-gradient-to-r from-rose-500 to-pink-600 hover:from-rose-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
+            >
+              <i class="fas fa-magic mr-2"></i>Create Package
+            </button>
+            <button
+              class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300"
+            >
+              <i class="fas fa-phone mr-2"></i>Consult Expert
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div
+        class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
+      >
+        <i class="fas fa-chevron-down text-2xl"></i>
       </div>
     </section>
 
     <!-- Custom Package Form -->
-    <section class="py-20">
-      <div class="max-w-4xl mx-auto px-4">
-        <div class="bg-white rounded-2xl shadow-xl p-8">
-          <h2 class="text-3xl font-bold text-center mb-8 text-gray-900">
-            Design Your Dream Trip
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Design Your
+            <span
+              class="bg-gradient-to-r from-rose-500 to-pink-600 bg-clip-text text-transparent"
+              >Dream Trip</span
+            >
           </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Tell us about your travel dreams and we'll create a personalized
+            itinerary that exceeds your expectations
+          </p>
+        </div>
 
-          <form class="space-y-6" id="customPackageForm">
-            <!-- Personal Information -->
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2"
-                  >Full Name *</label
-                >
-                <input
-                  type="text"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
-                />
+        <div
+          class="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-100"
+        >
+          <div class="grid lg:grid-cols-3 gap-8 mb-8">
+            <div
+              class="text-center p-6 bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-rose-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-user-edit text-white text-2xl"></i>
               </div>
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2"
-                  >Email *</label
-                >
-                <input
-                  type="email"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
-                />
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Step 1</h3>
+              <p class="text-gray-600">Share your preferences</p>
+            </div>
+            <div
+              class="text-center p-6 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-route text-white text-2xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Step 2</h3>
+              <p class="text-gray-600">We design your itinerary</p>
+            </div>
+            <div
+              class="text-center p-6 bg-gradient-to-br from-emerald-50 to-teal-50 rounded-2xl"
+            >
+              <div
+                class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-4"
+              >
+                <i class="fas fa-plane-departure text-white text-2xl"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900 mb-2">Step 3</h3>
+              <p class="text-gray-600">Enjoy your perfect trip</p>
+            </div>
+          </div>
+
+          <form class="space-y-8" id="customPackageForm">
+            <!-- Personal Information Section -->
+            <div
+              class="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-6"
+            >
+              <h3
+                class="text-xl font-bold text-gray-900 mb-6 flex items-center"
+              >
+                <i class="fas fa-user text-rose-500 mr-3"></i>
+                Personal Information
+              </h3>
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="relative">
+                  <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    <i class="fas fa-user text-gray-400 mr-2"></i>Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    placeholder="Enter your full name"
+                    class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-rose-500 transition-all duration-300 bg-white shadow-sm hover:shadow-md"
+                  />
+                </div>
+                <div class="relative">
+                  <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    <i class="fas fa-envelope text-gray-400 mr-2"></i>Email
+                    Address *
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    placeholder="your.email@example.com"
+                    class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-rose-500 transition-all duration-300 bg-white shadow-sm hover:shadow-md"
+                  />
+                </div>
               </div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2"
-                  >Phone Number *</label
-                >
+              <div class="relative">
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  <i class="fas fa-phone text-gray-400 mr-2"></i>Phone Number *
+                </label>
                 <input
                   type="tel"
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
+                  placeholder="+91 98765 43210"
+                  class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-rose-500 transition-all duration-300 bg-white shadow-sm hover:shadow-md"
                 />
               </div>
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2"
-                  >Number of Travelers *</label
-                >
+              <div class="relative">
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  <i class="fas fa-users text-gray-400 mr-2"></i>Number of
+                  Travelers *
+                </label>
                 <select
                   required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
+                  class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-rose-500 focus:border-rose-500 transition-all duration-300 bg-white shadow-sm hover:shadow-md appearance-none"
                 >
-                  <option value="">Select travelers</option>
-                  <option value="1">1 Person</option>
-                  <option value="2">2 People</option>
-                  <option value="3-5">3-5 People</option>
-                  <option value="6-10">6-10 People</option>
-                  <option value="10+">More than 10</option>
+                  <option value="">Select number of travelers</option>
+                  <option value="1">1 Person (Solo Travel)</option>
+                  <option value="2">2 People (Couple)</option>
+                  <option value="3-5">3-5 People (Small Group)</option>
+                  <option value="6-10">6-10 People (Large Group)</option>
+                  <option value="10+">More than 10 (Corporate/Event)</option>
                 </select>
               </div>
             </div>
 
-            <!-- Travel Preferences -->
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2"
-                  >Preferred Destination *</label
-                >
-                <select
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
-                >
-                  <option value="">Select destination</option>
-                  <option value="dubai">Dubai, UAE</option>
-                  <option value="japan">Japan</option>
-                  <option value="malaysia">Malaysia</option>
-                  <option value="maldives">Maldives</option>
-                  <option value="usa">United States</option>
-                  <option value="kazakhstan">Kazakhstan</option>
-                  <option value="other">Other (Please specify)</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2"
-                  >Budget Range *</label
-                >
-                <select
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
-                >
-                  <option value="">Select budget</option>
-                  <option value="50000-100000">₹50,000 - ₹1,00,000</option>
-                  <option value="100000-200000">₹1,00,000 - ₹2,00,000</option>
-                  <option value="200000-500000">₹2,00,000 - ₹5,00,000</option>
-                  <option value="500000+">₹5,00,000+</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2"
-                  >Travel Dates *</label
-                >
-                <input
-                  type="date"
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label class="block text-sm font-medium text-gray-700 mb-2"
-                  >Duration *</label
-                >
-                <select
-                  required
-                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
-                >
-                  <option value="">Select duration</option>
-                  <option value="3-5">3-5 Days</option>
-                  <option value="6-10">6-10 Days</option>
-                  <option value="11-15">11-15 Days</option>
-                  <option value="15+">More than 15 Days</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Travel Type -->
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-4"
-                >Travel Type *</label
+            <!-- Travel Preferences Section -->
+            <div
+              class="bg-gradient-to-r from-purple-50 to-indigo-50 rounded-2xl p-6"
+            >
+              <h3
+                class="text-xl font-bold text-gray-900 mb-6 flex items-center"
               >
+                <i class="fas fa-map-marked-alt text-purple-500 mr-3"></i>
+                Travel Preferences
+              </h3>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="relative">
+                  <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    <i class="fas fa-globe-asia text-gray-400 mr-2"></i
+                    >Preferred Destination *
+                  </label>
+                  <select
+                    required
+                    class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-300 bg-white shadow-sm hover:shadow-md appearance-none"
+                  >
+                    <option value="">Choose your dream destination</option>
+                    <option value="dubai">🇦🇪 Dubai, UAE</option>
+                    <option value="japan">🇯🇵 Japan</option>
+                    <option value="malaysia">🇲🇾 Malaysia</option>
+                    <option value="maldives">🇲🇻 Maldives</option>
+                    <option value="usa">🇺🇸 United States</option>
+                    <option value="kazakhstan">🇰🇿 Kazakhstan</option>
+                    <option value="europe">🇪🇺 Europe</option>
+                    <option value="other">🌍 Other (Please specify)</option>
+                  </select>
+                </div>
+                <div class="relative">
+                  <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    <i class="fas fa-rupee-sign text-gray-400 mr-2"></i>Budget
+                    Range *
+                  </label>
+                  <select
+                    required
+                    class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-300 bg-white shadow-sm hover:shadow-md appearance-none"
+                  >
+                    <option value="">Select your budget range</option>
+                    <option value="50000-100000">
+                      💰 ₹50,000 - ₹1,00,000 (Budget)
+                    </option>
+                    <option value="100000-200000">
+                      💎 ₹1,00,000 - ₹2,00,000 (Standard)
+                    </option>
+                    <option value="200000-500000">
+                      👑 ₹2,00,000 - ₹5,00,000 (Premium)
+                    </option>
+                    <option value="500000+">✨ ₹5,00,000+ (Luxury)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="relative">
+                  <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    <i class="fas fa-calendar-alt text-gray-400 mr-2"></i
+                    >Preferred Travel Date *
+                  </label>
+                  <input
+                    type="date"
+                    required
+                    class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-300 bg-white shadow-sm hover:shadow-md"
+                  />
+                </div>
+                <div class="relative">
+                  <label class="block text-sm font-semibold text-gray-700 mb-2">
+                    <i class="fas fa-clock text-gray-400 mr-2"></i>Trip Duration
+                    *
+                  </label>
+                  <select
+                    required
+                    class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-300 bg-white shadow-sm hover:shadow-md appearance-none"
+                  >
+                    <option value="">How long do you want to travel?</option>
+                    <option value="3-5">🌅 3-5 Days (Quick Getaway)</option>
+                    <option value="6-10">
+                      🌄 6-10 Days (Perfect Vacation)
+                    </option>
+                    <option value="11-15">
+                      🌍 11-15 Days (Extended Journey)
+                    </option>
+                    <option value="15+">
+                      ✨ More than 15 Days (Epic Adventure)
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Travel Type Section -->
+            <div
+              class="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-2xl p-6"
+            >
+              <h3
+                class="text-xl font-bold text-gray-900 mb-6 flex items-center"
+              >
+                <i class="fas fa-heart text-emerald-500 mr-3"></i>
+                Travel Experience Type *
+              </h3>
               <div class="grid md:grid-cols-3 gap-4">
                 <label
-                  class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50"
+                  class="group relative flex items-center p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-emerald-400 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-lg"
                 >
                   <input
                     type="radio"
                     name="travelType"
                     value="honeymoon"
-                    class="mr-3"
+                    class="sr-only"
                   />
-                  <span>Honeymoon</span>
+                  <div class="flex flex-col items-center text-center w-full">
+                    <div
+                      class="w-12 h-12 bg-gradient-to-br from-pink-400 to-rose-500 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300"
+                    >
+                      <i class="fas fa-heart text-white text-lg"></i>
+                    </div>
+                    <span class="font-semibold text-gray-800"
+                      >💕 Honeymoon</span
+                    >
+                    <span class="text-sm text-gray-500 mt-1"
+                      >Romantic getaway</span
+                    >
+                  </div>
+                  <div
+                    class="absolute top-2 right-2 w-5 h-5 border-2 border-gray-300 rounded-full group-hover:border-emerald-400 transition-colors duration-300"
+                  ></div>
                 </label>
                 <label
-                  class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50"
+                  class="group relative flex items-center p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-emerald-400 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-lg"
                 >
                   <input
                     type="radio"
                     name="travelType"
                     value="family"
-                    class="mr-3"
+                    class="sr-only"
                   />
-                  <span>Family Trip</span>
+                  <div class="flex flex-col items-center text-center w-full">
+                    <div
+                      class="w-12 h-12 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300"
+                    >
+                      <i class="fas fa-users text-white text-lg"></i>
+                    </div>
+                    <span class="font-semibold text-gray-800"
+                      >👨‍👩‍👧‍👦 Family Trip</span
+                    >
+                    <span class="text-sm text-gray-500 mt-1"
+                      >Fun for everyone</span
+                    >
+                  </div>
+                  <div
+                    class="absolute top-2 right-2 w-5 h-5 border-2 border-gray-300 rounded-full group-hover:border-emerald-400 transition-colors duration-300"
+                  ></div>
                 </label>
                 <label
-                  class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50"
+                  class="group relative flex items-center p-6 border-2 border-gray-200 rounded-2xl cursor-pointer hover:border-emerald-400 hover:bg-white transition-all duration-300 shadow-sm hover:shadow-lg"
                 >
                   <input
                     type="radio"
                     name="travelType"
                     value="adventure"
-                    class="mr-3"
+                    class="sr-only"
                   />
-                  <span>Adventure</span>
+                  <div class="flex flex-col items-center text-center w-full">
+                    <div
+                      class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300"
+                    >
+                      <i class="fas fa-mountain text-white text-lg"></i>
+                    </div>
+                    <span class="font-semibold text-gray-800"
+                      >🏔️ Adventure</span
+                    >
+                    <span class="text-sm text-gray-500 mt-1"
+                      >Thrill & excitement</span
+                    >
+                  </div>
+                  <div
+                    class="absolute top-2 right-2 w-5 h-5 border-2 border-gray-300 rounded-full group-hover:border-emerald-400 transition-colors duration-300"
+                  ></div>
                 </label>
               </div>
             </div>
 
-            <!-- Special Requirements -->
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-2"
-                >Special Requirements & Preferences</label
+            <!-- Special Requirements Section -->
+            <div
+              class="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-6"
+            >
+              <h3
+                class="text-xl font-bold text-gray-900 mb-6 flex items-center"
               >
-              <textarea
-                rows="4"
-                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000042] focus:border-transparent"
-                placeholder="Tell us about any special requirements, dietary restrictions, accessibility needs, or specific activities you'd like to include..."
-              ></textarea>
+                <i class="fas fa-star text-amber-500 mr-3"></i>
+                Special Requirements & Preferences
+              </h3>
+              <div class="relative">
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  <i class="fas fa-comment-dots text-gray-400 mr-2"></i>Tell us
+                  more about your dream trip
+                </label>
+                <textarea
+                  rows="5"
+                  class="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 transition-all duration-300 bg-white shadow-sm hover:shadow-md resize-none"
+                  placeholder="Share any special requirements, dietary restrictions, accessibility needs, celebration occasions, preferred activities, or anything else that would make your trip perfect..."
+                ></textarea>
+              </div>
             </div>
 
             <!-- Submit Button -->
-            <div class="text-center">
+            <div class="text-center pt-8">
               <button
                 type="submit"
-                class="bg-gradient-to-r from-[#000042] to-blue-700 text-white px-12 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-[#000042] transition-all duration-300 transform hover:scale-105 shadow-lg"
+                class="group relative bg-gradient-to-r from-rose-500 via-pink-600 to-purple-600 hover:from-rose-600 hover:via-pink-700 hover:to-purple-700 text-white px-12 py-5 rounded-2xl font-bold text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-3xl"
               >
-                Create My Custom Package
+                <span class="flex items-center justify-center">
+                  <i class="fas fa-magic mr-3 group-hover:animate-pulse"></i>
+                  Create My Dream Package
+                  <i
+                    class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform duration-300"
+                  ></i>
+                </span>
               </button>
+              <p class="text-gray-500 text-sm mt-4">
+                🔒 Your information is secure and will only be used to create
+                your custom travel package
+              </p>
             </div>
           </form>
         </div>
@@ -340,88 +941,394 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#000042] text-white py-12">
-      <div class="max-w-7xl mx-auto px-4">
-        <div class="grid md:grid-cols-4 gap-8">
+    <footer class="bg-[#000042] py-16 relative overflow-hidden">
+      <!-- Background Decorations Marquee -->
+      <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+        <div class="flex animate-marquee items-end whitespace-nowrap">
+          <img
+            src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png"
+            alt=""
+            class="h-[30vh] w-auto opacity-20 flex-shrink-0"
+          />
+          <img
+            src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png"
+            alt=""
+            class="h-[30vh] w-auto opacity-20 flex-shrink-0"
+          />
+          <img
+            src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png"
+            alt=""
+            class="h-[30vh] w-auto opacity-20 flex-shrink-0"
+          />
+          <img
+            src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png"
+            alt=""
+            class="h-[30vh] w-auto opacity-20 flex-shrink-0"
+          />
+          <img
+            src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png"
+            alt=""
+            class="h-[30vh] w-auto opacity-20 flex-shrink-0"
+          />
+          <img
+            src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png"
+            alt=""
+            class="h-[30vh] w-auto opacity-20 flex-shrink-0"
+          />
+          <img
+            src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png"
+            alt=""
+            class="h-[30vh] w-auto opacity-20 flex-shrink-0"
+          />
+          <img
+            src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png"
+            alt=""
+            class="h-[30vh] w-auto opacity-20 flex-shrink-0"
+          />
+          <img
+            src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png"
+            alt=""
+            class="h-[30vh] w-auto opacity-20 flex-shrink-0"
+          />
+          <img
+            src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png"
+            alt=""
+            class="h-[30vh] w-auto opacity-20 flex-shrink-0"
+          />
+        </div>
+      </div>
+      <style>
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+        .animate-marquee {
+          animation: marquee 40s linear infinite;
+          width: 200%;
+        }
+      </style>
+      <div class="container mx-auto px-6 max-w-7xl relative z-10">
+        <!-- Logo Section -->
+        <div class="mb-12 text-center">
+          <img
+            src="Images/Oasis Logo.png"
+            alt="Oasis Travel & Tourism"
+            class="h-20 mx-auto mb-4"
+          />
+          <p class="text-gray-300 max-w-2xl mx-auto">
+            Your trusted partner for unforgettable travel experiences. Discover
+            the world with Oasis Travel & Tourism.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <!-- Contact Section -->
           <div>
-            <img
-              class="w-32 mb-4"
-              src="Images/Oasis Logo_New.png"
-              alt="Oasis Travel & Tourism"
-            />
-            <p class="text-gray-300">
-              Creating unforgettable travel experiences tailored just for you.
-            </p>
+            <h3
+              class="text-xl font-bold text-white mb-6"
+              style="font-family: &quot;Lausanne&quot;"
+            >
+              Contact
+            </h3>
+            <div class="space-y-4">
+              <div class="flex items-center text-gray-300">
+                <svg
+                  class="w-5 h-5 mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  ></path>
+                </svg>
+                <span>+91 9796986969</span>
+              </div>
+              <div class="flex items-center text-gray-300">
+                <svg
+                  class="w-5 h-5 mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <span>info@oasistoursandtravels.com</span>
+              </div>
+              <div class="flex items-center text-gray-300">
+                <svg
+                  class="w-5 h-5 mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+                <span>Ops@oasistoursandtravels.com</span>
+              </div>
+              <div class="flex items-start text-gray-300">
+                <svg
+                  class="w-5 h-5 mr-3 mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+                <span>Ravet, Pune- 411007<br />Maharashtra, India</span>
+              </div>
+            </div>
           </div>
+
+          <!-- Company Section -->
           <div>
-            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-            <ul class="space-y-2">
+            <h3
+              class="text-xl font-bold text-white mb-6"
+              style="font-family: &quot;Lausanne&quot;"
+            >
+              Company
+            </h3>
+            <ul class="space-y-3">
               <li>
-                <a href="index.html" class="text-gray-300 hover:text-white"
+                <a
+                  href="index.html"
+                  class="text-gray-300 hover:text-[#d4af37] transition-colors"
                   >Home</a
                 >
               </li>
               <li>
-                <a href="about.html" class="text-gray-300 hover:text-white"
-                  >About</a
+                <a
+                  href="about.html"
+                  class="text-gray-300 hover:text-[#d4af37] transition-colors"
+                  >About Us</a
                 >
               </li>
               <li>
-                <a href="packages.html" class="text-gray-300 hover:text-white"
+                <a
+                  href="index.html#packages"
+                  class="text-gray-300 hover:text-[#d4af37] transition-colors"
                   >Packages</a
                 >
               </li>
               <li>
-                <a href="contact.html" class="text-gray-300 hover:text-white"
-                  >Contact</a
+                <a
+                  href="index.html#services"
+                  class="text-gray-300 hover:text-[#d4af37] transition-colors"
+                  >Team</a
                 >
               </li>
             </ul>
           </div>
+
+          <!-- Support Section -->
           <div>
-            <h3 class="text-xl font-bold mb-4">Services</h3>
-            <ul class="space-y-2">
+            <h3
+              class="text-xl font-bold text-white mb-6"
+              style="font-family: &quot;Lausanne&quot;"
+            >
+              Support
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-300 hover:text-[#d4af37] transition-colors"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#contact"
+                  class="text-gray-300 hover:text-[#d4af37] transition-colors"
+                  >Enquiry</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#d4af37] transition-colors"
+                  >FAQ's</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-300 hover:text-[#d4af37] transition-colors"
+                  >Help</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services Section -->
+          <div>
+            <h3
+              class="text-xl font-bold text-white mb-6"
+              style="font-family: &quot;Lausanne&quot;"
+            >
+              Services
+            </h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="index.html#packages"
+                  class="text-gray-300 hover:text-[#d4af37] transition-colors"
+                  >Packages</a
+                >
+              </li>
               <li>
                 <a
                   href="index.html#services"
-                  class="text-gray-300 hover:text-white"
-                  >Our Services</a
+                  class="text-gray-300 hover:text-[#d4af37] transition-colors"
+                  >Our Guides</a
                 >
               </li>
               <li>
                 <a
-                  href="destinations.html"
-                  class="text-gray-300 hover:text-white"
-                  >Destinations</a
+                  href="#"
+                  class="text-gray-300 hover:text-[#d4af37] transition-colors"
+                  >Visa & Passport</a
                 >
               </li>
               <li>
-                <a href="hotels.html" class="text-gray-300 hover:text-white"
-                  >Hotels</a
-                >
-              </li>
-              <li>
-                <a href="tours.html" class="text-gray-300 hover:text-white"
-                  >Tours</a
+                <a
+                  href="custom-package.html"
+                  class="text-gray-300 hover:text-[#d4af37] transition-colors"
+                  >Custom Package</a
                 >
               </li>
             </ul>
           </div>
-          <div>
-            <h3 class="text-xl font-bold mb-4">Contact Info</h3>
-            <div class="space-y-2 text-gray-300">
-              <p><i class="fas fa-phone mr-2"></i> +91 98765 43210</p>
-              <p><i class="fas fa-envelope mr-2"></i> info@oasistravel.com</p>
-              <p><i class="fas fa-map-marker-alt mr-2"></i> Mumbai, India</p>
+        </div>
+
+        <!-- Social Media & Copyright -->
+        <div class="border-t border-gray-600 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <!-- Social Media Icons -->
+            <div class="flex space-x-4 mb-4 md:mb-0">
+              <!-- WhatsApp -->
+              <a
+                href="https://wa.me/919796986969?text=Hello%20Oasis%20Tours"
+                target="_blank"
+                class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all duration-300"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516"
+                  />
+                </svg>
+              </a>
+              <!-- Facebook -->
+              <a
+                href="https://www.facebook.com/profile.php?id=61581901382290"
+                target="_blank"
+                class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white transition-all duration-300"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                  />
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a
+                href="https://www.instagram.com/tours_with_oasis?igsh=MXNpZWRydTFrMHNwbQ=="
+                target="_blank"
+                class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-gradient-to-r hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F77737] hover:border-[#833AB4] hover:text-white transition-all duration-300"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <!-- Email -->
+              <a
+                href="mailto:info@oasistoursandtravels.com"
+                class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-[#d4af37] hover:border-[#d4af37] hover:text-white transition-all duration-300"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Copyright -->
+            <div class="text-gray-300 text-center md:text-right">
+              <p>
+                Copyright © 2025 Oasis Tours & Travel | Design By Code Sunny
+              </p>
             </div>
           </div>
-        </div>
-        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p>&copy; 2024 Oasis Travel & Tourism. All rights reserved.</p>
         </div>
       </div>
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Mobile Navigation JavaScript -->
+    <script>
+      // Mobile Navigation Toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        const burger = document.querySelector(".burger");
+        const mobileNav = document.querySelector(".mobile-nav");
+
+        if (burger && mobileNav) {
+          burger.addEventListener("click", function () {
+            burger.classList.toggle("active");
+            mobileNav.classList.toggle("active");
+          });
+
+          // Close mobile nav when clicking on links
+          const mobileNavLinks = document.querySelectorAll(
+            ".mobile-nav-links a"
+          );
+          mobileNavLinks.forEach((link) => {
+            link.addEventListener("click", function () {
+              burger.classList.remove("active");
+              mobileNav.classList.remove("active");
+            });
+          });
+        }
+      });
+    </script>
   </body>
 </html>

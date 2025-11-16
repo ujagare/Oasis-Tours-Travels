@@ -126,11 +126,12 @@ function initializeHeroSlider() {
     spaceBetween: 0,
     loop: true,
 
-    // Autoplay settings
+    // Autoplay settings - Fixed timing
     autoplay: {
-      delay: 4000,
+      delay: 5000,
       disableOnInteraction: false,
-      pauseOnMouseEnter: false,
+      pauseOnMouseEnter: true,
+      waitForTransition: true,
     },
 
     // Navigation
@@ -164,11 +165,14 @@ function initializeHeroSlider() {
         console.log(`🎉 Swiper initialized with ${this.slides.length} slides`);
         console.log(`📍 Active slide: ${this.activeIndex}`);
 
-        // Play first video
+        // Play first video and animate after website loads
         setTimeout(() => {
           playCurrentVideo(this);
-          animateCurrentSlideText(this);
-        }, 200);
+          // Only animate if not already animated
+          if (!document.querySelector('.slide-title').style.opacity || document.querySelector('.slide-title').style.opacity === '0') {
+            animateCurrentSlideText(this);
+          }
+        }, 1500);
       },
 
       slideChange: function () {
@@ -198,11 +202,7 @@ function initializeHeroSlider() {
 
   console.log("✅ Hero Slider Fix Complete!");
 
-  // Test navigation after 2 seconds
-  setTimeout(() => {
-    console.log("🧪 Testing slider navigation...");
-    heroSwiper.slideNext();
-  }, 2000);
+  // Removed test navigation to prevent fast slide changes
 }
 
 function playCurrentVideo(swiperInstance) {
@@ -228,12 +228,31 @@ function stopAllVideos() {
 
 function hideAllSlideText() {
   if (typeof gsap !== "undefined") {
-    gsap.set(".slide-title", { opacity: 0, x: 100 });
-    gsap.set(".slide-subtitle, .slide-description, .slide-button", {
+    // Kill all existing animations first
+    gsap.killTweensOf(".slide-title, .slide-subtitle, .slide-description, .slide-button");
+    
+    // Set hidden states for all slides except active
+    gsap.set(".heroSwiper .slide-title", { opacity: 0, x: 100, force3D: true });
+    gsap.set(".heroSwiper .slide-subtitle, .heroSwiper .slide-description, .heroSwiper .slide-button", {
       opacity: 0,
       y: 50,
+      force3D: true
     });
   }
+}
+
+// Set initial state for all hero text elements
+if (typeof gsap !== "undefined") {
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+      gsap.set(".heroSwiper .slide-title", { opacity: 0, x: 100, force3D: true });
+      gsap.set(".heroSwiper .slide-subtitle, .heroSwiper .slide-description, .heroSwiper .slide-button", {
+        opacity: 0,
+        y: 50,
+        force3D: true
+      });
+    }, 100);
+  });
 }
 
 function animateCurrentSlideText(swiperInstance) {
@@ -245,37 +264,41 @@ function animateCurrentSlideText(swiperInstance) {
   const description = activeSlide?.querySelector(".slide-description");
   const button = activeSlide?.querySelector(".slide-button");
 
-  if (title) {
-    gsap.fromTo(
-      title,
-      { opacity: 0, x: 100 },
-      { opacity: 1, x: 0, duration: 1, ease: "power2.out", delay: 0.3 }
-    );
+  // Check if animation is already running
+  if (title && title.style.opacity === '1') {
+    return; // Animation already completed
   }
 
-  if (subtitle) {
-    gsap.fromTo(
-      subtitle,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0.6 }
-    );
-  }
+  // Kill any existing animations first
+  gsap.killTweensOf([title, subtitle, description, button]);
 
-  if (description) {
-    gsap.fromTo(
-      description,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0.8 }
-    );
-  }
+  // Set initial states properly
+  gsap.set(title, { opacity: 0, x: 100, force3D: true });
+  gsap.set([subtitle, description, button], { opacity: 0, y: 50, force3D: true });
 
-  if (button) {
-    gsap.fromTo(
-      button,
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 1.0 }
-    );
-  }
+  // Create timeline for smooth sequence
+  const tl = gsap.timeline();
+  
+  tl.to(title, {
+    opacity: 1,
+    x: 0,
+    duration: 0.8,
+    ease: "power2.out",
+    delay: 0.2
+  })
+  .to([subtitle, description], {
+    opacity: 1,
+    y: 0,
+    duration: 0.6,
+    ease: "power2.out",
+    stagger: 0.15
+  }, "-=0.4")
+  .to(button, {
+    opacity: 1,
+    y: 0,
+    duration: 0.5,
+    ease: "power2.out"
+  }, "-=0.3");
 }
 
 // Debug function

@@ -1,0 +1,1702 @@
+{
+  "Malaysia": {
+    "hero_title": "Malaysia",
+    "Capital": "Kuala Lumpur",
+    "population": "3.3 Crore",
+    "language": "Malay, English, Chinese, Tamil",
+    "currency": "MYR (Ringgit)",
+    "description": "Malaysia offers diverse experiences from modern cities to pristine beaches, rainforests, and rich cultural heritage. Discover the perfect blend of modernity and tradition.",
+    "top_attractions": [
+      {"name": "Petronas Twin Towers", "detail": "Iconic twin skyscrapers and symbol of modern Malaysia."},
+      {"name": "Langkawi Island", "detail": "Beautiful beaches, cable car rides, and duty-free shopping."},
+      {"name": "Penang Heritage", "detail": "UNESCO World Heritage site with rich cultural diversity."},
+      {"name": "Borneo Rainforest", "detail": "Ancient rainforest with unique wildlife and adventure activities."},
+      {"name": "Genting Highlands", "detail": "Cool mountain resort with theme parks and casinos."},
+      {"name": "Cameron Highlands", "detail": "Tea plantations and cool climate hill station."},
+      {"name": "Malacca Historic City", "detail": "UNESCO World Heritage site with colonial architecture."},
+      {"name": "Tioman Island", "detail": "Pristine diving destination with coral reefs and marine life."}
+    ],
+    "hotels": [
+        {"name": "Mandarin Oriental KL", "price": "$150 /night", "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80", "features": ["Luxury city hotel", "Spa", "Fine Dining"]},
+        {"name": "The Datai Langkawi", "price": "$300 /night", "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80", "features": ["Rainforest resort", "Private Beach", "Golf Course"]},
+        {"name": "Eastern & Oriental Penang", "price": "$200 /night", "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80", "features": ["Heritage hotel", "Sea View", "Colonial Architecture"]}
+    ],
+    "activities": [
+      {"name": "City Tours", "price": "From $50"},
+      {"name": "Island Hopping", "price": "From $80"},
+      {"name": "Cultural Tours", "price": "From $60"},
+      {"name": "Adventure Sports", "price": "From $100"},
+      {"name": "Shopping Tours", "price": "From $40"},
+      {"name": "Food Tours", "price": "From $45"},
+      {"name": "Wildlife Safari", "price": "From $120"},
+      {"name": "Spa & Wellness", "price": "From $70"}
+    ],
+    "packages": [
+      {
+        "name": "Budget Package",
+        "type": "BEST VALUE",
+        "price": "₹ 45,000/-",
+        "detail": "Round-trip flights, Business hotel accommodation, Daily breakfast, JR Pass included. Perfect for first-time visitors."
+      },
+      {
+        "name": "Standard Package",
+        "type": "MOST POPULAR",
+        "price": "₹ 75,000/-",
+        "detail": "Flights + seaplane transfer, Overwater villa, Half board meals, Sunset cruise included. Perfect for couples."
+      },
+      {
+        "name": "Luxury Package",
+        "type": "LUXURY",
+        "price": "₹ 1,25,000/-",
+        "detail": "Business class flights, Presidential suite + butler, All-inclusive dining, All activities included, VIP concierge service."
+      },
+      {
+        "name": "Custom Package",
+        "type": "CUSTOM",
+        "price": "Contact for Price",
+        "detail": "Choose your duration, Select accommodation, Pick your activities, Flexible meal plans. Designed just for you."
+      }
+    ],
+    "why_choose_us": [
+      {"title": "Cultural Diversity", "detail": "Experience Malaysia's rich multicultural heritage and traditions."},
+      {"title": "Modern Cities", "detail": "Explore world-class cities with stunning architecture."},
+      {"title": "Natural Beauty", "detail": "Discover pristine beaches, rainforests, and islands."},
+      {"title": "Culinary Delights", "detail": "Taste diverse and delicious Malaysian cuisine."},
+      {"title": "Adventure Activities", "detail": "Enjoy thrilling outdoor adventures and wildlife encounters."},
+      {"title": "Shopping Paradise", "detail": "Shop at modern malls and traditional markets."}
+    ],
+    "guides": [
+      {
+        "name": "Ahmad Rahman",
+        "title": "Cultural Heritage Expert",
+        "experience": "15+ years",
+        "tours_led": "500+",
+        "rating": "4.9",
+        "badge": "CULTURAL EXPERT",
+        "description": "15+ years experience in cultural heritage and history. Licensed guide specializing in local traditions and cultural experiences.",
+        "skills": ["Temples", "History", "Tea Ceremony"],
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Siti Nurhaliza",
+        "title": "Adventure & Nature Guide",
+        "experience": "12+",
+        "tours_led": "400+",
+        "rating": "4.8",
+        "badge": "NATURE EXPERT",
+        "description": "Expert adventure guide with extensive knowledge of rainforests, wildlife, and outdoor activities. Fluent in multiple languages.",
+        "skills": ["Wildlife", "Rainforest", "Adventure"],
+        "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Captain Lim",
+        "title": "Marine & Island Expert",
+        "experience": "20+",
+        "tours_led": "600+",
+        "rating": "5.0",
+        "badge": "MARINE EXPERT",
+        "description": "Professional marine guide specializing in island hopping, water sports, and coastal adventures. Expert in marine safety.",
+        "skills": ["Islands", "Diving", "Water Sports"],
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      }
+    ],
+    "testimonials": [
+      {"name": "Anita Gupta", "review": "Malaysia trip was absolutely wonderful! Oasis Tours arranged everything perfectly. The cultural diversity and modern cities were amazing.", "location": "Pune, India"},
+      {"name": "Vikram Singh", "review": "Both Langkawi and KL experiences were excellent. The beaches and city attractions were perfectly balanced. Highly recommended!", "location": "Jaipur, India"},
+      {"name": "Meera Patel", "review": "Perfect combination of food and culture in Malaysia. The local cuisine and multicultural heritage were incredible. Thank you Oasis!", "location": "Ahmedabad, India"},
+      {"name": "Rajesh Kumar", "review": "The Petronas Towers and Genting Highlands were breathtaking. Malaysia offers the perfect blend of nature and modernity.", "location": "Mumbai, India"}
+    ]
+  },
+  "Thailand": {
+    "hero_title": "Thailand",
+    "Capital": "Bangkok",
+    "population": "7 Crore",
+    "language": "Thai, English",
+    "currency": "THB (Baht)",
+    "description": "Thailand captivates with golden temples, pristine beaches, vibrant street life, and warm hospitality. Experience the Land of Smiles with its perfect blend of culture and adventure.",
+    "top_attractions": [
+      {"name": "Grand Palace Bangkok", "detail": "Magnificent royal palace complex with stunning architecture."},
+      {"name": "Phuket Beaches", "detail": "World-famous beaches with crystal clear waters."},
+      {"name": "Chiang Mai Temples", "detail": "Ancient temples and rich cultural heritage."},
+      {"name": "Phi Phi Islands", "detail": "Breathtaking islands with limestone cliffs and turquoise waters."},
+      {"name": "Ayutthaya Historical Park", "detail": "Ancient capital ruins and UNESCO World Heritage site."},
+      {"name": "Krabi Province", "detail": "Stunning limestone karsts and pristine beaches."},
+      {"name": "Koh Samui", "detail": "Tropical island paradise with luxury resorts."},
+      {"name": "Sukhothai Historical Park", "detail": "First capital of Thailand with ancient Buddha statues."}
+    ],
+    "hotels": [
+        {"name": "Mandarin Oriental Bangkok", "price": "$200 /night", "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80", "features": ["Luxury riverside hotel", "Spa", "Fine Dining"]},
+        {"name": "Banyan Tree Phuket", "price": "$350 /night", "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80", "features": ["Beach resort", "Private Pool Villas", "Golf Course"]},
+        {"name": "Four Seasons Chiang Mai", "price": "$300 /night", "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80", "features": ["Mountain resort", "Rice Terrace Views", "Spa Sanctuary"]}
+    ],
+    "activities": [
+      {"name": "Temple Tours", "price": "From $40"},
+      {"name": "Island Hopping", "price": "From $90"},
+      {"name": "Thai Cooking Class", "price": "From $50"},
+      {"name": "Elephant Sanctuary", "price": "From $80"},
+      {"name": "Floating Markets", "price": "From $35"},
+      {"name": "Muay Thai Show", "price": "From $45"},
+      {"name": "Snorkeling Tours", "price": "From $70"},
+      {"name": "Traditional Massage", "price": "From $25"}
+    ],
+    "packages": [
+      {
+        "name": "Budget Package",
+        "type": "BEST VALUE",
+        "price": "₹ 40,000/-",
+        "detail": "Round-trip flights, Business hotel accommodation, Daily breakfast, JR Pass included. Perfect for first-time visitors."
+      },
+      {
+        "name": "Standard Package",
+        "type": "MOST POPULAR",
+        "price": "₹ 70,000/-",
+        "detail": "Flights + seaplane transfer, Overwater villa, Half board meals, Sunset cruise included. Perfect for couples."
+      },
+      {
+        "name": "Luxury Package",
+        "type": "LUXURY",
+        "price": "₹ 1,20,000/-",
+        "detail": "Business class flights, Presidential suite + butler, All-inclusive dining, All activities included, VIP concierge service."
+      },
+      {
+        "name": "Custom Package",
+        "type": "CUSTOM",
+        "price": "Contact for Price",
+        "detail": "Choose your duration, Select accommodation, Pick your activities, Flexible meal plans. Designed just for you."
+      }
+    ],
+    "why_choose_us": [
+      {"title": "Cultural Heritage", "detail": "Explore ancient temples and rich Thai traditions."},
+      {"title": "Tropical Paradise", "detail": "Relax on world-famous beaches and pristine islands."},
+      {"title": "Culinary Adventure", "detail": "Discover authentic Thai flavors and street food."},
+      {"title": "Warm Hospitality", "detail": "Experience the famous Thai friendliness and service."},
+      {"title": "Adventure Activities", "detail": "Enjoy water sports, trekking, and wildlife encounters."},
+      {"title": "Vibrant Nightlife", "detail": "Experience Thailand's exciting entertainment and markets."}
+    ],
+    "guides": [
+      {
+        "name": "Somchai Jaidee",
+        "title": "Temple & Culture Expert",
+        "experience": "18+",
+        "tours_led": "650+",
+        "rating": "4.9",
+        "badge": "CULTURAL EXPERT",
+        "description": "18+ years experience in Buddhist temples and Thai culture. Licensed guide specializing in spiritual journeys and cultural immersion.",
+        "skills": ["Temples", "Buddhism", "Culture"],
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Niran Pattaya",
+        "title": "Island & Beach Guide",
+        "experience": "14+",
+        "tours_led": "480+",
+        "rating": "4.8",
+        "badge": "ISLAND EXPERT",
+        "description": "Expert island guide with extensive knowledge of Phuket, Phi Phi, and Koh Samui. Specializes in beach activities and water sports.",
+        "skills": ["Islands", "Beaches", "Snorkeling"],
+        "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Chef Apinya",
+        "title": "Culinary & Food Expert",
+        "experience": "16+",
+        "tours_led": "550+",
+        "rating": "5.0",
+        "badge": "CULINARY EXPERT",
+        "description": "Professional culinary guide specializing in Thai street food, cooking classes, and authentic local cuisine experiences.",
+        "skills": ["Street Food", "Cooking", "Markets"],
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      }
+    ],
+    "testimonials": [
+      {"name": "Rohit Sharma", "review": "Thailand experience was unforgettable! Both beaches and temples were amazing. The perfect blend of relaxation and culture.", "location": "Mumbai, India"},
+      {"name": "Kavya Reddy", "review": "Phuket honeymoon was perfect. Oasis Tours planned everything beautifully. The island hopping and sunset views were magical.", "location": "Hyderabad, India"},
+      {"name": "Arjun Mehta", "review": "Thai food and culture experience was lifetime memorable. The street food tours and temple visits were incredible.", "location": "Chennai, India"},
+      {"name": "Priya Singh", "review": "Chiang Mai temples and elephant sanctuary were so peaceful. Thailand's spiritual side touched our hearts deeply.", "location": "Delhi, India"}
+    ]
+  },
+  "Singapore": {
+    "hero_title": "Singapore",
+    "Capital": "Singapore",
+    "population": "58 Lakh",
+    "language": "English, Mandarin, Malay, Tamil",
+    "currency": "SGD (Singapore Dollar)",
+    "description": "Singapore dazzles as a modern city-state with futuristic architecture, world-class attractions, diverse cuisine, and seamless blend of cultures in the heart of Southeast Asia.",
+    "top_attractions": [
+      {"name": "Marina Bay Sands", "detail": "Iconic infinity pool and stunning city skyline views."},
+      {"name": "Gardens by the Bay", "detail": "Futuristic gardens with spectacular light shows."},
+      {"name": "Universal Studios", "detail": "Thrilling rides and movie-themed attractions."},
+      {"name": "Sentosa Island", "detail": "Beach resort destination with entertainment and attractions."},
+      {"name": "Singapore Zoo", "detail": "World-renowned zoo with open-concept animal habitats."},
+      {"name": "Chinatown Heritage Centre", "detail": "Cultural district with traditional shophouses and temples."},
+      {"name": "Clarke Quay", "detail": "Vibrant riverside dining and entertainment district."},
+      {"name": "Singapore Botanic Gardens", "detail": "UNESCO World Heritage tropical garden with orchid collection."}
+    ],
+    "hotels": [
+        {"name": "Marina Bay Sands", "price": "$400 /night", "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80", "features": ["Infinity Pool", "Sky Deck", "Luxury Shopping"]},
+        {"name": "Raffles Singapore", "price": "$600 /night", "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80", "features": ["Colonial Heritage", "Butler Service", "Historic Luxury"]},
+        {"name": "Shangri-La Singapore", "price": "$350 /night", "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80", "features": ["Garden Setting", "Multiple Pools", "Fine Dining"]}
+    ],
+    "activities": [
+      {"name": "City Tours", "price": "From $60"},
+      {"name": "River Cruise", "price": "From $40"},
+      {"name": "Food Tours", "price": "From $80"},
+      {"name": "Theme Parks", "price": "From $90"},
+      {"name": "Shopping Tours", "price": "From $50"},
+      {"name": "Night Safari", "price": "From $45"},
+      {"name": "Cable Car Ride", "price": "From $35"},
+      {"name": "Cultural Tours", "price": "From $55"}
+    ],
+    "packages": [
+      {
+        "name": "Budget Package",
+        "type": "BEST VALUE",
+        "price": "₹ 55,000/-",
+        "detail": "Round-trip flights, Business hotel accommodation, Daily breakfast, JR Pass included. Perfect for first-time visitors."
+      },
+      {
+        "name": "Standard Package",
+        "type": "MOST POPULAR",
+        "price": "₹ 85,000/-",
+        "detail": "Flights + seaplane transfer, Overwater villa, Half board meals, Sunset cruise included. Perfect for couples."
+      },
+      {
+        "name": "Luxury Package",
+        "type": "LUXURY",
+        "price": "₹ 1,50,000/-",
+        "detail": "Business class flights, Presidential suite + butler, All-inclusive dining, All activities included, VIP concierge service."
+      },
+      {
+        "name": "Custom Package",
+        "type": "CUSTOM",
+        "price": "Contact for Price",
+        "detail": "Choose your duration, Select accommodation, Pick your activities, Flexible meal plans. Designed just for you."
+      }
+    ],
+    "why_choose_us": [
+      {"title": "Modern Marvels", "detail": "Experience cutting-edge architecture and attractions."},
+      {"title": "Cultural Fusion", "detail": "Discover the perfect blend of Asian cultures."},
+      {"title": "Culinary Paradise", "detail": "Taste world-class cuisine from street food to fine dining."},
+      {"title": "Shopping Haven", "detail": "Shop at world-renowned malls and local markets."},
+      {"title": "Family Fun", "detail": "Enjoy attractions perfect for all ages."},
+      {"title": "Urban Oasis", "detail": "Experience a clean, green, and efficient city-state."}
+    ],
+    "guides": [
+      {
+        "name": "Li Wei Ming",
+        "title": "City & Architecture Expert",
+        "experience": "16+",
+        "tours_led": "520+",
+        "rating": "4.9",
+        "badge": "CITY EXPERT",
+        "description": "16+ years experience in Singapore's modern architecture and urban planning. Licensed guide specializing in city tours and cultural districts.",
+        "skills": ["Architecture", "City Tours", "Culture"],
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Priya Rajesh",
+        "title": "Food & Culture Guide",
+        "experience": "13+",
+        "tours_led": "450+",
+        "rating": "4.8",
+        "badge": "FOOD EXPERT",
+        "description": "Expert food guide with extensive knowledge of Singapore's hawker centers and multicultural cuisine. Fluent in multiple languages.",
+        "skills": ["Food Tours", "Hawker Centers", "Culture"],
+        "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Captain Marcus",
+        "title": "Marina & Attractions Expert",
+        "experience": "19+",
+        "tours_led": "580+",
+        "rating": "5.0",
+        "badge": "ATTRACTIONS EXPERT",
+        "description": "Professional attractions guide specializing in Marina Bay, Sentosa Island, and theme parks. Expert in family entertainment.",
+        "skills": ["Marina Bay", "Sentosa", "Theme Parks"],
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      }
+    ],
+    "testimonials": [
+      {"name": "Deepak Kumar", "review": "Singapore's cleanliness and efficiency impressed us greatly. Perfect family trip with attractions for all ages!", "location": "Delhi, India"},
+      {"name": "Priyanka Joshi", "review": "Marina Bay Sands infinity pool experience was lifetime memorable. Amazing planning by Oasis Tours!", "location": "Bangalore, India"},
+      {"name": "Rahul Agarwal", "review": "From food courts to fine dining, Singapore's culinary scene is incredible. The hawker centers were amazing!", "location": "Kolkata, India"},
+      {"name": "Kavita Sharma", "review": "Gardens by the Bay light show was magical. Singapore's blend of nature and technology is fascinating.", "location": "Mumbai, India"}
+    ]
+  },
+  "Indonesia": {
+    "hero_title": "Indonesia",
+    "Capital": "Jakarta",
+    "population": "27.5 Crore",
+    "language": "Indonesian, English",
+    "currency": "IDR (Rupiah)",
+    "description": "Indonesia enchants with thousands of islands, ancient temples, volcanic landscapes, pristine beaches, and rich cultural diversity. Discover the world's largest archipelago.",
+    "top_attractions": [
+      {"name": "Bali Temples", "detail": "Sacred Hindu temples with stunning architecture and spiritual significance."},
+      {"name": "Borobudur Temple", "detail": "UNESCO World Heritage Buddhist temple complex."},
+      {"name": "Komodo National Park", "detail": "Home to the famous Komodo dragons and pristine marine life."},
+      {"name": "Raja Ampat", "detail": "World's richest marine biodiversity for diving enthusiasts."},
+      {"name": "Yogyakarta Cultural Sites", "detail": "Cultural heart of Java with royal palaces and traditional arts."},
+      {"name": "Lombok Beaches", "detail": "Pristine beaches and Mount Rinjani volcano adventures."},
+      {"name": "Ubud Rice Terraces", "detail": "Stunning terraced landscapes and traditional Balinese culture."},
+      {"name": "Bromo Tengger Semeru", "detail": "Active volcanic landscape with spectacular sunrise views."}
+    ],
+    "hotels": [
+        {"name": "AYANA Resort Bali", "price": "$250 /night", "features": ["Cliff-top resort", "Rock Bar", "Multiple Pools"]},
+        {"name": "Borobudur Hotel", "price": "$150 /night", "features": ["Heritage hotel", "Temple Views", "Cultural Tours"]},
+        {"name": "Plataran Komodo", "price": "$300 /night", "features": ["Eco-luxury resort", "Private Beach", "Diving Center"]}
+    ],
+    "activities": [
+      {"name": "Temple Tours", "price": "From $45"},
+      {"name": "Volcano Trekking", "price": "From $100"},
+      {"name": "Island Hopping", "price": "From $120"},
+      {"name": "Cultural Shows", "price": "From $30"},
+      {"name": "Diving & Snorkeling", "price": "From $80"},
+      {"name": "Rice Terrace Tours", "price": "From $40"},
+      {"name": "Traditional Crafts", "price": "From $35"},
+      {"name": "Spa Treatments", "price": "From $50"}
+    ],
+    "packages": [
+      {
+        "name": "Budget Package",
+        "type": "BEST VALUE",
+        "price": "₹ 50,000/-",
+        "detail": "Round-trip flights, Business hotel accommodation, Daily breakfast, JR Pass included. Perfect for first-time visitors."
+      },
+      {
+        "name": "Standard Package",
+        "type": "MOST POPULAR",
+        "price": "₹ 80,000/-",
+        "detail": "Flights + seaplane transfer, Overwater villa, Half board meals, Sunset cruise included. Perfect for couples."
+      },
+      {
+        "name": "Luxury Package",
+        "type": "LUXURY",
+        "price": "₹ 1,40,000/-",
+        "detail": "Business class flights, Presidential suite + butler, All-inclusive dining, All activities included, VIP concierge service."
+      },
+      {
+        "name": "Custom Package",
+        "type": "CUSTOM",
+        "price": "Contact for Price",
+        "detail": "Choose your duration, Select accommodation, Pick your activities, Flexible meal plans. Designed just for you."
+      }
+    ],
+    "why_choose_us": [
+      {"title": "Island Paradise", "detail": "Explore thousands of beautiful islands with unique characteristics."},
+      {"title": "Cultural Heritage", "detail": "Discover ancient temples and rich Indonesian traditions."},
+      {"title": "Natural Wonders", "detail": "Experience volcanoes, rainforests, and pristine beaches."},
+      {"title": "Marine Life", "detail": "Dive in some of the world's best underwater destinations."},
+      {"title": "Adventure Activities", "detail": "Enjoy trekking, diving, and wildlife encounters."},
+      {"title": "Authentic Experiences", "detail": "Immerse in local culture and traditional crafts."}
+    ],
+    "guides": [
+      {
+        "name": "Made Sutrisna",
+        "title": "Bali Cultural Expert",
+        "experience": "17+",
+        "tours_led": "520+",
+        "rating": "4.9",
+        "badge": "CULTURAL EXPERT",
+        "description": "17+ years experience in Balinese culture and Hindu temples. Licensed guide specializing in spiritual journeys and traditional ceremonies.",
+        "skills": ["Temples", "Hinduism", "Ceremonies"],
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Sari Dewi",
+        "title": "Nature & Adventure Guide",
+        "experience": "14+",
+        "tours_led": "450+",
+        "rating": "4.8",
+        "badge": "NATURE EXPERT",
+        "description": "Expert nature guide with extensive knowledge of volcanoes, rice terraces, and wildlife. Specializes in eco-tourism and sustainable travel.",
+        "skills": ["Volcanoes", "Rice Terraces", "Wildlife"],
+        "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Captain Wayan",
+        "title": "Marine & Island Expert",
+        "experience": "21+",
+        "tours_led": "680+",
+        "rating": "5.0",
+        "badge": "MARINE EXPERT",
+        "description": "Professional marine guide specializing in Komodo National Park, diving, and island hopping. Expert in marine conservation and safety.",
+        "skills": ["Komodo Dragons", "Diving", "Islands"],
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      }
+    ],
+    "testimonials": [
+      {"name": "Sanjay Verma", "review": "Bali's spiritual experience and natural beauty were both incredible. Perfect honeymoon destination with amazing temples!", "location": "Indore, India"},
+      {"name": "Neha Kapoor", "review": "Borobudur temple brought peace to our minds. Indonesia's culture and heritage are truly amazing.", "location": "Chandigarh, India"},
+      {"name": "Aditya Rao", "review": "Seeing Komodo dragons was a lifetime experience. Oasis Tours arrangement was absolutely perfect.", "location": "Kochi, India"},
+      {"name": "Priya Malhotra", "review": "Ubud rice terraces were breathtaking. The traditional Balinese culture and hospitality touched our hearts.", "location": "Delhi, India"}
+    ]
+  },
+  "Maldives": {
+    "hero_title": "Maldives",
+    "Capital": "Male",
+    "population": "5.4 Lakh",
+    "language": "Dhivehi, English",
+    "currency": "MVR (Rufiyaa)",
+    "description": "The Maldives offers tropical paradise with crystal-clear waters, pristine beaches, and luxury overwater villas. Escape to tropical paradise with pristine beaches, luxury overwater villas, and world-class diving.",
+    "top_attractions": [
+      {"name": "Pristine Atolls & Islands", "detail": "Explore multiple pristine islands and discover local culture."},
+      {"name": "Coral Reefs & Marine Life", "detail": "World-class diving and snorkeling in crystal clear lagoons."},
+      {"name": "Luxury Overwater Villas", "detail": "Iconic accommodation for the ultimate tropical escape."},
+      {"name": "Sunset Cruise", "detail": "Romantic sunset sailing with dolphin watching."},
+      {"name": "Male Fish Market", "detail": "Vibrant local market showcasing Maldivian culture and fresh seafood."},
+      {"name": "Banana Reef", "detail": "Famous diving site with diverse marine life and coral formations."},
+      {"name": "Hulhumale Beach", "detail": "Beautiful artificial island with pristine beaches and water sports."},
+      {"name": "Underwater Restaurant", "detail": "Unique dining experience surrounded by marine life."}
+    ],
+    "hotels": [
+        {"name": "Conrad Maldives", "price": "$800 /night", "features": ["Luxury overwater & beach villas", "Private Beach", "Spa"]},
+        {"name": "Four Seasons Maldives", "price": "$1200 /night", "features": ["Ultimate luxury island experience", "Butler Service", "Fine Dining"]},
+        {"name": "Soneva Jani", "price": "$1500 /night", "features": ["Eco-luxury overwater villas", "Observatory", "Water Slide"]}
+    ],
+    "activities": [
+      {"name": "Seaplane Transfer", "price": "From $200"},
+      {"name": "Water Sports", "price": "From $150"},
+      {"name": "Island Hopping", "price": "From $120"},
+      {"name": "Spa & Wellness", "price": "From $180"},
+      {"name": "Fishing Trips", "price": "From $100"},
+      {"name": "Sunset Cruise", "price": "From $80"},
+      {"name": "Photography Sessions", "price": "From $250"},
+      {"name": "Dining Experiences", "price": "From $300"}
+    ],
+    "packages": [
+      {
+        "name": "Budget Package",
+        "type": "BEST VALUE",
+        "price": "₹ 75,000/-",
+        "detail": "Round-trip flights, Business hotel accommodation, Daily breakfast, JR Pass included. Perfect for first-time visitors."
+      },
+      {
+        "name": "Standard Package",
+        "type": "MOST POPULAR",
+        "price": "₹ 1,15,000/-",
+        "detail": "Flights + seaplane transfer, Overwater villa, Half board meals, Sunset cruise included. Perfect for couples."
+      },
+      {
+        "name": "Luxury Package",
+        "type": "LUXURY",
+        "price": "₹ 2,50,000/-",
+        "detail": "Business class flights, Presidential suite + butler, All-inclusive dining, All activities included, VIP concierge service."
+      },
+      {
+        "name": "Custom Package",
+        "type": "CUSTOM",
+        "price": "Contact for Price",
+        "detail": "Choose your duration, Select accommodation, Pick your activities, Flexible meal plans. Designed just for you."
+      }
+    ],
+    "why_choose_us": [
+      {"title": "Luxury Accommodation", "detail": "Enjoy luxury overwater villas and private beach villas."},
+      {"title": "World-Class Diving", "detail": "Experience world-class diving and snorkeling in crystal clear lagoons."},
+      {"title": "Exotic Flavors", "detail": "Immerse yourself in the exotic flavors of the Maldives."},
+      {"title": "Private Beach", "detail": "Enjoy private beach access and relaxation."},
+      {"title": "Wellness & Spa", "detail": "Rejuvenate with wellness and spa treatments."},
+      {"title": "Local Culture", "detail": "Discover local culture and explore pristine atolls and islands."}
+    ],
+    "guides": [
+      {
+        "name": "Ibrahim Waheed",
+        "title": "Marine Life Expert",
+        "experience": "17+",
+        "tours_led": "550+",
+        "rating": "4.9",
+        "badge": "MARINE EXPERT",
+        "description": "17+ years experience in marine life and diving. Licensed guide specializing in coral reefs and underwater experiences.",
+        "skills": ["Diving", "Marine Life", "Coral Reefs"],
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Aisha Mohamed",
+        "title": "Island & Resort Guide",
+        "experience": "14+",
+        "tours_led": "420+",
+        "rating": "4.8",
+        "badge": "ISLAND EXPERT",
+        "description": "Expert island guide with extensive knowledge of atolls, resorts, and local culture. Specializes in luxury experiences and water activities.",
+        "skills": ["Islands", "Resorts", "Water Sports"],
+        "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Captain Hassan",
+        "title": "Seaplane & Adventure Expert",
+        "experience": "22+",
+        "tours_led": "650+",
+        "rating": "5.0",
+        "badge": "ADVENTURE EXPERT",
+        "description": "Professional seaplane and adventure guide specializing in aerial tours, sunset cruises, and marine adventures. Expert in safety protocols.",
+        "skills": ["Seaplane Tours", "Sunset Cruise", "Adventure"],
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      }
+    ],
+    "testimonials": [
+      {"name": "Priya Sharma", "review": "Oasis Tours made our trip unforgettable. The overwater villa experience was absolutely magical and romantic!", "location": "Mumbai, India"},
+      {"name": "Rajesh Kumar", "review": "Maldives experience was incredible, the entire team was very helpful. 5-star service throughout our stay!", "location": "Delhi, India"},
+      {"name": "Amit Varma", "review": "Our booking was very easy, and we got the best price. The coral reef diving was beyond our expectations!", "location": "Bangalore, India"},
+      {"name": "Kavya Reddy", "review": "Sunset cruise with dolphin watching was the highlight. Maldives is truly paradise on earth!", "location": "Hyderabad, India"}
+    ]
+  },
+  "Langkawi": {
+    "hero_title": "Langkawi",
+    "Capital": "Kuah",
+    "population": "1.2 Lakh",
+    "language": "Malay, English",
+    "currency": "MYR (Ringgit)",
+    "description": "Langkawi offers duty-free shopping, pristine beaches, mangrove tours, and the famous Sky Bridge. Experience Malaysia's tropical paradise island.",
+    "top_attractions": [
+      {"name": "Langkawi Sky Bridge", "detail": "Spectacular curved suspension bridge with panoramic views."},
+      {"name": "Eagle Square", "detail": "Iconic landmark with giant eagle sculpture."},
+      {"name": "Underwater World", "detail": "One of the largest aquariums in Southeast Asia."},
+      {"name": "Mangrove Tours", "detail": "Explore unique ecosystem with wildlife spotting."},
+      {"name": "Pantai Cenang Beach", "detail": "Popular beach with water sports and beachfront dining."},
+      {"name": "Temurun Waterfall", "detail": "Beautiful waterfall surrounded by lush rainforest."},
+      {"name": "Rice Garden Museum", "detail": "Learn about traditional rice cultivation and local culture."},
+      {"name": "Black Sand Beach", "detail": "Unique volcanic black sand beach with legends and stories."}
+    ],
+    "hotels": [
+        {"name": "The Datai Langkawi", "price": "$300 /night", "features": ["Rainforest resort", "Private Beach", "Spa"]},
+        {"name": "Four Seasons Langkawi", "price": "$400 /night", "features": ["Beach resort", "Private Villas", "Water Sports"]},
+        {"name": "Meritus Pelangi Beach", "price": "$150 /night", "features": ["Beachfront location", "Traditional Architecture", "Multiple Pools"]}
+    ],
+    "activities": [
+      {"name": "Cable Car Ride", "price": "From $25"},
+      {"name": "Island Hopping", "price": "From $60"},
+      {"name": "Mangrove Tours", "price": "From $40"},
+      {"name": "Duty-Free Shopping", "price": "From $20"},
+      {"name": "Beach Activities", "price": "From $30"},
+      {"name": "Sunset Cruise", "price": "From $45"},
+      {"name": "Jet Ski Tours", "price": "From $80"},
+      {"name": "Spa Treatments", "price": "From $50"}
+    ],
+    "packages": [
+      {
+        "name": "Budget Package",
+        "type": "BEST VALUE",
+        "price": "₹ 35,000/-",
+        "detail": "Round-trip flights, Business hotel accommodation, Daily breakfast, JR Pass included. Perfect for first-time visitors."
+      },
+      {
+        "name": "Standard Package",
+        "type": "MOST POPULAR",
+        "price": "₹ 60,000/-",
+        "detail": "Flights + seaplane transfer, Overwater villa, Half board meals, Sunset cruise included. Perfect for couples."
+      },
+      {
+        "name": "Luxury Package",
+        "type": "LUXURY",
+        "price": "₹ 1,00,000/-",
+        "detail": "Business class flights, Presidential suite + butler, All-inclusive dining, All activities included, VIP concierge service."
+      },
+      {
+        "name": "Custom Package",
+        "type": "CUSTOM",
+        "price": "Contact for Price",
+        "detail": "Choose your duration, Select accommodation, Pick your activities, Flexible meal plans. Designed just for you."
+      }
+    ],
+    "why_choose_us": [
+      {"title": "Duty-Free Paradise", "detail": "Enjoy tax-free shopping on the beautiful island."},
+      {"title": "Natural Beauty", "detail": "Experience pristine beaches and lush rainforests."},
+      {"title": "Adventure Activities", "detail": "Enjoy cable car rides, water sports, and island hopping."},
+      {"title": "Relaxation", "detail": "Unwind at world-class spas and beach resorts."},
+      {"title": "Wildlife Encounters", "detail": "Discover unique mangrove ecosystems and marine life."},
+      {"title": "Cultural Heritage", "detail": "Learn about local legends and Malay culture."}
+    ],
+    "testimonials": [
+      {"name": "Ravi Malhotra", "review": "Langkawi Sky Bridge experience was very thrilling! Perfect family vacation with stunning panoramic views.", "location": "Gurgaon, India"},
+      {"name": "Sunita Yadav", "review": "Enjoyed both duty-free shopping and beautiful beaches. Oasis Tours arranged everything perfectly for our trip.", "location": "Lucknow, India"},
+      {"name": "Karan Sethi", "review": "Seeing eagles in mangrove tour was unforgettable. Perfect destination for nature lovers and wildlife enthusiasts!", "location": "Amritsar, India"},
+      {"name": "Meera Singh", "review": "Cable car ride and Temurun Waterfall were breathtaking. Langkawi's natural beauty exceeded our expectations.", "location": "Delhi, India"}
+    ]
+  },
+  "Bintan": {
+    "Capital": "Tanjung Pinang",
+    "population": "3.5 Lakh",
+    "language": "Indonesian, English",
+    "currency": "IDR (Rupiah)",
+    "description": "Bintan offers pristine beaches, luxury resorts, golf courses, and cultural experiences just an hour from Singapore. Perfect tropical escape.",
+    "top_attractions": [
+      {"name": "Trikora Beach", "detail": "Pristine white sand beach with crystal clear waters."},
+      {"name": "Penyengat Island", "detail": "Historical island with royal heritage and cultural sites."},
+      {"name": "Bintan Resorts", "detail": "World-class beach resorts with luxury amenities."},
+      {"name": "Mangrove Discovery", "detail": "Explore unique mangrove ecosystems and wildlife."}
+    ],
+    "hotels": [
+        {"name": "Banyan Tree Bintan", "price": "$250 /night", "features": ["Beachfront villas", "Spa", "Golf Course"]},
+        {"name": "Angsana Bintan", "price": "$200 /night", "features": ["Beach resort", "Water Sports", "Family Friendly"]},
+        {"name": "The Sanchaya", "price": "$400 /night", "features": ["Luxury beachfront", "Private Beach", "Fine Dining"]}
+    ],
+    "activities": [
+      {"name": "Beach Activities", "price": "From $30"},
+      {"name": "Golf", "price": "From $80"},
+      {"name": "Island Hopping", "price": "From $50"},
+      {"name": "Cultural Tours", "price": "From $40"},
+      {"name": "Water Sports", "price": "From $60"},
+      {"name": "Mangrove Tours", "price": "From $35"},
+      {"name": "Spa Treatments", "price": "From $70"},
+      {"name": "Fishing Trips", "price": "From $90"}
+    ],
+    "packages": [
+      {
+        "name": "Budget Package",
+        "type": "BEST VALUE",
+        "price": "₹ 40,000/-",
+        "detail": "Round-trip flights, Business hotel accommodation, Daily breakfast, JR Pass included. Perfect for first-time visitors."
+      },
+      {
+        "name": "Standard Package",
+        "type": "MOST POPULAR",
+        "price": "₹ 70,000/-",
+        "detail": "Flights + seaplane transfer, Overwater villa, Half board meals, Sunset cruise included. Perfect for couples."
+      },
+      {
+        "name": "Luxury Package",
+        "type": "LUXURY",
+        "price": "₹ 1,20,000/-",
+        "detail": "Business class flights, Presidential suite + butler, All-inclusive dining, All activities included, VIP concierge service."
+      },
+      {
+        "name": "Custom Package",
+        "type": "CUSTOM",
+        "price": "Contact for Price",
+        "detail": "Choose your duration, Select accommodation, Pick your activities, Flexible meal plans. Designed just for you."
+      }
+    ],
+    "why_choose_us": [
+      {"title": "Pristine Beaches", "detail": "Relax on beautiful white sand beaches with clear waters."},
+      {"title": "Luxury Resorts", "detail": "Stay at world-class beachfront resorts."},
+      {"title": "Golf Paradise", "detail": "Play at championship golf courses with ocean views."},
+      {"title": "Cultural Heritage", "detail": "Explore historical sites and local traditions."},
+      {"title": "Easy Access", "detail": "Just an hour from Singapore by ferry."},
+      {"title": "Water Activities", "detail": "Enjoy various water sports and marine adventures."}
+    ],
+    "testimonials": [
+      {"name": "Amit Khanna", "review": "Despite being so close to Singapore, Bintan has its own unique charm. Perfect weekend getaway with beautiful beaches!", "location": "Mumbai, India"},
+      {"name": "Pooja Nair", "review": "Beach resort experience was very relaxing and peaceful. The golf course was absolutely amazing too.", "location": "Kochi, India"},
+      {"name": "Suresh Gupta", "review": "From ferry ride to resort, everything was smooth and well-organized. Oasis Tours planning was excellent!", "location": "Delhi, India"},
+      {"name": "Ravi Sharma", "review": "Bintan's pristine beaches and luxury resorts exceeded our expectations. Perfect tropical escape from city life.", "location": "Bangalore, India"}
+    ]
+  },
+  "Cambodia": {
+    "Capital": "Phnom Penh",
+    "population": "1.7 Crore",
+    "language": "Khmer, English",
+    "currency": "KHR (Riel), USD",
+    "description": "Cambodia mesmerizes with the magnificent Angkor Wat temples, rich Khmer heritage, floating villages, and warm hospitality. Discover ancient wonders and cultural treasures.",
+    "top_attractions": [
+      {"name": "Angkor Wat", "detail": "World's largest religious monument and UNESCO World Heritage site."},
+      {"name": "Bayon Temple", "detail": "Famous temple with giant stone faces and intricate carvings."},
+      {"name": "Tonle Sap Lake", "detail": "Floating villages and unique ecosystem of Southeast Asia's largest lake."},
+      {"name": "Royal Palace Phnom Penh", "detail": "Stunning royal complex with traditional Khmer architecture."}
+    ],
+    "hotels": [
+        {"name": "Raffles Hotel Le Royal", "price": "$200 /night", "features": ["Colonial heritage", "Historic luxury", "Central location"]},
+        {"name": "Park Hyatt Siem Reap", "price": "$250 /night", "features": ["Modern luxury", "Spa", "Near Angkor Wat"]},
+        {"name": "Amansara", "price": "$800 /night", "features": ["Ultra-luxury", "Private pools", "Exclusive experience"]}
+    ],
+    "activities": [
+      {"name": "Angkor Temple Tours", "price": "From $50"},
+      {"name": "Floating Village Tours", "price": "From $40"},
+      {"name": "Cultural Shows", "price": "From $25"},
+      {"name": "Cooking Classes", "price": "From $35"},
+      {"name": "Bicycle Tours", "price": "From $30"},
+      {"name": "Boat Cruises", "price": "From $45"},
+      {"name": "Traditional Crafts", "price": "From $20"},
+      {"name": "Sunrise Tours", "price": "From $60"}
+    ],
+    "packages": [
+      {
+        "name": "Budget Package",
+        "type": "BEST VALUE",
+        "price": "₹ 45,000/-",
+        "detail": "Round-trip flights, 3-star hotel, Daily breakfast, Angkor Wat tours. Perfect temple exploration."
+      },
+      {
+        "name": "Standard Package",
+        "type": "MOST POPULAR",
+        "price": "₹ 75,000/-",
+        "detail": "Flights, Heritage hotel, Half board meals, Multi-temple tours. Great cultural experience."
+      },
+      {
+        "name": "Luxury Package",
+        "type": "LUXURY",
+        "price": "₹ 1,30,000/-",
+        "detail": "Business class flights, 5-star resort, All meals, Private guide tours. Premium Cambodia experience."
+      },
+      {
+        "name": "Custom Package",
+        "type": "CUSTOM",
+        "price": "Contact for Price",
+        "detail": "Choose temples, Select experiences, Flexible itinerary, Custom duration. Your Cambodia journey."
+      }
+    ],
+    "why_choose_us": [
+      {"title": "Ancient Wonders", "detail": "Explore the magnificent Angkor Wat and temple complexes."},
+      {"title": "Cultural Heritage", "detail": "Discover rich Khmer history and traditions."},
+      {"title": "Unique Experiences", "detail": "Visit floating villages and traditional markets."},
+      {"title": "Authentic Cuisine", "detail": "Taste traditional Cambodian flavors and cooking."},
+      {"title": "Spiritual Journey", "detail": "Experience Buddhist temples and spiritual sites."},
+      {"title": "Natural Beauty", "detail": "Explore lakes, rivers, and countryside landscapes."}
+    ],
+    "guides": [
+      {
+        "name": "Sophea Chea",
+        "title": "Angkor Temple Expert",
+        "experience": "18+",
+        "tours_led": "650+",
+        "rating": "4.9",
+        "badge": "CULTURAL EXPERT",
+        "description": "18+ years experience in Angkor temples and Khmer history. Licensed guide specializing in ancient architecture and cultural heritage.",
+        "skills": ["Angkor Wat", "Khmer History", "Temples"],
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Channary Sok",
+        "title": "Cultural & Heritage Guide",
+        "experience": "15+",
+        "tours_led": "480+",
+        "rating": "4.8",
+        "badge": "HERITAGE EXPERT",
+        "description": "Expert cultural guide with extensive knowledge of Cambodian traditions, floating villages, and local customs. Fluent in multiple languages.",
+        "skills": ["Floating Villages", "Culture", "Traditions"],
+        "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Pisach Meng",
+        "title": "Adventure & Nature Guide",
+        "experience": "12+",
+        "tours_led": "350+",
+        "rating": "4.7",
+        "badge": "NATURE EXPERT",
+        "description": "Professional adventure guide specializing in countryside tours, wildlife spotting, and outdoor activities. Expert in sustainable tourism.",
+        "skills": ["Countryside", "Wildlife", "Adventure"],
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      }
+    ],
+    "testimonials": [
+      {"name": "Rajesh Tiwari", "review": "Visiting Angkor Wat was a deeply spiritual experience. Cambodia's history is absolutely fascinating and rich.", "location": "Varanasi, India"},
+      {"name": "Madhuri Desai", "review": "The floating villages tour was truly unique. Got a wonderful opportunity to experience local culture closely.", "location": "Pune, India"},
+      {"name": "Vinod Kumar", "review": "The temple architecture was breathtaking and filled our hearts with joy. Oasis Tours guide was very knowledgeable.", "location": "Jaipur, India"},
+      {"name": "Anita Gupta", "review": "Cambodia's ancient temples and warm people made this trip unforgettable. The sunrise at Angkor Wat was magical.", "location": "Delhi, India"}
+    ]
+  },
+  "Vietnam": {
+    "hero_title": "Vietnam",
+    "Capital": "Hanoi",
+    "population": "9.8 Crore",
+    "language": "Vietnamese, English",
+    "currency": "VND (Dong)",
+    "description": "Vietnam captivates with stunning landscapes, rich history, delicious cuisine, and vibrant culture. From Ha Long Bay to bustling cities, experience Southeast Asian charm.",
+    "top_attractions": [
+      {"name": "Ha Long Bay", "detail": "UNESCO World Heritage site with limestone karsts and emerald waters."},
+      {"name": "Hoi An Ancient Town", "detail": "Charming historic town with lantern-lit streets and traditional architecture."},
+      {"name": "Sapa Rice Terraces", "detail": "Breathtaking mountain landscapes with terraced rice fields."},
+      {"name": "Cu Chi Tunnels", "detail": "Historic underground tunnel network from the Vietnam War."}
+    ],
+    "hotels": [
+        {"name": "Park Hyatt Saigon", "price": "$200 /night", "features": ["Luxury city hotel", "French colonial style", "Central location"]},
+        {"name": "Intercontinental Hanoi", "price": "$180 /night", "features": ["Lakeside location", "Modern amenities", "Cultural proximity"]},
+        {"name": "Amanoi", "price": "$600 /night", "features": ["Beach resort", "Mountain views", "Ultra-luxury"]}
+    ],
+    "activities": [
+      {"name": "Ha Long Bay Cruise", "price": "From $80"},
+      {"name": "Street Food Tours", "price": "From $35"},
+      {"name": "Motorbike Tours", "price": "From $50"},
+      {"name": "Cooking Classes", "price": "From $40"},
+      {"name": "Cultural Tours", "price": "From $45"},
+      {"name": "Trekking Tours", "price": "From $70"},
+      {"name": "River Cruises", "price": "From $60"},
+      {"name": "War History Tours", "price": "From $55"}
+    ],
+    "packages": [
+      {
+        "name": "Budget Package",
+        "type": "BEST VALUE",
+        "price": "₹ 50,000/-",
+        "detail": "Round-trip flights, 3-star hotels, Daily breakfast, City tours included. Great Vietnam introduction."
+      },
+      {
+        "name": "Standard Package",
+        "type": "MOST POPULAR",
+        "price": "₹ 80,000/-",
+        "detail": "Flights, 4-star hotels, Half board meals, Ha Long Bay cruise. Perfect Vietnam experience."
+      },
+      {
+        "name": "Luxury Package",
+        "type": "LUXURY",
+        "price": "₹ 1,35,000/-",
+        "detail": "Business class flights, 5-star resorts, All meals, Private tours with guide. Premium Vietnam journey."
+      },
+      {
+        "name": "Custom Package",
+        "type": "CUSTOM",
+        "price": "Contact for Price",
+        "detail": "Choose destinations, Select activities, Flexible duration, Custom experiences. Your Vietnam adventure."
+      }
+    ],
+    "why_choose_us": [
+      {"title": "Natural Wonders", "detail": "Explore stunning landscapes from mountains to beaches."},
+      {"title": "Rich History", "detail": "Discover Vietnam's fascinating historical sites and stories."},
+      {"title": "Culinary Delights", "detail": "Taste authentic Vietnamese cuisine and street food."},
+      {"title": "Cultural Immersion", "detail": "Experience local traditions and vibrant markets."},
+      {"title": "Adventure Activities", "detail": "Enjoy trekking, cruising, and motorbike adventures."},
+      {"title": "Warm Hospitality", "detail": "Experience the friendliness of Vietnamese people."}
+    ],
+    "guides": [
+      {
+        "name": "Nguyen Minh",
+        "title": "Cultural & History Expert",
+        "experience": "16+",
+        "tours_led": "580+",
+        "rating": "4.9",
+        "badge": "CULTURAL EXPERT",
+        "description": "16+ years experience in Vietnamese history and culture. Licensed guide specializing in Ha Long Bay, Hoi An, and cultural heritage sites.",
+        "skills": ["Ha Long Bay", "History", "Culture"],
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Linh Tran",
+        "title": "Food & Street Culture Guide",
+        "experience": "13+",
+        "tours_led": "420+",
+        "rating": "4.8",
+        "badge": "CULINARY EXPERT",
+        "description": "Expert food guide with extensive knowledge of Vietnamese cuisine, street food, and local markets. Specializes in authentic culinary experiences.",
+        "skills": ["Street Food", "Pho", "Markets"],
+        "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Captain Duc",
+        "title": "Adventure & Nature Guide",
+        "experience": "19+",
+        "tours_led": "650+",
+        "rating": "5.0",
+        "badge": "ADVENTURE EXPERT",
+        "description": "Professional adventure guide specializing in motorbike tours, trekking, and outdoor activities. Expert in Sapa mountains and countryside exploration.",
+        "skills": ["Motorbike Tours", "Trekking", "Sapa"],
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      }
+    ],
+    "testimonials": [
+      {"name": "Sachin Jain", "review": "Ha Long Bay cruise experience was lifetime memorable. Vietnam's natural beauty is absolutely amazing and breathtaking.", "location": "Indore, India"},
+      {"name": "Rekha Sharma", "review": "Hoi An's lanterns and street food combination was perfect. The cultural experience was also fantastic.", "location": "Chandigarh, India"},
+      {"name": "Manish Agarwal", "review": "From Pho to Banh Mi, Vietnam's food scene is incredible. Oasis Tours showed us the best local places.", "location": "Agra, India"},
+      {"name": "Priya Reddy", "review": "Vietnam's landscapes from mountains to beaches were stunning. The motorbike tours through countryside were thrilling.", "location": "Hyderabad, India"}
+    ]
+  },
+  "Philippines": {
+    "Capital": "Manila",
+    "population": "11 Crore",
+    "language": "Filipino, English",
+    "currency": "PHP (Peso)",
+    "description": "Philippines dazzles with over 7,000 islands, pristine beaches, vibrant coral reefs, and warm Filipino hospitality. Discover tropical paradise and rich cultural heritage.",
+    "top_attractions": [
+      {"name": "Palawan Islands", "detail": "World's best island with pristine beaches and crystal clear lagoons."},
+      {"name": "Boracay Beach", "detail": "Famous white sand beach with vibrant nightlife and water sports."},
+      {"name": "Chocolate Hills", "detail": "Unique geological formation with over 1,200 cone-shaped hills."},
+      {"name": "Mayon Volcano", "detail": "Perfect cone-shaped active volcano with stunning landscapes."}
+    ],
+    "hotels": [
+        {"name": "Shangri-La Boracay", "price": "$300 /night", "features": ["Beachfront resort", "Private beach", "Water sports"]},
+        {"name": "El Nido Resorts", "price": "$400 /night", "features": ["Island resort", "Eco-luxury", "Diving center"]},
+        {"name": "Amanpulo", "price": "$1200 /night", "features": ["Private island", "Ultra-luxury", "Exclusive experience"]}
+    ],
+    "activities": [
+      {"name": "Island Hopping", "price": "From $60"},
+      {"name": "Diving & Snorkeling", "price": "From $80"},
+      {"name": "Beach Activities", "price": "From $40"},
+      {"name": "Cultural Tours", "price": "From $50"},
+      {"name": "Volcano Tours", "price": "From $70"},
+      {"name": "Water Sports", "price": "From $90"},
+      {"name": "Sunset Cruises", "price": "From $55"},
+      {"name": "Traditional Shows", "price": "From $35"}
+    ],
+    "packages": [
+      {
+        "name": "Budget Package",
+        "type": "BEST VALUE",
+        "price": "₹ 55,000/-",
+        "detail": "Round-trip flights, 3-star resort, Daily breakfast, Island tours included. Perfect island introduction."
+      },
+      {
+        "name": "Standard Package",
+        "type": "MOST POPULAR",
+        "price": "₹ 85,000/-",
+        "detail": "Flights, Beach resort, Half board meals, Multi-island hopping. Great Philippines adventure."
+      },
+      {
+        "name": "Luxury Package",
+        "type": "LUXURY",
+        "price": "₹ 1,50,000/-",
+        "detail": "Business class flights, 5-star island resort, All-inclusive, Private tours. Ultimate Philippines luxury."
+      },
+      {
+        "name": "Custom Package",
+        "type": "CUSTOM",
+        "price": "Contact for Price",
+        "detail": "Choose islands, Select activities, Flexible duration, Custom experiences. Your Philippines paradise."
+      }
+    ],
+    "why_choose_us": [
+      {"title": "Island Paradise", "detail": "Explore over 7,000 beautiful islands with unique characteristics."},
+      {"title": "Marine Wonders", "detail": "Dive in world-class coral reefs and marine sanctuaries."},
+      {"title": "Beach Perfection", "detail": "Relax on some of the world's most beautiful beaches."},
+      {"title": "Cultural Richness", "detail": "Experience diverse Filipino culture and traditions."},
+      {"title": "Adventure Activities", "detail": "Enjoy water sports, volcano tours, and island adventures."},
+      {"title": "Warm Hospitality", "detail": "Experience the famous Filipino friendliness and service."}
+    ],
+    "testimonials": [
+      {"name": "Arjun Malhotra", "review": "Palawan का underwater world देखकर मन खुश हो गया। Philippines की natural beauty incredible है।", "location": "Gurgaon, India"},
+      {"name": "Kavita Singh", "review": "Boracay beach पर sunset देखना romantic था। Island hopping का experience भी amazing था।", "location": "Lucknow, India"},
+      {"name": "Rohit Gupta", "review": "7000+ islands में से जो भी देखे, सब beautiful थे। Oasis Tours ने best selection किया।", "location": "Bhopal, India"}
+    ]
+  },
+  "United Arab Emirates": {
+    "hero_title": "United Arab Emirates",
+    "Capital": "Abu Dhabi",
+    "population": "1 Crore",
+    "language": "Arabic, English",
+    "currency": "AED (Dirham)",
+    "description": "UAE offers futuristic cities, luxury shopping, desert adventures, and world-class attractions. Experience the perfect blend of tradition and modernity in the Arabian Peninsula.",
+    "top_attractions": [
+      {"name": "Burj Khalifa Dubai", "detail": "World's tallest building with breathtaking city views."},
+      {"name": "Sheikh Zayed Mosque", "detail": "Magnificent white marble mosque with stunning architecture."},
+      {"name": "Desert Safari", "detail": "Thrilling dune bashing and traditional Bedouin experiences."},
+      {"name": "Dubai Mall & Fountains", "detail": "World's largest shopping mall with spectacular fountain shows."},
+      {"name": "Palm Jumeirah", "detail": "Artificial island with luxury resorts and Atlantis waterpark."},
+      {"name": "Dubai Marina", "detail": "Modern waterfront district with skyscrapers and yacht clubs."},
+      {"name": "Gold Souk", "detail": "Traditional market with world's largest collection of gold jewelry."},
+      {"name": "Miracle Garden", "detail": "World's largest natural flower garden with stunning displays."}
+    ],
+    "hotels": [
+        {"name": "Burj Al Arab", "price": "$1500 /night", "features": ["7-star luxury", "Sail-shaped icon", "Butler service"]},
+        {"name": "Atlantis The Palm", "price": "$400 /night", "features": ["Resort & waterpark", "Aquarium", "Beach access"]},
+        {"name": "Emirates Palace", "price": "$600 /night", "features": ["Royal luxury", "Private beach", "Gold decor"]}
+    ],
+    "activities": [
+      {"name": "Desert Safari", "price": "From $60"},
+      {"name": "Burj Khalifa Tour", "price": "From $40"},
+      {"name": "Dubai Mall Shopping", "price": "From $30"},
+      {"name": "Dhow Cruise", "price": "From $50"},
+      {"name": "Theme Parks", "price": "From $80"},
+      {"name": "City Tours", "price": "From $45"},
+      {"name": "Water Sports", "price": "From $100"},
+      {"name": "Cultural Tours", "price": "From $55"}
+    ],
+    "packages": [
+      {
+        "name": "Budget Package",
+        "type": "BEST VALUE",
+        "price": "₹ 60,000/-",
+        "detail": "Round-trip flights, 3-star hotel, Daily breakfast, City tours included. Perfect UAE introduction."
+      },
+      {
+        "name": "Standard Package",
+        "type": "MOST POPULAR",
+        "price": "₹ 90,000/-",
+        "detail": "Flights, 4-star hotel, Half board meals, Desert safari included. Great UAE experience."
+      },
+      {
+        "name": "Luxury Package",
+        "type": "LUXURY",
+        "price": "₹ 1,80,000/-",
+        "detail": "Business class flights, 5-star hotels, All meals, Private tours. Premium UAE luxury."
+      },
+      {
+        "name": "Custom Package",
+        "type": "CUSTOM",
+        "price": "Contact for Price",
+        "detail": "Choose emirates, Select experiences, Flexible duration, Custom activities. Your UAE adventure."
+      }
+    ],
+    "why_choose_us": [
+      {"title": "Modern Marvels", "detail": "Experience world's tallest buildings and futuristic architecture."},
+      {"title": "Luxury Shopping", "detail": "Shop at world's largest malls and traditional souks."},
+      {"title": "Desert Adventures", "detail": "Enjoy thrilling desert safaris and Bedouin experiences."},
+      {"title": "Cultural Heritage", "detail": "Discover rich Arabian culture and traditions."},
+      {"title": "World-Class Attractions", "detail": "Visit theme parks, beaches, and entertainment destinations."},
+      {"title": "Culinary Excellence", "detail": "Taste international cuisine and traditional Arabic flavors."}
+    ],
+    "testimonials": [
+      {"name": "Sunil Sharma", "review": "Dubai's skyline impressed us greatly. The view from Burj Khalifa was absolutely amazing and breathtaking.", "location": "Delhi, India"},
+      {"name": "Priya Agarwal", "review": "Desert safari experience was thrilling. We got to see both UAE's luxury and traditional culture beautifully.", "location": "Mumbai, India"},
+      {"name": "Rajesh Verma", "review": "From shopping to adventure, everything was perfect. Oasis Tours arrangement was excellent and professional!", "location": "Bangalore, India"},
+      {"name": "Kavita Jain", "review": "Palm Jumeirah and Atlantis were incredible. Dubai's modern architecture and luxury exceeded all expectations.", "location": "Pune, India"},
+      {"name": "Amit Kumar", "review": "Gold Souk shopping and Dubai Fountain show were magical. The blend of tradition and modernity was fascinating.", "location": "Kolkata, India"}
+    ]
+  },
+  "Jordan": {
+    "Capital": "Amman",
+    "population": "1.1 Crore",
+    "language": "Arabic, English",
+    "currency": "JOD (Dinar)",
+    "description": "Jordan captivates with ancient Petra, desert landscapes, Dead Sea, and rich biblical history. Discover the crossroads of civilizations.",
+    "top_attractions": [
+      {"name": "Petra", "detail": "Ancient rose-red city carved into rock, UNESCO World Heritage site."},
+      {"name": "Wadi Rum", "detail": "Spectacular desert landscape with red sand dunes and rock formations."},
+      {"name": "Dead Sea", "detail": "Lowest point on earth with therapeutic salt waters."},
+      {"name": "Jerash", "detail": "Best-preserved Roman ruins outside Italy."}
+    ],
+    "hotels": [
+        {"name": "Feynan Ecolodge", "price": "$200 /night", "features": ["Eco-luxury", "Desert views", "Sustainable tourism"]},
+        {"name": "Movenpick Resort Petra", "price": "$250 /night", "features": ["Near Petra", "Luxury amenities", "Traditional architecture"]},
+        {"name": "Kempinski Ishtar Dead Sea", "price": "$300 /night", "features": ["Dead Sea resort", "Spa treatments", "Private beach"]}
+    ],
+    "activities": [
+      {"name": "Petra Tours", "price": "From $60"},
+      {"name": "Desert Safari", "price": "From $80"},
+      {"name": "Dead Sea Float", "price": "From $40"},
+      {"name": "Cultural Tours", "price": "From $50"},
+      {"name": "Camel Rides", "price": "From $35"},
+      {"name": "Hot Air Balloon", "price": "From $150"},
+      {"name": "Hiking Tours", "price": "From $45"},
+      {"name": "Spa Treatments", "price": "From $70"}
+    ],
+    "packages": [
+      {"name": "Budget Package", "type": "BEST VALUE", "price": "₹ 65,000/-", "detail": "Flights, 3-star hotels, Breakfast, Petra tours. Great Jordan introduction."},
+      {"name": "Standard Package", "type": "MOST POPULAR", "price": "₹ 95,000/-", "detail": "Flights, 4-star hotels, Half board, Multi-city tours. Perfect Jordan experience."},
+      {"name": "Luxury Package", "type": "LUXURY", "price": "₹ 1,60,000/-", "detail": "Business class, 5-star resorts, All meals, Private guides. Premium Jordan luxury."},
+      {"name": "Custom Package", "type": "CUSTOM", "price": "Contact for Price", "detail": "Flexible itinerary, Choose experiences, Custom duration. Your Jordan adventure."}
+    ],
+    "why_choose_us": [
+      {"title": "Ancient Wonders", "detail": "Explore Petra and other archaeological marvels."},
+      {"title": "Desert Adventures", "detail": "Experience the magic of Wadi Rum desert."},
+      {"title": "Therapeutic Waters", "detail": "Relax and rejuvenate at the Dead Sea."},
+      {"title": "Rich History", "detail": "Discover biblical sites and ancient civilizations."},
+      {"title": "Cultural Heritage", "detail": "Experience authentic Jordanian hospitality."},
+      {"title": "Natural Beauty", "detail": "Enjoy diverse landscapes from deserts to valleys."}
+    ],
+    "testimonials": [
+      {"name": "Vikash Sharma", "review": "Petra देखना एक magical experience था। Jordan की history fascinating है।", "location": "Delhi, India"},
+      {"name": "Anita Reddy", "review": "Dead Sea में float करना unique था। Wadi Rum desert भी incredible था।", "location": "Hyderabad, India"},
+      {"name": "Ravi Kumar", "review": "Ancient sites से लेकर modern hospitality तक, Jordan में सब perfect था।", "location": "Mumbai, India"}
+    ]
+  },
+  "Lebanon": {
+    "Capital": "Beirut",
+    "population": "68 Lakh",
+    "language": "Arabic, French, English",
+    "currency": "LBP (Pound)",
+    "description": "Lebanon offers Mediterranean charm, ancient ruins, vibrant nightlife, and delicious cuisine. Discover the Paris of the Middle East.",
+    "top_attractions": [
+      {"name": "Baalbek Temples", "detail": "Ancient Roman temple complex with massive stone blocks."},
+      {"name": "Jeita Grotto", "detail": "Spectacular limestone caves with underground rivers."},
+      {"name": "Cedars of God", "detail": "Ancient cedar forest, UNESCO World Heritage site."},
+      {"name": "Beirut Corniche", "detail": "Beautiful waterfront promenade with Mediterranean views."}
+    ],
+    "hotels": [
+        {"name": "Four Seasons Beirut", "price": "$300 /night", "features": ["Luxury hotel", "Marina views", "Fine dining"]},
+        {"name": "Le Gray Beirut", "price": "$250 /night", "features": ["Boutique luxury", "Rooftop pool", "Central location"]},
+        {"name": "Phoenicia Hotel", "price": "$200 /night", "features": ["Historic luxury", "Sea views", "Traditional elegance"]}
+    ],
+    "activities": [
+      {"name": "Historical Tours", "price": "From $50"},
+      {"name": "Wine Tasting", "price": "From $60"},
+      {"name": "Cave Exploration", "price": "From $40"},
+      {"name": "Cultural Tours", "price": "From $45"},
+      {"name": "Cooking Classes", "price": "From $55"},
+      {"name": "Mountain Hiking", "price": "From $35"},
+      {"name": "Beach Activities", "price": "From $30"},
+      {"name": "Nightlife Tours", "price": "From $40"}
+    ],
+    "packages": [
+      {"name": "Budget Package", "type": "BEST VALUE", "price": "₹ 70,000/-", "detail": "Flights, 3-star hotels, Breakfast, City tours. Great Lebanon introduction."},
+      {"name": "Standard Package", "type": "MOST POPULAR", "price": "₹ 1,00,000/-", "detail": "Flights, 4-star hotels, Half board, Multi-site tours. Perfect Lebanon experience."},
+      {"name": "Luxury Package", "type": "LUXURY", "price": "₹ 1,70,000/-", "detail": "Business class, 5-star hotels, All meals, Private guides. Premium Lebanon luxury."},
+      {"name": "Custom Package", "type": "CUSTOM", "price": "Contact for Price", "detail": "Flexible itinerary, Choose experiences, Custom duration. Your Lebanon adventure."}
+    ],
+    "why_choose_us": [
+      {"title": "Ancient Heritage", "detail": "Explore Roman ruins and historical sites."},
+      {"title": "Natural Wonders", "detail": "Discover caves, mountains, and Mediterranean coast."},
+      {"title": "Culinary Excellence", "detail": "Taste authentic Lebanese cuisine and wines."},
+      {"title": "Cultural Fusion", "detail": "Experience blend of Arab and European cultures."},
+      {"title": "Vibrant Nightlife", "detail": "Enjoy Beirut's famous entertainment scene."},
+      {"title": "Warm Hospitality", "detail": "Experience legendary Lebanese friendliness."}
+    ],
+    "testimonials": [
+      {"name": "Priya Malhotra", "review": "Lebanon का food culture amazing है। Baalbek temples भी incredible थे।", "location": "Chandigarh, India"},
+      {"name": "Rohit Jain", "review": "Beirut की nightlife और Mediterranean coast दोनों enjoy किया।", "location": "Pune, India"},
+      {"name": "Kavya Nair", "review": "Jeita Grotto caves देखना unforgettable experience था। Nature lovers के लिए perfect!"  , "location": "Kochi, India"}
+    ]
+  },
+  "China": {
+    "Capital": "Beijing",
+    "population": "142 Crore",
+    "language": "Mandarin, English",
+    "currency": "CNY (Yuan)",
+    "description": "China fascinates with ancient wonders, modern cities, diverse landscapes, and rich cultural heritage. Discover 5000 years of civilization.",
+    "top_attractions": [
+      {"name": "Great Wall of China", "detail": "Ancient fortification and UNESCO World Heritage wonder."},
+      {"name": "Forbidden City", "detail": "Imperial palace complex with traditional Chinese architecture."},
+      {"name": "Terracotta Army", "detail": "Thousands of life-sized warrior sculptures in Xi'an."},
+      {"name": "Li River Guilin", "detail": "Stunning karst landscape with scenic river cruises."}
+    ],
+    "hotels": [
+        {"name": "Peninsula Beijing", "price": "$300 /night", "features": ["Luxury hotel", "Traditional elegance", "Central location"]},
+        {"name": "Park Hyatt Shanghai", "price": "$400 /night", "features": ["Sky-high luxury", "City views", "Modern amenities"]},
+        {"name": "Aman Summer Palace", "price": "$800 /night", "features": ["Historic luxury", "Imperial gardens", "Cultural immersion"]}
+    ],
+    "activities": [
+      {"name": "Great Wall Tours", "price": "From $60"},
+      {"name": "Cultural Shows", "price": "From $40"},
+      {"name": "River Cruises", "price": "From $80"},
+      {"name": "Temple Visits", "price": "From $35"},
+      {"name": "Cooking Classes", "price": "From $50"},
+      {"name": "Martial Arts", "price": "From $45"},
+      {"name": "Tea Ceremonies", "price": "From $30"},
+      {"name": "Calligraphy Classes", "price": "From $40"}
+    ],
+    "packages": [
+      {"name": "Budget Package", "type": "BEST VALUE", "price": "₹ 80,000/-", "detail": "Flights, 3-star hotels, Breakfast, Major attractions. Great China introduction."},
+      {"name": "Standard Package", "type": "MOST POPULAR", "price": "₹ 1,20,000/-", "detail": "Flights, 4-star hotels, Half board, Multi-city tours. Perfect China experience."},
+      {"name": "Luxury Package", "type": "LUXURY", "price": "₹ 2,00,000/-", "detail": "Business class, 5-star hotels, All meals, Private guides. Premium China luxury."},
+      {"name": "Custom Package", "type": "CUSTOM", "price": "Contact for Price", "detail": "Flexible itinerary, Choose cities, Custom experiences. Your China adventure."}
+    ],
+    "why_choose_us": [
+      {"title": "Ancient Wonders", "detail": "Explore Great Wall, Forbidden City, and historical sites."},
+      {"title": "Cultural Heritage", "detail": "Experience 5000 years of Chinese civilization."},
+      {"title": "Modern Marvels", "detail": "Discover futuristic cities and technological advances."},
+      {"title": "Natural Beauty", "detail": "Enjoy diverse landscapes from mountains to rivers."},
+      {"title": "Culinary Journey", "detail": "Taste authentic regional Chinese cuisines."},
+      {"title": "Spiritual Sites", "detail": "Visit ancient temples and spiritual destinations."}
+    ],
+    "testimonials": [
+      {"name": "Suresh Agarwal", "review": "Great Wall देखना lifetime का experience था। China की history fascinating है।", "location": "Delhi, India"},
+      {"name": "Meera Sharma", "review": "Forbidden City का architecture incredible था। Chinese culture को closely देखने का मौका मिला।", "location": "Mumbai, India"},
+      {"name": "Arun Kumar", "review": "Terracotta Army देखकर मन impressed हो गया। Oasis Tours का arrangement perfect था।"  , "location": "Bangalore, India"}
+    ]
+  },
+  "Japan": {
+    "hero_title": "Japan",
+    "Capital": "Tokyo",
+    "population": "12.5 Crore",
+    "language": "Japanese, English",
+    "currency": "JPY (Yen)",
+    "description": "Japan enchants with ancient traditions, modern technology, cherry blossoms, and unique culture. Experience the Land of the Rising Sun.",
+    "top_attractions": [
+      {"name": "Mount Fuji", "detail": "Iconic sacred mountain and symbol of Japan."},
+      {"name": "Kyoto Temples", "detail": "Ancient temples, gardens, and traditional architecture."},
+      {"name": "Tokyo Skyline", "detail": "Modern metropolis with skyscrapers and neon lights."},
+      {"name": "Cherry Blossoms", "detail": "Beautiful sakura season throughout the country."},
+      {"name": "Osaka Castle", "detail": "Historic castle with beautiful gardens and city views."},
+      {"name": "Hiroshima Peace Memorial", "detail": "Moving memorial park and museum for world peace."},
+      {"name": "Nara Deer Park", "detail": "Sacred park with friendly deer and ancient temples."},
+      {"name": "Hakone Hot Springs", "detail": "Traditional onsen resorts with Mount Fuji views."}
+    ],
+    "hotels": [
+        {"name": "Park Hyatt Tokyo", "price": "$500 /night", "features": ["Luxury hotel", "City views", "Fine dining"]},
+        {"name": "Aman Tokyo", "price": "$800 /night", "features": ["Ultra-luxury", "Traditional design", "Spa sanctuary"]},
+        {"name": "Ritz Carlton Kyoto", "price": "$600 /night", "features": ["Riverside luxury", "Garden views", "Cultural immersion"]}
+    ],
+    "activities": [
+      {"name": "Temple Tours", "price": "From $50"},
+      {"name": "Sushi Making", "price": "From $80"},
+      {"name": "Tea Ceremony", "price": "From $60"},
+      {"name": "Mount Fuji Tours", "price": "From $100"},
+      {"name": "Cultural Shows", "price": "From $70"},
+      {"name": "Bullet Train", "price": "From $120"},
+      {"name": "Anime Tours", "price": "From $45"},
+      {"name": "Hot Springs", "price": "From $90"}
+    ],
+    "packages": [
+      {"name": "Budget Package", "type": "BEST VALUE", "price": "₹ 1,20,000/-", "detail": "Flights, 3-star hotels, Breakfast, Major attractions. Great Japan introduction."},
+      {"name": "Standard Package", "type": "MOST POPULAR", "price": "₹ 1,80,000/-", "detail": "Flights, 4-star hotels, Half board, Multi-city tours. Perfect Japan experience."},
+      {"name": "Luxury Package", "type": "LUXURY", "price": "₹ 3,00,000/-", "detail": "Business class, 5-star hotels, All meals, Private guides. Premium Japan luxury."},
+      {"name": "Custom Package", "type": "CUSTOM", "price": "Contact for Price", "detail": "Flexible itinerary, Choose experiences, Custom duration. Your Japan adventure."}
+    ],
+    "why_choose_us": [
+      {"title": "Cultural Heritage", "detail": "Experience ancient traditions and modern innovations."},
+      {"title": "Natural Beauty", "detail": "Enjoy cherry blossoms, Mount Fuji, and gardens."},
+      {"title": "Culinary Excellence", "detail": "Taste authentic Japanese cuisine and sake."},
+      {"title": "Technological Marvels", "detail": "Discover cutting-edge technology and bullet trains."},
+      {"title": "Spiritual Journey", "detail": "Visit ancient temples and peaceful gardens."},
+      {"title": "Unique Experiences", "detail": "Enjoy hot springs, tea ceremonies, and cultural shows."}
+    ],
+    "guides": [
+      {
+        "name": "Hiroshi Tanaka",
+        "title": "Cultural Heritage Expert",
+        "experience": "15+",
+        "tours_led": "500+",
+        "rating": "4.9",
+        "badge": "CULTURAL EXPERT",
+        "description": "15+ years experience in cultural heritage and history. Licensed guide specializing in local traditions and cultural experiences.",
+        "skills": ["Temples", "History", "Tea Ceremony"],
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Yuki Sato",
+        "title": "Adventure & Nature Guide",
+        "experience": "12+",
+        "tours_led": "400+",
+        "rating": "4.8",
+        "badge": "NATURE EXPERT",
+        "description": "Expert adventure guide with extensive knowledge of hiking trails, natural landscapes, and outdoor activities. Fluent in multiple languages.",
+        "skills": ["Hiking", "Mount Fuji", "Nature"],
+        "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Chef Kenji",
+        "title": "Culinary & Food Expert",
+        "experience": "20+",
+        "tours_led": "600+",
+        "rating": "5.0",
+        "badge": "CULINARY EXPERT",
+        "description": "Professional culinary guide specializing in Japanese cuisine, sushi making, and authentic food experiences. Expert in traditional cooking.",
+        "skills": ["Sushi", "Ramen", "Street Food"],
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      }
+    ],
+    "testimonials": [
+      {"name": "Rajesh Patel", "review": "Japan's discipline and culture impressed us greatly. Cherry blossoms were absolutely beautiful and magical.", "location": "Ahmedabad, India"},
+      {"name": "Sneha Gupta", "review": "Journey from Tokyo to Kyoto was amazing. Perfect blend of traditional and modern Japanese culture.", "location": "Kolkata, India"},
+      {"name": "Amit Singh", "review": "Sushi making class and tea ceremony experience were unique. Japan's hospitality is truly incredible.", "location": "Jaipur, India"},
+      {"name": "Priya Sharma", "review": "Mount Fuji views from Hakone were breathtaking. The hot springs and traditional ryokan experience was perfect.", "location": "Mumbai, India"},
+      {"name": "Vikram Reddy", "review": "Nara deer park and Hiroshima Peace Memorial were deeply moving. Japan's history and nature are fascinating.", "location": "Hyderabad, India"}
+    ]
+  },
+  "Australia": {
+    "hero_title": "Australia",
+    "Capital": "Canberra",
+    "population": "2.6 Crore",
+    "language": "English",
+    "currency": "AUD (Dollar)",
+    "description": "Australia amazes with diverse wildlife, stunning landscapes, vibrant cities, and unique culture. Discover the land Down Under.",
+    "top_attractions": [
+      {"name": "Sydney Opera House", "detail": "Iconic architectural masterpiece and cultural landmark."},
+      {"name": "Great Barrier Reef", "detail": "World's largest coral reef system for diving and snorkeling."},
+      {"name": "Uluru (Ayers Rock)", "detail": "Sacred monolith in the heart of the Red Centre."},
+      {"name": "Melbourne Culture", "detail": "Vibrant arts, coffee culture, and laneways."}
+    ],
+    "hotels": [
+        {"name": "Park Hyatt Sydney", "price": "$600 /night", "features": ["Harbour views", "Opera House proximity", "Luxury amenities"]},
+        {"name": "Crown Towers Melbourne", "price": "$400 /night", "features": ["Luxury hotel", "River views", "Fine dining"]},
+        {"name": "Shangri-La Cairns", "price": "$300 /night", "features": ["Reef access", "Marina location", "Tropical luxury"]}
+    ],
+    "activities": [
+      {"name": "Great Barrier Reef", "price": "From $150"},
+      {"name": "Wildlife Tours", "price": "From $80"},
+      {"name": "City Tours", "price": "From $60"},
+      {"name": "Uluru Tours", "price": "From $120"},
+      {"name": "Wine Tasting", "price": "From $90"},
+      {"name": "Surfing Lessons", "price": "From $70"},
+      {"name": "Aboriginal Culture", "price": "From $85"},
+      {"name": "Scenic Flights", "price": "From $200"}
+    ],
+    "packages": [
+      {"name": "Budget Package", "type": "BEST VALUE", "price": "₹ 1,50,000/-", "detail": "Flights, 3-star hotels, Breakfast, Major attractions. Great Australia introduction."},
+      {"name": "Standard Package", "type": "MOST POPULAR", "price": "₹ 2,20,000/-", "detail": "Flights, 4-star hotels, Half board, Multi-city tours. Perfect Australia experience."},
+      {"name": "Luxury Package", "type": "LUXURY", "price": "₹ 3,50,000/-", "detail": "Business class, 5-star hotels, All meals, Private guides. Premium Australia luxury."},
+      {"name": "Custom Package", "type": "CUSTOM", "price": "Contact for Price", "detail": "Flexible itinerary, Choose cities, Custom experiences. Your Australia adventure."}
+    ],
+    "why_choose_us": [
+      {"title": "Unique Wildlife", "detail": "Encounter kangaroos, koalas, and diverse marine life."},
+      {"title": "Natural Wonders", "detail": "Explore Great Barrier Reef, Uluru, and stunning landscapes."},
+      {"title": "Vibrant Cities", "detail": "Experience Sydney, Melbourne, and cosmopolitan culture."},
+      {"title": "Adventure Activities", "detail": "Enjoy diving, surfing, and outdoor adventures."},
+      {"title": "Aboriginal Culture", "detail": "Learn about indigenous heritage and traditions."},
+      {"title": "Culinary Scene", "detail": "Taste world-class wines and diverse cuisine."}
+    ],
+    "testimonials": [
+      {"name": "Vikram Reddy", "review": "Great Barrier Reef में diving का experience lifetime memorable था। Australia की wildlife amazing है।", "location": "Hyderabad, India"},
+      {"name": "Pooja Sharma", "review": "Sydney Opera House देखना dream come true था। Melbourne की coffee culture भी loved it।", "location": "Delhi, India"},
+      {"name": "Arjun Nair", "review": "Uluru sunset देखकर मन को peace मिली। Aboriginal culture भी fascinating था।"  , "location": "Kochi, India"}
+    ]
+  },
+  "USA": {
+    "hero_title": "United States",
+    "Capital": "Washington D.C.",
+    "population": "33 Crore",
+    "language": "English",
+    "currency": "USD (Dollar)",
+    "description": "USA offers diverse experiences from iconic cities to natural wonders, entertainment, and cultural attractions. Discover the American dream.",
+    "top_attractions": [
+      {"name": "Statue of Liberty", "detail": "Iconic symbol of freedom and democracy in New York."},
+      {"name": "Grand Canyon", "detail": "Spectacular natural wonder with breathtaking views."},
+      {"name": "Times Square", "detail": "Vibrant heart of New York with lights and entertainment."},
+      {"name": "Golden Gate Bridge", "detail": "Iconic suspension bridge in San Francisco."}
+    ],
+    "hotels": [
+        {"name": "Plaza Hotel New York", "price": "$800 /night", "features": ["Luxury landmark", "Central Park views", "Historic elegance"]},
+        {"name": "Beverly Hills Hotel", "price": "$700 /night", "features": ["Hollywood glamour", "Pink Palace", "Celebrity haven"]},
+        {"name": "Ritz Carlton San Francisco", "price": "$600 /night", "features": ["Luxury hotel", "City views", "Fine dining"]}
+    ],
+    "activities": [
+      {"name": "City Tours", "price": "From $80"},
+      {"name": "Theme Parks", "price": "From $120"},
+      {"name": "Broadway Shows", "price": "From $100"},
+      {"name": "National Parks", "price": "From $90"},
+      {"name": "Shopping Tours", "price": "From $60"},
+      {"name": "Food Tours", "price": "From $70"},
+      {"name": "Museum Visits", "price": "From $50"},
+      {"name": "Scenic Drives", "price": "From $150"}
+    ],
+    "packages": [
+      {"name": "Budget Package", "type": "BEST VALUE", "price": "₹ 1,80,000/-", "detail": "Flights, 3-star hotels, Breakfast, Major attractions. Great USA introduction."},
+      {"name": "Standard Package", "type": "MOST POPULAR", "price": "₹ 2,50,000/-", "detail": "Flights, 4-star hotels, Half board, Multi-city tours. Perfect USA experience."},
+      {"name": "Luxury Package", "type": "LUXURY", "price": "₹ 4,00,000/-", "detail": "Business class, 5-star hotels, All meals, Private guides. Premium USA luxury."},
+      {"name": "Custom Package", "type": "CUSTOM", "price": "Contact for Price", "detail": "Flexible itinerary, Choose destinations, Custom experiences. Your USA adventure."}
+    ],
+    "why_choose_us": [
+      {"title": "Iconic Landmarks", "detail": "Visit Statue of Liberty, Grand Canyon, and famous sites."},
+      {"title": "Entertainment Capital", "detail": "Experience Broadway, Hollywood, and theme parks."},
+      {"title": "Natural Wonders", "detail": "Explore national parks and diverse landscapes."},
+      {"title": "Cultural Diversity", "detail": "Discover melting pot of cultures and cuisines."},
+      {"title": "Shopping Paradise", "detail": "Shop at world-famous malls and outlets."},
+      {"title": "Adventure Activities", "detail": "Enjoy road trips, outdoor adventures, and city experiences."}
+    ],
+    "testimonials": [
+      {"name": "Rahul Mehta", "review": "New York का energy और Grand Canyon की beauty दोनों incredible थे। USA trip unforgettable रहा।", "location": "Mumbai, India"},
+      {"name": "Kavya Jain", "review": "Disneyland से Times Square तक, हर जगह का अपना charm था। Oasis Tours का planning excellent!"  , "location": "Delhi, India"},
+      {"name": "Sunil Gupta", "review": "Hollywood से Silicon Valley तक देखा। America की diversity amazing है।"  , "location": "Bangalore, India"}
+    ]
+  },
+  "India": {
+    "Capital": "New Delhi",
+    "population": "140 Crore",
+    "language": "Hindi, English, Regional Languages",
+    "currency": "INR (Rupee)",
+    "description": "India mesmerizes with incredible diversity, ancient heritage, spiritual sites, and vibrant culture. Discover the land of unity in diversity.",
+    "top_attractions": [
+      {"name": "Taj Mahal", "detail": "Iconic symbol of love and UNESCO World Heritage monument."},
+      {"name": "Golden Temple", "detail": "Sacred Sikh shrine with golden architecture."},
+      {"name": "Kerala Backwaters", "detail": "Serene network of canals, rivers, and lagoons."},
+      {"name": "Rajasthan Palaces", "detail": "Magnificent royal palaces and desert landscapes."}
+    ],
+    "hotels": [
+        {"name": "Taj Lake Palace Udaipur", "price": "$400 /night", "features": ["Palace hotel", "Lake views", "Royal luxury"]},
+        {"name": "Oberoi Amarvilas Agra", "price": "$500 /night", "features": ["Taj Mahal views", "Luxury resort", "Mughal architecture"]},
+        {"name": "Kumarakom Lake Resort", "price": "$200 /night", "features": ["Backwater resort", "Traditional architecture", "Ayurvedic spa"]}
+    ],
+    "activities": [
+      {"name": "Heritage Tours", "price": "From $40"},
+      {"name": "Spiritual Tours", "price": "From $35"},
+      {"name": "Wildlife Safari", "price": "From $80"},
+      {"name": "Cultural Shows", "price": "From $25"},
+      {"name": "Cooking Classes", "price": "From $30"},
+      {"name": "Yoga Retreats", "price": "From $50"},
+      {"name": "Houseboat Cruise", "price": "From $60"},
+      {"name": "Desert Safari", "price": "From $70"}
+    ],
+    "packages": [
+      {"name": "Budget Package", "type": "BEST VALUE", "price": "₹ 25,000/-", "detail": "Domestic travel, 3-star hotels, Breakfast, Major attractions. Great India exploration."},
+      {"name": "Standard Package", "type": "MOST POPULAR", "price": "₹ 45,000/-", "detail": "Multi-state tours, 4-star hotels, Half board, Cultural experiences. Perfect India journey."},
+      {"name": "Luxury Package", "type": "LUXURY", "price": "₹ 80,000/-", "detail": "Palace hotels, 5-star resorts, All meals, Private guides. Premium India luxury."},
+      {"name": "Custom Package", "type": "CUSTOM", "price": "Contact for Price", "detail": "Flexible itinerary, Choose states, Custom experiences. Your India adventure."}
+    ],
+    "why_choose_us": [
+      {"title": "Rich Heritage", "detail": "Explore ancient monuments, palaces, and historical sites."},
+      {"title": "Spiritual Journey", "detail": "Visit sacred temples, ashrams, and pilgrimage sites."},
+      {"title": "Cultural Diversity", "detail": "Experience diverse traditions, festivals, and customs."},
+      {"title": "Natural Beauty", "detail": "Discover mountains, beaches, deserts, and backwaters."},
+      {"title": "Culinary Delights", "detail": "Taste authentic regional cuisines and street food."},
+      {"title": "Wildlife Encounters", "detail": "Spot tigers, elephants, and exotic birds in national parks."}
+    ],
+    "testimonials": [
+      {"name": "Sarah Johnson", "review": "India का diversity और hospitality incredible है। Taj Mahal देखना dream come true था।", "location": "London, UK"},
+      {"name": "David Smith", "review": "Kerala backwaters से Rajasthan deserts तक, हर जगह unique experience मिला।", "location": "New York, USA"},
+      {"name": "Maria Garcia", "review": "Indian culture और spirituality ने मन को touch किया। Oasis Tours का service excellent था।"  , "location": "Madrid, Spain"}
+    ]
+  },
+  "Oman": {
+    "Capital": "Muscat",
+    "population": "52 Lakh",
+    "language": "Arabic, English",
+    "currency": "OMR (Rial)",
+    "description": "Oman offers stunning landscapes, rich heritage, pristine beaches, and warm hospitality. Discover the hidden gem of the Arabian Peninsula.",
+    "top_attractions": [
+      {"name": "Sultan Qaboos Grand Mosque", "detail": "Magnificent mosque with stunning Islamic architecture."},
+      {"name": "Wahiba Sands", "detail": "Golden desert dunes perfect for adventure activities."},
+      {"name": "Nizwa Fort", "detail": "Historic fort showcasing Omani heritage and culture."},
+      {"name": "Musandam Fjords", "detail": "Dramatic coastline with crystal clear waters and dolphins."}
+    ],
+    "hotels": [
+        {"name": "Al Bustan Palace", "price": "$400 /night", "features": ["Luxury beach resort", "Royal heritage", "Private beach"]},
+        {"name": "Shangri-La Muscat", "price": "$300 /night", "features": ["Beachfront location", "Mountain views", "Spa"]},
+        {"name": "Desert Nights Camp", "price": "$200 /night", "features": ["Desert experience", "Traditional tents", "Stargazing"]}
+    ],
+    "activities": [
+      {"name": "Desert Safari", "price": "From $80"},
+      {"name": "Dolphin Watching", "price": "From $60"},
+      {"name": "Wadi Tours", "price": "From $70"},
+      {"name": "Cultural Tours", "price": "From $50"},
+      {"name": "Snorkeling", "price": "From $45"},
+      {"name": "Mountain Hiking", "price": "From $55"},
+      {"name": "Camel Riding", "price": "From $40"},
+      {"name": "Traditional Markets", "price": "From $30"}
+    ],
+    "packages": [
+      {"name": "Budget Package", "type": "BEST VALUE", "price": "₹ 75,000/-", "detail": "Flights, 3-star hotels, Breakfast, Desert safari. Great Oman introduction."},
+      {"name": "Standard Package", "type": "MOST POPULAR", "price": "₹ 1,10,000/-", "detail": "Flights, 4-star hotels, Half board, Multi-city tours. Perfect Oman experience."},
+      {"name": "Luxury Package", "type": "LUXURY", "price": "₹ 1,80,000/-", "detail": "Business class, 5-star resorts, All meals, Private guides. Premium Oman luxury."},
+      {"name": "Custom Package", "type": "CUSTOM", "price": "Contact for Price", "detail": "Flexible itinerary, Choose experiences, Custom duration. Your Oman adventure."}
+    ],
+    "why_choose_us": [
+      {"title": "Natural Beauty", "detail": "Explore deserts, mountains, and pristine coastlines."},
+      {"title": "Rich Heritage", "detail": "Discover ancient forts, souks, and cultural sites."},
+      {"title": "Adventure Activities", "detail": "Enjoy desert safaris, wadi swimming, and dolphin watching."},
+      {"title": "Authentic Culture", "detail": "Experience traditional Omani hospitality and customs."},
+      {"title": "Peaceful Destination", "detail": "Enjoy a safe and welcoming travel environment."},
+      {"title": "Unique Landscapes", "detail": "Witness dramatic fjords, sand dunes, and oases."}
+    ],
+    "testimonials": [
+      {"name": "Sanjay Mehta", "review": "Oman की natural beauty और hospitality incredible थी। Desert safari का experience unforgettable रहा।", "location": "Mumbai, India"},
+      {"name": "Priya Nair", "review": "Musandam fjords में dolphin watching amazing था। Oman की culture भी fascinating है।", "location": "Kochi, India"},
+      {"name": "Rajesh Gupta", "review": "Wahiba Sands में camel riding और stargazing lifetime का experience था। Perfect destination!"  , "location": "Delhi, India"}
+    ]
+  },
+  "Qatar": {
+    "Capital": "Doha",
+    "population": "29 Lakh",
+    "language": "Arabic, English",
+    "currency": "QAR (Riyal)",
+    "description": "Qatar combines modern luxury with traditional culture, offering world-class attractions, shopping, and hospitality. Discover the pearl of the Gulf.",
+    "top_attractions": [
+      {"name": "Museum of Islamic Art", "detail": "World-class museum with stunning Islamic art collections."},
+      {"name": "Souq Waqif", "detail": "Traditional marketplace with authentic Arabian atmosphere."},
+      {"name": "The Pearl Qatar", "detail": "Luxury artificial island with upscale shopping and dining."},
+      {"name": "Katara Cultural Village", "detail": "Cultural hub showcasing Qatari heritage and arts."}
+    ],
+    "hotels": [
+        {"name": "Four Seasons Doha", "price": "$500 /night", "features": ["Luxury hotel", "Sea views", "Fine dining"]},
+        {"name": "St. Regis Doha", "price": "$450 /night", "features": ["Beachfront luxury", "Butler service", "Spa"]},
+        {"name": "Mondrian Doha", "price": "$350 /night", "features": ["Modern design", "City views", "Rooftop pool"]}
+    ],
+    "activities": [
+      {"name": "Desert Safari", "price": "From $90"},
+      {"name": "Dhow Cruise", "price": "From $60"},
+      {"name": "Museum Tours", "price": "From $40"},
+      {"name": "Shopping Tours", "price": "From $50"},
+      {"name": "Cultural Shows", "price": "From $45"},
+      {"name": "City Tours", "price": "From $55"},
+      {"name": "Water Sports", "price": "From $80"},
+      {"name": "Traditional Markets", "price": "From $35"}
+    ],
+    "packages": [
+      {"name": "Budget Package", "type": "BEST VALUE", "price": "₹ 80,000/-", "detail": "Flights, 3-star hotels, Breakfast, City tours. Great Qatar introduction."},
+      {"name": "Standard Package", "type": "MOST POPULAR", "price": "₹ 1,20,000/-", "detail": "Flights, 4-star hotels, Half board, Cultural tours. Perfect Qatar experience."},
+      {"name": "Luxury Package", "type": "LUXURY", "price": "₹ 2,00,000/-", "detail": "Business class, 5-star hotels, All meals, Private guides. Premium Qatar luxury."},
+      {"name": "Custom Package", "type": "CUSTOM", "price": "Contact for Price", "detail": "Flexible itinerary, Choose experiences, Custom duration. Your Qatar adventure."}
+    ],
+    "why_choose_us": [
+      {"title": "Modern Luxury", "detail": "Experience world-class hotels and attractions."},
+      {"title": "Cultural Heritage", "detail": "Discover rich Qatari traditions and Islamic art."},
+      {"title": "Shopping Paradise", "detail": "Shop at luxury malls and traditional souks."},
+      {"title": "Culinary Excellence", "detail": "Taste international cuisine and local flavors."},
+      {"title": "Safe Destination", "detail": "Enjoy a secure and welcoming environment."},
+      {"title": "Strategic Location", "detail": "Perfect stopover destination in the Gulf."}
+    ],
+    "testimonials": [
+      {"name": "Amit Sharma", "review": "Qatar की modern infrastructure और traditional culture का blend amazing था। Museum of Islamic Art incredible है।", "location": "Delhi, India"},
+      {"name": "Kavya Patel", "review": "Souq Waqif में shopping और The Pearl Qatar का luxury experience दोनों enjoy किया।", "location": "Ahmedabad, India"},
+      {"name": "Rohit Kumar", "review": "Desert safari से city tours तक सब कुछ perfectly organized था। Qatar hospitality excellent है।"  , "location": "Bangalore, India"}
+    ]
+  },
+  "Saudi Arabia": {
+    "Capital": "Riyadh",
+    "population": "3.5 Crore",
+    "language": "Arabic, English",
+    "currency": "SAR (Riyal)",
+    "description": "Saudi Arabia offers rich Islamic heritage, modern cities, desert adventures, and Red Sea coastline. Discover the birthplace of Islam and Arabian culture.",
+    "top_attractions": [
+      {"name": "Masjid al-Haram Mecca", "detail": "Holiest mosque in Islam surrounding the Kaaba."},
+      {"name": "Masjid an-Nabawi Medina", "detail": "Prophet's Mosque, second holiest site in Islam."},
+      {"name": "Al-Ula Heritage Site", "detail": "Ancient Nabatean city with stunning rock formations."},
+      {"name": "Red Sea Coast", "detail": "Pristine beaches and world-class diving sites."}
+    ],
+    "hotels": [
+        {"name": "Ritz Carlton Riyadh", "price": "$400 /night", "features": ["Luxury hotel", "City center", "Fine dining"]},
+        {"name": "Fairmont Makkah", "price": "$600 /night", "features": ["Haram views", "Pilgrimage services", "Luxury amenities"]},
+        {"name": "Shaza Al Madina", "price": "$350 /night", "features": ["Near Prophet's Mosque", "Traditional design", "Spiritual ambiance"]}
+    ],
+    "activities": [
+      {"name": "Religious Tours", "price": "From $100"},
+      {"name": "Desert Safari", "price": "From $80"},
+      {"name": "Historical Sites", "price": "From $60"},
+      {"name": "Cultural Tours", "price": "From $70"},
+      {"name": "Red Sea Diving", "price": "From $120"},
+      {"name": "Traditional Markets", "price": "From $40"},
+      {"name": "Camel Experiences", "price": "From $50"},
+      {"name": "Heritage Villages", "price": "From $55"}
+    ],
+    "packages": [
+      {"name": "Umrah Package", "type": "SPIRITUAL", "price": "₹ 1,20,000/-", "detail": "Flights, 4-star hotels, Umrah services, Religious guidance. Complete spiritual journey."},
+      {"name": "Heritage Package", "type": "CULTURAL", "price": "₹ 1,50,000/-", "detail": "Flights, Luxury hotels, Historical tours, Cultural experiences. Discover Saudi heritage."},
+      {"name": "Luxury Package", "type": "LUXURY", "price": "₹ 2,50,000/-", "detail": "Business class, 5-star hotels, All meals, Private guides. Premium Saudi experience."},
+      {"name": "Custom Package", "type": "CUSTOM", "price": "Contact for Price", "detail": "Flexible itinerary, Choose experiences, Custom duration. Your Saudi adventure."}
+    ],
+    "why_choose_us": [
+      {"title": "Islamic Heritage", "detail": "Visit the holiest sites in Islam with proper guidance."},
+      {"title": "Rich History", "detail": "Explore ancient civilizations and archaeological sites."},
+      {"title": "Modern Development", "detail": "Experience Saudi Arabia's rapid modernization."},
+      {"title": "Desert Adventures", "detail": "Enjoy authentic Arabian desert experiences."},
+      {"title": "Red Sea Beauty", "detail": "Discover pristine beaches and marine life."},
+      {"title": "Cultural Immersion", "detail": "Experience authentic Arabian hospitality and traditions."}
+    ],
+    "testimonials": [
+      {"name": "Mohammed Ali", "review": "Umrah का spiritual experience life-changing था। Saudi Arabia की hospitality और facilities excellent थी।", "location": "Hyderabad, India"},
+      {"name": "Fatima Khan", "review": "Masjid al-Haram और Masjid an-Nabawi का experience बहुत peaceful था। Oasis Tours का arrangement perfect था।", "location": "Mumbai, India"},
+      {"name": "Ahmed Sheikh", "review": "Al-Ula के historical sites देखकर Saudi Arabia की rich heritage का पता चला। Amazing experience!"  , "location": "Delhi, India"}
+    ]
+  },
+  "Dubai": {
+    "hero_title": "Dubai",
+    "Capital": "Dubai",
+    "population": "35 Lakh",
+    "language": "Arabic, English",
+    "currency": "AED (Dirham)",
+    "description": "Dubai dazzles with futuristic architecture, luxury shopping, desert adventures, and world-class attractions. Experience the jewel of the Middle East.",
+    "top_attractions": [
+      {"name": "Burj Khalifa", "detail": "World's tallest building with breathtaking city views from observation decks."},
+      {"name": "Dubai Mall", "detail": "World's largest shopping mall with aquarium and fountain shows."},
+      {"name": "Palm Jumeirah", "detail": "Artificial island with luxury resorts and Atlantis waterpark."},
+      {"name": "Desert Safari", "detail": "Thrilling dune bashing and traditional Bedouin camp experiences."},
+      {"name": "Dubai Marina", "detail": "Modern waterfront district with skyscrapers and yacht clubs."},
+      {"name": "Gold Souk", "detail": "Traditional market with world's largest collection of gold jewelry."},
+      {"name": "Miracle Garden", "detail": "World's largest natural flower garden with stunning floral displays."},
+      {"name": "Dubai Frame", "detail": "Iconic architectural landmark offering panoramic city views."}
+    ],
+    "hotels": [
+        {"name": "Burj Al Arab", "price": "$1500 /night", "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80", "features": ["7-star luxury", "Sail-shaped icon", "Butler service"]},
+        {"name": "Atlantis The Palm", "price": "$400 /night", "image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80", "features": ["Resort & waterpark", "Aquarium", "Beach access"]},
+        {"name": "Armani Hotel Dubai", "price": "$600 /night", "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2080&q=80", "features": ["Designer luxury", "Burj Khalifa location", "Fine dining"]}
+    ],
+    "activities": [
+      {"name": "Desert Safari", "price": "From $60"},
+      {"name": "Burj Khalifa Tour", "price": "From $40"},
+      {"name": "Dubai Mall Shopping", "price": "From $30"},
+      {"name": "Dhow Cruise", "price": "From $50"},
+      {"name": "Theme Parks", "price": "From $80"},
+      {"name": "City Tours", "price": "From $45"},
+      {"name": "Water Sports", "price": "From $100"},
+      {"name": "Helicopter Tours", "price": "From $200"}
+    ],
+    "packages": [
+      {
+        "name": "Budget Package",
+        "type": "BEST VALUE",
+        "price": "₹ 60,000/-",
+        "detail": "Round-trip flights, 3-star hotel, Daily breakfast, City tours included. Perfect Dubai introduction."
+      },
+      {
+        "name": "Standard Package",
+        "type": "MOST POPULAR",
+        "price": "₹ 90,000/-",
+        "detail": "Flights, 4-star hotel, Half board meals, Desert safari included. Great Dubai experience."
+      },
+      {
+        "name": "Luxury Package",
+        "type": "LUXURY",
+        "price": "₹ 1,80,000/-",
+        "detail": "Business class flights, 5-star hotels, All meals, Private tours. Premium Dubai luxury."
+      },
+      {
+        "name": "Custom Package",
+        "type": "CUSTOM",
+        "price": "Contact for Price",
+        "detail": "Choose experiences, Select hotels, Flexible duration, Custom activities. Your Dubai adventure."
+      }
+    ],
+    "why_choose_us": [
+      {"title": "Modern Marvels", "detail": "Experience world's tallest buildings and futuristic architecture."},
+      {"title": "Luxury Shopping", "detail": "Shop at world's largest malls and traditional gold souks."},
+      {"title": "Desert Adventures", "detail": "Enjoy thrilling desert safaris and Bedouin experiences."},
+      {"title": "Cultural Heritage", "detail": "Discover rich Arabian culture and traditions."},
+      {"title": "World-Class Attractions", "detail": "Visit theme parks, beaches, and entertainment destinations."},
+      {"title": "Culinary Excellence", "detail": "Taste international cuisine and traditional Arabic flavors."}
+    ],
+    "guides": [
+      {
+        "name": "Ahmed Hassan",
+        "title": "Cultural Heritage Expert",
+        "experience": "15+",
+        "tours_led": "500+",
+        "rating": "4.9",
+        "badge": "CULTURAL EXPERT",
+        "description": "15+ years experience in cultural heritage and history. Licensed guide specializing in local traditions and cultural experiences.",
+        "skills": ["Heritage", "History", "Culture"],
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Mariyam Ali",
+        "title": "Adventure & Desert Guide",
+        "experience": "12+",
+        "tours_led": "400+",
+        "rating": "4.8",
+        "badge": "DESERT EXPERT",
+        "description": "Expert adventure guide with extensive knowledge of desert safaris, dune bashing, and outdoor activities. Fluent in multiple languages.",
+        "skills": ["Desert Safari", "Adventure", "Nature"],
+        "image": "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      },
+      {
+        "name": "Captain Ibrahim",
+        "title": "Marine & Water Sports Expert",
+        "experience": "20+",
+        "tours_led": "600+",
+        "rating": "5.0",
+        "badge": "MARINE EXPERT",
+        "description": "Professional marine guide specializing in water sports, boat tours, and coastal adventures. Expert in marine safety and activities.",
+        "skills": ["Water Sports", "Boat Tours", "Marine Safety"],
+        "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=387&q=80"
+      }
+    ],
+    "testimonials": [
+      {"name": "Sunil Sharma", "review": "Dubai's skyline impressed us greatly. The view from Burj Khalifa was absolutely amazing and breathtaking.", "location": "Delhi, India"},
+      {"name": "Priya Agarwal", "review": "Desert safari experience was thrilling. We got to see both Dubai's luxury and traditional culture beautifully.", "location": "Mumbai, India"},
+      {"name": "Rajesh Verma", "review": "From shopping to adventure, everything was perfect. Oasis Tours arrangement was excellent and professional!", "location": "Bangalore, India"},
+      {"name": "Kavita Jain", "review": "Palm Jumeirah and Atlantis were incredible. Dubai's modern architecture and luxury exceeded all expectations.", "location": "Pune, India"},
+      {"name": "Amit Kumar", "review": "Gold Souk shopping and Dubai Fountain show were magical. The blend of tradition and modernity was fascinating.", "location": "Kolkata, India"}
+    ]
+  },
+  "Turkey": {
+    "hero_title": "Turkey",
+    "Capital": "Ankara",
+    "population": "8.5 Crore",
+    "language": "Turkish, English",
+    "currency": "TRY (Lira)",
+    "description": "Turkey bridges Europe and Asia with rich history, stunning landscapes, vibrant culture, and delicious cuisine. Discover where East meets West.",
+    "top_attractions": [
+      {"name": "Hagia Sophia Istanbul", "detail": "Iconic Byzantine cathedral turned mosque with stunning architecture."},
+      {"name": "Cappadocia", "detail": "Unique landscape with fairy chimneys and hot air balloons."},
+      {"name": "Pamukkale", "detail": "Natural thermal pools with white travertine terraces."},
+      {"name": "Ephesus", "detail": "Ancient Greek city with well-preserved Roman ruins."}
+    ],
+    "hotels": [
+        {"name": "Four Seasons Istanbul", "price": "$400 /night", "features": ["Historic luxury", "Bosphorus views", "Ottoman heritage"]},
+        {"name": "Museum Hotel Cappadocia", "price": "$300 /night", "features": ["Cave hotel", "Unique architecture", "Balloon views"]},
+        {"name": "Swissotel Ankara", "price": "$200 /night", "features": ["Modern luxury", "City center", "Business facilities"]}
+    ],
+    "activities": [
+      {"name": "Hot Air Balloon", "price": "From $150"},
+      {"name": "Bosphorus Cruise", "price": "From $40"},
+      {"name": "Historical Tours", "price": "From $60"},
+      {"name": "Turkish Bath", "price": "From $50"},
+      {"name": "Cooking Classes", "price": "From $70"},
+      {"name": "Cultural Shows", "price": "From $45"},
+      {"name": "Shopping Tours", "price": "From $35"},
+      {"name": "Thermal Springs", "price": "From $55"}
+    ],
+    "packages": [
+      {"name": "Budget Package", "type": "BEST VALUE", "price": "₹ 65,000/-", "detail": "Flights, 3-star hotels, Breakfast, Major attractions. Great Turkey introduction."},
+      {"name": "Standard Package", "type": "MOST POPULAR", "price": "₹ 95,000/-", "detail": "Flights, 4-star hotels, Half board, Multi-city tours. Perfect Turkey experience."},
+      {"name": "Luxury Package", "type": "LUXURY", "price": "₹ 1,60,000/-", "detail": "Business class, 5-star hotels, All meals, Private guides. Premium Turkey luxury."},
+      {"name": "Custom Package", "type": "CUSTOM", "price": "Contact for Price", "detail": "Flexible itinerary, Choose regions, Custom experiences. Your Turkey adventure."}
+    ],
+    "why_choose_us": [
+      {"title": "Rich History", "detail": "Explore Byzantine, Ottoman, and ancient Greek heritage."},
+      {"title": "Unique Landscapes", "detail": "Experience Cappadocia's fairy chimneys and Pamukkale's terraces."},
+      {"title": "Cultural Bridge", "detail": "Discover the fascinating blend of European and Asian cultures."},
+      {"title": "Culinary Delights", "detail": "Taste authentic Turkish cuisine and famous sweets."},
+      {"title": "Adventure Activities", "detail": "Enjoy hot air ballooning, thermal baths, and boat cruises."},
+      {"title": "Warm Hospitality", "detail": "Experience famous Turkish friendliness and service."}
+    ],
+    "testimonials": [
+      {"name": "Priya Joshi", "review": "Cappadocia में hot air balloon ride lifetime का experience था। Turkey की history और culture amazing है।", "location": "Pune, India"},
+      {"name": "Vikram Singh", "review": "Istanbul के Hagia Sophia से लेकर Pamukkale के thermal pools तक, हर जगह incredible थी।", "location": "Jaipur, India"},
+      {"name": "Neha Agarwal", "review": "Turkish food और hospitality का जो experience मिला, वो unforgettable है। Oasis Tours का planning excellent!"  , "location": "Kolkata, India"}
+    ]
+  }
+}

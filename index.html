@@ -62,6 +62,17 @@
     <!-- Error Handler -->
     <script src="error-handler.js"></script>
     
+    <!-- Package Card Click Handler -->
+    <script>
+        function navigateToPackage(packageType) {
+            window.location.href = packageType + '-package.html';
+        }
+    </script>
+    
+    <!-- ImageKit.io Integration - Temporarily Disabled -->
+    <!-- <script src="imagekit-config.js"></script>
+    <script src="imagekit-upload.js"></script> -->
+    
     <!-- Custom Font -->
     <style>
         @font-face {
@@ -2527,7 +2538,7 @@
                 <!-- Logo -->
                 <div class="flex items-center" style="z-index: 10000; position: relative;">
                     <a href="#" class="flex items-center space-x-2">
-                        <img class="w-20" src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="h-14 w-auto">
+                        <img src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="w-20 h-20 object-contain">
                     </a>
                 </div>
                 
@@ -2584,7 +2595,13 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                 </svg>
-                <span>Oasistours@gmail.com</span>
+                <span>info@oasistoursandtravels.com</span>
+            </div>
+            <div class="address-item">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <span>Ops@oasistoursandtravels.com</span>
             </div>
             <div class="address-item">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2602,17 +2619,17 @@
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488"/>
                 </svg>
             </a>
-            <a href="#" class="social-btn" title="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61581901382290" target="_blank" class="social-btn" title="Facebook">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
             </a>
-            <a href="#" class="social-btn" title="Instagram">
+            <a href="https://www.instagram.com/tours_with_oasis?igsh=MXNpZWRydTFrMHNwbQ==" target="_blank" class="social-btn" title="Instagram">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.40z"/>
                 </svg>
             </a>
-            <a href="mailto:Oasistours@gmail.com" class="social-btn" title="Email">
+            <a href="mailto:info@oasistoursandtravels.com" class="social-btn" title="Email">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                 </svg>
@@ -2628,7 +2645,7 @@
             <div class="swiper heroSwiper h-full">
                 <div class="swiper-wrapper">
                     <!-- Dubai Slide -->
-                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='dubai.html'" style="cursor: pointer;">
+                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='DestinationDetails.html?destination=Dubai'" style="cursor: pointer;">
                         <!-- Fallback background image -->
                         <div class="absolute inset-0 bg-gradient-to-r from-blue-900 via-purple-900 to-pink-900"></div>
                         <video autoplay muted loop preload="metadata" class="absolute inset-0 w-full h-full object-cover z-5">
@@ -2643,7 +2660,7 @@
                                 <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Dubai, UAE</h1>
                                 <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Experience luxury like never before in the city of gold</p>
                                 <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">From towering skyscrapers to pristine beaches, Dubai offers world-class shopping, dining, and entertainment. Discover the perfect blend of modern innovation and traditional Arabian culture.</p>
-                                <a href="dubai.html" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                <a href="DestinationDetails.html?destination=Dubai" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
                                     Explore Dubai
                                 </a>
                             </div>
@@ -2651,7 +2668,7 @@
                     </div>
                     
                     <!-- Japan Slide -->
-                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='japan.html'" style="cursor: pointer;">
+                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='DestinationDetails.html?destination=Japan'" style="cursor: pointer;">
                         <video muted loop preload="metadata" class="absolute inset-0 w-full h-full object-cover">
                             <source src="video/Japan.mp4" type="video/mp4">
                         </video>
@@ -2664,7 +2681,7 @@
                                 <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Japan</h1>
                                 <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Where ancient traditions meet cutting-edge technology</p>
                                 <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Immerse yourself in the land of the rising sun. From serene temples and cherry blossoms to bustling Tokyo streets and bullet trains, Japan offers an unforgettable cultural journey.</p>
-                                <a href="japan.html" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                <a href="DestinationDetails.html?destination=Japan" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
                                     Discover Japan
                                 </a>
                             </div>
@@ -2672,7 +2689,7 @@
                     </div>
                     
                     <!-- Malaysia Slide -->
-                    <div class="swiper-slide relative overflow-hidden">
+                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='DestinationDetails.html?destination=Malaysia'" style="cursor: pointer;">
                         <video muted loop preload="metadata" class="absolute inset-0 w-full h-full object-cover">
                             <source src="video/Malaysica.mp4" type="video/mp4">
                         </video>
@@ -2685,7 +2702,7 @@
                                 <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Malaysia</h1>
                                 <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Truly Asia - A melting pot of cultures and natural beauty</p>
                                 <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Experience diverse cultures, delicious cuisine, and stunning landscapes. From the iconic Petronas Towers to pristine beaches and lush rainforests, Malaysia offers endless adventures.</p>
-                                <a href="malaysia.html" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                <a href="DestinationDetails.html?destination=Malaysia" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
                                     Visit Malaysia
                                 </a>
                             </div>
@@ -2693,7 +2710,7 @@
                     </div>
                     
                     <!-- USA Slide -->
-                    <div class="swiper-slide relative overflow-hidden">
+                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='DestinationDetails.html?destination=USA'" style="cursor: pointer;">
                         <video muted loop preload="metadata" class="absolute inset-0 w-full h-full object-cover">
                             <source src="video/Usa.mp4" type="video/mp4">
                         </video>
@@ -2706,7 +2723,7 @@
                                 <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">United States</h1>
                                 <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Land of dreams and endless possibilities</p>
                                 <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">From the bright lights of New York City to the natural wonders of the Grand Canyon, experience the diversity and grandeur of America. Every state offers unique attractions and experiences.</p>
-                                <a href="destinations.html" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                <a href="DestinationDetails.html?destination=USA" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
                                     Explore USA
                                 </a>
                             </div>
@@ -2714,7 +2731,7 @@
                     </div>
                     
                     <!-- Kazakhstan Slide -->
-                    <div class="swiper-slide relative overflow-hidden">
+                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='DestinationDetails.html?destination=Kazakhstan'" style="cursor: pointer;">
                         <video muted loop preload="metadata" class="absolute inset-0 w-full h-full object-cover">
                             <source src="video/kajajistan.mp4" type="video/mp4">
                         </video>
@@ -2727,14 +2744,14 @@
                                 <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Kazakhstan</h1>
                                 <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Heart of Central Asia with rich nomadic heritage</p>
                                 <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Discover the vast steppes, modern cities like Almaty and Nur-Sultan, and ancient Silk Road history. Experience unique culture, stunning landscapes, and warm hospitality in this fascinating Central Asian gem.</p>
-                                <a href="destinations.html" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-white hover:text-[#000042] transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                <a href="DestinationDetails.html?destination=Kazakhstan" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-white hover:text-[#000042] transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
                                     Discover Kazakhstan
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- Maldives Slide -->
-                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='maldives.html'" style="cursor: pointer;">
+                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='DestinationDetails.html?destination=Maldives'" style="cursor: pointer;">
                         <video muted loop preload="metadata" class="absolute inset-0 w-full h-full object-cover">
                             <source src="video/activity_video_bg.mp4" type="video/mp4">
                         </video>
@@ -2747,7 +2764,7 @@
                                 <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Maldives</h1>
                                 <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Paradise on Earth with crystal clear waters</p>
                                 <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Escape to tropical paradise with pristine beaches, luxury overwater villas, and world-class diving. Experience the ultimate romantic getaway in the Maldives' crystal-clear lagoons and coral reefs.</p>
-                                <a href="maldives.html" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-white hover:text-[#000042] transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                <a href="DestinationDetails.html?destination=Maldives" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-white hover:text-[#000042] transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
                                     Discover Maldives
                                 </a>
                             </div>
@@ -3291,7 +3308,7 @@
                 <!-- Header -->
                 <div class="text-center mb-16">
                     <span class="text-cyan-400 text-lg font-semibold tracking-wide uppercase">Our Services</span>
-                    <h2 class="text-sm md:text-5xl font-bold text-white mb-6 mt-4">Let's Get Started</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 mt-4">Let's Get Started</h2>
                     <p class="text-gray-300 text-lg max-w-4xl mx-auto leading-relaxed">
                         We're the travel experts you can trust. From custom itineraries to all-inclusive tours, we handle every detail so you can simply relax and enjoy the world. Explore our hand-picked collection of adventures, book flights and hotels with ease, and get 24/7 support. Let us take the stress out of planning and turn your dream vacation into a reality. Start your journey with our expertise today and discover the perfect trip for you.
                     </p>
@@ -3392,7 +3409,7 @@
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <!-- Budget Package -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="window.location.href='budget-package.html'">
                         <div class="relative">
                             <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=250&fit=crop" alt="Budget Package" class="w-full h-48 object-cover">
                             <div class="absolute top-4 right-4">
@@ -3403,7 +3420,7 @@
                             <h3 class="text-xl font-semibold text-gray-800 mb-2" style="font-size: 1.5rem !important;">Budget Package</h3>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">₹ 75,000/-</span>
-                                <button onclick="window.location.href='contact.html'" class="bg-gradient-to-r from-[#000042] to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-[#000042] transition-all duration-300 w-24">
+                                <button onclick="event.stopPropagation(); window.location.href='budget-package.html'" class="bg-gradient-to-r from-[#000042] to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-[#000042] transition-all duration-300 w-24">
                                     Book Now
                                 </button>
                             </div>
@@ -3411,7 +3428,7 @@
                     </div>
 
                     <!-- Standard Package -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 relative">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 relative cursor-pointer" onclick="window.location.href='standard-package.html'">
                         <div class="absolute top-3 left-3 z-10">
                             <span class="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                                 Most Preferred
@@ -3427,7 +3444,7 @@
                             <h3 class="text-xl font-semibold text-gray-800 mb-2" style="font-size: 1.5rem !important;">Standard Package</h3>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">₹1,15,000/-</span>
-                                <button onclick="window.location.href='contact.html'" class="bg-gradient-to-r from-[#000042] to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-[#000042] transition-all duration-300 w-24">
+                                <button onclick="event.stopPropagation(); window.location.href='standard-package.html'" class="bg-gradient-to-r from-[#000042] to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-[#000042] transition-all duration-300 w-24">
                                     Book Now
                                 </button>
                             </div>
@@ -3435,7 +3452,7 @@
                     </div>
 
                     <!-- Luxury Package -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="window.location.href='luxury-package.html'">
                         <div class="relative">
                             <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=250&fit=crop" alt="Luxury Package" class="w-full h-48 object-cover">
                             <div class="absolute top-4 right-4">
@@ -3446,7 +3463,7 @@
                             <h3 class="text-xl font-semibold text-gray-800 mb-2" style="font-size: 1.5rem !important;">Luxury Package</h3>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">₹1,50,000/-</span>
-                                <button onclick="window.location.href='contact.html'" class="bg-gradient-to-r from-[#000042] to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-[#000042] transition-all duration-300 w-24">
+                                <button onclick="event.stopPropagation(); window.location.href='luxury-package.html'" class="bg-gradient-to-r from-[#000042] to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-[#000042] transition-all duration-300 w-24">
                                     Book Now
                                 </button>
                             </div>
@@ -3454,7 +3471,7 @@
                     </div>
 
                     <!-- Custom Package -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="window.location.href='custom-package.html'">
                         <div class="relative">
                             <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=250&fit=crop" alt="Custom Package" class="w-full h-48 object-cover">
                             <div class="absolute top-4 right-4">
@@ -3465,7 +3482,7 @@
                             <h3 class="text-xl font-semibold text-gray-800 mb-2" style="font-size: 1.5rem !important;">Custom Package</h3>
                             <div class="flex items-center justify-between">
                                 <span class="text-2xl font-bold text-gray-900">₹2,00,000/-</span>
-                                <button onclick="window.location.href='contact.html'" class="bg-gradient-to-r from-[#000042] to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-[#000042] transition-all duration-300 w-24">
+                                <button onclick="event.stopPropagation(); window.location.href='custom-package.html'" class="bg-gradient-to-r from-[#000042] to-blue-700 text-white px-6 py-2 rounded-lg hover:from-blue-700 hover:to-[#000042] transition-all duration-300 w-24">
                                     Book Now
                                 </button>
                             </div>
@@ -3513,7 +3530,7 @@
                                             Singapore blends modern innovation with rich culture. Experience Marina Bay Sands, hawker centers, and world-class attractions in this vibrant city-state...
                                         </p>
                                     </div>
-                                    <button class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
+                                    <button onclick="window.location.href='DestinationDetails.html?destination=Singapore'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
                                         Discover Singapore
                                     </button>
                                 </div>
@@ -3545,7 +3562,7 @@
                                             Dubai is a futuristic metropolis where luxury meets innovation. Experience Burj Khalifa, pristine beaches, and world-class shopping in this modern marvel...
                                         </p>
                                     </div>
-                                    <button onclick="window.location.href='dubai.html'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
+                                    <button onclick="window.location.href='DestinationDetails.html?destination=Dubai'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
                                         Discover Dubai
                                     </button>
                                 </div>
@@ -3577,7 +3594,7 @@
                                             The Maldives offers tropical paradise with crystal-clear waters, pristine beaches, and luxury overwater villas. Perfect for romantic getaways and relaxation...
                                         </p>
                                     </div>
-                                    <button onclick="window.location.href='maldives.html'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
+                                    <button onclick="window.location.href='DestinationDetails.html?destination=Maldives'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
                                         Visit Maldives
                                     </button>
                                 </div>
@@ -3609,7 +3626,7 @@
                                             Japan blends ancient traditions with cutting-edge technology. Experience serene temples, bustling Tokyo streets, cherry blossoms, and authentic cuisine...
                                         </p>
                                     </div>
-                                    <button onclick="window.location.href='japan.html'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
+                                    <button onclick="window.location.href='DestinationDetails.html?destination=Japan'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
                                         Experience Japan
                                     </button>
                                 </div>
@@ -3628,7 +3645,7 @@
                                         </span>
                                     </div>
                                     <!-- Destination Image -->
-                                    <img src="https://images.unsplash.com/photo-1527668752968-14dc92a4041f?w=400" alt="Switzerland" class="w-full h-full object-cover rounded-lg">
+                                    <img src="https://static.toiimg.com/thumb/msid-96203700,width-748,height-499,resizemode=4,imgsize-239734/Places-that-turn-magical-in-Switzerland-during-winters.jpg" alt="Switzerland" class="w-full h-full object-cover rounded-lg">
                                 </div>
                                 
                                 <!-- Content Section -->
@@ -3641,7 +3658,7 @@
                                             Switzerland offers breathtaking Alpine landscapes, pristine lakes, and charming villages. Experience skiing, historic cities, and scenic train rides...
                                         </p>
                                     </div>
-                                    <button class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
+                                    <button onclick="window.location.href='DestinationDetails.html?destination=Switzerland'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
                                         Explore Switzerland
                                     </button>
                                 </div>
@@ -3673,7 +3690,7 @@
                                             Thailand captivates with golden temples, tropical beaches, and vibrant street life. Experience Bangkok markets, pristine islands, and authentic cuisine...
                                         </p>
                                     </div>
-                                    <button class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
+                                    <button onclick="window.location.href='DestinationDetails.html?destination=Thailand'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
                                         Discover Thailand
                                     </button>
                                 </div>
@@ -4090,7 +4107,7 @@
                     <div class="inline-block bg-gradient-to-r from-[#000042] to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
                         Our Services
                     </div>
-                        <h2 class="font-semibold text-blue-900">Why Chooose Us</h2>
+                        <h2 class="font-semibold text-blue-900 text-5xl">Why Chooose Us</h2>
                     <p class="text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">We deliver the best service and experience to make your journey unforgettable</p>
                 </div>
 
@@ -4099,7 +4116,7 @@
                     <!-- Customer Delight -->
                     <div class="service-card rounded-3xl  p-8 transition-all duration-500 transform hover:-translate-y-3 text-center">
                         <div class="service-icon-bg w-28 h-28 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl flex items-center justify-center">
-                            <img src="Images/svg/feature_icon_1.svg" alt="" class="service-icon" style="filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(4841%) hue-rotate(244deg) brightness(93%) contrast(106%);">
+                            <img src="Images/svg/feature_icon_1.svg" alt="" class="service-icon w-12 h-12" style="filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(4841%) hue-rotate(244deg) brightness(93%) contrast(106%);">
                         </div>
                         <h3 class="text-2xl font-bold text-[#000042] mb-4">Customer Delight</h3>
                         <p class="text-gray-600 leading-relaxed">We deliver the best service and you to experience for our customer we est service and you to experie</p>
@@ -4108,7 +4125,7 @@
                     <!-- Trusted Adventure -->
                     <div class="service-card rounded-3xl  p-8  transition-all duration-500 transform hover:-translate-y-3 text-center">
                         <div class="service-icon-bg w-28 h-28 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl flex items-center justify-center">
-                           <img src="Images/svg/feature_icon_2.svg" alt="" class="service-icon" style="filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(4841%) hue-rotate(244deg) brightness(93%) contrast(106%);">
+                           <img src="Images/svg/feature_icon_2.svg" alt="" class="service-icon w-12 h-12" style="filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(4841%) hue-rotate(244deg) brightness(93%) contrast(106%);">
                         </div>
                         <h3 class="text-2xl font-bold text-[#000042] mb-4">Trusted Adventure</h3>
                         <p class="text-gray-600 leading-relaxed">We deliver the best service and you to experience for our customer we est service and you to experie</p>
@@ -4117,7 +4134,7 @@
                     <!-- Expert Guides -->
                     <div class="service-card  rounded-3xl  p-8 transition-all duration-500 transform hover:-translate-y-3 text-center">
                         <div class="service-icon-bg w-28 h-28 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl flex items-center justify-center">
-                            <img src="Images/svg/feature_icon_3.svg" alt="" class="service-icon" style="filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(4841%) hue-rotate(244deg) brightness(93%) contrast(106%);">
+                            <img src="Images/svg/feature_icon_3.svg" alt="" class="service-icon w-12 h-12" style="filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(4841%) hue-rotate(244deg) brightness(93%) contrast(106%);">
                         </div>
                         <h3 class="text-2xl font-bold text-[#000042] mb-4">Expert Guides</h3>
                         <p class="text-gray-600 leading-relaxed">We deliver the best service and you to experience for our customer we est service and you to experie</p>
@@ -4126,7 +4143,7 @@
                     <!-- Time Flexibility -->
                     <div class="service-card  rounded-3xl  p-8 transition-all duration-500 transform hover:-translate-y-3 text-center">
                         <div class="service-icon-bg w-28 h-28 mx-auto mb-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl flex items-center justify-center">
-                            <img src="Images/svg/feature_icon_4.svg" alt="" class="service-icon" style="filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(4841%) hue-rotate(244deg) brightness(93%) contrast(106%);">
+                            <img src="Images/svg/feature_icon_4.svg" alt="" class="service-icon w-12 h-12" style="filter: brightness(0) saturate(100%) invert(8%) sepia(100%) saturate(4841%) hue-rotate(244deg) brightness(93%) contrast(106%);">
                         </div>
                         <h3 class="text-2xl font-bold text-[#000042] mb-4">Time Flexibility</h3>
                         <p class="text-gray-600 leading-relaxed">We deliver the best service and you to experience for our customer we est service and you to experie</p>
@@ -4298,7 +4315,7 @@
             </svg>
         </a>
     </div>
-    <!-- Footer -->
+   <!-- Footer -->
     <footer class="bg-[#000042] py-16 relative overflow-hidden">
         <!-- Background Decorations Marquee -->
         <div class="absolute bottom-0 left-0 w-full overflow-hidden">
@@ -4323,34 +4340,6 @@
         .animate-marquee {
             animation: marquee 40s linear infinite;
             width: 200%;
-        }
-        
-        /* Anime.js Text Animation Styles */
-        .ml10 {
-            position: relative;
-            font-weight: 900;
-        }
-        
-        .ml10 .text-wrapper {
-            position: relative;
-            display: inline-block;
-            padding-top: 0.2em;
-            padding-right: 0.05em;
-            padding-bottom: 0.1em;
-            overflow: hidden;
-        }
-        
-        .ml10 .letter {
-            display: inline-block;
-            line-height: 1em;
-            transform-origin: 0 0;
-        }
-        
-        /* Cursor animation for typewriter - DISABLED */
-        .cursor {
-            color: #3b82f6;
-            font-weight: bold;
-            /* animation: blink 1s infinite; - REMOVED */
         }
         </style>
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
@@ -4379,7 +4368,15 @@
                                     d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
                                 </path>
                             </svg>
-                            <span>Oasistours@gmail.com</span>
+                            <span>info@oasistoursandtravels.com</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <span>Ops@oasistoursandtravels.com</span>
                         </div>
                         <div class="flex items-start text-gray-300">
                             <svg class="w-5 h-5 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -4401,9 +4398,9 @@
                         <li><a href="index.html" class="text-gray-300 hover:text-[#d4af37] transition-colors">Home</a></li>
                         <li><a href="about.html" class="text-gray-300 hover:text-[#d4af37] transition-colors">About Us</a>
                         </li>
-                        <li><a href="#packages" class="text-gray-300 hover:text-[#d4af37] transition-colors">Packages</a>
+                        <li><a href="index.html#packages" class="text-gray-300 hover:text-[#d4af37] transition-colors">Packages</a>
                         </li>
-                        <li><a href="#services" class="text-gray-300 hover:text-[#d4af37] transition-colors">Team</a></li>
+                        <li><a href="index.html#services" class="text-gray-300 hover:text-[#d4af37] transition-colors">Team</a></li>
                     </ul>
                 </div>
     
@@ -4413,7 +4410,7 @@
                     <ul class="space-y-3">
                         <li><a href="contact.html" class="text-gray-300 hover:text-[#d4af37] transition-colors">Contact
                                 Us</a></li>
-                        <li><a href="#contact" class="text-gray-300 hover:text-[#d4af37] transition-colors">Enquiry</a></li>
+                        <li><a href="index.html#contact" class="text-gray-300 hover:text-[#d4af37] transition-colors">Enquiry</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-[#d4af37] transition-colors">FAQ's</a></li>
                         <li><a href="#" class="text-gray-300 hover:text-[#d4af37] transition-colors">Help</a></li>
                     </ul>
@@ -4423,9 +4420,9 @@
                 <div>
                     <h3 class="text-xl font-bold text-white mb-6" style="font-family: 'Lausanne';">Services</h3>
                     <ul class="space-y-3">
-                        <li><a href="#packages" class="text-gray-300 hover:text-[#d4af37] transition-colors">Packages</a>
+                        <li><a href="index.html#packages" class="text-gray-300 hover:text-[#d4af37] transition-colors">Packages</a>
                         </li>
-                        <li><a href="#services" class="text-gray-300 hover:text-[#d4af37] transition-colors">Our Guides</a>
+                        <li><a href="index.html#services" class="text-gray-300 hover:text-[#d4af37] transition-colors">Our Guides</a>
                         </li>
                         <li><a href="#" class="text-gray-300 hover:text-[#d4af37] transition-colors">Visa & Passport</a>
                         </li>
@@ -4441,15 +4438,15 @@
                     <!-- Social Media Icons -->
                     <div class="flex space-x-4 mb-4 md:mb-0">
                         <!-- WhatsApp -->
-                        <a href="#"
+                        <a href="https://wa.me/919796986969?text=Hello%20Oasis%20Tours" target="_blank"
                             class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all duration-300">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.488" />
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
                             </svg>
                         </a>
                         <!-- Facebook -->
-                        <a href="#"
+                        <a href="https://www.facebook.com/profile.php?id=61581901382290" target="_blank"
                             class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white transition-all duration-300">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path
@@ -4457,7 +4454,7 @@
                             </svg>
                         </a>
                         <!-- Instagram -->
-                        <a href="#"
+                        <a href="https://www.instagram.com/tours_with_oasis?igsh=MXNpZWRydTFrMHNwbQ==" target="_blank"
                             class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-gradient-to-r hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F77737] hover:border-[#833AB4] hover:text-white transition-all duration-300">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path
@@ -4465,7 +4462,7 @@
                             </svg>
                         </a>
                         <!-- Email -->
-                        <a href="mailto:Oasistours@gmail.com"
+                        <a href="mailto:info@oasistoursandtravels.com"
                             class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-[#d4af37] hover:border-[#d4af37] hover:text-white transition-all duration-300">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

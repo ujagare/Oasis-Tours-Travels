@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Destination Details - Oasis Travel & Tourism</title>
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo_New.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/Oasis Logo_New.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/Oasis Logo_New.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="shortcut icon" href="Images/Oasis Logo_New.png">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- PhotoSwipe CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.2/dist/photoswipe.css" />
+    
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    
+    <!-- Tippy.js CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+    
+    <!-- NProgress CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/nprogress@0.2.0/nprogress.css" />
+    
+    <!-- Local Tailwind CSS -->
+    <link rel="stylesheet" href="dist/style.css">
+    
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Other Libraries -->
+    <script src="https://unpkg.com/nprogress@0.2.0/nprogress.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
+    
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        @font-face {
+            font-family: 'Lausanne';
+            src: url('font/Lausanne-300.woff2') format('woff2');
+            font-weight: 300;
+        }
+        @font-face {
+            font-family: 'Lausanne';
+            src: url('font/Lausanne-500.woff2') format('woff2');
+            font-weight: 500;
+        }
+        * { 
+            font-family: 'Lausanne', sans-serif !important; 
+        }
+        
+        /* Enhanced Custom Styles */
+        .japan-gallery .swiper-button-next,
+        .japan-gallery .swiper-button-prev {
+            color: white;
+            background: rgba(0, 0, 0, 0.3);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .japan-gallery .swiper-button-next:after,
+        .japan-gallery .swiper-button-prev:after {
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .japan-gallery .swiper-button-next:hover,
+        .japan-gallery .swiper-button-prev:hover {
+            background: rgba(6, 182, 212, 0.8);
+            transform: scale(1.1);
+        }
+        
+
+        
+        /* Advanced Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .wave-animation {
+            animation: wave 2s ease-in-out infinite;
+        }
+        
+        .shimmer-effect {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+        
+        /* Glass Morphism Effects */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glass-card-dark {
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Enhanced Gradients */
+        .gradient-ocean {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .gradient-tropical {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .gradient-paradise {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+        
+        .gradient-sunset {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+        }
+        
+        /* Hover Effects */
+        .hover-lift {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .hover-glow:hover {
+            box-shadow: 0 0 30px rgba(6, 182, 212, 0.4);
+        }
+        
+        /* Particle Background */
+        .particles-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .particle:nth-child(1) { width: 4px; height: 4px; left: 10%; animation-delay: 0s; }
+        .particle:nth-child(2) { width: 6px; height: 6px; left: 20%; animation-delay: 1s; }
+        .particle:nth-child(3) { width: 3px; height: 3px; left: 30%; animation-delay: 2s; }
+        .particle:nth-child(4) { width: 5px; height: 5px; left: 40%; animation-delay: 3s; }
+        .particle:nth-child(5) { width: 4px; height: 4px; left: 50%; animation-delay: 4s; }
+        .particle:nth-child(6) { width: 7px; height: 7px; left: 60%; animation-delay: 5s; }
+        .particle:nth-child(7) { width: 3px; height: 3px; left: 70%; animation-delay: 6s; }
+        .particle:nth-child(8) { width: 5px; height: 5px; left: 80%; animation-delay: 7s; }
+        .particle:nth-child(9) { width: 4px; height: 4px; left: 90%; animation-delay: 8s; }
+        
+        /* Text Glow Effects */
+        .text-glow {
+            text-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+        }
+        
+        .text-glow-white {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Button Enhancements */
+        .btn-ocean {
+            background: linear-gradient(45deg, #06b6d4, #0891b2, #0e7490);
+            background-size: 300% 300%;
+            animation: gradient-shift 3s ease infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-ocean::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-ocean:hover::before {
+            left: 100%;
+        }
+        
+        @keyframes gradient-shift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Card Tilt Effect */
+        .card-tilt {
+            transform-style: preserve-3d;
+            transition: transform 0.3s ease;
+        }
+        
+        .card-tilt:hover {
+            transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+        }
+        
+        /* Simple Destinations Slider */
+        .destinationsSwiper {
+            padding: 20px 0;
+        }
+        
+        .destinationsSwiper .swiper-button-next,
+        .destinationsSwiper .swiper-button-prev {
+            color: #06b6d4;
+            background: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .destinationsSwiper .swiper-button-next:after,
+        .destinationsSwiper .swiper-button-prev:after {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .destinationsSwiper .swiper-button-next:hover,
+        .destinationsSwiper .swiper-button-prev:hover {
+            background: #06b6d4;
+            color: white;
+        }
+        
+        /* Testimonials Swiper Navigation Styling */
+        .testimonials-slider .swiper-button-next,
+        .testimonials-slider .swiper-button-prev {
+            color: #06b6d4;
+            background: white;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: 1px solid #e5e7eb;
+        }
+        
+        .testimonials-slider .swiper-button-next:after,
+        .testimonials-slider .swiper-button-prev:after {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .testimonials-slider .swiper-button-next:hover,
+        .testimonials-slider .swiper-button-prev:hover {
+            background: #06b6d4;
+            color: white;
+        }
+        
+        /* Mobile Navigation Styles */
+        .mobile-nav {
+            position: fixed;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #000042;
+            z-index: 40;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            overflow-y: auto;
+            padding: 0;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        
+        .mobile-nav.active {
+            top: 0;
+            visibility: visible;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .mobile-nav-links {
+            padding: 3rem 2rem 0.5rem 2rem;
+        }
+        
+        .mobile-nav-links a {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+        }
+        
+        .mobile-nav-links a:hover {
+            color: #60a5fa;
+        }
+        
+        .mobile-nav-button {
+            padding: 0 2rem 1rem 2rem;
+        }
+        
+        .mobile-nav-button button {
+            width: 100%;
+            max-width: 250px;
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-nav-button button:hover {
+            background: white;
+            color: #1a1a3a;
+        }
+        
+        .mobile-nav-address {
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .mobile-nav-address h3 {
+            color: white;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 1.5rem;
+        }
+        
+        .address-item {
+            display: flex;
+            align-items: center;
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+        
+        .address-item svg {
+            width: 16px;
+            height: 16px;
+            margin-right: 1rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .mobile-nav-social {
+            display: flex;
+            gap: 1rem;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-btn:hover {
+            border-color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Burger Menu */
+        .burger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+            position: relative;
+            z-index: 10000;
+            width: 40px;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .burger .line1,
+        .burger .line2 {
+            width: 30px;
+            height: 2px;
+            background: white !important;
+            margin: 2px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+            display: block !important;
+            transform-origin: center;
+        }
+        
+        .burger span {
+            width: 30px;
+            height: 2px;
+            background: white !important;
+            margin: 2px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+            display: block !important;
+            transform-origin: center;
+        }
+        
+        .burger.active .line1 {
+            transform: rotate(45deg) translateY(6px);
+        }
+        
+        .burger.active .line2 {
+            transform: rotate(-45deg) translateY(-6px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 bg-black bg-opacity-50 backdrop-blur-sm shadow-lg z-50">
+        <div class="w-full mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-28">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <img class="w-20" src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="h-14 w-auto">
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center  space-x-8 p-20">
+                    <a href="index.html" class="text-white hover:text-blue-300 font-bold transition-colors">Home</a>
+                    <a href="about.html" class="text-white hover:text-blue-300 font-bold transition-colors">About</a>
+                    <a href="index.html#services" class="text-white hover:text-blue-300 font-bold transition-colors">Services</a>
+                    <a href="destinations.html" class="text-white hover:text-blue-300 font-bold transition-colors">Destinations</a>
+                    <a href="index.html#gallery" class="text-white hover:text-blue-300 font-bold transition-colors">Gallery</a>
+                    <a href="contact.html" class="text-white hover:text-blue-300 font-bold transition-colors">Contact</a>
+                    <button onclick="window.location.href='contact.html'" class="border-2 text-white px-6 py-2 rounded-lg hover:bg-[#000042] transition-colors font-semibold">
+                        Book Now
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <div class="burger">
+                        <span class="line1"></span>
+                        <span class="line2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div class="mobile-nav">
+        <!-- Navigation Links -->
+        <div class="mobile-nav-links" style="padding-top: 8rem;">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="packages.html">Packages</a>
+            <a href="index.html#services">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        
+        <!-- Book Now Button -->
+        <div class="mobile-nav-button">
+            <button onclick="window.location.href='contact.html'">Book Now</button>
+        </div>
+        
+        <!-- Address Section -->
+        <div class="mobile-nav-address">
+            <h3>Contact Info</h3>
+            <div class="address-item">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                <span>+91 9796986969</span>
+            </div>
+            <div class="address-item">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <span>Oasistours@gmail.com</span>
+            </div>
+            <div class="address-item">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span>Ravet, Pune- 411007 Maharashtra, India</span>
+            </div>
+        </div>
+        
+        <!-- Social Media Icons -->
+        <div class="mobile-nav-social">
+            <a href="https://wa.me/919796986969?text=Hello%20Oasis%20Tours" class="social-btn" title="WhatsApp">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516"/>
+                </svg>
+            </a>
+            <a href="https://www.facebook.com/oasistoursandtravels" class="social-btn" title="Facebook">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/oasistoursandtravels" class="social-btn" title="Instagram">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+            </a>
+            <a href="mailto:Oasistours@gmail.com" class="social-btn" title="Email">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Enhanced Hero Section with Video Background -->
+    <section class="pt-28 relative overflow-hidden flex items-center" style="height: 70vh; min-height: 70vh;">
+        <!-- Dynamic Video/Image Background -->
+        <div id="hero-background" class="absolute inset-0 w-full h-full object-cover z-0">
+            <!-- Background will be set dynamically -->
+        </div>
+        
+        <!-- Video Overlay -->
+        <div class="absolute inset-0 bg-black/40 z-10"></div>
+        
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 z-20">
+            <div class="absolute top-20 left-20 w-32 h-32 bg-white/10 rounded-full blur-3xl float-animation"></div>
+            <div class="absolute bottom-20 right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl float-animation" style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-1/4 w-36 h-36 bg-white/10 rounded-full blur-3xl float-animation" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <!-- Content -->
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-30 w-full">
+            <h1 id="destination-title" class="text-6xl md:text-8xl font-bold text-white mb-12 text-glow-white">Destination</h1>
+            
+            <!-- CTA Button -->
+            <div class="flex justify-center">
+                <button id="book-now-btn" class="glass-card text-white px-4 sm:px-6 md:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base md:text-lg hover:scale-105 transition-all duration-300 border border-white/30">
+                    Book Your Adventure
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Quick Info -->
+    <section class="py-16 bg-gradient-to-br from-gray-50 to-white relative">
+        <div class="max-w-7xl mx-auto px-4">
+            <div id="quick-info" class="grid md:grid-cols-4 gap-8 text-center">
+                <!-- Quick info cards will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Maldives -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 id="about-title" class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 sm:mb-6">Discover Destination</h2>
+                    <p id="about-description" class="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">Loading destination information...</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-cyan-600 mr-3"></i>
+                            <span class="text-gray-700">Ancient temples & shrines</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-cyan-600 mr-3"></i>
+                            <span class="text-gray-700">Cherry blossom seasons</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-cyan-600 mr-3"></i>
+                            <span class="text-gray-700">Traditional hot springs</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-lucide="check-circle" class="w-6 h-6 text-cyan-600 mr-3"></i>
+                            <span class="text-gray-700">Modern cities & culture</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Enhanced Image Gallery -->
+                <div class="relative">
+                    <div class="swiper destination-gallery h-96 rounded-3xl overflow-hidden shadow-2xl hover-glow">
+                        <div class="swiper-wrapper" id="gallery-images">
+                            <!-- Gallery images will be populated dynamically -->
+                        </div>
+
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Top Destinations -->
+    <section class="py-20 bg-gradient-to-br from-white via-gray-50 to-cyan-50 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-10 left-10 w-40 h-40 bg-cyan-200/20 rounded-full blur-3xl float-animation"></div>
+            <div class="absolute bottom-10 right-10 w-56 h-56 bg-blue-200/20 rounded-full blur-3xl float-animation" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 id="attractions-title" class="text-5xl font-bold text-gray-800 mb-6 text-glow">Top Attractions</h2>
+                <p id="attractions-subtitle" class="text-xl text-gray-600 max-w-3xl mx-auto">Explore the most iconic attractions and landmarks</p>
+            </div>
+            
+            <!-- Destinations Slider -->
+            <div class="relative">
+                <div class="swiper destinationsSwiper overflow-hidden">
+                    <div class="swiper-wrapper pb-8" id="attractions-slider">
+                        <!-- Attractions will be populated dynamically -->
+                    </div>
+                       
+                        </div>
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                     
+                        
+                      
+                        
+                     
+                        
+                      
+                    
+                    <!-- Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            
+         
+        </div>
+    </section>
+                   
+                
+         
+        
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- Enhanced Luxury Hotels Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-cyan-50 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-cyan-400 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-20 w-40 h-40 bg-blue-400 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/2 w-36 h-36 bg-teal-400 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 id="hotels-title" class="text-5xl font-bold text-gray-800 mb-6 text-glow">Luxury Hotels</h2>
+                <p id="hotels-subtitle" class="text-xl text-gray-600 max-w-3xl mx-auto">Experience world-class hospitality with our handpicked luxury hotels</p>
+            </div>
+            
+            <div id="hotels-grid" class="grid md:grid-cols-3 gap-10">
+                <!-- Hotels will be populated dynamically -->
+            </div>
+            
+            <!-- Resort Comparison -->
+            <div class="mt-16 bg-white rounded-3xl shadow-2xl p-8">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-8">Why Choose Our Partner Resorts?</h3>
+                <div class="grid md:grid-cols-4 gap-6 text-center">
+                    <div class="p-4">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000042;">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Verified Quality</h4>
+                        <p class="text-sm text-gray-600">All resorts are personally inspected and verified</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000042;">
+                            <i data-lucide="percent" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Best Prices</h4>
+                        <p class="text-sm text-gray-600">Guaranteed lowest prices with exclusive deals</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000042;">
+                            <i data-lucide="headphones" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">24/7 Support</h4>
+                        <p class="text-sm text-gray-600">Round-the-clock assistance during your stay</p>
+                    </div>
+                    <div class="p-4">
+                        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color: #000042;">
+                            <i data-lucide="gift" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Exclusive Perks</h4>
+                        <p class="text-sm text-gray-600">Complimentary upgrades and special amenities</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Activities Section -->
+    <section class="py-20 bg-gradient-to-br from-white via-cyan-50 to-blue-50 relative overflow-hidden">
+      
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 id="activities-title" class="text-5xl font-bold text-gray-800 mb-6 text-glow">Activities & Experiences</h2>
+                <p id="activities-subtitle" class="text-xl text-gray-600 max-w-4xl mx-auto">Discover authentic cultural experiences and unforgettable adventures</p>
+            </div>
+            <div id="activities-grid" class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Activities will be populated dynamically -->
+            </div>
+             
+                
+             
+                
+             
+      
+    </section>
+
+    <!-- Expert Guides Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 id="experts-title" class="text-4xl font-bold text-gray-800 mb-4">Meet Your Travel Experts</h2>
+                <p id="experts-subtitle" class="text-xl text-gray-600 max-w-3xl mx-auto">Our experienced local guides will ensure you have the most authentic and memorable travel experience</p>
+            </div>
+            
+            <div id="guides-grid" class="grid md:grid-cols-3 gap-8">
+                <!-- Guides will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Enhanced Packages Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-48 h-48 bg-cyan-200/10 rounded-full blur-3xl float-animation"></div>
+            <div class="absolute bottom-20 right-20 w-64 h-64 bg-blue-200/10 rounded-full blur-3xl float-animation" style="animation-delay: 1s;"></div>
+            <div class="absolute top-1/2 left-1/4 w-56 h-56 bg-teal-200/10 rounded-full blur-3xl float-animation" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <h2 id="packages-title" class="text-5xl font-bold text-gray-800 mb-6 text-glow">Exclusive Packages</h2>
+                <p id="packages-subtitle" class="text-xl text-gray-600 max-w-3xl mx-auto">Carefully curated packages for the ultimate experience</p>
+            </div>
+            
+            <div id="packages-grid" class="grid lg:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
+                <!-- Packages will be populated dynamically -->
+            </div>
+
+
+
+         
+        </div>
+    </section>
+
+        <!-- start Why choose us section -->
+        <section class="py-20 bg-gray-50 relative">
+            <div class="absolute -top-0 lg:-top-12 left-0 w-full">
+                <img src="Images/images/why-choose-us-bg.svg" alt="why-choose-us-bg" class="w-full block">
+            </div>
+            <!-- container -->
+            <div class="max-w-7xl mx-auto px-4 relative">
+                <!-- section heading -->
+                <div class="text-center mb-10 md:mb-14">
+                    <h2 class="text-5xl font-bold text-gray-800 mb-6 text-glow">Why Choose This Destination</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover what makes this destination special</p>
+                </div>
+                <div id="why-choose-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center gap-7 max-w-5xl mx-auto">
+                    <!-- Why choose us items will be populated dynamically -->
+                </div>
+                        </div>
+                      
+                    </div>
+                </div>
+
+                <div class="mt-10 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-7 max-w-6xl mx-auto">
+                    <div class="py-16 lg:py-24 px-5 lg:px-10 relative rounded-3xl overflow-hidden h-64 md:h-80 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="absolute top-0 left-0 w-full h-full">
+                            <img src="Images/images/weekly-flash-deels-img.jpg" alt="weekly-flash-deels-img" class="block w-full h-full object-cover">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+                        <div class="relative max-w-[250px] h-full flex flex-col justify-center">
+                            <h4 class="mb-4 text-white text-2xl font-bold">Weekly Flash Deals</h4>
+                            <p class="text-white text-lg font-semibold">Up to 45% off</p>
+                        </div>
+                    </div>
+                    <div class="py-16 lg:py-24 px-5 lg:px-10 relative rounded-3xl overflow-hidden h-64 md:h-80 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+                        <div class="absolute top-0 left-0 w-full h-full">
+                            <img src="Images/images/summer-escaps-img.png" alt="summer-escaps-img" class="block w-full h-full object-cover">
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+                        <div class="relative max-w-[250px] h-full flex flex-col justify-center">
+                            <h4 class="mb-4 text-white text-2xl font-bold">Summer Escapes</h4>
+                            <p class="text-white text-lg font-semibold">Plan your next trip with us</p>
+                        </div>
+                    </div>
+                </div>          
+             </div>
+    </section>
+       <!-- end Why choose us section -->
+
+    <!-- Customer Reviews -->
+    <!-- Enhanced Testimonials Section with Swiper -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-800 mb-6 text-glow">What Our Travelers Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Real experiences from our satisfied customers</p>
+            </div>
+            
+            <!-- Testimonials Slider -->
+            <div class="testimonials-slider relative">
+                <div class="swiper testimonials-swiper">
+                    <div class="swiper-wrapper" id="testimonials-slider">
+                        <!-- Testimonials will be populated dynamically -->
+                    </div>
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <div class="swiper-button-next testimonials-next"></div>
+                <div class="swiper-button-prev testimonials-prev"></div>
+            </div>
+        </div>
+    </section>
+
+   
+    <!-- Footer -->
+    <footer class="bg-[#000042] py-16 relative overflow-hidden">
+        <!-- Background Decorations Marquee -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden">
+            <div class="flex animate-marquee items-end whitespace-nowrap">
+                <img src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png" alt="" class="h-[30vh] w-auto opacity-20 flex-shrink-0">
+                <img src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png" alt="" class="h-[30vh] w-auto opacity-20 flex-shrink-0">
+                <img src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png" alt="" class="h-[30vh] w-auto opacity-20 flex-shrink-0">
+                <img src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png" alt="" class="h-[30vh] w-auto opacity-20 flex-shrink-0">
+                <img src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png" alt="" class="h-[30vh] w-auto opacity-20 flex-shrink-0">
+                <img src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png" alt="" class="h-[30vh] w-auto opacity-20 flex-shrink-0">
+                <img src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png" alt="" class="h-[30vh] w-auto opacity-20 flex-shrink-0">
+                <img src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png" alt="" class="h-[30vh] w-auto opacity-20 flex-shrink-0">
+                <img src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png" alt="" class="h-[30vh] w-auto opacity-20 flex-shrink-0">
+                <img src="Images/graphics/Gemini_Generated_Image_8isvzm8isvzm8isv-removebg-preview.png" alt="" class="h-[30vh] w-auto opacity-20 flex-shrink-0">
+            </div>
+        </div>
+        <style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 40s linear infinite;
+            width: 200%;
+        }
+        </style>
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <!-- Logo Section -->
+            <div class="mb-12 text-center">
+                <img src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="h-20 mx-auto mb-4">
+                <p class="text-gray-300 max-w-2xl mx-auto">Your trusted partner for unforgettable travel experiences. Discover the world with Oasis Travel & Tourism.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Contact Section -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6" style="font-family: 'Lausanne';">Contact</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                </path>
+                            </svg>
+                            <span>+91 9796986969</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <span>info@oasistoursandtravels.com</span>
+                        </div>
+                        <div class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <span>Ops@oasistoursandtravels.com</span>
+                        </div>
+                        <div class="flex items-start text-gray-300">
+                            <svg class="w-5 h-5 mr-3 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span>Ravet, Pune- 411007<br>Maharashtra, India</span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Company Section -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6" style="font-family: 'Lausanne';">Company</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-[#d4af37] transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-[#d4af37] transition-colors">About Us</a>
+                        </li>
+                        <li><a href="index.html#packages" class="text-gray-300 hover:text-[#d4af37] transition-colors">Packages</a>
+                        </li>
+                        <li><a href="index.html#services" class="text-gray-300 hover:text-[#d4af37] transition-colors">Team</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Support Section -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6" style="font-family: 'Lausanne';">Support</h3>
+                    <ul class="space-y-3">
+                        <li><a href="contact.html" class="text-gray-300 hover:text-[#d4af37] transition-colors">Contact
+                                Us</a></li>
+                        <li><a href="index.html#contact" class="text-gray-300 hover:text-[#d4af37] transition-colors">Enquiry</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-[#d4af37] transition-colors">FAQ's</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-[#d4af37] transition-colors">Help</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Services Section -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6" style="font-family: 'Lausanne';">Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#packages" class="text-gray-300 hover:text-[#d4af37] transition-colors">Packages</a>
+                        </li>
+                        <li><a href="index.html#services" class="text-gray-300 hover:text-[#d4af37] transition-colors">Our Guides</a>
+                        </li>
+                        <li><a href="#" class="text-gray-300 hover:text-[#d4af37] transition-colors">Visa & Passport</a>
+                        </li>
+                        <li><a href="custom-package.html"
+                                class="text-gray-300 hover:text-[#d4af37] transition-colors">Custom Package</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Social Media & Copyright -->
+            <div class="border-t border-gray-600 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <!-- Social Media Icons -->
+                    <div class="flex space-x-4 mb-4 md:mb-0">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/919796986969?text=Hello%20Oasis%20Tours" target="_blank"
+                            class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516" />
+                            </svg>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/profile.php?id=61581901382290" target="_blank"
+                            class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/tours_with_oasis?igsh=MXNpZWRydTFrMHNwbQ==" target="_blank"
+                            class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-gradient-to-r hover:from-[#833AB4] hover:via-[#FD1D1D] hover:to-[#F77737] hover:border-[#833AB4] hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:info@oasistoursandtravels.com"
+                            class="w-10 h-10 border-2 border-gray-500 rounded flex items-center justify-center text-gray-300 hover:bg-[#d4af37] hover:border-[#d4af37] hover:text-white transition-all duration-300">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+    
+                    <!-- Copyright -->
+                    <div class="text-gray-300 text-center md:text-right">
+                        <p>Copyright © 2025 Oasis Tours & Travel | Design By Code Sunny</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dubai page has its own swiper initialization below -->
+    
+    <script>
+        // Initialize Destinations Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize Destinations Swiper
+            const destinationsSwiper = new Swiper('.destinationsSwiper', {
+                slidesPerView: 4,
+                spaceBetween: 30,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                    },
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 25,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    }
+                },
+                effect: 'slide',
+                speed: 800,
+                grabCursor: true,
+                allowTouchMove: true,
+                on: {
+                    init: function() {
+                        console.log('Destinations Swiper initialized successfully');
+                    },
+                    slideChangeTransitionStart: function() {
+                        // Add smooth transition effects
+                        const slides = this.slides;
+                        slides.forEach((slide, index) => {
+                            const card = slide.querySelector('.group');
+                            if (card) {
+                                if (slide.classList.contains('swiper-slide-active')) {
+                                    card.style.transform = 'scale(1.02)';
+                                    card.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.15)';
+                                } else {
+                                    card.style.transform = 'scale(1)';
+                                    card.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
+                                }
+                            }
+                        });
+                    }
+                }
+            });
+            
+
+            
+            // Initialize Dubai Gallery Swiper
+            const dubaiGallerySwiper = new Swiper('.dubai-gallery', {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                navigation: {
+                    nextEl: '.dubai-gallery .swiper-button-next',
+                    prevEl: '.dubai-gallery .swiper-button-prev',
+                },
+
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                speed: 1000,
+                grabCursor: true,
+                loop: true,
+                on: {
+                    init: function() {
+                        console.log('Dubai Gallery Swiper initialized successfully');
+                    }
+                }
+            });
+            
+            console.log('Dubai Destinations Slider initialized successfully!');
+        });
+        
+        // Initialize Lucide Icons
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    </script>
+    
+    <!-- Mobile Navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const burger = document.querySelector('.burger');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+            const body = document.body;
+            
+            // Create overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'mobile-overlay';
+            document.body.appendChild(overlay);
+            
+            // Toggle mobile menu
+            function toggleMobileMenu() {
+                burger.classList.toggle('active');
+                mobileNav.classList.toggle('active');
+                overlay.classList.toggle('active');
+                body.style.overflow = mobileNav.classList.contains('active') ? 'hidden' : 'auto';
+            }
+            
+            // Close mobile menu
+            function closeMobileMenu() {
+                burger.classList.remove('active');
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+                body.style.overflow = 'auto';
+            }
+            
+            // Event listeners
+            if (burger) {
+                burger.addEventListener('click', toggleMobileMenu);
+            }
+            
+            if (overlay) {
+                overlay.addEventListener('click', closeMobileMenu);
+            }
+            
+            // Close menu when clicking on links
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+            
+            // Close menu on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+        });
+    </script>
+
+    <!-- JavaScript for Dynamic Content Loading -->
+    <script>
+        // Get destination from URL parameter
+        function getDestinationFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('destination') || 'Dubai';
+        }
+
+        // Load destination data
+        async function loadDestinationData() {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
+                const destinationName = getDestinationFromURL();
+                
+                console.log('Loading destination:', destinationName);
+                
+                if (data[destinationName]) {
+                    populateDestinationData(data[destinationName], destinationName);
+                } else {
+                    console.error('Destination not found:', destinationName);
+                    // Try with "United Arab Emirates" for Dubai
+                    if (destinationName === 'Dubai' && data['United Arab Emirates']) {
+                        populateDestinationData(data['United Arab Emirates'], 'Dubai');
+                    } else if (data['Dubai']) {
+                        populateDestinationData(data['Dubai'], 'Dubai');
+                    }
+                }
+            } catch (error) {
+                console.error('Error loading destination data:', error);
+            }
+        }
+
+        // Populate destination data
+        function populateDestinationData(destinationData, destinationName) {
+            console.log('Populating data for:', destinationName, destinationData);
+            
+            // Update page title
+            document.getElementById('page-title').textContent = `${destinationName} - Oasis Travel & Tourism`;
+            
+            // Update hero title (use hero_title from data or fallback to destinationName)
+            const heroTitle = destinationData.hero_title || destinationName;
+            const heroElement = document.getElementById('destination-title');
+            
+            console.log('Hero title:', heroTitle);
+            console.log('Hero element:', heroElement);
+            
+            if (heroElement) {
+                heroElement.textContent = heroTitle;
+                console.log('Hero title updated to:', heroTitle);
+            } else {
+                console.error('Hero element not found!');
+            }
+            
+            // Update hero section
+            updateHeroSection(destinationName);
+            
+            // Update quick info
+            updateQuickInfo(destinationData, destinationName);
+            
+            // Update about section
+            updateAboutSection(destinationData, destinationName);
+            
+            // Update attractions
+            updateAttractions(destinationData.top_attractions || [], destinationName);
+            
+            // Update hotels
+            updateHotels(destinationData.hotels || []);
+            
+            // Update activities
+            updateActivities(destinationData.activities || []);
+            
+            // Update packages
+            updatePackages(destinationData.packages || []);
+            
+            // Update why choose us
+            updateWhyChooseUs(destinationData.why_choose_us || []);
+            
+            // Update testimonials
+            updateTestimonials(destinationData.testimonials || []);
+            
+            // Update guides
+            updateGuides(destinationData.guides || [], destinationName);
+            
+            // Update section titles
+            updateSectionTitles(destinationName);
+            
+            // Update book now button
+            const bookBtn = document.getElementById('book-now-btn');
+            if (bookBtn) {
+                bookBtn.onclick = () => {
+                    window.location.href = `contact.html?destination=${destinationName}`;
+                };
+            }
+        }
+
+        // Update section titles
+        function updateSectionTitles(destinationName) {
+            const expertsTitle = document.getElementById('experts-title');
+            const expertsSubtitle = document.getElementById('experts-subtitle');
+            const activitiesTitle = document.getElementById('activities-title');
+            const activitiesSubtitle = document.getElementById('activities-subtitle');
+            const packagesTitle = document.getElementById('packages-title');
+            const packagesSubtitle = document.getElementById('packages-subtitle');
+            
+            if (expertsTitle) expertsTitle.textContent = `Meet Your ${destinationName} Experts`;
+            if (expertsSubtitle) expertsSubtitle.textContent = `Our experienced local guides will ensure you have the most authentic and memorable ${destinationName} experience`;
+            if (activitiesTitle) activitiesTitle.textContent = `${destinationName} Activities & Experiences`;
+            if (activitiesSubtitle) activitiesSubtitle.textContent = `Discover amazing activities and create unforgettable memories in ${destinationName}`;
+            if (packagesTitle) packagesTitle.textContent = `Exclusive ${destinationName} Packages`;
+            if (packagesSubtitle) packagesSubtitle.textContent = `Carefully curated packages for the ultimate ${destinationName} experience`;
+        }
+
+        // Update hero section background
+        function updateHeroSection(destinationName) {
+            const heroBackground = document.getElementById('hero-background');
+            if (!heroBackground) return;
+            
+            const backgrounds = {
+                'Dubai': 'video/Dubai.mp4',
+                'Maldives': 'Images/Maldives/maldives-hero.jpg',
+                'Malaysia': 'Images/Malaysia/malaysia-hero.jpg',
+                'Thailand': 'Images/Thailand/thailand-hero.jpg',
+                'Singapore': 'Images/Singapore/singapore-hero.jpg'
+            };
+            
+            const backgroundSrc = backgrounds[destinationName] || 'Images/default-hero.jpg';
+            
+            if (backgroundSrc.endsWith('.mp4')) {
+                heroBackground.innerHTML = `<video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+                    <source src="${backgroundSrc}" type="video/mp4">
+                </video>`;
+            } else {
+                heroBackground.innerHTML = `<img src="${backgroundSrc}" alt="${destinationName}" class="absolute inset-0 w-full h-full object-cover z-0">`;
+            }
+        }
+
+        // Update quick info cards
+        function updateQuickInfo(data, destinationName) {
+            const quickInfoContainer = document.getElementById('quick-info');
+            if (!quickInfoContainer) return;
+            
+            const quickInfoItems = [
+                { icon: 'map-pin', title: 'Capital', value: data.Capital || destinationName, color: 'from-cyan-400 to-blue-500' },
+                { icon: 'users', title: 'Population', value: data.population || 'N/A', color: 'from-pink-400 to-red-500' },
+                { icon: 'globe', title: 'Language', value: data.language || 'English', color: 'from-blue-400 to-cyan-500' },
+                { icon: 'banknote', title: 'Currency', value: data.currency || 'USD', color: 'from-yellow-400 to-orange-500' }
+            ];
+            
+            quickInfoContainer.innerHTML = quickInfoItems.map(item => `
+                <div class="group p-8 bg-white rounded-2xl shadow-lg hover-lift hover-glow card-tilt border border-gray-100">
+                    <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 float-animation" style="background-color: #000042;">
+                        <i data-lucide="${item.icon}" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-3 text-lg">${item.title}</h3>
+                    <p class="text-gray-600 text-lg font-semibold">${item.value}</p>
+                    <div class="mt-4 h-1 bg-gradient-to-r ${item.color} rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></div>
+                </div>
+            `).join('');
+            
+            setTimeout(() => lucide.createIcons(), 100);
+        }
+
+        // Update about section
+        function updateAboutSection(data, destinationName) {
+            const aboutTitle = document.getElementById('about-title');
+            const aboutDescription = document.getElementById('about-description');
+            const featuresContainer = document.getElementById('about-features');
+            
+            if (aboutTitle) aboutTitle.textContent = `Discover ${destinationName}`;
+            if (aboutDescription) aboutDescription.textContent = data.description || `Discover the beauty and culture of ${destinationName}.`;
+            
+            if (featuresContainer) {
+                const features = data.top_attractions?.slice(0, 4) || [];
+                featuresContainer.innerHTML = features.map(feature => `
+                    <div class="flex items-center">
+                        <i data-lucide="check-circle" class="w-5 h-5 sm:w-6 sm:h-6 text-cyan-600 mr-2 sm:mr-3"></i>
+                        <span class="text-sm sm:text-base text-gray-700">${feature.name}</span>
+                    </div>
+                `).join('');
+            }
+            
+            updateGalleryImages(destinationName);
+            setTimeout(() => lucide.createIcons(), 100);
+        }
+
+        // Update gallery images
+        function updateGalleryImages(destinationName) {
+            const galleryContainer = document.getElementById('gallery-images');
+            if (!galleryContainer) return;
+            
+            const galleryImages = {
+                'Dubai': [
+                    { src: 'Images/Dubai/destinaion-turkey-720x560.jpg', title: 'Dubai Skyline', subtitle: 'Modern metropolis' },
+                    { src: 'Images/Dubai/dubai-featured-720x560.jpg', title: 'Burj Khalifa', subtitle: 'Iconic tower' },
+                    { src: 'Images/Dubai/dubai-night.avif', title: 'Dubai at Night', subtitle: 'City lights' }
+                ],
+                'Maldives': [
+                    { src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4', title: 'Overwater Villas', subtitle: 'Luxury accommodation' },
+                    { src: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b', title: 'Crystal Waters', subtitle: 'Pristine lagoons' },
+                    { src: 'https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9', title: 'Sunset Views', subtitle: 'Tropical paradise' }
+                ]
+            };
+            
+            const images = galleryImages[destinationName] || galleryImages['Dubai'];
+            
+            galleryContainer.innerHTML = images.map(image => `
+                <div class="swiper-slide relative">
+                    <img src="${image.src}" alt="${image.title}" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 text-white">
+                        <div class="text-2xl font-bold text-glow-white">${image.title}</div>
+                        <div class="text-sm opacity-80 mt-2">${image.subtitle}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Update attractions
+        function updateAttractions(attractions, destinationName) {
+            const attractionsTitle = document.getElementById('attractions-title');
+            const attractionsSubtitle = document.getElementById('attractions-subtitle');
+            const attractionsContainer = document.getElementById('attractions-slider');
+            
+            if (attractionsTitle) attractionsTitle.textContent = `Top Destinations in ${destinationName}`;
+            if (attractionsSubtitle) attractionsSubtitle.textContent = `Explore the most iconic attractions and landmarks in ${destinationName}`;
+            
+            if (attractionsContainer && attractions.length > 0) {
+                attractionsContainer.innerHTML = attractions.map((attraction, index) => {
+                    const colors = ['yellow-600', 'blue-600', 'red-600', 'purple-600', 'emerald-600', 'rose-600', 'violet-600', 'amber-600'];
+                    const color = colors[index % colors.length];
+                    
+                    return `
+                        <div class="swiper-slide">
+                            <div class="group bg-white rounded-2xl shadow-xl overflow-hidden hover-lift hover-glow card-tilt mx-2">
+                                <div class="h-48 relative overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="${attraction.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
+                                    <div class="absolute top-4 right-4">
+                                        <div class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                                            <i data-lucide="map-pin" class="w-4 h-4 text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-4 left-4">
+                                        <div class="glass-card px-3 py-1 rounded-full">
+                                            <span class="text-white text-sm font-semibold">Top Attraction</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="font-bold mb-2 text-lg group-hover:text-${color} transition-colors">${attraction.name}</h3>
+                                    <p class="text-sm text-gray-600 mb-4">${attraction.detail}</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-${color} font-bold text-lg">Must Visit</span>
+                                        <button onclick="window.location.href='contact.html?destination=${destinationName}&attraction=${attraction.name}'" class="text-white px-4 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
+                                            Explore
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+            
+            setTimeout(() => lucide.createIcons(), 100);
+        }
+
+        // Update hotels
+        function updateHotels(hotels) {
+            const hotelsTitle = document.getElementById('hotels-title');
+            const hotelsSubtitle = document.getElementById('hotels-subtitle');
+            const hotelsContainer = document.getElementById('hotels-grid');
+            
+            if (hotelsTitle) hotelsTitle.textContent = 'Luxury Hotels';
+            if (hotelsSubtitle) hotelsSubtitle.textContent = 'Experience world-class hospitality with our handpicked luxury hotels';
+            
+            if (hotelsContainer && hotels.length > 0) {
+                hotelsContainer.innerHTML = hotels.map((hotel, index) => {
+                    const hotelImages = [
+                        'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                        'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+                    ];
+                    const hotelImage = hotel.image || hotelImages[index % hotelImages.length];
+                    
+                    return `
+                        <div class="group bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
+                            <div class="h-64 relative overflow-hidden">
+                                <img src="${hotelImage}" alt="${hotel.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                                
+                                <!-- Luxury Badge -->
+                                <div class="absolute top-4 right-4">
+                                    <div class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-bold flex items-center">
+                                        <i data-lucide="star" class="w-3 h-3 mr-1 fill-current"></i>
+                                        Luxury
+                                    </div>
+                                </div>
+                                
+                                <!-- Price Badge -->
+                                <div class="absolute top-4 left-4">
+                                    <div class="bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1 rounded-full text-sm font-bold">
+                                        ${hotel.price}
+                                    </div>
+                                </div>
+                                
+                                <!-- Hotel Name -->
+                                <div class="absolute bottom-4 left-4 right-4">
+                                    <h3 class="text-white text-xl font-bold mb-1">${hotel.name}</h3>
+                                    <div class="flex items-center text-yellow-300">
+                                        <i data-lucide="star" class="w-4 h-4 fill-current mr-1"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current mr-1"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current mr-1"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current mr-1"></i>
+                                        <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                        <span class="text-white text-sm ml-2">5.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="p-6">
+                                <!-- Features -->
+                                <div class="space-y-3 mb-6">
+                                    ${hotel.features.map((feature, idx) => {
+                                        const featureIcons = ['wifi', 'utensils', 'car', 'waves', 'dumbbell', 'coffee'];
+                                        const featureColors = ['text-blue-600', 'text-green-600', 'text-purple-600', 'text-cyan-600', 'text-red-600', 'text-orange-600'];
+                                        const icon = featureIcons[idx % featureIcons.length];
+                                        const color = featureColors[idx % featureColors.length];
+                                        
+                                        return `
+                                            <div class="flex items-center p-2 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                                                <i data-lucide="${icon}" class="w-4 h-4 ${color} mr-3"></i>
+                                                <span class="text-gray-700 text-sm font-medium">${feature}</span>
+                                            </div>
+                                        `;
+                                    }).join('')}
+                                </div>
+                                
+                                <!-- Action Buttons -->
+                                <div class="flex gap-3">
+                                    <button onclick="window.location.href='contact.html?hotel=${encodeURIComponent(hotel.name)}'" class="flex-1 bg-[#000042] text-white py-3 rounded-lg font-semibold hover:bg-[#000052] transition-colors text-sm">
+                                        Book Now
+                                    </button>
+                                    <button class="px-4 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
+                                        <i data-lucide="heart" class="w-4 h-4 text-gray-600"></i>
+                                    </button>
+                                </div>
+                                
+                                <!-- Additional Info -->
+                                <div class="mt-4 pt-4 border-t border-gray-100 flex justify-between items-center text-xs text-gray-500">
+                                    <span class="flex items-center">
+                                        <i data-lucide="map-pin" class="w-3 h-3 mr-1"></i>
+                                        Prime Location
+                                    </span>
+                                    <span class="flex items-center">
+                                        <i data-lucide="phone" class="w-3 h-3 mr-1"></i>
+                                        24/7 Support
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+            
+            setTimeout(() => lucide.createIcons(), 100);
+        }
+
+        // Update activities
+        function updateActivities(activities) {
+            const activitiesContainer = document.getElementById('activities-grid');
+            if (!activitiesContainer || !activities.length) return;
+            
+            activitiesContainer.innerHTML = activities.map((activity, index) => {
+                const icons = ['camera', 'compass', 'map', 'star', 'heart', 'sun', 'waves', 'mountain'];
+                const colors = ['cyan-600', 'blue-600', 'emerald-600', 'purple-600', 'pink-600', 'yellow-600', 'red-600', 'indigo-600'];
+                const icon = icons[index % icons.length];
+                const color = colors[index % colors.length];
+                
+                return `
+                    <div class="group text-center p-8 bg-white rounded-3xl shadow-xl hover-lift hover-glow card-tilt border border-gray-100 relative overflow-hidden">
+                        <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-full -translate-y-10 translate-x-10 opacity-50"></div>
+                        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 float-animation relative z-10" style="background-color: #000042;">
+                            <i data-lucide="${icon}" class="w-10 h-10 text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-3 text-lg group-hover:text-${color} transition-colors">${activity.name}</h3>
+                        <p class="text-sm text-gray-600 mb-6 leading-relaxed">${activity.name} experience with professional guides</p>
+                        <div class="text-2xl font-bold text-${color} mb-4">${activity.price}</div>
+                        <button onclick="window.location.href='contact.html?activity=${activity.name}'" class="text-white px-6 py-2 rounded-full text-sm font-semibold hover:scale-105 transition-transform" style="background-color: #000042;">
+                            Book Experience
+                        </button>
+                    </div>
+                `;
+            }).join('');
+            
+            setTimeout(() => lucide.createIcons(), 100);
+        }
+
+        // Update packages
+        function updatePackages(packages) {
+            const packagesContainer = document.getElementById('packages-grid');
+            if (!packagesContainer || !packages.length) return;
+            
+            packagesContainer.innerHTML = packages.map(pkg => {
+                const typeColors = {
+                    'BEST VALUE': 'bg-gradient-to-r from-green-500 to-emerald-500',
+                    'MOST POPULAR': 'bg-gradient-to-r from-blue-500 to-cyan-500',
+                    'LUXURY': 'bg-gradient-to-r from-yellow-500 to-orange-500',
+                    'CUSTOM': 'bg-gradient-to-r from-purple-500 to-indigo-500'
+                };
+                
+                const hoverColors = {
+                    'BEST VALUE': 'group-hover:text-green-600',
+                    'MOST POPULAR': 'group-hover:text-blue-600',
+                    'LUXURY': 'group-hover:text-orange-600',
+                    'CUSTOM': 'group-hover:text-purple-600'
+                };
+                
+                // Parse package details to extract features
+                const features = pkg.detail.split(', ').slice(0, 4); // Take first 4 features
+                const description = pkg.detail.split('. ').pop(); // Get the description part
+                
+                const featureIcons = ['plane', 'home', 'utensils', 'star', 'check', 'sparkles'];
+                const featureColors = ['green', 'blue', 'cyan', 'purple', 'teal', 'pink'];
+                
+                // Determine redirect URL based on package name
+                let redirectUrl = 'contact.html';
+                const packageName = pkg.name.toLowerCase();
+                if (packageName.includes('budget')) {
+                    redirectUrl = 'budget-package.html';
+                } else if (packageName.includes('standard')) {
+                    redirectUrl = 'standard-package.html';
+                } else if (packageName.includes('luxury')) {
+                    redirectUrl = 'luxury-package.html';
+                } else if (packageName.includes('custom')) {
+                    redirectUrl = 'custom-package.html';
+                }
+                
+                return `
+                    <div class="group bg-white rounded-3xl shadow-2xl overflow-hidden hover-lift hover-glow card-tilt border border-gray-100 relative cursor-pointer" onclick="window.location.href='${redirectUrl}'">
+                        <!-- Package Image -->
+                        <div class="h-48 relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="${pkg.name}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                            
+                            <!-- Package Badge -->
+                            <div class="absolute top-4 right-4">
+                                <div class="${typeColors[pkg.type] || 'bg-gray-500'} text-white px-3 py-1 rounded-full text-xs font-bold">
+                                    ${pkg.type}
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="p-6">
+                            <div class="text-center mb-6">
+                                <h3 class="text-2xl font-semibold text-gray-800 mb-2 ${hoverColors[pkg.type]} transition-colors">${pkg.name}</h3>
+                                <div class="text-3xl font-bold text-cyan-600 mb-4">${pkg.price}</div>
+                            </div>
+                            
+                            <!-- Package Features -->
+                            <div class="space-y-2 mb-6">
+                                ${features.map((feature, index) => {
+                                    const icon = featureIcons[index % featureIcons.length];
+                                    const color = featureColors[index % featureColors.length];
+                                    return `
+                                        <div class="flex items-center p-2 bg-${color}-50 rounded-lg">
+                                            <i data-lucide="${icon}" class="w-4 h-4 text-${color}-600 mr-2"></i>
+                                            <span class="text-xs font-medium">${feature.trim()}</span>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                            
+                            <button onclick="event.stopPropagation(); window.location.href='${redirectUrl}'" class="w-full bg-[#000042] text-white py-3 rounded-xl font-bold hover:scale-105 transition-all duration-300 mb-3">
+                                Book ${pkg.name}
+                            </button>
+                            
+                            <div class="text-center text-xs text-gray-500">
+                                <i data-lucide="info" class="w-3 h-3 inline mr-1"></i>
+                                ${description}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            setTimeout(() => lucide.createIcons(), 100);
+        }
+
+        // Update why choose us
+        function updateWhyChooseUs(whyChooseItems) {
+            const whyChooseContainer = document.getElementById('why-choose-grid');
+            if (!whyChooseContainer || !whyChooseItems.length) return;
+            
+            whyChooseContainer.innerHTML = whyChooseItems.map((item, index) => {
+                const icons = ['star', 'heart', 'award', 'compass', 'sun', 'waves'];
+                const icon = icons[index % icons.length];
+                
+                return `
+                    <div class="bg-white shadow-xl rounded-3xl py-4 md:py-6 px-4 flex items-center gap-4 max-w-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 border border-gray-100">
+                        <div class="bg-[#000042] rounded-2xl w-20 h-20 flex items-center justify-center shrink-0 transition-all">
+                            <i data-lucide="${icon}" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <div class="">
+                            <h5 class="text-base mb-2 font-bold text-gray-800">${item.title}</h5>
+                            <p class="text-xs mb-0 text-gray-600">${item.detail}</p>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            setTimeout(() => lucide.createIcons(), 100);
+        }
+
+        // Update guides
+        function updateGuides(guides, destinationName) {
+            const guidesContainer = document.getElementById('guides-grid');
+            if (!guidesContainer) return;
+            
+            // If no guides data, show default message
+            if (!guides || guides.length === 0) {
+                guidesContainer.innerHTML = `
+                    <div class="col-span-full text-center py-12">
+                        <div class="text-gray-500 text-lg">
+                            <i data-lucide="users" class="w-12 h-12 mx-auto mb-4 text-gray-400"></i>
+                            <p>Expert guides for ${destinationName} will be available soon.</p>
+                            <p class="text-sm mt-2">Contact us for personalized guide recommendations.</p>
+                        </div>
+                    </div>
+                `;
+                setTimeout(() => lucide.createIcons(), 100);
+                return;
+            }
+            
+            // Badge color mapping
+            const badgeColors = {
+                'CULTURAL EXPERT': 'bg-cyan-600',
+                'NATURE EXPERT': 'bg-teal-600', 
+                'MARINE EXPERT': 'bg-blue-600',
+                'CULINARY EXPERT': 'bg-purple-600',
+                'CITY EXPERT': 'bg-indigo-600',
+                'FOOD EXPERT': 'bg-orange-600',
+                'ATTRACTIONS EXPERT': 'bg-green-600',
+                'ISLAND EXPERT': 'bg-cyan-500',
+                'ADVENTURE EXPERT': 'bg-red-600',
+                'DESERT EXPERT': 'bg-yellow-600',
+                'HERITAGE EXPERT': 'bg-amber-600'
+            };
+            
+            // Text color mapping for stats
+            const textColors = {
+                'CULTURAL EXPERT': 'text-cyan-600',
+                'NATURE EXPERT': 'text-teal-600',
+                'MARINE EXPERT': 'text-blue-600', 
+                'CULINARY EXPERT': 'text-purple-600',
+                'CITY EXPERT': 'text-indigo-600',
+                'FOOD EXPERT': 'text-orange-600',
+                'ATTRACTIONS EXPERT': 'text-green-600',
+                'ISLAND EXPERT': 'text-cyan-500',
+                'ADVENTURE EXPERT': 'text-red-600',
+                'DESERT EXPERT': 'text-yellow-600',
+                'HERITAGE EXPERT': 'text-amber-600'
+            };
+            
+            guidesContainer.innerHTML = guides.map(guide => {
+                const badgeColor = badgeColors[guide.badge] || 'bg-gray-600';
+                const textColor = textColors[guide.badge] || 'text-gray-600';
+                const nameColor = guide.badge === 'CULTURAL EXPERT' ? 'text-cyan-200' : 
+                                 guide.badge === 'NATURE EXPERT' ? 'text-teal-200' :
+                                 guide.badge === 'MARINE EXPERT' ? 'text-blue-200' :
+                                 guide.badge === 'CULINARY EXPERT' ? 'text-purple-200' :
+                                 guide.badge === 'CITY EXPERT' ? 'text-indigo-200' :
+                                 guide.badge === 'FOOD EXPERT' ? 'text-orange-200' :
+                                 guide.badge === 'ATTRACTIONS EXPERT' ? 'text-green-200' :
+                                 guide.badge === 'ISLAND EXPERT' ? 'text-cyan-200' :
+                                 guide.badge === 'ADVENTURE EXPERT' ? 'text-red-200' :
+                                 guide.badge === 'DESERT EXPERT' ? 'text-yellow-200' :
+                                 guide.badge === 'HERITAGE EXPERT' ? 'text-amber-200' : 'text-gray-200';
+                
+                return `
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                        <!-- Guide Image -->
+                        <div class="h-64 relative">
+                            <img src="${guide.image}" alt="${guide.name} - ${guide.title}" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                            
+                            <!-- Expert Badge -->
+                            <div class="absolute top-4 left-4">
+                                <span class="${badgeColor} text-white px-3 py-1 rounded-full text-xs font-bold">${guide.badge}</span>
+                            </div>
+                            
+                            <!-- Rating -->
+                            <div class="absolute top-4 right-4">
+                                <div class="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-full flex items-center">
+                                    <i data-lucide="star" class="w-3 h-3 text-yellow-500 fill-current mr-1"></i>
+                                    <span class="text-xs font-bold text-gray-800">${guide.rating}</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Name & Title -->
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h3 class="text-xl font-bold mb-1">${guide.name}</h3>
+                                <p class="${nameColor} text-sm font-medium">${guide.title}</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Guide Info -->
+                        <div class="p-6">
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">${guide.description}</p>
+                            
+                            <!-- Stats -->
+                            <div class="flex justify-between mb-4 text-center">
+                                <div>
+                                    <div class="text-lg font-bold ${textColor}">${guide.experience}</div>
+                                    <div class="text-xs text-gray-500">Years Exp</div>
+                                </div>
+                                <div>
+                                    <div class="text-lg font-bold ${textColor}">${guide.tours_led}</div>
+                                    <div class="text-xs text-gray-500">Tours Led</div>
+                                </div>
+                                <div>
+                                    <div class="text-lg font-bold ${textColor}">${guide.rating}★</div>
+                                    <div class="text-xs text-gray-500">Rating</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Skills -->
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                ${guide.skills.map((skill, index) => {
+                                    const skillColors = ['bg-cyan-100 text-cyan-800', 'bg-blue-100 text-blue-800', 'bg-teal-100 text-teal-800', 'bg-purple-100 text-purple-800'];
+                                    const skillColor = skillColors[index % skillColors.length];
+                                    return `<span class="${skillColor} px-2 py-1 rounded text-xs">${skill}</span>`;
+                                }).join('')}
+                            </div>
+                            
+                            <!-- Book Button -->
+                            <button onclick="window.location.href='contact.html?guide=${encodeURIComponent(guide.name)}&destination=${encodeURIComponent(destinationName)}'" class="w-full text-white py-2 rounded-lg font-semibold transition-colors hover:scale-105" style="background-color: #000042;">
+                                Book with ${guide.name.split(' ')[0]}
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+            
+            setTimeout(() => lucide.createIcons(), 100);
+        }
+
+        // Update testimonials
+        function updateTestimonials(testimonials) {
+            const testimonialsContainer = document.getElementById('testimonials-slider');
+            if (!testimonialsContainer || !testimonials.length) return;
+            
+            testimonialsContainer.innerHTML = testimonials.map(testimonial => `
+                <div class="swiper-slide">
+                    <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 h-full">
+                        <div class="flex text-yellow-400 mb-6 text-xl">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">"${testimonial.review}"</p>
+                        <div>
+                            <p class="font-semibold text-gray-800">${testimonial.name}</p>
+                            <p class="text-sm text-gray-500">${testimonial.location}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Initialize Swiper sliders
+        function initializeSliders() {
+            // Destination gallery slider
+            if (document.querySelector('.destination-gallery')) {
+                new Swiper('.destination-gallery', {
+                    loop: true,
+                    autoplay: {
+                        delay: 4000,
+                        disableOnInteraction: false,
+                    },
+                    navigation: {
+                        nextEl: '.destination-gallery .swiper-button-next',
+                        prevEl: '.destination-gallery .swiper-button-prev',
+                    },
+                    effect: 'fade',
+                    fadeEffect: {
+                        crossFade: true
+                    }
+                });
+            }
+
+            // Destinations/Attractions slider
+            if (document.querySelector('.destinationsSwiper')) {
+                new Swiper('.destinationsSwiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    loop: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: true,
+                    },
+                    navigation: {
+                        nextEl: '.destinationsSwiper .swiper-button-next',
+                        prevEl: '.destinationsSwiper .swiper-button-prev',
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                        },
+                        1024: {
+                            slidesPerView: 4,
+                            spaceBetween: 30,
+                        },
+                    }
+                });
+            }
+
+            // Testimonials slider
+            if (document.querySelector('.testimonials-swiper')) {
+                new Swiper('.testimonials-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    loop: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    navigation: {
+                        nextEl: '.testimonials-next',
+                        prevEl: '.testimonials-prev',
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 30,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 40,
+                        },
+                    }
+                });
+            }
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, starting data loading...');
+            
+            // Test if hero element exists
+            const testHeroElement = document.getElementById('destination-title');
+            console.log('Hero element test:', testHeroElement);
+            if (testHeroElement) {
+                console.log('Hero element current text:', testHeroElement.textContent);
+                
+                // Set a temporary title immediately
+                const urlParams = new URLSearchParams(window.location.search);
+                const tempDestination = urlParams.get('destination') || 'Dubai';
+                testHeroElement.textContent = tempDestination;
+                console.log('Set temporary title:', tempDestination);
+            }
+            
+            // Add small delay to ensure DOM is fully ready
+            setTimeout(() => {
+                loadDestinationData();
+            }, 100);
+            
+            // Initialize sliders after content is loaded
+            setTimeout(() => {
+                initializeSliders();
+                if (typeof lucide !== 'undefined') {
+                    lucide.createIcons();
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

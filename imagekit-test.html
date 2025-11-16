@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ImageKit Test</title>
+</head>
+<body>
+    <h1>ImageKit Test Page</h1>
+    
+    <!-- Test Local Images -->
+    <h2>Local Images (Should be optimized):</h2>
+    <img src="Images/Oasis Logo.png" alt="Logo Test" style="width: 200px;">
+    <img src="Images/svg/feature_icon_1.svg" alt="Icon Test" style="width: 100px;">
+    
+    <!-- Test External Images -->
+    <h2>External Images (Won't be optimized):</h2>
+    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400" alt="External Test" style="width: 200px;">
+    
+    <script src="imagekit-config.js"></script>
+    
+    <script>
+        // Check console for optimization messages
+        console.log('ImageKit Test Page Loaded');
+        console.log('Check Network tab to see optimized URLs');
+    </script>
+</body>
+</html>

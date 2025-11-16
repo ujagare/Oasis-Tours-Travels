@@ -495,75 +495,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Function to animate slide text in sequence
+  // Function to animate slide text in sequence - DISABLED (handled by hero-slider-fix.js)
   function animateSlideText(slideIndex) {
-    const currentSlide = document.querySelector(
-      `.swiper-slide:nth-child(${slideIndex + 1})`
-    );
-    if (!currentSlide) return;
-
-    const slideTitle = currentSlide.querySelector(".slide-title");
-    const slideSubtitle = currentSlide.querySelector(".slide-subtitle");
-    const slideDescription = currentSlide.querySelector(".slide-description");
-    const slideButton = currentSlide.querySelector(".slide-button");
-
-    // Set initial states
-    gsap.set(slideTitle, { x: 100, opacity: 0, force3D: true });
-    gsap.set([slideSubtitle, slideDescription], {
-      y: 50,
-      opacity: 0,
-      force3D: true,
-    });
-    gsap.set(slideButton, { y: 50, opacity: 0, force3D: true });
-
-    // Create timeline for sequence
-    const tl = gsap.timeline();
-
-    // 1. Head text from X-axis
-    tl.to(slideTitle, {
-      x: 0,
-      opacity: 1,
-      duration: 1.2,
-      ease: "power2.out",
-      delay: 0.3,
-    })
-      // 2. Paragraph from Y-axis
-      .to(
-        [slideSubtitle, slideDescription],
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          ease: "power2.out",
-          stagger: 0.2,
-        },
-        "-=0.6"
-      )
-      // 3. Button from Y-axis
-      .to(
-        slideButton,
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: "power2.out",
-        },
-        "-=0.4"
-      );
+    // Animation is now handled by hero-slider-fix.js to prevent duplicates
+    console.log('Text animation delegated to hero-slider-fix.js');
+    return;
   }
 
-  // Set initial state for all slide elements
-  gsap.set(".slide-title", {
-    x: 100,
-    opacity: 0,
-    force3D: true,
-  });
-
-  gsap.set(".slide-subtitle, .slide-description, .slide-button", {
-    y: 50,
-    opacity: 0,
-    force3D: true,
-  });
+  // Initial state is now handled by hero-slider-fix.js
+  console.log('Hero text initial state handled by hero-slider-fix.js');
 
   // GSAP Stair Animation
   const tl = gsap.timeline();
