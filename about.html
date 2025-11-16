@@ -57,32 +57,34 @@
         @media (max-width: 1023px) {
             .testimonials-section {
                 height: auto !important;
-                min-height: 60vh;
-                padding: 2rem 1rem !important;
+                min-height: 80vh;
+                padding: 3rem 1rem !important;
             }
             
             .testimonials-section .main {
                 flex-direction: column !important;
+                gap: 2rem;
             }
             
             .testimonials-section .main > div {
                 width: 100% !important;
                 height: auto !important;
                 margin-top: 0 !important;
-                margin-bottom: 2rem;
+                margin-bottom: 0;
             }
             
             .testimonials-section h1 {
-                font-size: 2rem !important;
+                font-size: 2.5rem !important;
                 line-height: 1.2 !important;
                 text-align: center;
                 margin-bottom: 1rem !important;
             }
             
             .testimonials-section p {
-                font-size: 1rem !important;
+                font-size: 1.1rem !important;
                 text-align: center;
                 padding: 0 1rem;
+                margin-bottom: 2rem;
             }
             
             .testimonials-section .absolute {
@@ -91,18 +93,19 @@
             
             .testimonials-section .flex.justify-end {
                 justify-content: center !important;
+                margin-bottom: 1rem;
             }
             
             .testimonials-section .swiper-button-prev-custom,
             .testimonials-section .swiper-button-next-custom {
-                width: 40px !important;
-                height: 40px !important;
+                width: 45px !important;
+                height: 45px !important;
             }
             
             .testimonials-section .swiper-button-prev-custom svg,
             .testimonials-section .swiper-button-next-custom svg {
-                width: 16px !important;
-                height: 16px !important;
+                width: 18px !important;
+                height: 18px !important;
             }
         }
         
@@ -172,17 +175,31 @@
         
         @media (max-width: 640px) {
             .testimonials-section h1 {
-                font-size: 1.5rem !important;
+                font-size: 2rem !important;
+                line-height: 1.3 !important;
             }
             
             .testimonials-section {
-                padding: 1.5rem 0.75rem !important;
+                padding: 2rem 1rem !important;
+                min-height: 70vh;
+            }
+            
+            .testimonials-section p {
+                font-size: 1rem !important;
+                line-height: 1.5;
             }
             
             /* Hero section heading mobile optimization */
             .hero-bg h1 {
-                font-size: 2.75rem !important;
+                font-size: 2.5rem !important;
                 line-height: 1.2 !important;
+                padding: 0 1rem;
+            }
+            
+            .hero-bg p {
+                font-size: 1rem !important;
+                line-height: 1.4 !important;
+                padding: 0 1.5rem;
             }
             
             /* Why choose us heading mobile optimization */
@@ -193,16 +210,25 @@
             
             /* What our Travelers are saying heading mobile optimization */
             .testimonials-section .text h1 {
-                font-size: 2.25rem !important;
+                font-size: 2rem !important;
                 line-height: 1.3 !important;
             }
+            
+
         }
         
         @media (max-width: 480px) {
             /* Hero section heading for small mobile */
             .hero-bg h1 {
-                font-size: 2.25rem !important;
+                font-size: 2rem !important;
                 line-height: 1.3 !important;
+                padding: 0 0.5rem;
+            }
+            
+            .hero-bg p {
+                font-size: 0.95rem !important;
+                line-height: 1.4 !important;
+                padding: 0 1rem;
             }
             
             /* Why choose us heading for small mobile */
@@ -213,16 +239,29 @@
             
             /* What our Travelers are saying heading for small mobile */
             .testimonials-section .text h1 {
-                font-size: 1.875rem !important;
+                font-size: 1.75rem !important;
                 line-height: 1.4 !important;
             }
+            
+            .testimonials-section {
+                padding: 1.5rem 0.75rem !important;
+            }
+            
+
         }
         
         @media (max-width: 375px) {
             /* Hero section heading for very small mobile */
             .hero-bg h1 {
-                font-size: 2rem !important;
+                font-size: 1.75rem !important;
                 line-height: 1.4 !important;
+                padding: 0 0.5rem;
+            }
+            
+            .hero-bg p {
+                font-size: 0.9rem !important;
+                line-height: 1.4 !important;
+                padding: 0 0.75rem;
             }
             
             /* Why choose us heading for very small mobile */
@@ -233,12 +272,41 @@
             
             /* What our Travelers are saying heading for very small mobile */
             .testimonials-section .text h1 {
-                font-size: 1.625rem !important;
+                font-size: 1.5rem !important;
                 line-height: 1.5 !important;
             }
+            
+            .testimonials-section {
+                padding: 1.25rem 0.5rem !important;
+            }
+            
+
         }
         .story-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+
+        
+        /* About Us Story Section Mobile Fix */
+        @media (max-width: 1023px) {
+            .py-16.md\:py-24.bg-gradient-to-br {
+                padding: 2rem 0 !important;
+            }
+            
+            .py-16.md\:py-24.bg-gradient-to-br .grid {
+                gap: 1rem !important;
+            }
+            
+            .py-16.md\:py-24.bg-gradient-to-br .text-center {
+                margin-bottom: 2rem !important;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .py-16.md\:py-24.bg-gradient-to-br {
+                padding: 1.5rem 0 !important;
+            }
         }
     </style>
     <style>
@@ -693,8 +761,8 @@
     <!-- Hero Section -->
     <section class="hero-bg flex items-center justify-center text-white pt-28 pb-8" style="min-height: 50vh;">
         <div class="text-center px-4 py-8 max-w-4xl mx-auto">
-            <h1 class="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl text-center text-[#f1f1f1] font-bold mb-4 sm:mb-6 leading-tight">About Oasis Travel</h1>
-            <p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-500 max-w-2xl mx-auto leading-relaxed px-4">Crafting unforgettable journeys and creating memories that last a lifetime</p>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center text-[#f1f1f1] font-bold mb-4 sm:mb-6 leading-tight">About Oasis Travel</h1>
+            <p class="text-lg sm:text-xl md:text-xl lg:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed px-4">Crafting unforgettable journeys and creating memories that last a lifetime</p>
         </div>
     </section>
 
@@ -703,35 +771,35 @@
     <!-- About Us Story Section -->
     <section class="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12 md:mb-16">
-                <span class="text-[#000042] text-sm font-semibold uppercase tracking-wider mb-4 block">Our Story</span>
-                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#000042] mb-6 leading-tight">About Oasis Tours & Travels</h2>
+            <div class="text-center mb-8 sm:mb-12 md:mb-16">
+                <span class="text-[#000042] text-sm font-semibold uppercase tracking-wider mb-3 sm:mb-4 block">Our Story</span>
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#000042] mb-4 sm:mb-6 leading-tight px-4">About Oasis Tours & Travels</h2>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-stretch mb-16">
                 <!-- Left Side - Content -->
                 <div class="order-2 lg:order-1">
-                    <div class="p-6 sm:p-8 md:p-10 h-96 md:h-[28rem] lg:h-[32rem] xl:h-[36rem] flex flex-col justify-center">
-                        <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                    <div class="p-4 sm:p-6 md:p-8 lg:p-10 min-h-[400px] md:min-h-[28rem] lg:min-h-[32rem] xl:min-h-[36rem] flex flex-col justify-center bg-white lg:bg-transparent rounded-lg lg:rounded-none shadow-sm lg:shadow-none relative z-10">
+                        <p class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed mb-4 sm:mb-6">
                             At <strong class="text-[#000042]">Oasis Tours & Travels</strong>, we believe every journey tells a story – one filled with discovery, wonder, and connection.
                         </p>
-                        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+                        <p class="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
                             Founded with a passion for exploring the world beyond borders, Oasis isn't just a travel company – it's a community of explorers dedicated to crafting meaningful experiences.
                         </p>
-                        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+                        <p class="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed mb-4 sm:mb-6">
                             From serene island escapes to vibrant city adventures, we design journeys that go beyond sightseeing – experiences that let you truly live the destination. With our trusted global network, 24/7 support, and personalized touch, we make sure every traveler feels cared for, inspired, and free to explore with confidence.
                         </p>
-                        <p class="text-base md:text-lg text-gray-600 leading-relaxed">
+                        <p class="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
                             Whether it's your first trip abroad, a romantic getaway, or an adventurous group tour, Oasis ensures every moment becomes a memory – because for us, <strong class="text-[#000042]">travel isn't a service; it's an emotion</strong>.
                         </p>
                     </div>
                 </div>
                 
                 <!-- Right Side - Image -->
-                <div class="order-1 lg:order-2">
+                <div class="order-1 lg:order-2 mb-6 lg:mb-0">
                     <div class="relative">
                         <img src="Images/about oasis.png" 
-                             alt="Travel Adventure" class="w-full h-96 md:h-[28rem] lg:h-[32rem] xl:h-[36rem] rounded-2xl object-cover shadow-lg">
+                             alt="Travel Adventure" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[36rem] rounded-2xl object-cover shadow-lg">
                       
                     </div>
                 </div>
@@ -1174,24 +1242,24 @@
        <!-- end Why choose us section -->
 
     <!-- Testimonials Section -->
-     <section class="testimonials-section h-[60vh] w-full p-[5vh] bg-blue-100 relative">
+     <section class="testimonials-section min-h-[60vh] w-full p-[5vh] bg-blue-100 relative">
           <!-- Background Decorative Images -->
-          <div class="absolute flex justify-between w-full bottom-0">
+          <div class="absolute flex justify-between w-full bottom-0 hidden lg:flex">
               <img class="relative -left-0" src="https://demo.webbydemo.in/html-templates/tailwind/journea-travel-agency/layouts/assets/images/testimonial-right-img.svg" alt="">
               <img class="relative right-0" src="https://demo.webbydemo.in/html-templates/tailwind/journea-travel-agency/layouts/assets/images/testimonial-left-img.svg" alt="">
           </div>
          
          <div class="main h-full w-full flex items-center justify-center">
             <!-- Left Side - Text Content -->
-            <div class="h-full w-1/2 flex flex-col justify-center items-center text mt-14">
-                <h1 class="text-5xl mb-5 font-semibold leading-[6vh] text-[#000042]">What our Travelers <br>are saying</h1>
-                <p class="font-thin text-lg text-gray-600">Discover why thousands of travelers choose Oasis Travel for their <br>dream vacations and unforgettable adventures around the world.</p>
+            <div class="h-full w-full lg:w-1/2 flex flex-col justify-center items-center text mt-0 lg:mt-14 mb-8 lg:mb-0">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl mb-5 font-semibold leading-tight text-[#000042] text-center px-4">What our Travelers <br class="hidden sm:block">are saying</h1>
+                <p class="font-thin text-base sm:text-lg text-gray-600 text-center px-4 max-w-lg">Discover why thousands of travelers choose Oasis Travel for their dream vacations and unforgettable adventures around the world.</p>
             </div>
             
             <!-- Right Side - Testimonial Cards -->
-            <div class="w-1/2 h-full flex flex-col justify-center items-center relative">
+            <div class="w-full lg:w-1/2 h-full flex flex-col justify-center items-center relative">
                 <!-- Navigation Arrows Above Cards -->
-                <div class="flex justify-end items-center mb-4 w-full max-w-[700px] space-x-4">
+                <div class="flex justify-center lg:justify-end items-center mb-4 w-full max-w-[700px] space-x-4">
                     <div class="swiper-button-prev-custom cursor-pointer" style="color: #000042; background: rgba(255,255,255,0.9); width: 45px; height: 45px; border-radius: 50%; border: 2px solid #000042; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: all 0.3s ease;">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M15 18l-6-6 6-6"/>
@@ -1209,7 +1277,7 @@
                         <div class="swiper-wrapper">
                             <!-- Card 1 -->
                             <div class="swiper-slide">
-                                <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 mx-1 sm:mx-2 h-72 sm:h-80 md:h-84 flex flex-col justify-between border border-gray-100">
+                                <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 mx-1 sm:mx-2 h-80 sm:h-84 md:h-88 flex flex-col justify-between border border-gray-100">
                                     <div class="text-yellow-400 text-sm sm:text-base mb-3 sm:mb-4">⭐⭐⭐⭐⭐</div>
                                     <p class="text-gray-700 text-sm sm:text-base italic leading-relaxed flex-1 font-medium">"Oasis Travel organized the most incredible Dubai adventure for us! From the stunning desert safari to the luxurious hotel stays, every moment was perfectly planned. The local guides were knowledgeable and the service was exceptional throughout our journey."</p>
                                     <div class="flex items-center mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200">
@@ -1223,7 +1291,7 @@
                             
                             <!-- Card 2 -->
                             <div class="swiper-slide">
-                                <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 mx-1 sm:mx-2 h-72 sm:h-80 md:h-84 flex flex-col justify-between border border-gray-100">
+                                <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 mx-1 sm:mx-2 h-80 sm:h-84 md:h-88 flex flex-col justify-between border border-gray-100">
                                     <div class="text-yellow-400 text-sm sm:text-base mb-3 sm:mb-4">⭐⭐⭐⭐⭐</div>
                                     <p class="text-gray-700 text-sm sm:text-base italic leading-relaxed flex-1 font-medium">"Our family vacation to the Maldives was absolutely magical! Oasis Travel handled everything from flights to resort bookings. The overwater villa was breathtaking and the kids loved the snorkeling activities. Highly recommend their professional service!"</p>
                                     <div class="flex items-center mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200">
@@ -1237,7 +1305,7 @@
                             
                             <!-- Card 3 -->
                             <div class="swiper-slide">
-                                <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 mx-1 sm:mx-2 h-72 sm:h-80 md:h-84 flex flex-col justify-between border border-gray-100">
+                                <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 mx-1 sm:mx-2 h-80 sm:h-84 md:h-88 flex flex-col justify-between border border-gray-100">
                                     <div class="text-yellow-400 text-sm sm:text-base mb-3 sm:mb-4">⭐⭐⭐⭐⭐</div>
                                     <p class="text-gray-700 text-sm sm:text-base italic leading-relaxed flex-1 font-medium">"The cultural tour of India was beyond our expectations! Oasis Travel's attention to detail and authentic local experiences made this trip unforgettable. From the Taj Mahal to the bustling markets of Delhi, every moment was perfectly curated."</p>
                                     <div class="flex items-center mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200">
@@ -1251,7 +1319,7 @@
                             
                             <!-- Card 4 -->
                             <div class="swiper-slide">
-                                <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 mx-1 sm:mx-2 h-72 sm:h-80 md:h-84 flex flex-col justify-between border border-gray-100">
+                                <div class="bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 sm:p-6 mx-1 sm:mx-2 h-80 sm:h-84 md:h-88 flex flex-col justify-between border border-gray-100">
                                     <div class="text-yellow-400 text-sm sm:text-base mb-3 sm:mb-4">⭐⭐⭐⭐⭐</div>
                                     <p class="text-gray-700 text-sm sm:text-base italic leading-relaxed flex-1 font-medium">"Our European honeymoon was a dream come true! Oasis Travel arranged the most romantic itinerary through Paris, Rome, and Santorini. The luxury accommodations and personalized service made our special trip absolutely perfect. Thank you for the memories!"</p>
                                     <div class="flex items-center mt-3 sm:mt-4 pt-3 sm:pt-4 border-t border-gray-200">
