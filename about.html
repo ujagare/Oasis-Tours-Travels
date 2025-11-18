@@ -6,15 +6,16 @@
     <title>About Us - Oasis Travel & Tourism</title>
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo_New.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Images/Oasis Logo_New.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Images/Oasis Logo_New.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/Oasis Logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/Oasis Logo.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
-    <link rel="shortcut icon" href="Images/Oasis Logo_New.png">
+    <link rel="shortcut icon" href="Images/Oasis Logo.png">
     
     <link rel="stylesheet" href="dist/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="logo-fix.css">
        <!-- Fonts style file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Lucide Icons -->
@@ -22,10 +23,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         .hero-bg {
-            background: url('/Images/about\ hero.png');
+            background: url('Images/about hero.png');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
             min-height: 50vh;
+            background-attachment: fixed;
+        }
+        
+        /* Mobile hero background fix */
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-attachment: scroll !important;
+                background-size: cover !important;
+                background-position: center center !important;
+                min-height: 60vh !important;
+                background-image: url('Images/about hero.png') !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-bg {
+                min-height: 70vh !important;
+                background-size: cover !important;
+                background-position: center !important;
+            }
         }
         
         /* Responsive Hero Heights */
@@ -647,6 +669,21 @@
             color: white !important;
             transform: scale(1.1);
         }
+        
+        /* Increase height of Why choose us images for desktop */
+        @media (min-width: 1024px) {
+            .why-choose-us-section .rounded-5xl {
+                height: 24rem !important; /* lg:h-96 */
+            }
+        }
+        
+        /* Fix testimonials background images */
+        .testimonials-section {
+            background-image: url('Images/images/testimonial-left-img.svg'), url('Images/images/testimonial-right-img.svg') !important;
+            background-position: left bottom, right bottom !important;
+            background-repeat: no-repeat !important;
+            background-size: 300px auto, 300px auto !important;
+        }
     </style>
 </head>
 <body class="bg-white">
@@ -658,7 +695,7 @@
                 <!-- Logo -->
                 <div class="flex items-center" style="z-index: 10000; position: relative;">
                     <a href="#" class="flex items-center space-x-2">
-                        <img class="w-20" src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="h-14 w-auto">
+                        <img src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="w-20 h-20 object-contain" style="display: block !important; visibility: visible !important; opacity: 1 !important; max-width: none !important; max-height: none !important;">
                     </a>
                 </div>
                 
@@ -799,7 +836,7 @@
                 <div class="order-1 lg:order-2 mb-6 lg:mb-0">
                     <div class="relative">
                         <img src="Images/about oasis.png" 
-                             alt="Travel Adventure" class="w-full h-64 sm:h-80 md:h-96 lg:h-[32rem] xl:h-[36rem] rounded-2xl object-cover shadow-lg">
+                             alt="Travel Adventure" class="w-full h-[400px] md:h-[28rem] lg:h-[32rem] xl:h-[36rem] rounded-2xl object-cover shadow-lg" loading="lazy">
                       
                     </div>
                 </div>
@@ -1099,7 +1136,7 @@
 
 
     <!-- Team Section -->
-    <!-- <section class="py-12 sm:py-16 md:py-20 bg-gray-50">
+    <section class="py-12 sm:py-16 md:py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 md:mb-16">
                 <h2 class="text-3xl sm:text-4xl md:text-5xl text-[#000042] font-bold mb-4">Meet Our Team</h2>
@@ -1135,7 +1172,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     
 
@@ -1218,22 +1255,20 @@
                 <div class="mt-8 sm:mt-12 md:mt-16 lg:mt-24 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-7 max-w-6xl mx-auto">
                     <div class="py-8 sm:py-12 md:py-16 lg:py-24 px-4 sm:px-5 lg:px-10 relative rounded-5xl overflow-hidden h-48 sm:h-56 md:h-64 lg:h-80">
                         <div class="absolute top-0 left-0 w-full h-full">
-                            <img src="Images/images/weekly-flash-deels-img.jpg" alt="weekly-flash-deels-img" class="block w-full h-full object-cover">
+                            <img src="Images/images/weekly-flash-deels-img.jpg" alt="weekly-flash-deels-img" class="block w-full h-full object-cover" loading="lazy">
                         </div>
                         <div class="relative max-w-[250px] h-full flex flex-col justify-center">
                             <h4 class="mb-2 sm:mb-4 text-white text-lg sm:text-xl font-bold">Weekly Flash Deals</h4>
                             <p class="text-white mb-4 sm:mb-6 text-base sm:text-lg">Up to 45% off</p>
-                            <a href="contact.html" class="btn btn-light btn-md shadow-btn mx-0 w-fit text-sm sm:text-base">View deals <i class="fa-regular fa-arrow-right ml-2 sm:ml-3"></i></a>
                         </div>
                     </div>
                     <div class="py-8 sm:py-12 md:py-16 lg:py-24 px-4 sm:px-5 lg:px-10 relative rounded-5xl overflow-hidden h-48 sm:h-56 md:h-64 lg:h-80">
                         <div class="absolute top-0 left-0 w-full h-full">
-                            <img src="Images/images/summer-escaps-img.png" alt="weekly-flash-deels-img" class="block w-full h-full object-cover">
+                            <img src="Images/images/summer-escaps-img.png" alt="weekly-flash-deels-img" class="block w-full h-full object-cover" loading="lazy">
                         </div>
                         <div class="relative max-w-[250px] h-full flex flex-col justify-center">
                             <h4 class="mb-2 sm:mb-4 text-white text-lg sm:text-xl font-bold">Summer Escapes</h4>
                             <p class="text-white mb-4 sm:mb-6 text-base sm:text-lg">Plan your next trip with us.</p>
-                            <a href="contact.html" class="btn btn-light btn-md shadow-btn mx-0 w-fit text-sm sm:text-base">View deals <i class="fa-regular fa-arrow-right ml-2 sm:ml-3"></i></a>
                        </div>
                     </div>
                 </div>          
@@ -1244,7 +1279,7 @@
     <!-- Testimonials Section -->
      <section class="testimonials-section min-h-[60vh] w-full p-[5vh] bg-blue-100 relative">
           <!-- Background Decorative Images -->
-          <div class="absolute flex justify-between w-full bottom-0 hidden lg:flex">
+          <div class="absolute  justify-between w-full bottom-0 hidden lg:flex">
               <img class="relative -left-0" src="https://demo.webbydemo.in/html-templates/tailwind/journea-travel-agency/layouts/assets/images/testimonial-right-img.svg" alt="">
               <img class="relative right-0" src="https://demo.webbydemo.in/html-templates/tailwind/journea-travel-agency/layouts/assets/images/testimonial-left-img.svg" alt="">
           </div>
@@ -1253,7 +1288,7 @@
             <!-- Left Side - Text Content -->
             <div class="h-full w-full lg:w-1/2 flex flex-col justify-center items-center text mt-0 lg:mt-14 mb-8 lg:mb-0">
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl mb-5 font-semibold leading-tight text-[#000042] text-center px-4">What our Travelers <br class="hidden sm:block">are saying</h1>
-                <p class="font-thin text-base sm:text-lg text-gray-600 text-center px-4 max-w-lg">Discover why thousands of travelers choose Oasis Travel for their dream vacations and unforgettable adventures around the world.</p>
+                <p class="font-thin text-base sm:text-lg text-gray-600 text-center px-4 max-w-md">Discover why thousands of travelers choose Oasis Travel for their dream vacations and unforgettable adventures around the world.</p>
             </div>
             
             <!-- Right Side - Testimonial Cards -->
@@ -1386,7 +1421,7 @@
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <!-- Logo Section -->
             <div class="mb-12 text-center">
-                <img src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="h-20 mx-auto mb-4">
+                <img src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="h-20 mx-auto mb-4" style="display: block !important; visibility: visible !important; opacity: 1 !important; max-width: none !important; max-height: none !important;">
                 <p class="text-gray-300 max-w-2xl mx-auto">Your trusted partner for unforgettable travel experiences. Discover the world with Oasis Travel & Tourism.</p>
             </div>
             
@@ -1522,6 +1557,13 @@
         </div>
     </footer>
 
+    <!-- ImageKit.io Integration -->
+    <script src="imagekit-config.js"></script>
+    <script src="imagekit-upload.js"></script>
+    
+    <!-- Logo Fix Script -->
+    <script src="logo-fix.js"></script>
+    
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -2000,6 +2042,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- ImageKit.io Integration -->
+    <script src="imagekit-config.js"></script>
+    <script src="imagekit-upload.js"></script>
+    
+    <!-- Lazy Loading Script -->
+    <script src="lazy-loading.js"></script>
+    
     <!-- Firebase Integration -->
     <script type="module">
         import './firebase-integration.js';

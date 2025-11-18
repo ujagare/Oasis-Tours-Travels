@@ -1,4 +1,5 @@
 // ImageKit.io Configuration
+if (typeof ImageKitOptimizer === 'undefined') {
 class ImageKitOptimizer {
     constructor() {
         this.urlEndpoint = 'https://ik.imagekit.io/z4l1pevod/'; // Your ImageKit URL endpoint
@@ -64,14 +65,15 @@ class ImageKitOptimizer {
 // Initialize ImageKit
 const imageKit = new ImageKitOptimizer();
 
-// Auto-optimize existing images on page load
-document.addEventListener('DOMContentLoaded', function() {
-    optimizeExistingImages();
-    optimizeExistingVideos();
-});
+// Manual optimization functions (auto-optimization disabled to prevent image loading issues)
+// To use optimization, call optimizeExistingImages() manually when needed
 
+// DISABLED: ImageKit optimization temporarily disabled to fix missing images
 function optimizeExistingImages() {
-    const images = document.querySelectorAll('img[src*="Images/"], img[src*="images/"]');
+    console.log('ImageKit optimization is temporarily disabled to prevent image loading issues');
+    return;
+    // Only optimize images that are specifically marked for optimization
+    const images = document.querySelectorAll('img[data-optimize="true"]');
     
     images.forEach(img => {
         const originalSrc = img.src;
@@ -106,7 +108,10 @@ function optimizeExistingImages() {
 }
 
 function optimizeExistingVideos() {
-    const videos = document.querySelectorAll('video source[src*="video/"], video[src*="video/"]');
+    console.log('ImageKit video optimization is temporarily disabled to prevent video loading issues');
+    return;
+    // Only optimize videos that are specifically marked for optimization
+    const videos = document.querySelectorAll('video[data-optimize="true"] source[src*="video/"], video[data-optimize="true"][src*="video/"]');
     
     videos.forEach(video => {
         const originalSrc = video.src;
@@ -143,3 +148,4 @@ function createOptimizedImage(imagePath, options = {}) {
 window.ImageKitOptimizer = ImageKitOptimizer;
 window.imageKit = imageKit;
 window.createOptimizedImage = createOptimizedImage;
+}

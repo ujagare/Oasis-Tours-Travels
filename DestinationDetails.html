@@ -6,11 +6,11 @@
     <title id="page-title">Destination Details - Oasis Travel & Tourism</title>
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo_New.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Images/Oasis Logo_New.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Images/Oasis Logo_New.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo.png">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="Images/Oasis Logo.png">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="Images/Oasis Logo.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
-    <link rel="shortcut icon" href="Images/Oasis Logo_New.png">
+    <link rel="shortcut icon" href="Images/Oasis Logo.png">
     
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -47,6 +47,10 @@
     
     <!-- EmailJS -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <!-- ImageKit.io Integration -->
+    <script src="imagekit-config.js"></script>
+    <script src="imagekit-upload.js"></script>
     
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
@@ -245,6 +249,23 @@
         /* Simple Destinations Slider */
         .destinationsSwiper {
             padding: 20px 0;
+        }
+        
+        /* Destination Gallery Mobile Fix */
+        @media (max-width: 768px) {
+            .destination-gallery {
+                margin: 0 !important;
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            
+            .destination-gallery .swiper-wrapper {
+                width: 100% !important;
+            }
+            
+            .destination-gallery .swiper-slide {
+                width: 100% !important;
+            }
         }
         
         .destinationsSwiper .swiper-button-next,
@@ -836,7 +857,7 @@
                     </div>
                 </div>
 
-                <div class="mt-10 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-7 max-w-6xl mx-auto">
+                <div class="mt-10 md:mt-24 grid grid-cols-1 md:grid-cols-2 gap-7 max-w-6xl mx-auto px-4">
                     <div class="py-16 lg:py-24 px-5 lg:px-10 relative rounded-3xl overflow-hidden h-64 md:h-80 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
                         <div class="absolute top-0 left-0 w-full h-full">
                             <img src="Images/images/weekly-flash-deels-img.jpg" alt="weekly-flash-deels-img" class="block w-full h-full object-cover">
@@ -1327,10 +1348,10 @@
             
             const backgrounds = {
                 'Dubai': 'video/Dubai.mp4',
-                'Maldives': 'Images/Maldives/maldives-hero.jpg',
-                'Malaysia': 'Images/Malaysia/malaysia-hero.jpg',
-                'Thailand': 'Images/Thailand/thailand-hero.jpg',
-                'Singapore': 'Images/Singapore/singapore-hero.jpg'
+                'Maldives': 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+                'Malaysia': 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+                'Thailand': 'https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+                'Singapore': 'https://images.unsplash.com/photo-1525625293386-3f8f99389edd?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
             };
             
             const backgroundSrc = backgrounds[destinationName] || 'Images/default-hero.jpg';
@@ -1988,5 +2009,8 @@
             }, 1000);
         });
     </script>
+    
+    <!-- Lazy Loading Script -->
+    <script src="lazy-loading.js"></script>
 </body>
 </html>

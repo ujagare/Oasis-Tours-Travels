@@ -1,8 +1,9 @@
 // ImageKit Upload Helper
+if (typeof ImageKitUploader === 'undefined') {
 class ImageKitUploader {
     constructor() {
-        this.urlEndpoint = 'https://ik.imagekit.io/your_imagekit_id/';
-        this.publicKey = 'public_your_public_key';
+        this.urlEndpoint = 'https://ik.imagekit.io/z4l1pevod/';
+        this.publicKey = 'public_ueUa8yuhiCmv1g5xv/1YE7u6ytU=';
         this.privateKey = 'private_your_private_key'; // Only for server-side
         this.uploadEndpoint = 'https://upload.imagekit.io/api/v1/files/upload';
     }
@@ -87,11 +88,11 @@ class ImageMigrator {
             'Images/images/footer-gallery-img1.jpg',
             'Images/images/footer-gallery-img2.jpg',
             'Images/images/footer-gallery-img3.jpg',
-            'Images/images/footer-gallery-img4.jpg',
+            'Images/images/footer-gallery-img4.jpg'
             
-            // Logo
-            'Images/Oasis Logo.png',
-            'Images/Oasis Logo_New.jpeg'
+            // Logo images excluded from ImageKit optimization
+            // 'Images/Oasis Logo.png' - Keep local
+            // 'Images/Oasis Logo_New.jpeg' - Keep local
         ];
 
         const migrationMap = {};
@@ -118,7 +119,8 @@ class ImageMigrator {
     updateHTMLWithOptimizedImages(migrationMap) {
         Object.keys(migrationMap).forEach(originalPath => {
             const optimizedUrl = migrationMap[originalPath];
-            const images = document.querySelectorAll(`img[src*="${originalPath}"]`);
+            // Exclude logo images from optimization
+            const images = document.querySelectorAll(`img[src*="${originalPath}"]:not([src*="Logo"])`);
             
             images.forEach(img => {
                 img.src = optimizedUrl;
@@ -149,3 +151,4 @@ document.addEventListener('DOMContentLoaded', async function() {
 // Export classes
 window.ImageKitUploader = ImageKitUploader;
 window.ImageMigrator = ImageMigrator;
+}

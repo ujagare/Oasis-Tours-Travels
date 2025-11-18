@@ -10,11 +10,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <!-- Enhanced Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo_New.jpeg">
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="Images/Oasis Logo_New.jpeg">
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="Images/Oasis Logo_New.jpeg">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/Oasis Logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/Oasis Logo.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
-    <link rel="shortcut icon" href="Images/Oasis Logo_New.jpeg">
+    <link rel="shortcut icon" href="Images/Oasis Logo.png">
     
     <!-- PhotoSwipe CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.2/dist/photoswipe.css" />
@@ -37,6 +37,7 @@
 
     <!-- Local Tailwind CSS -->
     <link rel="stylesheet" href="dist/style.css">
+    <link rel="stylesheet" href="logo-fix.css">
     
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -62,6 +63,10 @@
     <!-- Error Handler -->
     <script src="error-handler.js"></script>
     
+    <!-- Travelmap Loader Scripts -->
+    <script src="travelmap-loader.js"></script>
+    <script src="page-loader.js"></script>
+    
     <!-- Package Card Click Handler -->
     <script>
         function navigateToPackage(packageType) {
@@ -69,9 +74,12 @@
         }
     </script>
     
-    <!-- ImageKit.io Integration - Temporarily Disabled -->
-    <!-- <script src="imagekit-config.js"></script>
-    <script src="imagekit-upload.js"></script> -->
+    <!-- ImageKit.io Integration -->
+    <script src="imagekit-config.js"></script>
+    <script src="imagekit-upload.js"></script>
+    
+    <!-- Logo Fix Script -->
+    <script src="logo-fix.js"></script>
     
     <!-- Custom Font -->
     <style>
@@ -3319,7 +3327,7 @@
                     <!-- Core Booking Services -->
                     <div class="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 border border-white/20 flex flex-col h-full">
                         <div class="rounded-xl h-48 mb-6 overflow-hidden relative">
-                            <img src="https://img.freepik.com/free-photo/christmas-travel-concept-with-laptop_23-2149573078.jpg?t=st=1759914378~exp=1759917978~hmac=75f989246de819fb2baa601299266169086566b0375fc959acdea3fe213fdde5&w=1480" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <img src="https://img.freepik.com/free-photo/christmas-travel-concept-with-laptop_23-2149573078.jpg?t=st=1759914378~exp=1759917978~hmac=75f989246de819fb2baa601299266169086566b0375fc959acdea3fe213fdde5&w=1480" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                             <div class="absolute bottom-4 left-4">
                                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -3337,7 +3345,7 @@
                     <!-- Planning Services -->
                     <div class="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 border border-white/20 flex flex-col h-full">
                         <div class="rounded-xl h-48 mb-6 overflow-hidden relative">
-                            <img src="https://img.freepik.com/free-vector/isometric-business-people-meeting_23-2148307974.jpg?t=st=1759914684~exp=1759918284~hmac=b27b30b20921ca672d39240c2932beb618dfd1a88083ac68ea907afff25e3e76&w=1480" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <img src="https://img.freepik.com/free-vector/isometric-business-people-meeting_23-2148307974.jpg?t=st=1759914684~exp=1759918284~hmac=b27b30b20921ca672d39240c2932beb618dfd1a88083ac68ea907afff25e3e76&w=1480" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                             <div class="absolute bottom-4 left-4">
                                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -3355,7 +3363,7 @@
                     <!-- On-Trip and Post-Trip Support -->
                     <div class="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 border border-white/20 flex flex-col h-full">
                         <div class="rounded-xl h-48 mb-6 overflow-hidden relative">
-                            <img src="https://img.freepik.com/free-vector/woman-holding-briefcase-man-buying-tickets_1262-21303.jpg?t=st=1759914782~exp=1759918382~hmac=73fc45ce0190b1fd13573add1d3a1e2acd1384bdc9c086e6f2bb3e9472a0006f&w=1480" alt="Customer Support" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <img src="https://img.freepik.com/free-vector/woman-holding-briefcase-man-buying-tickets_1262-21303.jpg?t=st=1759914782~exp=1759918382~hmac=73fc45ce0190b1fd13573add1d3a1e2acd1384bdc9c086e6f2bb3e9472a0006f&w=1480" alt="Customer Support" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                             <div class="absolute bottom-4 left-4">
                                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -3373,7 +3381,7 @@
                     <!-- Corporate & Event Services -->
                     <div class="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-2 border border-white/20 flex flex-col h-full">
                         <div class="rounded-xl h-48 mb-6 overflow-hidden relative">
-                            <img src="https://img.freepik.com/free-vector/data-network-illustration_24908-57790.jpg?t=st=1759914891~exp=1759918491~hmac=bbe7ccdbcfec3017787ebd2ff6799bb17b6aed357e797f7b8f4dca1c3c68cedc&w=1480" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                            <img src="https://img.freepik.com/free-vector/data-network-illustration_24908-57790.jpg?t=st=1759914891~exp=1759918491~hmac=bbe7ccdbcfec3017787ebd2ff6799bb17b6aed357e797f7b8f4dca1c3c68cedc&w=1480" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                             <div class="absolute bottom-4 left-4">
                                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -3411,7 +3419,7 @@
                     <!-- Budget Package -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="window.location.href='budget-package.html'">
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=250&fit=crop" alt="Budget Package" class="w-full h-48 object-cover">
+                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400&h=250&fit=crop" alt="Budget Package" class="w-full h-48 object-cover" loading="lazy">
                             <div class="absolute top-4 right-4">
                                 <svg class="w-6 h-6 text-gray-400 hover:text-red-500 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                             </div>
@@ -3435,7 +3443,7 @@
                             </span>
                         </div>
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=250&fit=crop" alt="Standard Package" class="w-full h-48 object-cover">
+                            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=400&h=250&fit=crop" alt="Standard Package" class="w-full h-48 object-cover" loading="lazy">
                             <div class="absolute top-4 right-4">
                                 <svg class="w-6 h-6 text-gray-400 hover:text-red-500 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                             </div>
@@ -3454,7 +3462,7 @@
                     <!-- Luxury Package -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="window.location.href='luxury-package.html'">
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=250&fit=crop" alt="Luxury Package" class="w-full h-48 object-cover">
+                            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&h=250&fit=crop" alt="Luxury Package" class="w-full h-48 object-cover" loading="lazy">
                             <div class="absolute top-4 right-4">
                                 <svg class="w-6 h-6 text-gray-400 hover:text-red-500 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                             </div>
@@ -3473,7 +3481,7 @@
                     <!-- Custom Package -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer" onclick="window.location.href='custom-package.html'">
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=250&fit=crop" alt="Custom Package" class="w-full h-48 object-cover">
+                            <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=250&fit=crop" alt="Custom Package" class="w-full h-48 object-cover" loading="lazy">
                             <div class="absolute top-4 right-4">
                                 <svg class="w-6 h-6 text-gray-400 hover:text-red-500 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
                             </div>
@@ -3517,7 +3525,7 @@
                                         </span>
                                     </div>
                                     <!-- Destination Image -->
-                                    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400" alt="Singapore" class="w-full h-full object-cover rounded-lg">
+                                    <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=400" alt="Singapore" class="w-full h-full object-cover rounded-lg" loading="lazy">
                                 </div>
                                 
                                 <!-- Content Section -->
@@ -3549,7 +3557,7 @@
                                         </span>
                                     </div>
                                     <!-- Destination Image -->
-                                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400" alt="Dubai" class="w-full h-full object-cover rounded-lg">
+                                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400" alt="Dubai" class="w-full h-full object-cover rounded-lg" loading="lazy">
                                 </div>
                                 
                                 <!-- Content Section -->
@@ -3740,7 +3748,7 @@
                                     <div class="pt-10">
                                         <div class="flex items-center mb-8">
                                             <div class="relative">
-                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="John Smith" class="w-20 h-20 p-3 rounded-full object-cover border-4 border-white shadow-xl">
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="John Smith" class="w-20 h-20 p-3 rounded-full object-cover border-4 border-white shadow-xl" loading="lazy">
                                                 <div class="absolute -bottom-2 -right-2 w-7 h-7 bg-green-500 rounded-full border-3 border-white flex items-center justify-center shadow-lg">
                                                     <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -4999,6 +5007,8 @@
 
         });
     </script>
+    <!-- Lazy Loading Script -->
+    <script src="lazy-loading.js"></script>
 </body>
 </html>
 <style>

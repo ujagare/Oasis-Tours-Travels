@@ -6,11 +6,11 @@
     <title>Photo Gallery - Oasis Travel & Tourism</title>
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo_New.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Images/Oasis Logo_New.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Images/Oasis Logo_New.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/Oasis Logo.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/Oasis Logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/Oasis Logo.png">
     <link rel="manifest" href="favicon_io/site.webmanifest">
-    <link rel="shortcut icon" href="Images/Oasis Logo_New.png">
+    <link rel="shortcut icon" href="Images/Oasis Logo.png">
     
     <link rel="stylesheet" href="dist/style.css">
 
@@ -76,7 +76,7 @@
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="#" class="flex items-center space-x-2">
-                        <img class="w-20" src="Images/Oasis Logo_New.png" alt="Oasis Travel & Tourism" class="h-14 w-auto">
+                        <img class="w-20" src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="h-14 w-auto">
                     </a>
                 </div>
                 
@@ -190,6 +190,7 @@
                   src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop"
                   alt="Dubai Skyline"
                   class="w-full h-auto"
+                  loading="lazy"
                 />
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity"
@@ -214,6 +215,7 @@
                   src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&h=500&fit=crop"
                   alt="Mount Fuji"
                   class="w-full h-auto"
+                  loading="lazy"
                 />
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity"
@@ -679,7 +681,7 @@
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <!-- Logo Section -->
             <div class="mb-12 text-center">
-                <img src="Images/Oasis Logo_New.png" alt="Oasis Travel & Tourism" class="h-20 mx-auto mb-4">
+                <img src="Images/Oasis Logo.png" alt="Oasis Travel & Tourism" class="h-20 mx-auto mb-4">
                 <p class="text-gray-300 max-w-2xl mx-auto">Your trusted partner for unforgettable travel experiences. Discover the world with Oasis Travel & Tourism.</p>
             </div>
             
@@ -807,12 +809,19 @@
         </div>
     </footer>
 
+    <!-- ImageKit.io Integration -->
+    <script src="imagekit-config.js"></script>
+    <script src="imagekit-upload.js"></script>
+    
     <!-- Scripts -->
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <script src="script.js"></script>
+    
+    <!-- Logo Fix Script -->
+    <script src="logo-fix.js"></script>
 
     <!-- Lightbox JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
@@ -906,5 +915,7 @@
         });
       });
     </script>
+    <!-- Lazy Loading Script -->
+    <script src="lazy-loading.js"></script>
   </body>
 </html>

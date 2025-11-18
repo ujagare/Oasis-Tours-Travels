@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Loader Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .loader-text {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+            font-weight: 500;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader" class="page-loader">
+        <div id="travelmap-loader"></div>
+        <div class="loader-text">Loading...</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>🌍 Travelmap Loader Fixed</h1>
+        <p>Page load hone par travelmap loader dikhega aur phir hide ho jayega.</p>
+        
+        <button onclick="showLoader('royal')">Show Royal Blue Loader</button>
+        <button onclick="showLoader('navy')">Show Navy Loader</button>
+        <button onclick="showLoader('forest')">Show Forest Loader</button>
+        
+        <h2>Content</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+
+    <script src="travelmap-loader.js"></script>
+    <script>
+        let pageLoader;
+
+        // Initialize page loader on load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Show loader with Royal Blue earth
+            pageLoader = new TravelmapLoader('travelmap-loader', {
+                size: 120,
+                earthColor: '#4169e1' // Royal Blue
+            });
+
+            // Hide loader after 3 seconds
+            setTimeout(() => {
+                hidePageLoader();
+            }, 3000);
+        });
+
+        function hidePageLoader() {
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                loader.style.opacity = '0';
+                loader.style.transition = 'opacity 0.5s';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                    if (pageLoader) {
+                        pageLoader.destroy();
+                    }
+                }, 500);
+            }
+        }
+
+        function showLoader(type) {
+            const colors = {
+                royal: '#4169e1',
+                navy: '#000080', 
+                forest: '#2d5a27'
+            };
+
+            // Create temporary loader overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'page-loader';
+            overlay.innerHTML = `
+                <div id="temp-loader"></div>
+                <div class="loader-text">Loading with ${type} earth...</div>
+            `;
+            document.body.appendChild(overlay);
+
+            // Initialize loader with selected color
+            const tempLoader = new TravelmapLoader('temp-loader', {
+                size: 120
+            });
+
+            // Change earth color
+            tempLoader.changeEarthColor(colors[type]);
+
+            // Remove after 2 seconds
+            setTimeout(() => {
+                overlay.style.opacity = '0';
+                overlay.style.transition = 'opacity 0.5s';
+                setTimeout(() => {
+                    tempLoader.destroy();
+                    document.body.removeChild(overlay);
+                }, 500);
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

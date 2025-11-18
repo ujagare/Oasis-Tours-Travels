@@ -1,0 +1,30 @@
+/* Logo Image Fix CSS */
+img[src*="Logo"] {
+    /* Ensure logo images are always visible */
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    
+    /* Prevent ImageKit transformation */
+    content: url('Images/Oasis Logo.png') !important;
+}
+
+/* Specific logo image fixes */
+img[alt*="Oasis Travel"] {
+    /* Force local logo path */
+    content: url('Images/Oasis Logo.png') !important;
+}
+
+/* Navigation logo specific fix */
+nav img[src*="Logo"] {
+    content: url('Images/Oasis Logo.png') !important;
+    max-width: 80px !important;
+    height: auto !important;
+}
+
+/* Footer logo specific fix */
+footer img[src*="Logo"] {
+    content: url('Images/Oasis Logo.png') !important;
+    max-height: 80px !important;
+    width: auto !important;
+}
