@@ -83,6 +83,11 @@
     
     <!-- Custom Font -->
     <style>
+        /* Hide body initially until loader completes */
+        body {
+            visibility: hidden !important;
+            overflow: hidden !important;
+        }
         @font-face {
             font-family: 'Lausanne';
             src: url('font/Lausanne-300.woff2') format('woff2');

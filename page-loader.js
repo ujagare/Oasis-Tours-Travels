@@ -32,13 +32,15 @@ class PageLoader {
             width: 100%;
             height: 100%;
             background: #001122;
-            z-index: 9999;
+            z-index: 99999;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             backdrop-filter: blur(5px);
         `;
+        
+        // Body is already hidden via CSS
 
         // Add container styles
         const container = this.overlay.querySelector('#page-loader-container');
@@ -88,6 +90,9 @@ class PageLoader {
                     if (this.overlay && this.overlay.parentNode) {
                         this.overlay.parentNode.removeChild(this.overlay);
                     }
+                    // Show body content after loader is hidden
+                    document.body.style.overflow = 'auto';
+                    document.body.style.visibility = 'visible';
                 }, 500);
             }
         }, remainingTime);
