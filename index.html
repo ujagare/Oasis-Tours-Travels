@@ -5224,16 +5224,70 @@
                     init: function() {
                         console.log('✅ Hero Swiper initialized successfully');
                         console.log('📊 Total slides:', this.slides.length);
+                        
+                        // Update slide counter
+                        const totalSlides = document.getElementById('totalSlides');
+                        if (totalSlides) {
+                            totalSlides.textContent = this.slides.length;
+                        }
                     },
                     slideChange: function() {
                         console.log('🎬 Slide changed to index:', this.realIndex);
+                        
+                        // Update current slide counter
+                        const currentSlide = document.getElementById('currentSlide');
+                        if (currentSlide) {
+                            currentSlide.textContent = this.realIndex + 1;
+                        }
                     },
                     autoplayStart: function() {
                         console.log('▶️ Autoplay started');
+                        updatePlayPauseButton(false); // Show pause icon
                     },
                     autoplayStop: function() {
                         console.log('⏸️ Autoplay stopped');
+                        updatePlayPauseButton(true); // Show play icon
                     }
+                }
+            });
+            
+            // Play/Pause button functionality
+            function updatePlayPauseButton(isPlaying) {
+                const playIcon = document.getElementById('playIcon');
+                const pauseIcon = document.getElementById('pauseIcon');
+                
+                if (isPlaying) {
+                    playIcon.classList.remove('hidden');
+                    pauseIcon.classList.add('hidden');
+                } else {
+                    playIcon.classList.add('hidden');
+                    pauseIcon.classList.remove('hidden');
+                }
+            }
+            
+            // Add play/pause button event listener
+            const playPauseBtn = document.getElementById('heroPlayPause');
+            if (playPauseBtn) {
+                playPauseBtn.addEventListener('click', function() {
+                    if (heroSwiper.autoplay.running) {
+                        heroSwiper.autoplay.stop();
+                        console.log('⏸️ Autoplay paused by user');
+                    } else {
+                        heroSwiper.autoplay.start();
+                        console.log('▶️ Autoplay resumed by user');
+                    }
+                });
+            }
+            
+            // Keyboard controls
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'ArrowLeft') {
+                    heroSwiper.slidePrev();
+                } else if (e.key === 'ArrowRight') {
+                    heroSwiper.slideNext();
+                } else if (e.key === ' ') { // Spacebar
+                    e.preventDefault();
+                    playPauseBtn.click();
                 }
             });
             
@@ -5241,7 +5295,7 @@
             setTimeout(() => {
                 if (heroSwiper) {
                     console.log('🧪 Testing manual slide change...');
-                    heroSwiper.slideNext();
+                    // Don't auto-test slide change, let user control
                 }
             }, 2000);
             
