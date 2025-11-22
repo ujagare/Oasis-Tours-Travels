@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Razorpay Checkout Test - Oasis Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen py-12 px-4">
+        <div class="max-w-4     
+       }
+        }
+
+        // Test basic checkout
+        function testBasicCheckout() {
+            updateStatus('Testing basic Razorpay checkout...');
+            console.log('🧪 Starting basic checkout test');
+            
+            if (!checkRazorpayStatus()) {
+                showResults('❌ Razorpay script not loaded. Cannot proceed with test.', 'error');
+                return;
+            }
+
+            const options = {
+                key: 'rzp_test_9WdJmqcwy6BNZX', // Razorpay test key (public)
+                amount: 50000, // ₹500 in paise
+                currency: 'INR',
+                name: 'Oasis Travel & Tourism',
+                description: 'Test Payment for Checkout',
+                image: '/Images/Oasis Logo.png',
+                handler: function (response) {
+                    console.log('✅ Payment successful:', response);
+                    showResults(`✅ Payment Success! Payment ID: ${response.razorpay_payment_id}`, 'success');
+                },
+                prefill: {
+                    name: 'Test Customer',
+                    email: 'test@example.com',
+                    contact: '9999999999'
+                },
+                theme: {
+                    color: '#000042'
+                },
+                modal: {
+                    ondismiss: function() {
+                        console.log('⚠️ Payment cancelled by user');
+                        showResults('⚠️ Payment cancelled by user', 'warning');
+                    }
+                }
+            };
+
+            try {
+                const rzp = new Razorpay(options);
+                rzp.open();
+                console.log('✅ Razorpay checkout opened');
+                updateStatus('✅ Razorpay checkout opened. Complete the payment to test.');
+            } catch (error) {
+                console.error('❌ Error opening checkout:', error);
+                showResults(`❌ Error opening checkout: ${error.message}`, 'error');
+            }
+        }
+
+        // Test with test keys
+        function testWithTestKeys() {
+            updateStatus('Testing with Razorpay test keys...');
+            console.log('🧪 Testing with test keys');
+            
+            if (!checkRazorpayStatus()) {
+                showResults('❌ Razorpay script not loaded. Cannot proceed with test.', 'error');
+                return;
+            }
+
+            // Test card details that work with Razorpay test mode
+            const options = {
+                key: 'rzp_test_9WdJmqcwy6BNZX', // Public test key
+                amount: 100000, // ₹1000 in paise
+                currency: 'INR',
+                name: 'Oasis Travel & Tourism',
+                description: 'Baku Package Test Booking',
+                image: '/Images/Oasis Logo.png',
+                handler: function (response) {
+                    console.log('✅ Test payment successful:', response);
+                    showResults(`✅ Test Payment Success! 
+                        Payment ID: ${response.razorpay_payment_id}
+                        Order ID: ${response.razorpay_order_id || 'N/A'}
+                        Signature: ${response.razorpay_signature || 'N/A'}`, 'success');
+                },
+                prefill: {
+                    name: 'John Doe',
+                    email: 'john@example.com',
+                    contact: '9876543210'
+                },
+                notes: {
+                    package: 'Baku Adventure',
+                    test_mode: 'true'
+                },
+                theme: {
+                    color: '#000042'
+                },
+                modal: {
+                    ondismiss: function() {
+                        console.log('⚠️ Test payment cancelled');
+                        showResults('⚠️ Test payment cancelled', 'warning');
+                    }
+                }
+            };
+
+            try {
+                const rzp = new Razorpay(options);
+                rzp.open();
+                console.log('✅ Test checkout opened');
+                updateStatus('✅ Test checkout opened. Use test card: 4111 1111 1111 1111');
+                showTestCardInfo();
+            } catch (error) {
+                console.error('❌ Error opening test checkout:', error);
+                showResults(`❌ Error opening test checkout: ${error.message}`, 'error');
+            }
+        }
+
+        // Test full flow with backend
+        async function testFullFlow() {
+            updateStatus('Testing full payment flow with backend...');
+            console.log('🧪 Testing full payment flow');
+            
+            if (!checkRazorpayStatus()) {
+                showResults('❌ Razorpay script not loaded. Cannot proceed with test.', 'error');
+                return;
+            }
+
+            try {
+                // Test order creation with backend
+                const orderData = {
+                    amount: 5000,
+                    packageName: 'Test Package',
+                    customerDetails: {
+                        name: 'Test User',
+                        email: 'test@example.com',
+                        phone: '9999999999'
+                    }
+                };
+
+                console.log('📡 Creating order with backend...');
+                const response = await fetch('http://localhost:3000/api/payments/create-order', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(orderData)
+                });
+
+                const result = await response.json();
+                console.log('📡 Backend response:', result);
+
+                if (!result.success) {
+                    throw new Error(result.message || 'Failed to create order');
+                }
+
+                // Open Razorpay with backend order
+                const options = {
+                    key: result.key_id,
+                    amount: result.order.amount,
+                    currency: result.order.currency,
+                    name: 'Oasis Travel & Tourism',
+                    description: 'Full Flow Test Payment',
+                    order_id: result.order.id,
+                    handler: function (response) {
+                        console.log('✅ Full flow payment successful:', response);
+                        showResults(`✅ Full Flow Success! 
+                            Payment ID: ${response.razorpay_payment_id}
+                            Order ID: ${response.razorpay_order_id}
+                            Signature: ${response.razorpay_signature}`, 'success');
+                    },
+                    prefill: {
+                        name: orderData.customerDetails.name,
+                        email: orderData.customerDetails.email,
+                        contact: orderData.customerDetails.phone
+                    },
+                    theme: {
+                        color: '#000042'
+                    },
+                    modal: {
+                        ondismiss: function() {
+                            console.log('⚠️ Full flow payment cancelled');
+                            showResults('⚠️ Full flow payment cancelled', 'warning');
+                        }
+                    }
+                };
+
+                const rzp = new Razorpay(options);
+                rzp.open();
+                console.log('✅ Full flow checkout opened');
+                updateStatus('✅ Full flow checkout opened with backend integration');
+
+            } catch (error) {
+                console.error('❌ Full flow test error:', error);
+                showResults(`❌ Full flow test failed: ${error.message}`, 'error');
+            }
+        }
+
+        // Helper functions
+        function updateStatus(message) {
+            document.getElementById('status-content').innerHTML = message;
+        }
+
+        function showResults(message, type = 'info') {
+            const resultsDiv = document.getElementById('test-results');
+            const contentDiv = document.getElementById('results-content');
+            
+            const colors = {
+                success: 'bg-green-50 text-green-800 border-green-200',
+                error: 'bg-red-50 text-red-800 border-red-200',
+                warning: 'bg-yellow-50 text-yellow-800 border-yellow-200',
+                info: 'bg-blue-50 text-blue-800 border-blue-200'
+            };
+            
+            resultsDiv.className = `${colors[type]} border rounded-lg p-4`;
+            contentDiv.innerHTML = message.replace(/\n/g, '<br>');
+            resultsDiv.classList.remove('hidden');
+        }
+
+        function showTestCardInfo() {
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'mt-4 bg-blue-50 border border-blue-200 rounded-lg p-4';
+            infoDiv.innerHTML = `
+                <h4 class="font-semibold text-blue-800 mb-2">🧪 Test Card Details:</h4>
+                <div class="text-sm text-blue-700">
+                    <div><strong>Card Number:</strong> 4111 1111 1111 1111</div>
+                    <div><strong>Expiry:</strong> Any future date (e.g., 12/25)</div>
+                    <div><strong>CVV:</strong> Any 3 digits (e.g., 123)</div>
+                    <div><strong>Name:</strong> Any name</div>
+                </div>
+            `;
+            
+            const statusDiv = document.getElementById('test-status');
+            const existingInfo = statusDiv.querySelector('.test-card-info');
+            if (existingInfo) {
+                existingInfo.remove();
+            }
+            infoDiv.classList.add('test-card-info');
+            statusDiv.appendChild(infoDiv);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 Razorpay checkout test page loaded');
+            
+            // Check status after a short delay to ensure script is loaded
+            setTimeout(() => {
+                checkRazorpayStatus();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

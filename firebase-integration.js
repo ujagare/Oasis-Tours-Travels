@@ -47,8 +47,8 @@ function initializeContactForms() {
         };
 
         // Simulate form submission (Firebase disabled)
-        console.log('Form data:', formData);
-        
+        console.log("Form data:", formData);
+
         // Show success message
         showSuccessMessage(
           "Thank you! Your inquiry has been submitted successfully. We will contact you soon."
@@ -61,7 +61,7 @@ function initializeContactForms() {
         );
 
         // Track error (disabled)
-        console.log('Contact form error:', error.message);
+        console.log("Contact form error:", error.message);
       } finally {
         // Reset button
         submitBtn.textContent = originalText;
@@ -98,7 +98,7 @@ function initializeNewsletterForm() {
         const result = await subscribeNewsletter(emailInput.value);
 
         // Simulate newsletter subscription
-        console.log('Newsletter subscription:', emailInput.value);
+        console.log("Newsletter subscription:", emailInput.value);
         showSuccessMessage("Thank you for subscribing to our newsletter!");
         form.reset();
       } catch (error) {
@@ -107,7 +107,7 @@ function initializeNewsletterForm() {
           "Sorry, there was an error subscribing. Please try again."
         );
 
-        console.log('Newsletter error:', error.message);
+        console.log("Newsletter error:", error.message);
       } finally {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
@@ -187,7 +187,8 @@ function initializePackageBookings() {
 function showSuccessMessage(message) {
   const alertDiv = document.createElement("div");
   alertDiv.className =
-    "fixed top-4 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg z-50 max-w-md";
+    "fixed top-4 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-lg max-w-md";
+  alertDiv.style.zIndex = "10000";
   alertDiv.innerHTML = `
     <div class="flex items-center space-x-2">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -209,7 +210,8 @@ function showSuccessMessage(message) {
 function showErrorMessage(message) {
   const alertDiv = document.createElement("div");
   alertDiv.className =
-    "fixed top-4 right-4 bg-red-500 text-white px-6 py-4 rounded-lg shadow-lg z-50 max-w-md";
+    "fixed top-4 right-4 bg-red-500 text-white px-6 py-4 rounded-lg shadow-lg max-w-md";
+  alertDiv.style.zIndex = "10000";
   alertDiv.innerHTML = `
     <div class="flex items-center space-x-2">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

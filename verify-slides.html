@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Slides - Oasis Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 min-h-screen py-8">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="bg-white rounded-lg shadow-lg p-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">
+          🔍 Slide Verification Tool
+        </h1>
+
+        <div class="mb-6">
+          <p class="text-gray-600 mb-4">
+            This tool will check if Baku and Vietnam slides are present in your
+            index.html file.
+          </p>
+          <button
+            onclick="checkSlides()"
+            class="bg-[#000042] text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+          >
+            Check Slides in Index.html
+          </button>
+        </div>
+
+        <div id="results" class="hidden">
+          <h2 class="text-xl font-semibold mb-4">📋 Verification Results:</h2>
+          <div id="results-content" class="space-y-4"></div>
+        </div>
+
+        <div class="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
+          <h3 class="font-semibold text-blue-800 mb-3">
+            🔧 If Slides Not Visible:
+          </h3>
+          <div class="text-sm text-blue-700 space-y-2">
+            <div>
+              <strong>1. Clear Browser Cache:</strong> Ctrl+F5 or Ctrl+Shift+R
+            </div>
+            <div>
+              <strong>2. Hard Refresh:</strong> Ctrl+Shift+Delete → Clear cache
+            </div>
+            <div>
+              <strong>3. Check Browser Console:</strong> F12 → Console tab for
+              errors
+            </div>
+            <div>
+              <strong>4. Try Different Browser:</strong> Chrome, Firefox, Edge
+            </div>
+            <div>
+              <strong>5. Check File Path:</strong> Make sure you're opening the
+              right index.html
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 bg-green-50 border border-green-200 rounded-lg p-6">
+          <h3 class="font-semibold text-green-800 mb-3">
+            ✅ Expected Slide Order:
+          </h3>
+          <div class="text-sm text-green-700 space-y-1">
+            <div>1. 🇸🇬 Singapore</div>
+            <div>2. 🇦🇪 Dubai</div>
+            <div>3. 🇦🇿 <strong>Baku Azerbaijan</strong> (NEW - with video)</div>
+            <div>4. 🇻🇳 <strong>Vietnam</strong> (NEW - with video)</div>
+            <div>5. 🇲🇻 Maldives</div>
+            <div>6. 🇯🇵 Japan</div>
+            <div>7. 🇨🇭 Switzerland</div>
+            <div>8. 🇹🇭 Thailand</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      async function checkSlides() {
+        const resultsDiv = document.getElementById("results");
+        const contentDiv = document.getElementById("results-content");
+
+        try {
+          // Fetch index.html content
+          const response = await fetch("index.html");
+          const htmlContent = await response.text();
+
+          // Check for Baku slide
+          const bakuFound =
+            htmlContent.includes("Baku, Azerbaijan") &&
+            htmlContent.includes("video/baku.mp4");
+
+          // Check for Vietnam slide
+          const vietnamFound =
+            htmlContent.includes("Vietnam Card") &&
+            htmlContent.includes("video/vietnam.mp4");
+
+          // Check slide order
+          const bakuIndex = htmlContent.indexOf("Baku Azerbaijan Card");
+          const vietnamIndex = htmlContent.indexOf("Vietnam Card");
+          const dubaiIndex = htmlContent.indexOf("Discover Dubai");
+          const maldivesIndex = htmlContent.indexOf("Maldives Card");
+
+          const orderCorrect =
+            dubaiIndex < bakuIndex &&
+            bakuIndex < vietnamIndex &&
+            vietnamIndex < maldivesIndex;
+
+          // Display results
+          contentDiv.innerHTML = `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="font-semibold mb-2">🔍 Slide Detection:</h4>
+                            <div class="space-y-2 text-sm">
+                                <div class="${bakuFound ? "text-green-600" : "text-red-600"}">
+                                    ${bakuFound ? "✅" : "❌"} Baku Azerbaijan Slide
+                                </div>
+                                <div class="${vietnamFound ? "text-green-600" : "text-red-600"}">
+                                    ${vietnamFound ? "✅" : "❌"} Vietnam Slide
+                                </div>
+                                <div class="${orderCorrect ? "text-green-600" : "text-red-600"}">
+                                    ${orderCorrect ? "✅" : "❌"} Correct Order
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="font-semibold mb-2">📊 Technical Details:</h4>
+                            <div class="space-y-2 text-sm">
+                                <div>File Size: ${(htmlContent.length / 1024).toFixed(1)} KB</div>
+                                <div>Total Slides: ${(htmlContent.match(/swiper-slide/g) || []).length}</div>
+                                <div>Video Tags: ${(htmlContent.match(/<video/g) || []).length}</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    ${
+                      bakuFound && vietnamFound
+                        ? `
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
+                            <h4 class="font-semibold text-green-800 mb-2">🎉 Success!</h4>
+                            <p class="text-green-700 text-sm">Both Baku and Vietnam slides are present in your index.html file. If you're not seeing them, try clearing your browser cache (Ctrl+F5).</p>
+                        </div>
+                    `
+                        : `
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-4 mt-4">
+                            <h4 class="font-semibold text-red-800 mb-2">❌ Issue Detected</h4>
+                            <p class="text-red-700 text-sm">Some slides are missing. Please check if you're opening the correct index.html file or if there were any file saving issues.</p>
+                        </div>
+                    `
+                    }
+                `;
+
+          resultsDiv.classList.remove("hidden");
+        } catch (error) {
+          contentDiv.innerHTML = `
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <h4 class="font-semibold text-red-800 mb-2">❌ Error</h4>
+                        <p class="text-red-700 text-sm">Could not fetch index.html: ${error.message}</p>
+                        <p class="text-red-700 text-sm mt-2">Make sure this verification file is in the same directory as index.html</p>
+                    </div>
+                `;
+          resultsDiv.classList.remove("hidden");
+        }
+      }
+
+      // Auto-check on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        setTimeout(checkSlides, 1000);
+      });
+    </script>
+  </body>
+</html>

@@ -3,7 +3,7 @@
 
 class ContactFormHandler {
   constructor() {
-    this.apiBaseUrl = "http://localhost:3000/api/contact";
+    this.apiBaseUrl = "http://localhost:3001/api/contact";
     this.initializeContactForm();
   }
 
@@ -135,7 +135,8 @@ class ContactFormHandler {
         loader = document.createElement("div");
         loader.id = "contact-loader";
         loader.className =
-          "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50";
+          "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center";
+        loader.style.zIndex = "10000";
         loader.innerHTML = `
           <div class="bg-white rounded-lg p-8 max-w-sm mx-4 text-center">
             <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#000042] mx-auto mb-4"></div>
@@ -156,7 +157,8 @@ class ContactFormHandler {
   showContactSuccessModal(contactData) {
     const modal = document.createElement("div");
     modal.className =
-      "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50";
+      "fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center";
+    modal.style.zIndex = "10000";
     modal.innerHTML = `
       <div class="bg-white rounded-2xl p-8 max-w-md mx-4 text-center">
         <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -197,7 +199,8 @@ class ContactFormHandler {
     };
 
     const alert = document.createElement("div");
-    alert.className = `fixed top-4 right-4 ${colors[type]} border rounded-lg p-4 max-w-sm z-50 shadow-lg`;
+    alert.className = `fixed top-4 right-4 ${colors[type]} border rounded-lg p-4 max-w-sm shadow-lg`;
+    alert.style.zIndex = "10000";
     alert.innerHTML = `
       <div class="flex items-center">
         <span class="flex-1">${message}</span>

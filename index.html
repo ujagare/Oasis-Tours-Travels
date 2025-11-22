@@ -2776,6 +2776,52 @@
                         </div>
                     </div>
                     
+                    <!-- Baku Azerbaijan Slide -->
+                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='baku-package.html?package=baku'" style="cursor: pointer;">
+                        <!-- Fallback background image -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-orange-900 via-red-900 to-yellow-900"></div>
+                        <video autoplay muted loop preload="metadata" class="absolute inset-0 w-full h-full object-cover z-5">
+                            <source src="video/baku.mov" type="video/mp4">
+                        </video>
+                        <!-- Dark overlay for better text readability -->
+                        <div class="absolute inset-0 bg-black/30 z-10"></div>
+                        
+                        <!-- Hero Content -->
+                        <div class="relative z-20 flex items-center justify-start h-full text-left text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+                            <div class="slide-text w-full max-w-4xl">
+                                <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Baku, Azerbaijan</h1>
+                                <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Land of Fire - Where ancient heritage meets modern marvels</p>
+                                <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Discover the mesmerizing Flame Towers illuminating the Caspian Sea skyline. Explore UNESCO World Heritage sites in the Old City, witness eternal flames at Yanar Dag, and experience the rich Zoroastrian culture in this captivating Caucasus gem.</p>
+                                <a href="baku-package.html?package=baku" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                    Explore Baku
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Vietnam Slide -->
+                    <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='baku-package.html?package=vietnam'" style="cursor: pointer;">
+                        <!-- Fallback background image -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-green-900 via-emerald-900 to-teal-900"></div>
+                        <video autoplay muted loop preload="metadata" class="absolute inset-0 w-full h-full object-cover z-5">
+                            <source src="video/vietnam.mov" type="video/mp4">
+                        </video>
+                        <!-- Dark overlay for better text readability -->
+                        <div class="absolute inset-0 bg-black/30 z-10"></div>
+                        
+                        <!-- Hero Content -->
+                        <div class="relative z-20 flex items-center justify-start h-full text-left text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+                            <div class="slide-text w-full max-w-4xl">
+                                <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Vietnam</h1>
+                                <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Land of Dragons - A thousand years of captivating history</p>
+                                <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Journey from bustling Hanoi to vibrant Ho Chi Minh City. Cruise through mystical Ha Long Bay, wander ancient Hoi An's lantern-lit streets, explore dramatic Marble Mountains, and experience authentic Vietnamese culture in the floating markets of Mekong Delta.</p>
+                                <a href="baku-package.html?package=vietnam" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                    Discover Vietnam
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <!-- Japan Slide -->
                     <div class="swiper-slide relative overflow-hidden" onclick="window.location.href='DestinationDetails.html?destination=Japan'" style="cursor: pointer;">
                         <!-- Fallback background image -->
@@ -2889,6 +2935,24 @@
                 
                 <!-- Pagination -->
                 <div class="swiper-pagination"></div>
+                
+                <!-- Slide Controls -->
+                <div class="absolute top-4 right-4 z-30 flex items-center space-x-3">
+                    <!-- Play/Pause Button -->
+                    <button id="heroPlayPause" class="bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-300" title="Play/Pause Slideshow">
+                        <svg id="playIcon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <svg id="pauseIcon" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                        </svg>
+                    </button>
+                    
+                    <!-- Slide Counter -->
+                    <div class="bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
+                        <span id="currentSlide">1</span> / <span id="totalSlides">7</span>
+                    </div>
+                </div>
             </div>
             
             <!-- Travel Booking Form -->
@@ -3703,6 +3767,94 @@
                                     </div>
                                     <button onclick="window.location.href='DestinationDetails.html?destination=Dubai'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
                                         Discover Dubai
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Baku Azerbaijan Card -->
+                        <div class="swiper-slide flex">
+                            <div class="group relative max-w-sm mx-auto bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden h-full w-full">
+                                <!-- Video Section -->
+                                <div class="relative h-48 overflow-hidden p-3">
+                                    <!-- Category Badge -->
+                                    <div class="absolute top-4 left-4 z-10">
+                                        <span class="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-700">
+                                            Featured Destination
+                                        </span>
+                                    </div>
+                                    <!-- Destination Video -->
+                                    <video 
+                                        class="w-full h-full object-cover rounded-lg" 
+                                        autoplay 
+                                        muted 
+                                        loop 
+                                        playsinline
+                                        poster="https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/07/24185058/baku-city-1.jpeg?tr=w-1200,q-60"
+                                    >
+                                        <source src="video/baku.mp4" type="video/mp4">
+                                        <source src="video/baku.webm" type="video/webm">
+                                        <!-- Fallback image if video doesn't load -->
+                                        <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/07/24185058/baku-city-1.jpeg?tr=w-1200,q-60" alt="Baku Azerbaijan - Land of Fire" class="w-full h-full object-cover rounded-lg">
+                                    </video>
+                                </div>
+                                
+                                <!-- Content Section -->
+                                <div class="p-6 flex flex-col justify-between h-full min-h-[320px]">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                            Baku, Azerbaijan
+                                        </h3>
+                                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                            Discover the Land of Fire where ancient Zoroastrian heritage meets futuristic architecture. Experience the mesmerizing Flame Towers, explore Old City's UNESCO sites, and witness the eternal flames of Yanar Dag. Baku offers a unique blend of Caspian Sea beauty, rich oil history, and vibrant cultural traditions.
+                                        </p>
+                                    </div>
+                                    <button onclick="window.location.href='baku-package.html?package=baku'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
+                                        Explore Baku
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Vietnam Card -->
+                        <div class="swiper-slide flex">
+                            <div class="group relative max-w-sm mx-auto bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden h-full w-full">
+                                <!-- Video Section -->
+                                <div class="relative h-48 overflow-hidden p-3">
+                                    <!-- Category Badge -->
+                                    <div class="absolute top-4 left-4 z-10">
+                                        <span class="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-gray-700">
+                                            Adventure Destination
+                                        </span>
+                                    </div>
+                                    <!-- Destination Video -->
+                                    <video 
+                                        class="w-full h-full object-cover rounded-lg" 
+                                        autoplay 
+                                        muted 
+                                        loop 
+                                        playsinline
+                                        poster="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=400&h=250&fit=crop"
+                                    >
+                                        <source src="video/vietnam.mp4" type="video/mp4">
+                                        <source src="video/vietnam.webm" type="video/webm">
+                                        <!-- Fallback image if video doesn't load -->
+                                        <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=400&h=250&fit=crop" alt="Vietnam - Land of Dragons" class="w-full h-full object-cover rounded-lg">
+                                    </video>
+                                </div>
+                                
+                                <!-- Content Section -->
+                                <div class="p-6 flex flex-col justify-between h-full min-h-[320px]">
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-900 mb-3 leading-tight">
+                                            Vietnam
+                                        </h3>
+                                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                            Journey through Vietnam's thousand-year history from bustling Hanoi to vibrant Ho Chi Minh City. Experience the mystical Ha Long Bay, ancient Hoi An's lantern-lit streets, the dramatic Marble Mountains, and the floating markets of Mekong Delta. Discover authentic Vietnamese cuisine, traditional water puppet shows, and the warmth of local hospitality.
+                                        </p>
+                                    </div>
+                                    <button onclick="window.location.href='baku-package.html?package=vietnam'" class="bg-[#000042] text-white font-medium text-sm px-6 py-3 rounded-lg hover:bg-[#000052] transition-all duration-300 transform hover:scale-105 w-full mt-4" style="background-color: #000042 !important; color: white !important; display: block !important; visibility: visible !important; opacity: 1 !important; z-index: 999 !important; position: relative !important; border: none !important; outline: none !important;">
+                                        Discover Vietnam
                                     </button>
                                 </div>
                             </div>
@@ -5041,8 +5193,9 @@
                 // Basic settings
                 loop: true,
                 autoplay: {
-                    delay: 2000,
+                    delay: 5000, // 5 seconds - better for reading content
                     disableOnInteraction: false,
+                    pauseOnMouseEnter: true, // Pause when user hovers
                 },
                 
                 // Navigation
@@ -5059,7 +5212,12 @@
                 
                 // Effects
                 effect: 'slide', // Changed from fade to slide for better compatibility
-                speed: 500,
+                speed: 800, // Smooth transition speed
+                
+                // Touch settings for better mobile experience
+                touchRatio: 1,
+                touchAngle: 45,
+                grabCursor: true,
                 
                 // Events
                 on: {

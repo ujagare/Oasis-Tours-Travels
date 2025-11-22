@@ -9,8 +9,8 @@ require("dotenv").config();
 
 // Initialize Razorpay
 const razorpay = new Razorpay({
-  key_id: process.env.RAZORPAY_KEY_ID || "rzp_test_your_key_id",
-  key_secret: process.env.RAZORPAY_KEY_SECRET || "your_key_secret",
+  key_id: process.env.RAZORPAY_KEY_ID || "rzp_test_9WdJmqcwy6BNZX",
+  key_secret: process.env.RAZORPAY_KEY_SECRET || "test_key_secret_placeholder",
 });
 
 // Create payment order
@@ -49,7 +49,7 @@ router.post("/create-order", async (req, res) => {
         currency: order.currency,
         receipt: order.receipt,
       },
-      key_id: process.env.RAZORPAY_KEY_ID || "rzp_test_your_key_id",
+      key_id: process.env.RAZORPAY_KEY_ID || "rzp_test_9WdJmqcwy6BNZX",
     });
   } catch (error) {
     console.error("Payment order creation error:", error);
