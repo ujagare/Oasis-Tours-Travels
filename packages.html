@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    
+
     <!-- ImageKit.io Configuration -->
     <script src="imagekit-config.js"></script>
 
@@ -34,7 +34,7 @@
         background: #000042;
         color: white;
       }
-      .price-badge {
+      .premium-badge {
         background: linear-gradient(135deg, #000042, #1e40af);
       }
 
@@ -433,9 +433,18 @@
 
     <!-- Hero Section -->
     <section
-      class="bg-gradient-to-r from-[#000042] to-blue-600 text-white pt-32 pb-20"
+      class="relative bg-gradient-to-r from-[#000042] to-blue-600 text-white pt-32 pb-20"
+      style="
+        background-image: url(&quot;Images/background.jpeg&quot;);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      "
     >
-      <div class="max-w-7xl mx-auto px-4 text-center">
+      <!-- Dark overlay for better text readability -->
+      <div class="absolute inset-0 bg-black/50"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
         <h1 class="text-5xl md:text-6xl font-bold mb-6">Tour Packages</h1>
         <p class="text-xl max-w-3xl mx-auto leading-relaxed">
           Discover our carefully curated tour packages designed to give you the
@@ -495,22 +504,18 @@
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           id="packagesGrid"
         >
-          <!-- Dubai Luxury Package -->
+          <!-- Baku Package -->
           <div
             class="package-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
             data-category="luxury"
           >
             <div class="relative">
               <img
-                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=250&fit=crop"
-                alt="Dubai Luxury"
+                src="https://images.travelandleisureasia.com/wp-content/uploads/sites/3/2024/07/24185058/baku-city-1.jpeg?tr=w-1200,q-60"
+                alt="Baku Azerbaijan"
                 class="w-full h-64 object-cover"
               />
-              <div
-                class="absolute top-4 left-4 price-badge text-white px-4 py-2 rounded-full"
-              >
-                <span class="text-sm font-semibold">From ₹2,99,999</span>
-              </div>
+
               <div
                 class="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold"
               >
@@ -519,12 +524,65 @@
             </div>
             <div class="p-6">
               <h3 class="text-2xl font-bold text-gray-900 mb-2">
-                Dubai Luxury Experience
+                Baku Azerbaijan Experience
               </h3>
-              <p class="text-gray-600 mb-4">7 Days / 6 Nights</p>
+              <p class="text-gray-600 mb-4">6 Days / 5 Nights</p>
               <p class="text-gray-700 mb-4">
-                Experience the ultimate luxury in Dubai with 5-star hotels,
-                private tours, and exclusive experiences.
+                Discover the Land of Fire with modern architecture, ancient
+                history, and Caspian Sea views. Experience Baku's unique blend
+                of East and West.
+              </p>
+
+              <div class="flex items-center justify-between mb-4">
+                <div class="flex items-center text-yellow-500">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <span class="text-gray-600 ml-2">(4.8)</span>
+                </div>
+                <span class="text-green-600 font-semibold">Available</span>
+              </div>
+
+              <div class="flex items-center justify-end">
+                <button
+                  class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
+                  onclick="window.location.href='baku-package.html?package=baku'"
+                >
+                  Book Now
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vietnam Package -->
+          <div
+            class="package-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            data-category="adventure"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=400&h=250&fit=crop"
+                alt="Vietnam Adventure"
+                class="w-full h-64 object-cover"
+              />
+
+              <div
+                class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold"
+              >
+                Adventure
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                Vietnam Adventure
+              </h3>
+              <p class="text-gray-600 mb-4">7 Nights / 8 Days</p>
+              <p class="text-gray-700 mb-4">
+                Ha Noi – Water puppet show – Ha Long Bay – Da Nang – Marble
+                Mountain – Bana Hills – Hoi An old town – Lantern Boat – Ho Chi
+                Minh – Mekong Delta. Experience Vietnam's 1000 years history.
               </p>
 
               <div class="flex items-center justify-between mb-4">
@@ -539,11 +597,10 @@
                 <span class="text-green-600 font-semibold">Available</span>
               </div>
 
-              <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-[#000042]">₹2,99,999</div>
+              <div class="flex items-center justify-end">
                 <button
                   class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                  onclick="window.location.href='contact.html'"
+                  onclick="window.location.href='baku-package.html?package=vietnam'"
                 >
                   Book Now
                 </button>
@@ -551,31 +608,33 @@
             </div>
           </div>
 
-          <!-- Japan Cultural Package -->
+          <!-- Dubai Package -->
           <div
             class="package-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-            data-category="family"
+            data-category="luxury"
           >
             <div class="relative">
               <img
-                src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&h=250&fit=crop"
-                alt="Japan Cultural"
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=250&fit=crop"
+                alt="Dubai Luxury"
                 class="w-full h-64 object-cover"
               />
               <div
-                class="absolute top-4 left-4 price-badge text-white px-4 py-2 rounded-full"
+                class="absolute top-4 right-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-sm font-bold"
               >
-                <span class="text-sm font-semibold">From ₹2,49,999</span>
+                Luxury
               </div>
             </div>
             <div class="p-6">
               <h3 class="text-2xl font-bold text-gray-900 mb-2">
-                Japan Cultural Journey
+                Dubai Luxury
               </h3>
-              <p class="text-gray-600 mb-4">10 Days / 9 Nights</p>
+              <p class="text-gray-600 mb-4">5 Nights / 6 Days</p>
               <p class="text-gray-700 mb-4">
-                Immerse yourself in Japanese culture with temple visits,
-                traditional experiences, and modern city tours.
+                Experience the glamour of Dubai with luxury shopping,
+                world-class dining, stunning architecture, and desert
+                adventures. Discover modern luxury and traditional Arabian
+                culture.
               </p>
 
               <div class="flex items-center justify-between mb-4">
@@ -585,235 +644,15 @@
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
                   <i class="fas fa-star"></i>
-                  <span class="text-gray-600 ml-2">(4.8)</span>
+                  <span class="text-gray-600 ml-2">(4.9)</span>
                 </div>
                 <span class="text-green-600 font-semibold">Available</span>
               </div>
 
-              <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-[#000042]">₹2,49,999</div>
+              <div class="flex items-center justify-end">
                 <button
                   class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                  onclick="window.location.href='contact.html'"
-                >
-                  Book Now
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Maldives Honeymoon Package -->
-          <div
-            class="package-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-            data-category="honeymoon"
-          >
-            <div class="relative">
-              <img
-                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=250&fit=crop"
-                alt="Maldives Honeymoon"
-                class="w-full h-64 object-cover"
-              />
-              <div
-                class="absolute top-4 left-4 price-badge text-white px-4 py-2 rounded-full"
-              >
-                <span class="text-sm font-semibold">From ₹3,99,999</span>
-              </div>
-              <div
-                class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-bold"
-              >
-                Romantic
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">
-                Maldives Honeymoon Paradise
-              </h3>
-              <p class="text-gray-600 mb-4">5 Days / 4 Nights</p>
-              <p class="text-gray-700 mb-4">
-                Perfect romantic getaway with overwater villas, private dining,
-                and couples spa treatments.
-              </p>
-
-              <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center text-yellow-500">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span class="text-gray-600 ml-2">(5.0)</span>
-                </div>
-                <span class="text-green-600 font-semibold">Available</span>
-              </div>
-
-              <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-[#000042]">₹3,99,999</div>
-                <button
-                  class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                  onclick="window.location.href='contact.html'"
-                >
-                  Book Now
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Nepal Adventure Package -->
-          <div
-            class="package-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-            data-category="adventure"
-          >
-            <div class="relative">
-              <img
-                src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=250&fit=crop"
-                alt="Nepal Adventure"
-                class="w-full h-64 object-cover"
-              />
-              <div
-                class="absolute top-4 left-4 price-badge text-white px-4 py-2 rounded-full"
-              >
-                <span class="text-sm font-semibold">From ₹1,89,999</span>
-              </div>
-              <div
-                class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold"
-              >
-                Adventure
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">
-                Nepal Himalayan Adventure
-              </h3>
-              <p class="text-gray-600 mb-4">12 Days / 11 Nights</p>
-              <p class="text-gray-700 mb-4">
-                Trek through the Himalayas, visit ancient temples, and
-                experience the thrill of mountain adventures.
-              </p>
-
-              <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center text-yellow-500">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span class="text-gray-600 ml-2">(4.7)</span>
-                </div>
-                <span class="text-green-600 font-semibold">Available</span>
-              </div>
-
-              <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-[#000042]">₹1,89,999</div>
-                <button
-                  class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                  onclick="window.location.href='contact.html'"
-                >
-                  Book Now
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Thailand Budget Package -->
-          <div
-            class="package-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-            data-category="budget"
-          >
-            <div class="relative">
-              <img
-                src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=400&h=250&fit=crop"
-                alt="Thailand Budget"
-                class="w-full h-64 object-cover"
-              />
-              <div
-                class="absolute top-4 left-4 price-badge text-white px-4 py-2 rounded-full"
-              >
-                <span class="text-sm font-semibold">From ₹89,999</span>
-              </div>
-              <div
-                class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold"
-              >
-                Budget
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">
-                Thailand Budget Explorer
-              </h3>
-              <p class="text-gray-600 mb-4">6 Days / 5 Nights</p>
-              <p class="text-gray-700 mb-4">
-                Affordable Thailand experience with temples, beaches, and local
-                culture without breaking the bank.
-              </p>
-
-              <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center text-yellow-500">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="far fa-star"></i>
-                  <span class="text-gray-600 ml-2">(4.5)</span>
-                </div>
-                <span class="text-green-600 font-semibold">Available</span>
-              </div>
-
-              <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-[#000042]">₹89,999</div>
-                <button
-                  class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                  onclick="window.location.href='contact.html'"
-                >
-                  Book Now
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Europe Family Package -->
-          <div
-            class="package-card bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-            data-category="family"
-          >
-            <div class="relative">
-              <img
-                src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=400&h=250&fit=crop"
-                alt="Europe Family"
-                class="w-full h-64 object-cover"
-              />
-              <div
-                class="absolute top-4 left-4 price-badge text-white px-4 py-2 rounded-full"
-              >
-                <span class="text-sm font-semibold">From ₹3,49,999</span>
-              </div>
-            </div>
-            <div class="p-6">
-              <h3 class="text-2xl font-bold text-gray-900 mb-2">
-                Europe Family Adventure
-              </h3>
-              <p class="text-gray-600 mb-4">14 Days / 13 Nights</p>
-              <p class="text-gray-700 mb-4">
-                Perfect family vacation covering Paris, Rome, and Barcelona with
-                kid-friendly activities.
-              </p>
-
-              <div class="flex items-center justify-between mb-4">
-                <div class="flex items-center text-yellow-500">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <span class="text-gray-600 ml-2">(4.8)</span>
-                </div>
-                <span class="text-green-600 font-semibold">Available</span>
-              </div>
-
-              <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-[#000042]">₹3,49,999</div>
-                <button
-                  class="bg-[#000042] text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-                  onclick="window.location.href='contact.html'"
+                  onclick="window.location.href='baku-package.html?package=dubai'"
                 >
                   Book Now
                 </button>
@@ -823,6 +662,7 @@
         </div>
       </div>
     </section>
+    ""
 
     <!-- Footer -->
     <footer class="bg-[#000042] py-16 relative overflow-hidden">
@@ -1302,7 +1142,7 @@
         }
       });
     </script>
-    
+
     <!-- Lazy Loading Script -->
     <script src="lazy-loading.js"></script>
   </body>

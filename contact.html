@@ -403,11 +403,23 @@
     </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="bg-cover bg-center h-[60vh] flex items-center justify-center text-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://demo.goodlayers.com/traveltour/homepages/main5/wp-content/uploads/sites/6/2016/06/geran-de-klerk-WJkc3xZjSXw-unsplash.jpg');">
-        <div class="max-w-2xl px-4">
+    <!-- Enhanced Hero Section -->
+    <section class="relative bg-cover bg-center h-[60vh] flex items-center justify-center text-center text-white overflow-hidden" style="background: linear-gradient(135deg, #000042 0%, #1a1a3a 50%, #2d1b69 100%);">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div style="background-image: radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 0%, transparent 50%);"></div>
+        </div>
+        
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0">
+            <div class="absolute top-10 left-10 w-20 h-20 bg-white/5 rounded-full animate-pulse"></div>
+            <div class="absolute top-32 right-20 w-16 h-16 bg-white/5 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-white/5 rounded-full animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="max-w-2xl px-4 relative z-10">
             <h1 class="text-6xl font-normal mb-5 leading-tight">
-                Contact Us</span>
+                Contact Us
             </h1>
             <p class="text-xl max-w-xl mx-auto leading-relaxed">
                 Get in touch with our travel experts to plan your perfect adventure
@@ -466,7 +478,7 @@
             <!-- Contact Form -->
             <div class="bg-white py-12 px-10 rounded-3xl max-w-4xl mx-auto border-4" style="border-color: #000042; box-shadow: 0 20px 35px rgba(20, 20, 20, 0.08);">
                 <h4 class="text-3xl font-normal text-gray-800 mb-8">Send Us a Message</h4>
-                <form class="space-y-6" id="contactForm" novalidate>
+                <form class="space-y-6" id="contact-form" novalidate>
                     <!-- Full Name -->
                     <div>
                         <label for="fullName" class="block text-base font-medium text-gray-800 mb-2">
@@ -475,7 +487,7 @@
                         <input 
                             type="text" 
                             id="fullName" 
-                            name="fullName" 
+                            name="name" 
                             required
                             placeholder="Enter your full name"
                             class="w-full px-5 py-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 focus:outline-none focus:bg-white transition-all duration-300 hover:border-gray-300"
@@ -510,7 +522,6 @@
                             type="tel" 
                             id="phone" 
                             name="phone"
-                            required
                             placeholder="Enter your contact number"
                             class="w-full px-5 py-4 border-2 border-gray-200 rounded-xl text-base bg-gray-50 focus:outline-none focus:bg-white transition-all duration-300 hover:border-gray-300"
                             onfocus="this.style.borderColor='#000042'"
@@ -1135,10 +1146,13 @@
         }
     </script>
 
+    <!-- Contact Form Integration -->
+    <script src="contact-integration.js"></script>
+
     <!-- Contact Form Validation -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('contactForm');
+            const form = document.getElementById('contact-form');
             const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
             
             // Add error message containers

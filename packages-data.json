@@ -1,0 +1,429 @@
+{
+  "packages": {
+    "baku": {
+      "title": "Baku Azerbaijan",
+      "duration": "4 Nights / 5 Days",
+      "description": "Discover the Land of Fire with modern architecture, ancient history, and Caspian Sea views. Experience Baku's unique blend of East and West.",
+      "hero": {
+        "title": "Baku Azerbaijan",
+        "subtitle": "4 Nights / 5 Days",
+        "description": "Discover the Land of Fire with modern architecture, ancient history, and Caspian Sea views. Experience Baku's unique blend of East and West.",
+        "backgroundImage": "https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcQfs2P4b8s_zJLpHSW4hY9GFR57ScF76bic8v5g3vZTDuvP-O90bBvXON9j9En_hVPU-xAq2drwcTSd41FKEJkEJUE&s=19"
+      },
+      "overview": {
+        "duration": "4 Nights / 5 Days",
+        "destinations": "Baku & Gabala",
+        "groupSize": "2-15 People",
+        "rating": "4.8/5 Stars"
+      },
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrive in Baku",
+          "activities": [
+            "Pick up from Baku airport",
+            "Transfer to hotel & check-in",
+            "Panoramic City Tour"
+          ],
+          "image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 2,
+          "title": "Baku Modern and Old City Tours",
+          "includes": "Breakfast",
+          "activities": [
+            "Old City Baku (Icherisheher)",
+            "Shirvanshah Palace",
+            "Miniature Book Museum",
+            "Highland Park, Alley of Martyrs"
+          ],
+          "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 3,
+          "title": "Gabala Day Tour",
+          "includes": "Breakfast",
+          "activities": [
+            "Tufandag Cable Car (World's longest)",
+            "Nohurgol Lake",
+            "Yeddi Gozel Waterfall (Seven Beauties)",
+            "Gabaland Entertainment Centre"
+          ],
+          "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 4,
+          "title": "Absheron Tours & Evening Free",
+          "includes": "Breakfast",
+          "activities": [
+            "Fire Temple - Ateshgah",
+            "Burning Mountain - Yanar Dag",
+            "Evening Free Time"
+          ],
+          "image": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 5,
+          "title": "Shopping Tours & Departure",
+          "activities": [
+            "Yashil Bazar (Green Bazaar)",
+            "Ganjlik Mall",
+            "Nizami Street",
+            "Transfer to Airport"
+          ],
+          "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=500&h=300&fit=crop"
+        }
+      ],
+      "inclusions": [
+        {
+          "icon": "fas fa-bed",
+          "title": "Accommodation",
+          "description": "4 Nights accommodation in Baku on Bed & Breakfast basis"
+        },
+        {
+          "icon": "fas fa-car",
+          "title": "Transportation",
+          "description": "All transfers including airport transfers in Mercedes Vito"
+        },
+        {
+          "icon": "fas fa-user-tie",
+          "title": "Guide",
+          "description": "English speaking Driver cum Guide"
+        },
+        {
+          "icon": "fas fa-ticket-alt",
+          "title": "Entrance Fees",
+          "description": "Fire Temple, Fire Mountain & Cable Car in Gabala (2 lines)"
+        },
+        {
+          "icon": "fas fa-tint",
+          "title": "Water",
+          "description": "2 bottles of 500ml water per person per day"
+        },
+        {
+          "icon": "fas fa-passport",
+          "title": "Visa",
+          "description": "Standard E-visa assistance"
+        }
+      ]
+    },
+    "vietnam": {
+      "title": "Vietnam Adventure",
+      "duration": "7 Nights / 8 Days",
+      "description": "Ha Noi – Water puppet show – Ha Long Bay (day cruise) – Da Nang – Marble Mountain – Bana Hills – Hoi An old town – Lantern Boat – Ho Chi Minh – Mekong Delta. Experience Vietnam's 1000 years history and great natural wonders.",
+      "hero": {
+        "title": "Vietnam Adventure",
+        "subtitle": "7 Nights / 8 Days",
+        "description": "Ha Noi – Water puppet show – Ha Long Bay (day cruise) – Da Nang – Marble Mountain – Bana Hills – Hoi An old town – Lantern Boat – Ho Chi Minh – Mekong Delta. Experience Vietnam's 1000 years history and great natural wonders.",
+        "backgroundImage": "https://images.unsplash.com/photo-1528127269322-539801943592?w=1920&h=1080&fit=crop&q=80"
+      },
+      "overview": {
+        "duration": "7 Nights / 8 Days",
+        "destinations": "Hanoi, Ha Long Bay, Da Nang, Hoi An & Ho Chi Minh City",
+        "groupSize": "2-20 People",
+        "rating": "4.9/5 Stars"
+      },
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Hanoi Arrival – Half Day City Tour",
+          "includes": "Dinner",
+          "activities": [
+            "Pick up from Noi Bai International Airport",
+            "Transfer to hotel & check-in",
+            "Evening visit to Hanoi's charming Old Quarter",
+            "Try Vietnamese local food (pho, banh mi)",
+            "Welcome dinner"
+          ],
+          "image": "https://images.unsplash.com/photo-1509023464722-18d996393ca8?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 2,
+          "title": "Hanoi – Ha Long Bay Day Cruise – Hanoi",
+          "includes": "Breakfast & Lunch",
+          "activities": [
+            "Luxury Symphony Day Cruise with 2 Jacuzzi Pool",
+            "6 hours cruising through stone islets",
+            "Visit floating villages and small beaches",
+            "Lunch on board with Vietnamese seafood",
+            "Return to Hanoi by evening"
+          ],
+          "image": "https://images.unsplash.com/photo-1528127269322-539801943592?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 3,
+          "title": "Hanoi Full Day City Tour – Water Puppet Show",
+          "includes": "Breakfast",
+          "activities": [
+            "Ba Dinh Square & Ho Chi Minh Mausoleum",
+            "Ho Chi Minh's house on stilts & Museum",
+            "One-Pillar Pagoda & Temple of Literature",
+            "Hoan Kiem Lake with Ngoc Son Temple",
+            "Water Puppet Show in evening"
+          ],
+          "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 4,
+          "title": "Hanoi Departure – Da Nang Arrival – Marble Mountain",
+          "includes": "Breakfast",
+          "activities": [
+            "Morning flight to Da Nang city",
+            "Visit Marble Mountain (elevator included)",
+            "Explore Buddhist sanctuaries in mountains",
+            "Free time at My Khe Beach",
+            "Evening stroll at Dragon Bridge with fire show"
+          ],
+          "image": "https://images.unsplash.com/photo-1583417319070-4a69db38a482?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 5,
+          "title": "Full Day Bana Hills – Hoi An Old Town – Lantern Boat",
+          "includes": "Breakfast",
+          "activities": [
+            "Cable car to Ba Na Hills (world record holder)",
+            "Visit Linh Ung Pagoda & French Village",
+            "Golden Bridge & Flower Garden",
+            "Fantasy Park activities",
+            "Hoi An old town walking tour",
+            "Lantern boat along Thu Bon river"
+          ],
+          "image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 6,
+          "title": "Da Nang Departure – Ho Chi Minh Arrival – Half Day City",
+          "includes": "Breakfast",
+          "activities": [
+            "Morning flight to Ho Chi Minh City",
+            "Visit Notre Dame Cathedral",
+            "Central Post Office tour",
+            "Shopping at Ben Thanh Market",
+            "Explore rooftop bars with city views"
+          ],
+          "image": "https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 7,
+          "title": "Ho Chi Minh – Mekong Delta – Ho Chi Minh",
+          "includes": "Breakfast",
+          "activities": [
+            "Visit My Tho, capital of Tien Giang Province",
+            "Boat trip on Mekong River",
+            "Visit islands with traditional handcrafts",
+            "Coconut candy and bee farms tour",
+            "Vinh Trang Pagoda visit"
+          ],
+          "image": "https://images.unsplash.com/photo-1528127269322-539801943592?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 8,
+          "title": "Free Day – Ho Chi Minh Departure",
+          "includes": "Breakfast",
+          "activities": [
+            "Free time for last minute shopping",
+            "Hotel check-out before 12:00 noon",
+            "Transfer to Tan Son Nhat Airport",
+            "Departure assistance"
+          ],
+          "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=500&h=300&fit=crop"
+        }
+      ],
+      "inclusions": [
+        {
+          "icon": "fas fa-passport",
+          "title": "Vietnam Visa",
+          "description": "Vietnam E-visa assistance included"
+        },
+        {
+          "icon": "fas fa-car",
+          "title": "Transportation",
+          "description": "Private air-conditioned vehicles with dedicated driver"
+        },
+        {
+          "icon": "fas fa-bed",
+          "title": "Accommodation",
+          "description": "7 nights in 4-star hotels with breakfast included"
+        },
+        {
+          "icon": "fas fa-utensils",
+          "title": "Meals",
+          "description": "Daily breakfast + 1 dinner with Vietnamese local food"
+        },
+        {
+          "icon": "fas fa-user-tie",
+          "title": "Expert Guide",
+          "description": "Local English speaking guide for touring days"
+        },
+        {
+          "icon": "fas fa-ticket-alt",
+          "title": "Entrance Fees",
+          "description": "All indicated sights and Water Puppet Show ticket"
+        },
+        {
+          "icon": "fas fa-ship",
+          "title": "Ha Long Bay Cruise",
+          "description": "6 hours cruising with buffet lunch and kayaking"
+        },
+        {
+          "icon": "fas fa-cable-car",
+          "title": "Ba Na Hills Cable Car",
+          "description": "World record cable car with Golden Bridge access"
+        },
+        {
+          "icon": "fas fa-water",
+          "title": "Lantern Boat",
+          "description": "Traditional lantern boat in Thu Bon river"
+        },
+        {
+          "icon": "fas fa-tint",
+          "title": "Drinking Water",
+          "description": "2 bottles per person per day included"
+        },
+        {
+          "icon": "fas fa-shield-alt",
+          "title": "Travel Insurance",
+          "description": "Comprehensive travel insurance coverage"
+        }
+      ]
+    },
+    "dubai": {
+      "title": "Dubai Luxury",
+      "duration": "5 Nights / 6 Days",
+      "description": "Experience the glamour of Dubai with luxury shopping, world-class dining, stunning architecture, and desert adventures. Discover the perfect blend of modern luxury and traditional Arabian culture.",
+      "hero": {
+        "title": "Dubai Luxury",
+        "subtitle": "5 Nights / 6 Days",
+        "description": "Experience the glamour of Dubai with luxury shopping, world-class dining, stunning architecture, and desert adventures. Discover the perfect blend of modern luxury and traditional Arabian culture.",
+        "backgroundImage": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&h=1080&fit=crop&q=80"
+      },
+      "overview": {
+        "duration": "5 Nights / 6 Days",
+        "destinations": "Dubai & Abu Dhabi",
+        "groupSize": "2-20 People",
+        "rating": "4.9/5 Stars"
+      },
+      "itinerary": [
+        {
+          "day": 1,
+          "title": "Arrive in Dubai – City Orientation",
+          "includes": "Dinner",
+          "activities": [
+            "Pick up from Dubai International Airport",
+            "Transfer to hotel & check-in",
+            "Evening Dubai Marina walk",
+            "Welcome dinner at Burj Al Arab view restaurant",
+            "Dubai Fountain show viewing"
+          ],
+          "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 2,
+          "title": "Dubai City Tour – Burj Khalifa & Dubai Mall",
+          "includes": "Breakfast",
+          "activities": [
+            "Burj Khalifa At The Top experience",
+            "Dubai Mall shopping and exploration",
+            "Dubai Aquarium & Underwater Zoo",
+            "Gold Souk and Spice Souk visit",
+            "Traditional Abra boat ride in Dubai Creek"
+          ],
+          "image": "https://images.unsplash.com/photo-1518684079-3c830dcef090?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 3,
+          "title": "Desert Safari & Cultural Experience",
+          "includes": "Breakfast & Dinner",
+          "activities": [
+            "Morning at leisure or beach time",
+            "Afternoon desert safari with dune bashing",
+            "Camel riding and sandboarding",
+            "Traditional Bedouin camp experience",
+            "BBQ dinner with cultural shows"
+          ],
+          "image": "https://images.unsplash.com/photo-1451337516015-6b6e9a44a8a3?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 4,
+          "title": "Abu Dhabi Day Trip – Sheikh Zayed Mosque",
+          "includes": "Breakfast & Lunch",
+          "activities": [
+            "Drive to Abu Dhabi (1.5 hours)",
+            "Sheikh Zayed Grand Mosque tour",
+            "Emirates Palace hotel visit",
+            "Louvre Abu Dhabi museum",
+            "Corniche waterfront walk"
+          ],
+          "image": "https://images.unsplash.com/photo-1578895101408-1a36b834405b?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 5,
+          "title": "Dubai Modern Attractions & Luxury Shopping",
+          "includes": "Breakfast",
+          "activities": [
+            "Dubai Frame experience",
+            "Museum of the Future visit",
+            "Palm Jumeirah monorail ride",
+            "Atlantis The Palm resort tour",
+            "Mall of the Emirates shopping"
+          ],
+          "image": "https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=500&h=300&fit=crop"
+        },
+        {
+          "day": 6,
+          "title": "Leisure & Departure",
+          "includes": "Breakfast",
+          "activities": [
+            "Morning at leisure or beach time",
+            "Last minute shopping at Dubai Mall",
+            "Hotel check-out",
+            "Transfer to Dubai International Airport"
+          ],
+          "image": "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=500&h=300&fit=crop"
+        }
+      ],
+      "inclusions": [
+        {
+          "icon": "fas fa-bed",
+          "title": "Accommodation",
+          "description": "5 nights in 5-star hotels with breakfast included"
+        },
+        {
+          "icon": "fas fa-car",
+          "title": "Transportation",
+          "description": "All transfers in luxury air-conditioned vehicles"
+        },
+        {
+          "icon": "fas fa-user-tie",
+          "title": "Guide",
+          "description": "Professional English speaking tour guide"
+        },
+        {
+          "icon": "fas fa-ticket-alt",
+          "title": "Entrance Fees",
+          "description": "Burj Khalifa, Dubai Mall Aquarium, Desert Safari included"
+        },
+        {
+          "icon": "fas fa-utensils",
+          "title": "Meals",
+          "description": "Daily breakfast, 1 lunch, 2 dinners included"
+        },
+        {
+          "icon": "fas fa-plane",
+          "title": "Airport Transfers",
+          "description": "Complimentary airport pickup and drop-off"
+        },
+        {
+          "icon": "fas fa-camera",
+          "title": "Photography",
+          "description": "Professional photos at iconic Dubai locations"
+        },
+        {
+          "icon": "fas fa-passport",
+          "title": "Visa",
+          "description": "UAE visa assistance and processing"
+        }
+      ]
+    }
+  }
+}
