@@ -160,52 +160,6 @@
         }
     </style>
     
-    <!-- Testimonial Cards Styles -->
-    <style>
-        .mySwiper .swiper-slide {
-            height: 420px !important;
-            transition: height 0.3s ease;
-        }
-        .mySwiper .swiper-slide.expanded {
-            height: auto !important;
-        }
-        .mySwiper .swiper-slide > div {
-            height: 100% !important;
-        }
-        .mySwiper .swiper-slide .relative.bg-white\/95 {
-            height: 100% !important;
-        }
-        .mySwiper .swiper-slide .pt-10 {
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        .testimonial-text {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            margin-bottom: 0.5rem !important;
-        }
-        .testimonial-text.expanded {
-            display: block;
-        }
-        .mySwiper .border-t {
-            margin-top: auto;
-        }
-        .read-more-btn {
-            color: #000042;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: underline;
-            margin-top: 0.5rem;
-            display: inline-block;
-            font-size: 0.95rem;
-        }
-        .read-more-btn:hover {
-            color: #0000aa;
-        }
-    </style>
     
     <!-- Package Card Click Handler -->
     <script>
@@ -2096,24 +2050,6 @@
             .mySwiper3 {
                 padding-bottom: 80px !important;
                 margin: 0;
-            }
-            
-            /* Equal height for all testimonial cards */
-            .mySwiper .swiper-slide {
-                height: auto !important;
-                display: flex !important;
-            }
-            
-            .mySwiper .swiper-slide > div {
-                width: 100% !important;
-                min-height: 520px !important;
-                display: flex !important;
-            }
-            
-            .mySwiper .swiper-slide .relative.bg-white\/95 {
-                display: flex !important;
-                flex-direction: column !important;
-                height: 100% !important;
             }
             
             /* Fix testimonials height on mobile */
@@ -4108,7 +4044,7 @@
                     <p class="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">Discover why thousands of travelers choose Oasis Travel for their dream vacations</p>
                 </div>
 
-                <div class="swiper mySwiper w-full h-auto px-4 py-12 mt-[3vh]">
+                <div class="swiper mySwiper w-full h-[65vh] px-4 py-12 mt-[3vh]">
                     <div class="swiper-wrapper ">
                         <div class="swiper-slide">
                             <div class="group relative max-w-sm mx-auto">
@@ -4124,7 +4060,7 @@
                                     <div class="pt-10">
                                         <div class="flex items-center mb-8">
                                             <div class="relative">
-                                            
+                                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100" alt="John Smith" class="w-20 h-20 p-3 rounded-full object-cover border-4 border-white shadow-xl" loading="lazy">
                                                 <div class="absolute -bottom-2 -right-2 w-7 h-7 bg-green-500 rounded-full border-3 border-white flex items-center justify-center shadow-lg">
                                                     <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -4132,8 +4068,8 @@
                                                 </div>
                                             </div>
                                             <div class="ml-6">
-                                                <h4 class="font-bold text-gray-900 text-2xl mb-1">Ketan Bora</h4>
-                                                <p class="text-gray-600 text-base font-medium mb-2">Satisfied Customer</p>
+                                                <h4 class="font-bold text-gray-900 text-2xl mb-1">John Smith</h4>
+                                                <p class="text-gray-600 text-base font-medium mb-2">Dubai Explorer</p>
                                                 <div class="flex items-center">
                                                     <div class="flex text-yellow-400 text-lg">
                                                         ⭐⭐⭐⭐⭐
@@ -4142,7 +4078,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="text-gray-700 leading-relaxed text-lg font-medium mb-8 italic testimonial-text">"Very hardworking & cooperative people. Definitely think about Oasis tours for your future travel plans, domestic as well as international too."</p>
+                                        <p class="text-gray-700 leading-relaxed text-lg font-medium mb-8 italic">"Absolutely incredible experience! The Dubai tour was breathtaking and our guide was so knowledgeable. Oasis Tours made our trip unforgettable with perfect planning."</p>
                                         <div class="flex items-center justify-between pt-6 border-t border-gray-200">
                                             <div class="flex items-center text-sm text-gray-500">
                                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -4175,7 +4111,7 @@
                                     <div class="pt-10">
                                         <div class="flex items-center mb-8">
                                             <div class="relative">
-                                               
+                                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100" alt="Sarah Johnson" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-xl">
                                                 <div class="absolute -bottom-2 -right-2 w-7 h-7 bg-green-500 rounded-full border-3 border-white flex items-center justify-center shadow-lg">
                                                     <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -4183,8 +4119,8 @@
                                                 </div>
                                             </div>
                                             <div class="ml-6">
-                                                <h4 class="font-bold text-gray-900 text-2xl mb-1">Sanika Jain</h4>
-                                                <p class="text-gray-600 text-base font-medium mb-2">Happy Traveler</p>
+                                                <h4 class="font-bold text-gray-900 text-2xl mb-1">Sarah Johnson</h4>
+                                                <p class="text-gray-600 text-base font-medium mb-2">Maldives Honeymoon</p>
                                                 <div class="flex items-center">
                                                     <div class="flex text-yellow-400 text-lg">
                                                         ⭐⭐⭐⭐⭐
@@ -4193,7 +4129,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="text-gray-700 leading-relaxed text-lg font-medium mb-8 italic testimonial-text">"Excellent service. The whole process was professionally managed and appreciate the efforts put in by the team at Oasis Travel."</p>
+                                        <p class="text-gray-700 leading-relaxed text-lg font-medium mb-8 italic">"The luxury Maldives package was amazing! Professional service, stunning resorts, and beautiful destinations. Perfect for our anniversary celebration. Highly recommended!"</p>
                                         <div class="flex items-center justify-between pt-6 border-t border-gray-200">
                                             <div class="flex items-center text-sm text-gray-500">
                                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -4227,7 +4163,7 @@
                                     <div class="pt-10">
                                         <div class="flex items-center mb-8">
                                             <div class="relative">
-                                                
+                                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100" alt="Michael Chen" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-xl">
                                                 <div class="absolute -bottom-2 -right-2 w-7 h-7 bg-green-500 rounded-full border-3 border-white flex items-center justify-center shadow-lg">
                                                     <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -4235,8 +4171,8 @@
                                                 </div>
                                             </div>
                                             <div class="ml-6">
-                                                <h4 class="font-bold text-gray-900 text-2xl mb-1">Komal Irani</h4>
-                                                <p class="text-gray-600 text-base font-medium mb-2">Satisfied Customer</p>
+                                                <h4 class="font-bold text-gray-900 text-2xl mb-1">Michael Chen</h4>
+                                                <p class="text-gray-600 text-base font-medium mb-2">Adventure Seeker</p>
                                                 <div class="flex items-center">
                                                     <div class="flex text-yellow-400 text-lg">
                                                         ⭐⭐⭐⭐⭐
@@ -4245,7 +4181,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="text-gray-700 leading-relaxed text-lg font-medium mb-8 italic testimonial-text">"Even though it was our first interaction, they were responsive and worked within my budget. Truly appreciated the attention and willingness to help—made the whole process so much easier! Thank you! Oasis tours and travel."</p>
+                                        <p class="text-gray-700 leading-relaxed text-lg font-medium mb-8 italic">"Adventure tour was the highlight of our trip! The scenic views were spectacular and safety standards were excellent. Great value for money with professional guides."</p>
                                         <div class="flex items-center justify-between pt-6 border-t border-gray-200">
                                             <div class="flex items-center text-sm text-gray-500">
                                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -4279,7 +4215,7 @@
                                     <div class="pt-10">
                                         <div class="flex items-center mb-8">
                                             <div class="relative">
-                                              
+                                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100" alt="Emma Wilson" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-xl">
                                                 <div class="absolute -bottom-2 -right-2 w-7 h-7 bg-green-500 rounded-full border-3 border-white flex items-center justify-center shadow-lg">
                                                     <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -4287,8 +4223,8 @@
                                                 </div>
                                             </div>
                                             <div class="ml-6">
-                                                <h4 class="font-bold text-gray-900 text-2xl mb-1">Tejas</h4>
-                                                <p class="text-gray-600 text-base font-medium mb-2">Happy Customer</p>
+                                                <h4 class="font-bold text-gray-900 text-2xl mb-1">Emma Wilson</h4>
+                                                <p class="text-gray-600 text-base font-medium mb-2">City Explorer</p>
                                                 <div class="flex items-center">
                                                     <div class="flex text-yellow-400 text-lg">
                                                         ⭐⭐⭐⭐⭐
@@ -4297,7 +4233,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="text-gray-700 leading-relaxed text-lg font-medium mb-8 italic testimonial-text">"My experience with Oasis Team was truly exceptional. Their service was incredibly prompt and efficient, transforming the entire ticket booking process into a smooth and stress-free affair. I especially valued the excellent rate they secured and their consistent responsiveness."</p>
+                                        <p class="text-gray-700 leading-relaxed text-lg font-medium mb-8 italic">"Perfect city tour! We covered all major attractions efficiently. The guide was friendly and the luxury transport was very comfortable. Exceeded our expectations!"</p>
                                         <div class="flex items-center justify-between pt-6 border-t border-gray-200">
                                             <div class="flex items-center text-sm text-gray-500">
                                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -4331,7 +4267,7 @@
                                     <div class="pt-10">
                                         <div class="flex items-center mb-8">
                                             <div class="relative">
-                                                
+                                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100" alt="David Rodriguez" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-xl">
                                                 <div class="absolute -bottom-2 -right-2 w-7 h-7 bg-green-500 rounded-full border-3 border-white flex items-center justify-center shadow-lg">
                                                     <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -4339,8 +4275,8 @@
                                                 </div>
                                             </div>
                                             <div class="ml-6">
-                                                <h4 class="font-bold text-gray-900 text-2xl mb-1">Rutuja Mahad</h4>
-                                                <p class="text-gray-600 text-base font-medium mb-2">Dubai Package</p>
+                                                <h4 class="font-bold text-gray-900 text-2xl mb-1">David Rodriguez</h4>
+                                                <p class="text-gray-600 text-base font-medium mb-2">Business Traveler</p>
                                                 <div class="flex items-center">
                                                     <div class="flex text-yellow-400 text-lg">
                                                         ⭐⭐⭐⭐⭐
@@ -4349,7 +4285,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="text-gray-700 leading-relaxed text-lg font-medium mb-8 italic testimonial-text">"Oasis Tours offers excellent custom-made packages that are also very budget-friendly. My personal experience was absolutely fantastic, and my family thoroughly enjoyed every moment of our trip. We chose a customized Dubai package, and I want to extend a huge thank you to Team Oasis!"</p>
+                                        <p class="text-gray-700 leading-relaxed text-lg font-medium mb-8 italic">"Outstanding service from start to finish! Airport transfers were punctual, hotel bookings seamless. Professional team that delivers on promises. Will book again!"</p>
                                         <div class="flex items-center justify-between pt-6 border-t border-gray-200">
                                             <div class="flex items-center text-sm text-gray-500">
                                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -4383,7 +4319,7 @@
                                     <div class="pt-10">
                                         <div class="flex items-center mb-8">
                                             <div class="relative">
-                                          
+                                                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100" alt="Lisa Anderson" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-xl">
                                                 <div class="absolute -bottom-2 -right-2 w-7 h-7 bg-green-500 rounded-full border-3 border-white flex items-center justify-center shadow-lg">
                                                     <svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                                         <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
@@ -4391,8 +4327,8 @@
                                                 </div>
                                             </div>
                                             <div class="ml-6">
-                                                <h4 class="font-bold text-gray-900 text-2xl mb-1">Nikhil</h4>
-                                                <p class="text-gray-600 text-base font-medium mb-2">Malaysia Tour</p>
+                                                <h4 class="font-bold text-gray-900 text-2xl mb-1">Lisa Anderson</h4>
+                                                <p class="text-gray-600 text-base font-medium mb-2">Luxury Traveler</p>
                                                 <div class="flex items-center">
                                                     <div class="flex text-yellow-400 text-lg">
                                                         ⭐⭐⭐⭐⭐
@@ -4401,7 +4337,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="text-gray-700 leading-relaxed text-lg font-medium mb-8 italic testimonial-text">"The Malaysia tour was very good. It was the best tour of the year for me and my family. Thank you."</p>
+                                        <p class="text-gray-700 leading-relaxed text-lg font-medium mb-8 italic">"The luxury package was worth every penny! From fine dining to exclusive experiences, everything was perfectly organized. Thank you Oasis for an amazing journey!"</p>
                                         <div class="flex items-center justify-between pt-6 border-t border-gray-200">
                                             <div class="flex items-center text-sm text-gray-500">
                                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -4433,7 +4369,7 @@
                     <div class="bg-gradient-to-r from-[#000042] to-blue-600 rounded-3xl p-12 max-w-4xl mx-auto">
                         <h3 class="text-4xl font-bold text-white mb-4">Join 5000+ Happy Travelers</h3>
                         <p class="text-white/90 text-xl mb-8 leading-relaxed">Experience the world like never before with our award-winning travel services and expert guidance</p>
-                        <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="bg-white text-[#000042] px-12 py-4 rounded-2xl text-xl font-bold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl">
+                        <button class="bg-white text-[#000042] px-12 py-4 rounded-2xl text-xl font-bold hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl">
                             Start Your Journey
                         </button>
                     </div>
@@ -4448,8 +4384,8 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="text-left mb-6">
                     <h3 class="text-lg font-semibold text-blue-300 mb-2">TRAVEL POINT</h3>
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Discover The World</h2>
-                    <p class="text-gray-400 max-w-2xl">With over 500+ curated holiday packages and 50+ stunning destinations worldwide, we've helped thousands of travelers create unforgettable memories. From exotic beaches to cultural landmarks, adventure tours to luxury getaways – your perfect journey awaits with Oasis Tours And Travels.</p>
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Discover The World<br>With Our Guide</h2>
+                    <p class="text-gray-400 max-w-2xl">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
                 </div>
                 
                 <div class="max-w-3xl">
@@ -4491,7 +4427,7 @@
                     <div class="inline-block bg-gradient-to-r from-[#000042] to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold mb-6">
                         Our Services
                     </div>
-                        <h2 class="font-semibold text-blue-900 text-5xl">Why Choose Us</h2>
+                        <h2 class="font-semibold text-blue-900 text-5xl">Why Chooose Us</h2>
                     <p class="text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed">We deliver the best service and experience to make your journey unforgettable</p>
                 </div>
 
@@ -4725,7 +4661,6 @@
             animation: marquee 40s linear infinite;
             width: 200%;
         }
-        
         </style>
         <div class="container mx-auto px-6 max-w-7xl relative z-10">
             <!-- Logo Section -->
@@ -5363,7 +5298,7 @@
             const playPauseBtn = document.getElementById('heroPlayPause');
             if (playPauseBtn) {
                 playPauseBtn.addEventListener('click', function() {
-                    if (heroSwiper && heroSwiper.autoplay && heroSwiper.autoplay.running) {
+                    if (heroSwiper.autoplay.running) {
                         heroSwiper.autoplay.stop();
                         console.log('⏸️ Autoplay paused by user');
                     } else {
@@ -5375,7 +5310,6 @@
             
             // Keyboard controls
             document.addEventListener('keydown', function(e) {
-                if (!heroSwiper) return;
                 if (e.key === 'ArrowLeft') {
                     heroSwiper.slidePrev();
                 } else if (e.key === 'ArrowRight') {
@@ -5550,390 +5484,6 @@
 
     <!-- Lazy Loading Script -->
     <script src="lazy-loading.js"></script>
-    
-    <!-- Testimonial Read More Script -->
-    <script>
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                const testimonialTexts = document.querySelectorAll('.testimonial-text');
-                
-                testimonialTexts.forEach(function(text, index) {
-                    const textLength = text.textContent.length;
-                    
-                    if (textLength > 150) {
-                        const readMoreBtn = document.createElement('div');
-                        readMoreBtn.className = 'read-more-btn';
-                        readMoreBtn.textContent = 'Read More';
-                        readMoreBtn.style.marginTop = '8px';
-                        readMoreBtn.style.cursor = 'pointer';
-                        
-                        text.insertAdjacentElement('afterend', readMoreBtn);
-                        
-                        readMoreBtn.addEventListener('click', function() {
-                            const slide = text.closest('.swiper-slide');
-                            if (text.classList.contains('expanded')) {
-                                text.classList.remove('expanded');
-                                slide.classList.remove('expanded');
-                                readMoreBtn.textContent = 'Read More';
-                            } else {
-                                text.classList.add('expanded');
-                                slide.classList.add('expanded');
-                                readMoreBtn.textContent = 'Read Less';
-                            }
-                        });
-                    }
-                });
-            }, 2000);
-        });
-    </script>
-
-    <!-- Contact Popup Styles -->
-    <style>
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 10000;
-        }
-
-        .popup-overlay.show {
-            display: flex;
-        }
-
-        .popup-box {
-            background: white;
-            border-radius: 20px;
-            max-width: 450px;
-            width: 90%;
-            max-height: 85vh;
-            overflow-y: auto;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-            animation: slideIn 0.4s ease;
-        }
-
-        @keyframes slideIn {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
-        .popup-header {
-            background: #000042;
-            padding: 15px 20px;
-            border-radius: 20px 20px 0 0;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            width: 35px;
-            height: 35px;
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            border-radius: 50%;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .close-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: rotate(90deg);
-        }
-
-        .popup-header h2 {
-            font-size: 22px;
-            margin-bottom: 3px;
-        }
-
-        .popup-body {
-            padding: 0 20px 20px;
-        }
-
-        .form-group {
-            margin-bottom: 12px;
-        }
-
-        .form-group label {
-            display: block;
-            color: #000042;
-            font-weight: 600;
-            margin-bottom: 6px;
-            font-size: 14px;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 8px 10px;
-            border: 1px solid #3b82f6;
-            border-radius: 8px;
-            font-size: 14px;
-            transition: 0.3s;
-            background: white;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-
-        .form-group textarea {
-            min-height: 60px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 10px;
-            background: #000042;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 15px;
-            font-weight: 700;
-            cursor: pointer;
-            transition: 0.3s;
-            margin-top: 5px;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 66, 0.3);
-        }
-
-        .trigger-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #000042 0%, #3b82f6 100%);
-            border: none;
-            border-radius: 50%;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 8px 25px rgba(0, 0, 66, 0.4);
-            z-index: 9999;
-            transition: 0.3s;
-        }
-
-        .trigger-btn:hover {
-            transform: scale(1.1);
-        }
-
-        .success-msg {
-            display: none;
-            text-align: center;
-            padding: 30px 20px;
-        }
-
-        .success-msg.show {
-            display: block;
-        }
-
-        .success-icon {
-            width: 80px;
-            height: 80px;
-            background: #10b981;
-            border-radius: 50%;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 40px;
-            color: white;
-        }
-    </style>
-
-    <!-- Contact Popup HTML -->
-    <button class="trigger-btn" onclick="openPopup()">✉️</button>
-
-    <div class="popup-overlay" id="popup">
-        <div class="popup-box">
-            <div class="popup-header">
-                <button class="close-btn" onclick="closePopup()">×</button>
-                <img src="Images/Oasis Logo.png" alt="Oasis Tours" style="width: 50px; height: 50px; margin: 0 auto 8px; display: block;">
-                <h2>Get In Touch</h2>
-                <p>We'd love to hear from you!</p>
-            </div>
-
-            <div class="popup-body" id="formSection">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label>Full Name *</label>
-                        <input type="text" required placeholder="John Doe">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Email *</label>
-                        <input type="email" required placeholder="john@example.com">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Phone</label>
-                        <input type="tel" placeholder="+91 12345 67890">
-                    </div>
-
-                    <div class="form-group">
-                        <label>Destination</label>
-                        <select>
-                            <option value="">Select Destination</option>
-                            <optgroup label="South East Asia">
-                                <option value="malaysia">Malaysia</option>
-                                <option value="thailand">Thailand</option>
-                                <option value="singapore">Singapore</option>
-                                <option value="indonesia">Indonesia</option>
-                                <option value="langkawi">Langkawi</option>
-                                <option value="bintan">Bintan</option>
-                                <option value="cambodia">Cambodia</option>
-                                <option value="vietnam">Vietnam</option>
-                                <option value="philippines">Philippines</option>
-                            </optgroup>
-                            <optgroup label="Middle East">
-                                <option value="dubai">Dubai, UAE</option>
-                                <option value="sharjah">Sharjah, UAE</option>
-                                <option value="ajman">Ajman, UAE</option>
-                                <option value="abudhabi">Abu Dhabi, UAE</option>
-                                <option value="rak">Ras Al Khaimah, UAE</option>
-                                <option value="uaq">Umm Al Quwain, UAE</option>
-                                <option value="jordan">Jordan</option>
-                                <option value="lebanon">Lebanon</option>
-                                <option value="oman">Oman</option>
-                                <option value="qatar">Qatar</option>
-                                <option value="saudi">Saudi Arabia</option>
-                                <option value="turkey">Turkey</option>
-                            </optgroup>
-                            <optgroup label="Other Asia">
-                                <option value="china">China</option>
-                                <option value="hongkong">Hong Kong & Macau</option>
-                                <option value="japan">Japan</option>
-                                <option value="srilanka">Sri Lanka</option>
-                            </optgroup>
-                            <optgroup label="Central Asia">
-                                <option value="kazakhstan">Kazakhstan</option>
-                                <option value="kyrgyzstan">Kyrgyzstan</option>
-                                <option value="tajikistan">Tajikistan</option>
-                                <option value="turkmenistan">Turkmenistan</option>
-                                <option value="uzbekistan">Uzbekistan</option>
-                            </optgroup>
-                            <optgroup label="Europe & Others">
-                                <option value="europe">Europe</option>
-                                <option value="usa">USA</option>
-                                <option value="uk">UK</option>
-                                <option value="australia">Australia</option>
-                                <option value="newzealand">New Zealand</option>
-                                <option value="southafrica">South Africa</option>
-                                <option value="kenya">Kenya</option>
-                                <option value="madagascar">Madagascar</option>
-                            </optgroup>
-                            <optgroup label="Islands">
-                                <option value="mauritius">Mauritius</option>
-                                <option value="maldives">Maldives</option>
-                                <option value="seychelles">Seychelles</option>
-                                <option value="andaman">Andaman Islands</option>
-                                <option value="lakshadweep">Lakshadweep</option>
-                            </optgroup>
-                            <optgroup label="Indian Subcontinent">
-                                <option value="india">India</option>
-                                <option value="nepal">Nepal</option>
-                                <option value="bhutan">Bhutan</option>
-                            </optgroup>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Message *</label>
-                        <textarea required placeholder="Tell us about your travel plans..."></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-
-            <div class="success-msg" id="successMsg">
-                <div class="success-icon">✓</div>
-                <h3 style="color: #000042; margin-bottom: 10px;">Message Sent!</h3>
-                <p style="color: #666; margin-bottom: 20px;">We'll get back to you soon.</p>
-                <button onclick="closePopup()" style="background: #000042; color: white; padding: 12px 30px; border: none; border-radius: 8px; cursor: pointer;">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact Popup Scripts -->
-    <script>
-        function openPopup() {
-            document.getElementById('popup').classList.add('show');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closePopup() {
-            document.getElementById('popup').classList.remove('show');
-            document.body.style.overflow = 'auto';
-            setTimeout(() => {
-                document.getElementById('formSection').style.display = 'block';
-                document.getElementById('successMsg').classList.remove('show');
-                document.getElementById('contactForm').reset();
-            }, 300);
-        }
-
-        document.getElementById('popup').addEventListener('click', function(e) {
-            if (e.target === this) closePopup();
-        });
-
-        document.getElementById('contactForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const formData = {
-                name: this.querySelector('input[type="text"]').value,
-                email: this.querySelector('input[type="email"]').value,
-                phone: this.querySelector('input[type="tel"]').value,
-                subject: 'Contact Form - ' + (this.querySelector('select').value || 'General Inquiry'),
-                message: this.querySelector('textarea').value
-            };
-            
-            try {
-                const response = await fetch('http://localhost:3001/api/contact/submit', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(formData)
-                });
-                
-                const result = await response.json();
-                
-                if (result.success) {
-                    document.getElementById('formSection').style.display = 'none';
-                    document.getElementById('successMsg').classList.add('show');
-                } else {
-                    alert('Failed to send message. Please try again.');
-                }
-            } catch (error) {
-                console.error('Form submission error:', error);
-                document.getElementById('formSection').style.display = 'none';
-                document.getElementById('successMsg').classList.add('show');
-            }
-        });
-
-        // Auto-open after 5 seconds
-        setTimeout(function() {
-            openPopup();
-        }, 5000);
-    </script>
 </body>
 </html>
 <style>

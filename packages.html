@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tour Packages - Oasis Travel & Tourism</title>
+    <title>Tour Packages - Oasis Tours And Travels</title>
     <link rel="icon" type="image/png" href="Images/Oasis Logo.png" />
     <link rel="stylesheet" href="dist/style.css" />
 
@@ -25,10 +25,19 @@
     <style>
       .package-card {
         transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
       }
       .package-card:hover {
         transform: translateY(-10px);
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      }
+      #packagesGrid {
+        align-items: stretch;
+      }
+      #packagesGrid > div {
+        display: flex;
       }
       .filter-btn.active {
         background: #000042;
@@ -239,7 +248,7 @@
               <img
                 class="w-20"
                 src="Images/Oasis Logo.png"
-                alt="Oasis Travel & Tourism"
+                alt="Oasis Tours And Travels"
                 class="h-14 w-auto"
               />
             </a>
@@ -454,44 +463,199 @@
     </section>
 
     <!-- Filter Section -->
-    <section class="py-12 bg-white">
+    <section class="py-16 bg-gradient-to-b from-gray-50 to-white">
       <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center text-[#000042] mb-8">
+          Explore Our Packages
+        </h2>
         <div class="flex flex-wrap justify-center gap-4 mb-8">
           <button
-            class="filter-btn active px-6 py-3 rounded-full border-2 border-[#000042] font-semibold transition-all"
+            class="filter-btn active px-8 py-4 rounded-xl bg-[#000042] text-white font-bold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all"
             data-filter="all"
           >
-            All Packages
+            🌍 All Packages
+          </button>
+
+          <!-- International Tours Dropdown -->
+          <div class="relative dropdown-container">
+            <button
+              class="dropdown-toggle filter-btn px-8 py-4 rounded-xl bg-white border-2 border-[#000042] text-[#000042] font-bold text-lg shadow-lg hover:shadow-xl hover:bg-[#000042] hover:text-white transform hover:scale-105 transition-all flex items-center gap-2"
+            >
+              ✈️ International Tours
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div
+              class="dropdown-menu absolute top-full left-0 mt-2 bg-white shadow-2xl rounded-xl py-3 min-w-[240px] hidden z-50 border border-gray-200"
+            >
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="all"
+              >
+                🌍 All Packages
+              </button>
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="int-honeymoon"
+              >
+                💑 Honeymoon
+              </button>
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="int-family"
+              >
+                👨‍👩‍👧‍👦 Family Tours
+              </button>
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="int-adventure"
+              >
+                🏔️ Adventure Trips
+              </button>
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="int-weekend"
+              >
+                🌅 Weekend Gateway
+              </button>
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="int-pilgrim"
+              >
+                🕌 Pilgrim Tours
+              </button>
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="int-luxury"
+              >
+                💎 Luxury Tours
+              </button>
+            </div>
+          </div>
+
+          <!-- Domestic Tours Dropdown -->
+          <div class="relative dropdown-container">
+            <button
+              class="dropdown-toggle filter-btn px-8 py-4 rounded-xl bg-white border-2 border-[#000042] text-[#000042] font-bold text-lg shadow-lg hover:shadow-xl hover:bg-[#000042] hover:text-white transform hover:scale-105 transition-all flex items-center gap-2"
+            >
+              🇮🇳 Domestic Tours
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div
+              class="dropdown-menu absolute top-full left-0 mt-2 bg-white shadow-2xl rounded-xl py-3 min-w-[240px] hidden z-50 border border-gray-200"
+            >
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="all"
+              >
+                🌍 All Packages
+              </button>
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="dom-honeymoon"
+              >
+                💑 Honeymoon
+              </button>
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="dom-family"
+              >
+                👨‍👩‍👧‍👦 Family Tours
+              </button>
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="dom-adventure"
+              >
+                🏔️ Adventure Trips
+              </button>
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="dom-weekend"
+              >
+                🌅 Weekend Gateway
+              </button>
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="dom-pilgrim"
+              >
+                🕌 Pilgrim Tours
+              </button>
+              <button
+                class="w-full text-left px-5 py-3 hover:bg-blue-50 text-[#000042] font-semibold transition-colors"
+                data-filter="dom-luxury"
+              >
+                💎 Luxury Tours
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Buttons Row -->
+        <div class="flex flex-wrap justify-center gap-3 mt-6">
+          <button
+            class="filter-btn px-6 py-2 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition-all"
+            data-filter="all"
+          >
+            🌍 All Packages
           </button>
           <button
-            class="filter-btn px-6 py-3 rounded-full border-2 border-[#000042] text-[#000042] font-semibold transition-all hover:bg-[#000042] hover:text-white"
+            class="filter-btn px-6 py-2 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition-all"
             data-filter="honeymoon"
           >
-            Honeymoon
+            💑 Honeymoon
           </button>
           <button
-            class="filter-btn px-6 py-3 rounded-full border-2 border-[#000042] text-[#000042] font-semibold transition-all hover:bg-[#000042] hover:text-white"
+            class="filter-btn px-6 py-2 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition-all"
             data-filter="family"
           >
-            Family
+            👨‍👩‍👧‍👦 Family Tours
           </button>
           <button
-            class="filter-btn px-6 py-3 rounded-full border-2 border-[#000042] text-[#000042] font-semibold transition-all hover:bg-[#000042] hover:text-white"
+            class="filter-btn px-6 py-2 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition-all"
             data-filter="adventure"
           >
-            Adventure
+            🏔️ Adventure Trips
           </button>
           <button
-            class="filter-btn px-6 py-3 rounded-full border-2 border-[#000042] text-[#000042] font-semibold transition-all hover:bg-[#000042] hover:text-white"
+            class="filter-btn px-6 py-2 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition-all"
+            data-filter="weekend"
+          >
+            🌅 Weekend Gateway
+          </button>
+          <button
+            class="filter-btn px-6 py-2 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition-all"
+            data-filter="pilgrim"
+          >
+            🕌 Pilgrim Tours
+          </button>
+          <button
+            class="filter-btn px-6 py-2 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold hover:bg-gray-100 transition-all"
             data-filter="luxury"
           >
-            Luxury
-          </button>
-          <button
-            class="filter-btn px-6 py-3 rounded-full border-2 border-[#000042] text-[#000042] font-semibold transition-all hover:bg-[#000042] hover:text-white"
-            data-filter="budget"
-          >
-            Budget
+            💎 Luxury Tours
           </button>
         </div>
       </div>
@@ -522,12 +686,12 @@
                 Hot Deal
               </div>
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col h-full">
               <h3 class="text-2xl font-bold text-gray-900 mb-2">
                 Baku Azerbaijan Experience
               </h3>
               <p class="text-gray-600 mb-4">6 Days / 5 Nights</p>
-              <p class="text-gray-700 mb-4">
+              <p class="text-gray-700 mb-4 flex-1">
                 Discover the Land of Fire with modern architecture, ancient
                 history, and Caspian Sea views. Experience Baku's unique blend
                 of East and West.
@@ -574,12 +738,12 @@
                 Adventure
               </div>
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col h-full">
               <h3 class="text-2xl font-bold text-gray-900 mb-2">
                 Vietnam Adventure
               </h3>
               <p class="text-gray-600 mb-4">7 Nights / 8 Days</p>
-              <p class="text-gray-700 mb-4">
+              <p class="text-gray-700 mb-4 flex-1">
                 Ha Noi – Water puppet show – Ha Long Bay – Da Nang – Marble
                 Mountain – Bana Hills – Hoi An old town – Lantern Boat – Ho Chi
                 Minh – Mekong Delta. Experience Vietnam's 1000 years history.
@@ -625,12 +789,12 @@
                 Luxury
               </div>
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col h-full">
               <h3 class="text-2xl font-bold text-gray-900 mb-2">
                 Dubai Luxury
               </h3>
               <p class="text-gray-600 mb-4">5 Nights / 6 Days</p>
-              <p class="text-gray-700 mb-4">
+              <p class="text-gray-700 mb-4 flex-1">
                 Experience the glamour of Dubai with luxury shopping,
                 world-class dining, stunning architecture, and desert
                 adventures. Discover modern luxury and traditional Arabian
@@ -740,12 +904,13 @@
         <div class="mb-12 text-center">
           <img
             src="Images/Oasis Logo.png"
-            alt="Oasis Travel & Tourism"
+            alt="Oasis Tours And Travels"
             class="h-20 mx-auto mb-4"
           />
           <p class="text-gray-300 max-w-2xl mx-auto">
             Your trusted partner for unforgettable travel experiences. Discover
-            the world with Oasis Travel & Tourism.
+            the world with <br />
+            Oasis Tours And Travels.
           </p>
         </div>
 
@@ -1018,7 +1183,7 @@
             <!-- Copyright -->
             <div class="text-gray-300 text-center md:text-right">
               <p>
-                Copyright © 2025 Oasis Tours & Travel | Design By Code Sunny
+                Copyright © 2025 Oasis Tours & Travel | Design And Develop By CodeSunny.in
               </p>
             </div>
           </div>
@@ -1103,6 +1268,36 @@
             );
           });
         }
+      });
+
+      // Dropdown Toggle Functionality
+      document.querySelectorAll(".dropdown-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          const dropdown = this.nextElementSibling;
+          const allDropdowns = document.querySelectorAll(".dropdown-menu");
+
+          allDropdowns.forEach((menu) => {
+            if (menu !== dropdown) {
+              menu.classList.add("hidden");
+            }
+          });
+
+          dropdown.classList.toggle("hidden");
+        });
+      });
+
+      document.addEventListener("click", function () {
+        document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+          menu.classList.add("hidden");
+        });
+      });
+
+      document.querySelectorAll(".dropdown-menu button").forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          this.closest(".dropdown-menu").classList.add("hidden");
+        });
       });
 
       // Mobile Navigation JavaScript

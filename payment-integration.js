@@ -3,9 +3,47 @@
 
 class PaymentGateway {
   constructor() {
-    this.razorpayKeyId = "rzp_test_9WdJmqcwy6BNZX"; // Working test key for development
-    this.apiBaseUrl = "http://localhost:3001/api/payments";
-    this.loadRazorpayScript();
+    this.razorpayKeyId = null; // Will be fetched from backend
+    this.apiBaseUrl = this.getApiBaseUrl();
+    this.initialized = false;
+    this.init();
+  }
+
+  // Get API base URL dynamically
+  getApiBaseUrl() {
+    // For production, use the same origin
+    // For development, check if backend is on different port
+    const isProduction = window.location.protocol === 'https:';
+    if (isProduction) {
+      return window.location.origin + "/api/payments";
+    }
+    // Development: try backend port first, fallback to same origin
+    return window.location.origin.replace(':3000', ':3001') + "/api/payments";
+  }
+
+  // Initialize payment gateway
+  async init() {
+    try {
+      await this.loadRazorpayScript();
+      await this.fetchConfig();
+      this.initialized = true;
+    } catch (error) {
+      console.error("Payment gateway initialization failed:", error);
+    }
+  }
+
+  // Fetch Razorpay configuration from backend
+  async fetchConfig() {
+    try {
+      const response = await fetch(`${this.apiBaseUrl}/config`);
+      const result = await response.json();
+      if (result.success) {
+        this.razorpayKeyId = result.key_id;
+      }
+    } catch (error) {
+      console.error("Failed to fetch payment config:", error);
+      throw error;
+    }
   }
 
   // Load Razorpay script dynamically
@@ -52,6 +90,29 @@ class PaymentGateway {
   // Process payment
   async processPayment(packageData, customerData, amount) {
     try {
+      // Ensure initialized
+      if (!this.initialized || !this.razorpayKeyId) {
+        await this.init();
+        if (!this.razorpayKeyId) {
+          throw new Error("Payment gateway not available. Please try again later.");
+        }
+      }
+
+      // Validate inputs
+      if (!packageData || !customerData || !amount) {
+        throw new Error("Missing required payment information");
+      }
+
+      // Validate amount
+      if (!amount || amount < 1000 || amount > 1000000) {
+        throw new Error("Invalid amount. Must be between ₹1,000 and ₹10,00,000");
+      }
+
+      // Validate customer data
+      if (!customerData.name || !customerData.email || !customerData.phone) {
+        throw new Error("Please fill in all customer details");
+      }
+
       // Show loading
       this.showPaymentLoading(true);
 
@@ -66,7 +127,7 @@ class PaymentGateway {
 
       // Configure Razorpay options
       const options = {
-        key: orderResponse.key_id,
+        key: this.razorpayKeyId,
         amount: orderResponse.order.amount,
         currency: orderResponse.order.currency,
         name: "Oasis Travel & Tourism",

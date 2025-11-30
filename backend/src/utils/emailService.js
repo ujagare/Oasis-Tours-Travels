@@ -19,8 +19,8 @@ class EmailService {
       },
     });
 
-    this.fromEmail = process.env.EMAIL_FROM || "sales@oasistourandtravels.com";
-    this.salesEmail = "sales@oasistourandtravels.com";
+    this.fromEmail = process.env.EMAIL_FROM || "info@oasistoursandtravels.com";
+    this.salesEmail = "info@oasistoursandtravels.com";
   }
 
   // Send booking confirmation to customer
