@@ -1,0 +1,24 @@
+/* Force hide Tawk.to bubble background and images */
+.tawk-min-container,
+.tawk-bubble-wrapper,
+#tawk-bubble-container,
+div[class*="tawk"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+}
+
+.tawk-text-truncate,
+.tawk-bubble-text,
+.tawk-bubble-text-container,
+.tawk-min-container .tawk-text,
+.tawk-min-container img,
+#tawk-bubble-container img,
+.tawk-image-frame,
+div[class*="tawk"] img {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}

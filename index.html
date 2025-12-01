@@ -38,6 +38,7 @@
     <!-- Local Tailwind CSS -->
     <link rel="stylesheet" href="dist/style.css">
     <link rel="stylesheet" href="logo-fix.css">
+    <link rel="stylesheet" href="tawk-hide.css">
     
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -182,7 +183,6 @@
         }
         .testimonial-text {
             display: -webkit-box;
-            -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
             margin-bottom: 0.5rem !important;
@@ -3007,7 +3007,7 @@
                                 <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Kazakhstan</h1>
                                 <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Heart of Central Asia with rich nomadic heritage</p>
                                 <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Discover the vast steppes, modern cities like Almaty and Nur-Sultan, and ancient Silk Road history. Experience unique culture, stunning landscapes, and warm hospitality in this fascinating Central Asian gem.</p>
-                                <a href="DestinationDetails.html?destination=Kazakhstan" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-white hover:text-[#000042] transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                <a href="DestinationDetails.html?destination=Kazakhstan"class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
                                     Discover Kazakhstan
                                 </a>
                             </div>
@@ -3027,7 +3027,7 @@
                                 <h1 class="slide-title text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-3 sm:mb-4 md:mb-6 leading-tight" style="text-shadow: 3px 3px 6px rgba(0,0,0,0.9);">Maldives</h1>
                                 <p class="slide-subtitle text-base sm:text-lg md:text-xl lg:text-2xl mb-3 sm:mb-4 md:mb-6 font-medium" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Paradise on Earth with crystal clear waters</p>
                                 <p class="slide-description text-sm sm:text-base md:text-lg lg:text-xl mb-6 sm:mb-8 md:mb-10 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl leading-relaxed" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.9);">Escape to tropical paradise with pristine beaches, luxury overwater villas, and world-class diving. Experience the ultimate romantic getaway in the Maldives' crystal-clear lagoons and coral reefs.</p>
-                                <a href="DestinationDetails.html?destination=Maldives" class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-white hover:text-[#000042] transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
+                                <a href="DestinationDetails.html?destination=Maldives"class="slide-button inline-block text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-lg text-base sm:text-lg md:text-xl font-semibold hover:bg-[#000042] hover:text-white transition-colors border-2 border-white shadow-lg hover:shadow-xl" style="box-shadow: 0 8px 16px rgba(0,0,0,0.3);">
                                     Discover Maldives
                                 </a>
                             </div>
@@ -5015,7 +5015,11 @@
     
     // Simple Tawk.to setup
     Tawk_API.onLoad = function(){
-        console.log('💬 Oasis Travel Live Chat is ready!');
+        setTimeout(function() {
+            const style = document.createElement('style');
+            style.innerHTML = '.tawk-min-container, .tawk-bubble-wrapper, #tawk-bubble-container { background: transparent !important; } .tawk-text-truncate, .tawk-bubble-text, .tawk-bubble-text-container, .tawk-min-container img, #tawk-bubble-container img { display: none !important; }';
+            document.head.appendChild(style);
+        }, 1000);
     };
     
     // Travel website specific events
