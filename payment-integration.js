@@ -12,13 +12,13 @@ class PaymentGateway {
   // Get API base URL dynamically
   getApiBaseUrl() {
     // For production, use the same origin
-    // For development, check if backend is on different port
-    const isProduction = window.location.protocol === 'https:';
+    // For development, use localhost:3001
+    const isProduction = window.location.protocol === 'https:' && !window.location.hostname.includes('localhost');
     if (isProduction) {
       return window.location.origin + "/api/payments";
     }
-    // Development: try backend port first, fallback to same origin
-    return window.location.origin.replace(':3000', ':3001') + "/api/payments";
+    // Development: always use http://localhost:3001
+    return 'http://localhost:3001/api/payments';
   }
 
   // Initialize payment gateway

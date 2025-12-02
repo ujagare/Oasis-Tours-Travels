@@ -505,43 +505,17 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initial state is now handled by hero-slider-fix.js
   console.log('Hero text initial state handled by hero-slider-fix.js');
 
-  // GSAP Stair Animation
-  const tl = gsap.timeline();
-
-  // Set initial state
-  gsap.set(".stair", {
-    scaleY: 0,
-    transformOrigin: "top",
-  });
-
-  // Animate stairs in (top to bottom growth)
-  tl.to(".stair", {
-    scaleY: 1,
-    duration: 0.3,
-    stagger: 0.05,
-    ease: "power2.out",
-  })
-    // Hold for a moment
-    .to({}, { duration: 0.2 })
-    // Animate stairs out (shrink to bottom)
-    .to(".stair", {
-      scaleY: 0,
-      duration: 0.3,
-      stagger: 0.05,
-      transformOrigin: "bottom",
-      ease: "power2.in",
-    })
-    // Remove from display
-    .set(".stair", {
-      display: "none",
-    })
-    // Fix z-index after animation
-    .call(() => {
-      const stairContainer = document.querySelector(".stair")?.parentElement;
-      if (stairContainer) {
-        stairContainer.style.zIndex = "-1";
-      }
-    });
+  // Simplified stair animation
+  const stairs=document.querySelectorAll(".stair");
+  if(stairs.length){
+    gsap.set(stairs,{scaleY:0,transformOrigin:"top"});
+    gsap.to(stairs,{scaleY:1,duration:0.3,stagger:0.05,ease:"power2.out",onComplete:()=>{
+      gsap.to(stairs,{scaleY:0,duration:0.3,delay:0.2,stagger:0.05,transformOrigin:"bottom",ease:"power2.in",onComplete:()=>{
+        stairs.forEach(s=>s.style.display="none");
+        stairs[0]?.parentElement&&(stairs[0].parentElement.style.zIndex="-1");
+      }});
+    }});
+  }
 
   // Hero Section Button Handlers
   const heroButtons = document.querySelectorAll(
@@ -621,40 +595,37 @@ document.addEventListener("DOMContentLoaded", function () {
     // Simple Text Animation for Section Headings
     function createSimpleTextAnimation(element) {
       const text = element.textContent;
-      element.innerHTML = "";
+      const fragment = document.createDocumentFragment();
 
-      // Create spans for each character
-      text.split("").forEach((char, index) => {
+      // Batch DOM creation
+      text.split("").forEach((char) => {
         const span = document.createElement("span");
         span.textContent = char === " " ? "\u00A0" : char;
-        span.style.display = "inline-block";
-        span.style.opacity = "0";
-        span.style.transform = "translateY(30px)";
-        element.appendChild(span);
+        span.style.cssText = "display:inline-block;opacity:0;transform:translateY(30px);will-change:transform,opacity";
+        fragment.appendChild(span);
       });
 
-      // Simple animate each character
-      const chars = element.querySelectorAll("span");
+      element.innerHTML = "";
+      element.appendChild(fragment);
+
+      // Animate
       gsap.fromTo(
-        chars,
-        {
-          opacity: 0,
-          y: 30,
-        },
+        element.children,
+        { opacity: 0, y: 30 },
         {
           opacity: 1,
           y: 0,
           duration: 0.6,
           ease: "power2.out",
-          stagger: {
-            amount: 0.4,
-            from: "start",
-          },
+          stagger: { amount: 0.4, from: "start" },
           scrollTrigger: {
             trigger: element,
             start: "top 80%",
             toggleActions: "play none none none",
           },
+          onComplete: () => {
+            element.querySelectorAll("span").forEach(s => s.style.willChange = "auto");
+          }
         }
       );
     }
@@ -705,7 +676,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .forEach((subtitle) => {
         gsap.fromTo(
           subtitle,
-          { opacity: 0, y: 50 },
+          { opacity: 0, y: 50, willChange: "transform, opacity" },
           {
             opacity: 1,
             y: 0,
@@ -716,6 +687,7 @@ document.addEventListener("DOMContentLoaded", function () {
               start: "top 85%",
               toggleActions: "play none none none",
             },
+            onComplete: function() { this.targets()[0].style.willChange = "auto"; }
           }
         );
       });
@@ -730,7 +702,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ) {
         gsap.fromTo(
           text,
-          { opacity: 0, y: 30, clipPath: "inset(0 100% 0 0)" },
+          { opacity: 0, y: 30, clipPath: "inset(0 100% 0 0)", willChange: "transform, opacity, clip-path" },
           {
             opacity: 1,
             y: 0,
@@ -742,6 +714,7 @@ document.addEventListener("DOMContentLoaded", function () {
               start: "top 85%",
               toggleActions: "play none none none",
             },
+            onComplete: function() { this.targets()[0].style.willChange = "auto"; }
           }
         );
       }

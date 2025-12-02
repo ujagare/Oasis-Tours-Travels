@@ -3,7 +3,11 @@
 
 class ContactFormHandler {
   constructor() {
-    this.apiBaseUrl = "http://localhost:3001/api/contact";
+    // Use same origin in production, localhost:3001 in development
+    const isProduction = window.location.protocol === 'https:' && !window.location.hostname.includes('localhost');
+    this.apiBaseUrl = isProduction 
+      ? window.location.origin + '/api/contact'
+      : 'http://localhost:3001/api/contact';
     this.initializeContactForm();
   }
 

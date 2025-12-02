@@ -14,8 +14,11 @@ require("dotenv").config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Security middleware
-app.use(helmet());
+// Security middleware - Disabled for development
+if (process.env.NODE_ENV === 'production') {
+  app.use(helmet());
+}
+// Development: No helmet restrictions
 app.use(mongoSanitize());
 
 // CORS configuration
@@ -28,11 +31,22 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-// HTTPS redirect in production
+// Development: Disable CSP completely
+if (process.env.NODE_ENV !== 'production') {
+  app.use((req, res, next) => {
+    res.removeHeader('Content-Security-Policy');
+    res.removeHeader('X-Content-Security-Policy');
+    res.removeHeader('X-WebKit-CSP');
+    next();
+  });
+}
+
+// HTTPS redirect in production (skip for localhost)
 if (process.env.NODE_ENV === 'production') {
   app.use((req, res, next) => {
-    if (req.header('x-forwarded-proto') !== 'https') {
-      res.redirect(`https://${req.header('host')}${req.url}`);
+    const host = req.header('host') || '';
+    if (req.header('x-forwarded-proto') !== 'https' && !host.includes('localhost')) {
+      res.redirect(`https://${host}${req.url}`);
     } else {
       next();
     }

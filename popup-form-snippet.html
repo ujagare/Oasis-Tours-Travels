@@ -1,0 +1,334 @@
+<!-- Contact Popup Form - Add before </body> tag -->
+<style>
+    /* Popup Styles */
+    .contact-popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(5px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 100000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .contact-popup-overlay.active {
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .contact-popup-container {
+        background: white;
+        border-radius: 24px;
+        max-width: 500px;
+        width: 90%;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        transform: scale(0.9) translateY(20px);
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    .contact-popup-overlay.active .contact-popup-container {
+        transform: scale(1) translateY(0);
+    }
+
+    .contact-popup-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(0, 0, 66, 0.1);
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 10;
+    }
+
+    .contact-popup-close:hover {
+        background: #000042;
+        transform: rotate(90deg);
+    }
+
+    .contact-popup-close svg {
+        width: 20px;
+        height: 20px;
+        stroke: #000042;
+        transition: stroke 0.3s ease;
+    }
+
+    .contact-popup-close:hover svg {
+        stroke: white;
+    }
+
+    .contact-popup-header {
+        background: linear-gradient(135deg, #000042 0%, #1a1a5e 100%);
+        padding: 40px 30px 30px;
+        border-radius: 24px 24px 0 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .contact-popup-header h2 {
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .contact-popup-header p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .contact-popup-form {
+        padding: 30px;
+    }
+
+    .contact-form-group {
+        margin-bottom: 20px;
+    }
+
+    .contact-form-group label {
+        display: block;
+        color: #000042;
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+    }
+
+    .contact-form-group input,
+    .contact-form-group select,
+    .contact-form-group textarea {
+        width: 100%;
+        padding: 14px 16px;
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        background: #f9fafb;
+    }
+
+    .contact-form-group input:focus,
+    .contact-form-group select:focus,
+    .contact-form-group textarea:focus {
+        outline: none;
+        border-color: #000042;
+        background: white;
+        box-shadow: 0 0 0 4px rgba(0, 0, 66, 0.1);
+    }
+
+    .contact-form-group textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    .contact-submit-btn {
+        width: 100%;
+        padding: 16px;
+        background: linear-gradient(135deg, #000042 0%, #3b82f6 100%);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .contact-submit-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 66, 0.3);
+    }
+
+    .contact-trigger-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #000042 0%, #3b82f6 100%);
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        box-shadow: 0 8px 25px rgba(0, 0, 66, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: all 0.3s ease;
+    }
+
+    .contact-trigger-btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 12px 35px rgba(0, 0, 66, 0.5);
+    }
+
+    .contact-trigger-btn svg {
+        width: 28px;
+        height: 28px;
+        fill: white;
+    }
+
+    @media (max-width: 640px) {
+        .contact-popup-container {
+            width: 95%;
+            max-height: 95vh;
+        }
+
+        .contact-popup-header h2 {
+            font-size: 1.5rem;
+        }
+
+        .contact-popup-form {
+            padding: 20px;
+        }
+
+        .contact-trigger-btn {
+            width: 50px;
+            height: 50px;
+            bottom: 20px;
+            right: 20px;
+        }
+    }
+</style>
+
+<!-- Trigger Button -->
+<button class="contact-trigger-btn" onclick="openContactPopup()">
+    <svg viewBox="0 0 24 24">
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+    </svg>
+</button>
+
+<!-- Popup Overlay -->
+<div class="contact-popup-overlay" id="contactPopupOverlay" onclick="closeContactPopupOnOverlay(event)">
+    <div class="contact-popup-container">
+        <!-- Close Button -->
+        <button class="contact-popup-close" onclick="closeContactPopup()">
+            <svg fill="none" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+
+        <!-- Header -->
+        <div class="contact-popup-header">
+            <h2>Get In Touch</h2>
+            <p>We'd love to hear from you. Send us a message!</p>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-popup-form">
+            <form id="contactPopupForm" onsubmit="handleContactFormSubmit(event)">
+                <div class="contact-form-group">
+                    <label for="popup-name">Full Name *</label>
+                    <input type="text" id="popup-name" name="name" required placeholder="John Doe">
+                </div>
+
+                <div class="contact-form-group">
+                    <label for="popup-email">Email Address *</label>
+                    <input type="email" id="popup-email" name="email" required placeholder="john@example.com">
+                </div>
+
+                <div class="contact-form-group">
+                    <label for="popup-phone">Phone Number</label>
+                    <input type="tel" id="popup-phone" name="phone" placeholder="+91 1234567890">
+                </div>
+
+                <div class="contact-form-group">
+                    <label for="popup-destination">Destination</label>
+                    <select id="popup-destination" name="destination">
+                        <option value="">Select Destination</option>
+                        <option value="dubai">Dubai, UAE</option>
+                        <option value="baku">Baku, Azerbaijan</option>
+                        <option value="vietnam">Vietnam</option>
+                        <option value="maldives">Maldives</option>
+                        <option value="singapore">Singapore</option>
+                        <option value="malaysia">Malaysia</option>
+                        <option value="japan">Japan</option>
+                        <option value="thailand">Thailand</option>
+                    </select>
+                </div>
+
+                <div class="contact-form-group">
+                    <label for="popup-message">Message *</label>
+                    <textarea id="popup-message" name="message" required placeholder="Tell us about your travel plans..."></textarea>
+                </div>
+
+                <button type="submit" class="contact-submit-btn">
+                    <span>Send Message</span>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Open popup
+    function openContactPopup() {
+        document.getElementById('contactPopupOverlay').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    // Close popup
+    function closeContactPopup() {
+        document.getElementById('contactPopupOverlay').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Close on overlay click
+    function closeContactPopupOnOverlay(e) {
+        if (e.target === document.getElementById('contactPopupOverlay')) {
+            closeContactPopup();
+        }
+    }
+
+    // Handle form submission
+    function handleContactFormSubmit(e) {
+        e.preventDefault();
+        
+        const submitBtn = document.querySelector('.contact-submit-btn');
+        submitBtn.innerHTML = '<span>Sending...</span>';
+        submitBtn.disabled = true;
+        
+        // Simulate form submission
+        setTimeout(() => {
+            alert('Thank you for contacting us! We will get back to you soon.');
+            document.getElementById('contactPopupForm').reset();
+            submitBtn.innerHTML = '<span>Send Message</span><svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>';
+            submitBtn.disabled = false;
+            closeContactPopup();
+        }, 1500);
+    }
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeContactPopup();
+        }
+    });
+</script>
