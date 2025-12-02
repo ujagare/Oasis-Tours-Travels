@@ -29,7 +29,7 @@
         .loader-text { color: white; font-size: 1.5rem; font-weight: 600; margin-bottom: 0.5rem; text-align: center; }
         .loader-subtext { color: rgba(255, 255, 255, 0.8); font-size: 1rem; text-align: center; }
         @keyframes spin { to { transform: rotate(360deg); } }
-        @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.05); opacity: 0.8; } }
+        @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
         body.loading { overflow: hidden; }
         
         /* Testimonial Cards Equal Height */
@@ -5786,14 +5786,47 @@ Thank you! Oasis tours and travel.</p>
         }
         @media (max-width: 640px) {
             .contact-popup-container {
-                width: 95%;
-                max-height: 95vh;
+                width: 92%;
+                max-width: 380px;
+                max-height: 80vh;
+                padding: 12px;
+            }
+            .contact-popup-header {
+                padding: 10px 15px;
+            }
+            .contact-popup-logo {
+                width: 50px;
+                height: 50px;
             }
             .contact-popup-header h2 {
-                font-size: 1.5rem;
+                font-size: 1.1rem;
+                margin-bottom: 4px;
+            }
+            .contact-popup-header p {
+                font-size: 0.75rem;
             }
             .contact-popup-form {
-                padding: 20px;
+                padding: 12px;
+            }
+            .contact-popup-form .form-group {
+                margin-bottom: 12px;
+            }
+            .contact-popup-form input,
+            .contact-popup-form select,
+            .contact-popup-form textarea {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+            .contact-popup-form label {
+                font-size: 12px;
+                margin-bottom: 3px;
+            }
+            .contact-popup-form textarea {
+                min-height: 60px;
+            }
+            .contact-popup-form button {
+                padding: 10px 16px;
+                font-size: 13px;
             }
             .contact-trigger-btn {
                 width: 50px;
